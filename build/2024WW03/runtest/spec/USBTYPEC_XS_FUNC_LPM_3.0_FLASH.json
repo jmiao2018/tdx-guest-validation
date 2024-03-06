@@ -1,0 +1,42 @@
+{
+    "name": "USBTYPEC_XS_FUNC_LPM_3.0_FLASH",
+    "initial_platform": "",
+    "cmdline": "usb_lpm_tests.sh -p 3.0 -t flash",
+    "steps": [],
+    "flags": [],
+    "summary": "LPM with TYPE-C_3.0_FLASH",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_type-c_lpm_func_tests",
+    "domain": "IO",
+    "feature": "USB_TYPEC",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 3.0 flash storage device",
+            "check": "",
+            "description": "Need connect to typec port"
+        }
+    ],
+    "createDate": "2017-11-25T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure 2.0/3.x flash/uas device is connected to typec port as case name."
+}

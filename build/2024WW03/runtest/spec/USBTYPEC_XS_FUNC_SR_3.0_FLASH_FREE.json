@@ -1,0 +1,42 @@
+{
+    "name": "USBTYPEC_XS_FUNC_SR_3.0_FLASH_FREE",
+    "initial_platform": "",
+    "cmdline": "usb_suspend_resume_tests.sh -p 3.0 -t flash -s freeze",
+    "steps": [],
+    "flags": [],
+    "summary": "USBTYPEC_XS_FUNC_SR_3.0_FLASH_FREE",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_type-c_suspendresume_func_tests",
+    "domain": "IO",
+    "feature": "USB_TYPEC",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 3.0 flash storage device",
+            "check": "",
+            "description": "Need connect to typec port"
+        }
+    ],
+    "createDate": "2018-06-06T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure 2.0/3.x flash/uas device is connected to typec port as case name. Please make sure s/r to freeze is working."
+}

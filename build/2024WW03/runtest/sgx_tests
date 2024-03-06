@@ -1,0 +1,20 @@
+# @name SGX_TESTS
+# @desc test SGX function
+# @requires sgx
+
+SGX_S_FUNC_SGX_NUMA_PREALLOC sgx_tests.sh sgx_numa_prealloc
+SGX_S_FUNC_SGX_LOCAL_ATTESTATION sgx_tests.sh sgx_local_attestation
+SGX_S_FUNC_SGX_SEAL_UNSEAL_ENCLAVE sgx_tests.sh sgx_seal_unseal_enclave
+SGX_S_FUNC_SGX_ENCLAVE_MULTIPLE sgx_tests.sh sgx_enclave_multiple
+SGX_S_FUNC_SGX_ENCLAVE_STACK40000  sgx_tests.sh sgx_enclave_stack40000
+SGX_S_FUNC_SGX_ENABLE sgx_tests.sh sgx_enable
+SGX_XS_FUNC_SGX_EDMM_DETECT sgx_tests.sh sgx_edmm_detect
+SGX_XS_FUNC_SGX_NO_HEAP_EXPANSION sgx_tests.sh sgx_no_heap_expansion
+SGX_XS_FUNC_EXPAND_HEAP sgx_tests.sh sgx_expand_heap
+SGX_XS_FUNC_NO_STACK_EXPANSION sgx_tests.sh sgx_no_stack_expansion
+SGX_XS_FUNC_EXPAND_STACK sgx_tests.sh sgx_expand_stack
+
+# SGX_S_FUNC_BOOTLESS_LOCAL_ATTESTATION_NEGTIVE sgx_tests.sh bootless_local_attestation_negtive
+# SGX_S_FUNC_BOOTLESS_LOCAL_ATTESTATION sgx_tests.sh bootless_local_attestation
+# SGX_S_FUNC_UPDATE_SVN sgx_tests.sh update_svn
+# SGX_S_FUNC_BOOTLESS_ENCLAVE_CREATE sgx_tests.sh bootless_enclave_create

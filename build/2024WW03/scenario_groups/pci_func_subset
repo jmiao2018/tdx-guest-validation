@@ -1,0 +1,2 @@
+# This file contains all the functional tests for LCK PCI driver
+ddt_intel/pci_func_tests

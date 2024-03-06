@@ -1,0 +1,8 @@
+# @name Power Management pstate tests
+# @desc intel pstate Tests for Power Management driver.
+# @requires powermgr
+# @setup_requires
+# @package_requires msr-tools
+
+POWER_XS_FUNC_INTELPSTATE_HT_SLIBING_FREQ_POWERSAVE_LIMIT powermgr_pstate_freq_step_tests.sh -t yes -m powersave -c all
+POWER_XS_FUNC_INTELPSTATE_HT_SLIBING_FREQ_PERF_LIMIT powermgr_pstate_freq_step_tests.sh -t yes -m performance -c all

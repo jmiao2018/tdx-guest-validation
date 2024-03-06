@@ -1,0 +1,6 @@
+# @name UART_SET_BAUDRATE_TESTS
+# @desc uart set baudrate tests
+# @requires uart
+# @setup_requires
+
+UART_XS_FUNC_SET_BAUDRATE uart_set_baudrate.sh

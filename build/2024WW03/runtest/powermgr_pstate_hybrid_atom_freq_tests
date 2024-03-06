@@ -1,0 +1,10 @@
+# @name Power Management pstate tests
+# @desc intel pstate Tests for Power Management driver.
+# @requires powermgr
+# @setup_requires
+# @package_requires msr-tools
+
+POWER_XS_FUNC_SINGLE_HYBRID_ATOM_CPUFREQ_POWERSAVE_TURBO powermgr_pstate_freq_tests.sh -t yes -m powersave -c atom
+POWER_XS_FUNC_SINGLE_HYBRID_ATOM_CPUFREQ_PERF_TURBO powermgr_pstate_freq_tests.sh -t yes -m performance -c atom
+POWER_XS_FUNC_SINGLE_HYBRID_ATOM_CPUFREQ_POWERSAVE powermgr_pstate_freq_tests.sh -t no -m powersave -c atom
+POWER_XS_FUNC_SINGLE_HYBRID_ATOM_CPUFREQ_PERF powermgr_pstate_freq_tests.sh -t no -m performance -c atom

@@ -1,0 +1,8 @@
+# @name CAN_FUNC_SR_TESTS
+# @desc can with sr tests
+# @requires ose_can
+# @setup_requires
+
+# CAN SR test
+CAN_XS_FUNC_DISK can_tests.sh -t disk
+CAN_XS_FUNC_MEM can_tests.sh -t mem

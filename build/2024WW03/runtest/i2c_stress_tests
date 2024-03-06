@@ -1,0 +1,7 @@
+# @name I2C_STRESS_TESTS_SUBSET_0
+# @desc I2C_STRESS_TESTS_SUBSET_0 perform stress tests for I2C driver
+# @requires i2c
+# @utility_requires i2cdetect
+
+# LPSS: I2C driver
+I2C_S_STRESS_I2CDETECT_20TIMES i2c_tests.sh -c i2c_detect -l 20

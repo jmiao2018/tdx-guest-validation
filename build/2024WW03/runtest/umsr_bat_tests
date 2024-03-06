@@ -1,0 +1,7 @@
+# @name UMSR_BAT_TESTS
+# @desc user msr BAT test cases for related cpuflag and cpuid check
+# @requires umsr
+
+UMSR_XS_BAT_UMSR_CPUINFO cpu_bat.sh -n umsr -f user_msr
+UMSR_XS_BAT_UMSR_CPUID cpu_bat.sh -n umsr -p "7 0 1 0 d 15"
+

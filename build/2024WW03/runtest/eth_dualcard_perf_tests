@@ -1,0 +1,15 @@
+# @name Ethernet performance using IPERF on two interfaces simultaneously
+# @desc Run Iperf as a server in a host PC on two different interfaces
+# and as a client in the target machine
+# Test different window sizes, from 16K to 256K
+# @requires eth/dual_mac
+# @utility_requires ethtool udhcpc iperf
+
+ETH_XS_PERF_DUALIPERF_16K source 'eth_common.sh'; iface=`get_eth_iface_name.sh -t all` || (test_print_trc "error getting eth interface name"; exit 2); arr=($iface); echo ${arr[@]}; if [ "${#arr[@]}" -ne "2" ] ; then test_print_trc "Only two ethernet interfaces are expected but found ${#arr[@]} interfaces. This is a dual mac test."; exit 2; fi;do_cmd ipaddr1=`get_eth_ipaddr.sh -i ${arr[1]}`;do_cmd ipaddr2=`get_eth_ipaddr.sh -i ${arr[0]}`;echo ===$ipaddr1,$ipaddr2===;run_processes.sh -c "run_iperf.sh -B $ipaddr1  -w 16K# run_iperf.sh -B $ipaddr2  -w 16K"
+
+ETH_XS_PERF_DUALIPERF_256K source 'eth_common.sh'; iface=`get_eth_iface_name.sh -t all` || (test_print_trc "error getting eth interface name"; exit 2); arr=($iface); echo ${arr[@]}; if [ "${#arr[@]}" -ne "2" ] ; then test_print_trc "Only two ethernet interfaces are expected but found ${#arr[@]} interfaces. This is a dual mac test."; exit 2; fi;ipaddr1=`get_eth_ipaddr.sh -i ${arr[1]}`;ipaddr2=`get_eth_ipaddr.sh -i ${arr[0]}`; run_processes.sh -c "run_iperf.sh -B $ipaddr1  -w 256K# run_iperf.sh -B $ipaddr2  -w 256K"
+
+ETH_XS_PERF_DUALIPERF_INTPAC_16K source 'eth_common.sh'; iface=`get_eth_iface_name.sh -t all` || (test_print_trc "error getting eth interface name"; exit 2); arr=($iface); echo ${arr[@]}; if [ "${#arr[@]}" -ne "2" ] ; then test_print_trc "Only two ethernet interfaces are expected but found ${#arr[@]} interfaces. This is a dual mac test."; exit 2; fi; ipaddr1=`get_eth_ipaddr.sh -i ${arr[1]}`;ipaddr2=`get_eth_ipaddr.sh -i ${arr[0]}`;for intface in "${arr[@]}"; do do_cmd "set_ethtool_coalesce_options.sh -d $intface -p 'rx-usecs' -n 500"; done; run_processes.sh -c "run_iperf.sh -B $ipaddr1  -w 16K# run_iperf.sh -B $ipaddr2  -w 16K"; for intface in "${arr[@]}"; do do_cmd "set_ethtool_coalesce_options.sh -d $intface -p 'rx-usecs' -n 16"; done
+
+ETH_XS_PERF_DUALIPERF_INTPAC_256K source 'eth_common.sh'; iface=`get_eth_iface_name.sh -t all` || (test_print_trc "error getting eth interface name"; exit 2); arr=($iface); echo ${arr[@]}; if [ "${#arr[@]}" -ne "2" ] ; then test_print_trc "Only two ethernet interfaces are expected but found ${#arr[@]} interfaces. This is a dual mac test."; exit 2; fi; ipaddr1=`get_eth_ipaddr.sh -i ${arr[1]}`;ipaddr2=`get_eth_ipaddr.sh -i ${arr[0]}`; for intface in "${arr[@]}"; do do_cmd "set_ethtool_coalesce_options.sh -d $intface -p 'rx-usecs' -n 500"; done; run_processes.sh -c "run_iperf.sh -B $ipaddr1  -w 256K# run_iperf.sh -B $ipaddr2  -w 256K"; for intface in "${arr[@]}"; do do_cmd "set_ethtool_coalesce_options.sh -d $intface -p 'rx-usecs' -n 16"; done
+

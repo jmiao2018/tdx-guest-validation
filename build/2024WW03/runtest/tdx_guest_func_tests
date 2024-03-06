@@ -1,0 +1,17 @@
+# @name tdx_guest_func_tests
+# @desc Check tdx guest func status
+# @requires tdx
+# @setup_requires
+# @utility_requires
+
+TDX_XS_FUNC_GUEST_LAZY_ACCEPT_VMSTAT tdx_guest_func.sh -t LAZY_ACCEPT_VMSTAT
+TDX_XS_FUNC_GUEST_LAZY_ACCEPT_MEMINFO tdx_guest_func.sh -t LAZY_ACCEPT_MEMINFO
+TDX_XS_FUNC_GUEST_LAZY_ACCEPT_NEG tdx_guest_func.sh -t LAZY_ACCEPT_NEG
+TDX_XS_FUNC_GUEST_EBIZZY tdx_guest_func.sh -t EBIZZY_FUNC
+TDX_M_FUNC_GUEST_COPY_LARGE_FILE tdx_guest_func.sh -t COPY_LARGE_FILE
+TDX_M_FUNC_GUEST_BUILD_KERNEL tdx_guest_func.sh -t BUILD_KERNEL
+TDX_XS_FUNC_GUEST_ATTEST_GET_TDREPORT tdx_guest_func.sh -t GET_TDREPORT
+TDX_XS_FUNC_GUEST_ATTEST_VERIFY_TDREPORT tdx_guest_func.sh -t VERIFY_TDREPORT
+TDX_XS_FUNC_GUEST_ATTEST_GET_TDQUOTE tdx_guest_func.sh -t GET_TDQUOTE
+TDX_XS_FUNC_GUEST_ATTEST_EXTEND_RTMR tdx_guest_func.sh -t EXTEND_RTMR
+TDX_XS_FUNC_GUEST_VE_HANDLER_HALT tdx_guest_func.sh -t VE_HALT

@@ -1,0 +1,23 @@
+# @name Power Management pstate tests
+# @desc intel pstate Tests for Power Management driver on Broadwell-U x86_64 HW platform.
+# @requires powermgr
+# @setup_requires
+# @package_requires msr-tools
+
+POWER_XS_FUNC_HWP_S3 powermgr_pstate_tests.sh -c 1
+POWER_XS_FUNC_INTELPSTATE_MAX_CPUFREQ powermgr_pstate_tests.sh -c 2
+POWER_XS_FUNC_TURBO_NOTURBO powermgr_pstate_tests.sh -c 3
+POWER_XS_FUNC_INTELPSTATE_GOVERNOR_PERF powermgr_pstate_tests.sh -c 4
+POWER_XS_FUNC_INTELPSTATE_GOVERNOR_PWRSAVE powermgr_pstate_tests.sh -c 5
+POWER_XS_FUNC_INTELPSTATE_MAXPERFPCT_50 powermgr_pstate_tests.sh -c 6
+POWER_XS_FUNC_INTELPSTATE_MINPERFPCT_50 powermgr_pstate_tests.sh -c 7
+POWER_XS_FUNC_CPU_HOTPLUG powermgr_pstate_tests.sh -c 8
+POWER_XS_FUNC_HWP_S2IDLE powermgr_pstate_tests.sh -c 9
+POWER_XS_FUNC_DEFAULT_GOV_EPP powermgr_pstate_tests.sh -c 10
+POWER_XS_FUNC_GOV_PERF_EPP_PERF powermgr_pstate_tests.sh -c 11
+POWER_XS_FUNC_GOV_POWERSAVE_EPP_PERF powermgr_pstate_tests.sh -c 15
+POWER_XS_FUNC_GOV_POWERSAVE_EPP_BALANCE_PERF powermgr_pstate_tests.sh -c 16
+POWER_XS_FUNC_GOV_POWERSAVE_EPP_BALANCE_POWER powermgr_pstate_tests.sh -c 17
+POWER_XS_FUNC_GOV_POWERSAVE_EPP_POWER powermgr_pstate_tests.sh -c 18
+POWER_XS_FUNC_HWP_CPU_HOTPLUG powermgr_pstate_tests.sh -c 19
+POWER_XS_FUNC_INTELPSTATE_SINGLE_CPU_FREQ powermgr_pstate_tests.sh -c 20

@@ -1,0 +1,8 @@
+# @name TGPIO_FUNC_SR_TESTS
+# @desc TGPIO s/r tests
+# @requires tgpio
+# @setup_requires
+
+# TGPIO s/r test
+TGPIO_PMC_XS_FUNC_DISK tgpio_tests.sh -m pmc -t disk
+TGPIO_PMC_XS_FUNC_MEM tgpio_tests.sh -m pmc -t mem

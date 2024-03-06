@@ -1,0 +1,34 @@
+{
+    "name": "SATA_M_FUNC_EXT4_DD_RW_10G",
+    "initial_platform": "",
+    "cmdline": "blk_device_dd_readwrite_test.sh -f \"ext4\" -b \"1M\" -c \"1024\" -l 10 -w -d \"sata\"",
+    "steps": [],
+    "flags": [],
+    "summary": "Find, format in 'ext4' and mount device node. Write a file of 10G size",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "sata_ext4_func_tests",
+    "domain": "IO",
+    "feature": "SATA",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free sata disk partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-10-15T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

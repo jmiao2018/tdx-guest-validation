@@ -1,0 +1,6 @@
+#This file contains all the tests for PCI/PCIe driver
+ddt_intel/pci_bat_subset
+ddt_intel/pci_4.0_bat_tests
+ddt_intel/pci_func_subset
+ddt_intel/pci_perf_subset
+ddt_intel/pci_stress_subset

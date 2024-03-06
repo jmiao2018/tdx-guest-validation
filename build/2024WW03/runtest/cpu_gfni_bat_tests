@@ -1,0 +1,7 @@
+# @name CPU_GFNI_BAT_TESTS
+# @desc Check gfni cpuinfo and cpuid
+# @requires cpu/gfni
+# @setup_requires
+
+CPU_XS_BAT_GFNI_CPU_INFO_TEST cpu_bat.sh -n gfni -f gfni
+CPU_XS_BAT_GFNI_CPU_ID_TEST cpu_bat.sh -n gfni -p "7 1 0 1 c 8"

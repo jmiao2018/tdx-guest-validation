@@ -1,0 +1,13 @@
+# @name CAN_FUNC_TESTS
+# @desc can func tests
+# @requires ose_can
+# @setup_requires
+
+# CAN func test
+CAN_XS_FUNC_DEVICES_IFCONFIG can_tests.sh -t interface
+CAN_XS_FUNC_RW_LOOP can_tests.sh -t rw_loop
+CAN_XS_FUNC_RW_LISTEN can_tests.sh -t rw_listen
+CAN_XS_FUNC_BASIC can_tests.sh -t basic
+CAN_XS_FUNC_BITRATE can_tests.sh -t bitrate
+CAN_XS_FUNC_START_STOP  can_tests.sh -t ss
+CAN_XS_FUNC_FD  can_tests.sh -t fd

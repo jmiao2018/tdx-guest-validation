@@ -1,0 +1,36 @@
+{
+    "name": "USBHOST_XS_FUNC_TRACE",
+    "initial_platform": "",
+    "cmdline": "usb_trace_tests.sh -t host",
+    "steps": [],
+    "flags": [],
+    "summary": "USB XHCI trace check",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usbhost_bat_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2017-11-25T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure a usb device is connected"
+}

@@ -1,0 +1,14 @@
+# @name CPU_SL_SUSPEND_RESUME_TESTS
+# @desc CPU SL freeze s3 s4
+# @requires cpu/sl
+# @setup_requires
+# @package_requires msr-tools
+
+CPU_XS_FUNC_SL_ON_USER_MODE_FREEZE  sl_func.sh -t user_s2idle -p "split_lock_detect=on"
+CPU_XS_FUNC_SL_ON_USER_MODE_S3  sl_func.sh -t user_s3 -p "split_lock_detect=on"
+CPU_XS_FUNC_SL_OFF_USER_MODE_FREEZE  sl_func.sh -t user_s2idle -p "split_lock_detect=off"
+CPU_XS_FUNC_SL_OFF_USER_MODE_S4  sl_func.sh -t user_s4 -p "split_lock_detect=off"
+CPU_XS_FUNC_SL_ON_ROOT_MODE_FREEZE  sl_func.sh -t root_s2idle -p "split_lock_detect=on"
+CPU_XS_FUNC_SL_ON_ROOT_MODE_S4  sl_func.sh -t root_s4 -p "split_lock_detect=on"
+CPU_XS_FUNC_SL_OFF_ROOT_MODE_FREEZE  sl_func.sh -t root_s4 -p "split_lock_detect=off"
+CPU_XS_FUNC_SL_OFF_ROOT_MODE_S3  sl_func.sh -t root_s3 -p "split_lock_detect=off"

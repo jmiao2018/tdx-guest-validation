@@ -1,0 +1,8 @@
+# @name DSA_PERFMON_FUNC_TESTS
+# @desc DSA perfmon functional tests
+# @requires dsa && dsa_perfmon
+# @utility_requires
+
+DSA_PERFMON_XS_FUNC_DRIVER_LOAD_UNLOAD dsa_perfmon_tests.sh -t driver
+DSA_PERFMON_XS_FUNC_CPU_HOTPLUG dsa_perfmon_tests.sh -t cpu_hotplug_test
+DSA_PERFMON_XS_FUNC_ALL dsa_perfmon_tests.sh -t all

@@ -1,0 +1,6 @@
+# @name CPU_RDT_MBA_FUNC_TESTS
+# @desc Perf MBA function tests
+# @requires cpu/rdt_mba
+# @setup_requires
+
+CPU_XS_FUNC_RDT_MBA_PER_THREAD_ENABLE rdt_func.sh -t mba_perthread_enable

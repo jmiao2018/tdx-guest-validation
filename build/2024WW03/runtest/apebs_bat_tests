@@ -1,0 +1,26 @@
+# @name APEBS_FUNC_TESTS
+# @desc Adaptive PEBS basic tests
+# @requires apebs
+# @setup_requires
+
+# Adaptive PEBS test
+ADAPTIVE_PEBS_XS_FUNC_LBR_LEVEL_1 apebs_tests.sh -t lbr_1 -w 0
+ADAPTIVE_PEBS_XS_FUNC_LBR_LEVEL_2 apebs_tests.sh -t lbr_2 -w 0
+ADAPTIVE_PEBS_XS_FUNC_XMM_LEVEL_1 apebs_tests.sh -t xmm_1 -w 0
+ADAPTIVE_PEBS_XS_FUNC_XMM_LEVEL_2 apebs_tests.sh -t xmm_2 -w 0
+ADAPTIVE_PEBS_XS_FUNC_IP_LEVEL_1 apebs_tests.sh -t ip_1 -w 0
+ADAPTIVE_PEBS_XS_FUNC_IP_LEVEL_2 apebs_tests.sh -t ip_2 -w 0
+ADAPTIVE_PEBS_XS_FUNC_BENCHMARK apebs_tests.sh -t benchmark -w 0
+ADAPTIVE_PEBS_XS_FUNC_LARGE_PEBS apebs_tests.sh -t large_pebs -w 0
+ADAPTIVE_PEBS_XS_FUNC_DATA_SRC apebs_tests.sh -t data_src -w 0
+ADAPTIVE_PEBS_XS_FUNC_WITH_SR apebs_tests.sh -t sr -w 0
+ADAPTIVE_PEBS_XS_FUNC_LBR_LEVEL_1_W_1 apebs_tests.sh -t lbr_1 -w 1
+ADAPTIVE_PEBS_XS_FUNC_LBR_LEVEL_2_W_1 apebs_tests.sh -t lbr_2 -w 1
+ADAPTIVE_PEBS_XS_FUNC_XMM_LEVEL_1_W_1 apebs_tests.sh -t xmm_1 -w 1
+ADAPTIVE_PEBS_XS_FUNC_XMM_LEVEL_2_W_1 apebs_tests.sh -t xmm_2 -w 1
+ADAPTIVE_PEBS_XS_FUNC_IP_LEVEL_1_W_1 apebs_tests.sh -t ip_1 -w 1
+ADAPTIVE_PEBS_XS_FUNC_IP_LEVEL_2_W_1 apebs_tests.sh -t ip_2 -w 1
+ADAPTIVE_PEBS_XS_FUNC_BENCHMARK_W_1 apebs_tests.sh -t benchmark -w 1
+ADAPTIVE_PEBS_XS_FUNC_LARGE_PEBS_W_1 apebs_tests.sh -t large_pebs -w 1
+ADAPTIVE_PEBS_XS_FUNC_DATA_SRC_W_1 apebs_tests.sh -t data_src -w 1
+ADAPTIVE_PEBS_XS_FUNC_WITH_SR_W_1 apebs_tests.sh -t sr -w 1

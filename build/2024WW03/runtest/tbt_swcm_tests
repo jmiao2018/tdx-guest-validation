@@ -1,0 +1,7 @@
+# @name TBT_SWCM_TESTS
+# @desc Check Thunderbolt Software Conncetion Manager tests
+# @requires tbt
+# @setup_requires
+
+TBT_XS_FUNC_SWCM_VERIFY_TEST tbt_func_test.sh -s swcm_verify
+TBT_XS_FUNC_SWCM_LOOP_TRANSFER_PKG_TEST tbt_func_test.sh -s loop_transfer

@@ -1,0 +1,20 @@
+# @name EMMC-STRESS-TESTS
+# @desc EMMC-STRESS-TESTS perform all stress Test Cases for ext2
+# @requires emmc && ext2
+# @setup_requires
+
+#EXT2 FS TC's
+EMMC_M_STRESS_EXT2_DD_RW_100M blk_device_dd_readwrite_test.sh -f 'ext2' -b '10M' -c '10' -d 'emmc' -l '100'
+
+EMMC_L_STRESS_EXT2_CP_100M blk_device_dd_readwrite_test.sh -f 'ext2' -b '10M' -c '10' -i 'cp' -d 'emmc' -l '100'
+
+EMMC_M_STRESS_EXT2_WR_TARBALL blk_device_tarball_write_test.sh -f 'ext2' -d 'emmc' -T 'gz' -s '100M' -l '100'
+
+EMMC_M_STRESS_EXT2_DD_RW_10G blk_device_dd_readwrite_test.sh -f 'ext2' -b '1M' -c '1024' -d 'emmc' -l '10' -w
+
+EMMC_XL_STRESS_EXT2_DD_RW_20G blk_device_dd_readwrite_test.sh -f 'ext2' -b '1M' -c '1024' -d 'emmc' -l '20' -w
+
+#Format and FS Check TC's on EXT2
+EMMC_M_STRESS_EXT2_MKFS_W_PART blk_device_erase_format_part.sh -d 'emmc' -f 'ext2'
+
+EMMC_S_STRESS_EXT2_FSCK_W_PART blk_device_filesystem_check.sh -d 'emmc' -f 'ext2'

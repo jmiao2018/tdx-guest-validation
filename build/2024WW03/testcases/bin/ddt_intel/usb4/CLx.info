@@ -1,0 +1,8 @@
+0:Disabled state
+1:Training or Lane Bonding state
+10:CL0 state
+11:Transmitter in CL0s state
+100:Receiver in CL0s state
+101:CL1 state
+110:CL2 state
+111:CLd state

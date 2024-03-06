@@ -1,0 +1,13 @@
+# @name PMEM_BAT_TESTS
+# @desc perform BAT tests for persistent memory driver
+# @requires pmem
+
+PMEM_XS_BAT_DEV_NODE_CHECK pmem_bat_tests.sh -t check_dev_node
+PMEM_XS_BAT_CONFIG_ZONE_DEVICE cpu_bat.sh -k "CONFIG_ZONE_DEVICE=y"
+PMEM_XS_BAT_CONFIG_ACPI_NFIT cpu_bat.sh -k "CONFIG_ACPI_NFIT=m"
+PMEM_XS_BAT_CONFIG_X86_PMEM_LEGACY cpu_bat.sh -k "CONFIG_X86_PMEM_LEGACY=y"
+PMEM_XS_BAT_CONFIG_OF_PMEM cpu_bat.sh -k "CONFIG_OF_PMEM=m"
+PMEM_XS_BAT_CONFIG_LIBNVDIMM cpu_bat.sh -k "CONFIG_LIBNVDIMM=y"
+PMEM_XS_BAT_CONFIG_NVDIMM_PFN cpu_bat.sh -k "CONFIG_NVDIMM_PFN=y"
+PMEM_XS_BAT_CONFIG_NVDIMM_DAX cpu_bat.sh -k "CONFIG_NVDIMM_DAX=y"
+PMEM_XS_BAT_CONFIG_FS_DAX_PMD cpu_bat.sh -k "CONFIG_FS_DAX_PMD=y"

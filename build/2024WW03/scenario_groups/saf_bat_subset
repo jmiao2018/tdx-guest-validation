@@ -1,0 +1,7 @@
+# This file contains all the Basic Acceptance Tests for LCK SAF driver
+ddt_intel/saf_basic_func_tests
+ddt_intel/saf_reload_func_tests
+ddt_intel/saf_interrupt_func_tests
+ddt_intel/saf_inject_func_tests
+#ddt_intel/saf_offline_func_tests
+

@@ -1,0 +1,34 @@
+{
+    "name": "EMMC_S_PERF_EXT3_100M_SYNC",
+    "initial_platform": "",
+    "cmdline": "blk_device_filesystem_perf_test.sh -f 'ext3' -s '100' -o 'sync' -B '262144' -d 'emmc'",
+    "steps": [],
+    "flags": [],
+    "summary": "Find, format in 'ext3' and mount device node. Write a file of 100M size with a buffer size of: 262144 bytes. Mount mode: 'sync'",
+    "status": "Closed",
+    "priority": "P4",
+    "scenario": "emmc_ext3_perf_tests",
+    "domain": "IO",
+    "feature": "eMMC",
+    "owner": "hongyuni",
+    "testType": "PERF",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free EMMC partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-12-04T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

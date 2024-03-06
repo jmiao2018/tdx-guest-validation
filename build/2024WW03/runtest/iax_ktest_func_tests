@@ -1,0 +1,9 @@
+# @name IAX_KTEST_FUNC_TESTS
+# @desc IAX kernel level functional tests
+# @requires iax
+# @utility_requires
+
+IAX_XS_FUNC_KTEST_2C_4T_1000 idxd_ktest.sh -d iax -c 2 -t 4 -i 1000
+IAX_XS_FUNC_KTEST_4C_2T_1000 idxd_ktest.sh -d iax -c 4 -t 2 -i 1000
+IAX_XS_FUNC_KTEST_8C_1T_1000 idxd_ktest.sh -d iax -c 8 -t 1 -i 1000
+IAX_XS_FUNC_KTEST_32C_2T_1000 idxd_ktest.sh -d iax -c 32 -t 2 -i 1000

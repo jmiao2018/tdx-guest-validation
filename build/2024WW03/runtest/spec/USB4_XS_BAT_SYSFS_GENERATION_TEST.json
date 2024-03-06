@@ -1,0 +1,43 @@
+{
+    "name": "USB4_XS_BAT_SYSFS_GENERATION_TEST",
+    "initial_platform": "",
+    "cmdline": "usb4_tests.sh -s generation",
+    "steps": [],
+    "flags": [],
+    "summary": "check /sys/bus/thunderbolt/devices/0-0/generation should be 4",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usb4_bat_tests",
+    "domain": "IO",
+    "feature": "USB4",
+    "owner": "xupengfe",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB4",
+            "values": [
+                "m"
+            ],
+            "description": "For USB4 enabling"
+        },
+        {
+            "name": "CONFIG_USB4_NET",
+            "values": [
+                "m"
+            ],
+            "description": "For USB4 net  enabling"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-03-10T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

@@ -1,0 +1,36 @@
+{
+    "name": "CXL_XS_BAT_CXL_PCI_CHECK_TEST",
+    "initial_platform": "",
+    "cmdline": "cxl_tests.sh -s cxl_pci_dmesg",
+    "steps": [],
+    "flags": [],
+    "summary": "Check is there CXL PCI info in dmesg, which show really CXL PCI exist on platforms",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cxl_bat_tests",
+    "domain": "IO",
+    "feature": "CXL",
+    "owner": "xupengfe",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_PCI_CXL",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CXL"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-04-27T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

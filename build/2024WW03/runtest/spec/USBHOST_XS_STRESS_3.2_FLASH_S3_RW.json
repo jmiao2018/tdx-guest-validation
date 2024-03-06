@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_XS_STRESS_3.2_FLASH_S3_RW",
+    "initial_platform": "",
+    "cmdline": "usb_suspend_resume_tests.sh -p 3.2 -t flash -s mem -m 1000",
+    "steps": [],
+    "flags": [],
+    "summary": "USB 3.2 flash device big data r/w + s3/reume stress test",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_3.2_stress_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 3.2 flash storage device",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-06-06T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure 3.x flash/uas device is connected as case name."
+}

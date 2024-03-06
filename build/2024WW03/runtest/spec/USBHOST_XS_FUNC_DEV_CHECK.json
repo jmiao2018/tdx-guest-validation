@@ -1,0 +1,36 @@
+{
+    "name": "USBHOST_XS_FUNC_DEV_CHECK",
+    "initial_platform": "",
+    "cmdline": "blk_device_bat_test.sh -d \"usb\" -c \"2\"",
+    "steps": [],
+    "flags": [],
+    "summary": "Check USB block device register in /sys/class/block",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usbhost_bat_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2017-10-31T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure a usb device is connected"
+}

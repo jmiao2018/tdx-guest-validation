@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_XS_STRESS_3.2_FLASH_MULTI_RW",
+    "initial_platform": "",
+    "cmdline": "usb_multi_rw_tests.sh -p 3.2 -t flash -b '10M' -c '100'  -m 1000 -n 1000",
+    "steps": [],
+    "flags": [],
+    "summary": "USB 3.2 flash device multi thread r/w stress test",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_3.2_stress_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 3.2 flash storage device",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-02-22T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure 3.x flash/uas device is connected as case name."
+}

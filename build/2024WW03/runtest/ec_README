@@ -1,0 +1,136 @@
+                      EMBEDDED CONTROLLER (EC) TEST SUITE
+================================================================================
+
+1) TEST CASES OVERVIEW:
+================================================================================
+
+  1.1) In 'runtest/ddt_intel/upstream':
+
+                            AUTO    MANUAL
+                           ------   ------
+	'ec-func-tests'  :  7 TC
+	'ec-perf-tests'  :  1 TC
+	'ec-stress-tests':  4 TC
+
+  1.2) In 'scenario_groups':
+
+	'ec_all_tests': * ddt_intel/ec_func_tests
+                        * ddt_intel/ec_perf_tests
+                        * ddt_intel/ec_stress_tests
+
+2) PRECONDITIONS:
+================================================================================
+
+Before run EC test cases be aware you meet below preconditions:
+
+  2.1) Required utilities:
+
+       - apt-get install acpica-tools
+
+  2.2) For semi automated TCs:
+
+       - Locate 'Caps Lock' and 'Num Lock' keys in your keyboard.
+       - Locate 'Caps Lock', 'Num Lock' and 'Scroll Lock' LEDs in your board.
+       - Locate 'LID', 'Battery' and 'Docking' buttons/switch in your board.
+
+3) HOW TO RUN EC TEST CASES:
+================================================================================
+
+  3.1) To run an specific test scenario:
+
+       ./runtests.sh -p $PLATFORM -f ddt_intel/$TEST_SCENARIO -P $PLATFORM -o ./results
+
+  3.2) To run full test cases:
+
+       ./runtests.sh -p $PLATFORM -g ec_full_tests -P $PLATFORM -o ./results
+
+  3.3) To run manual EC test cases (TO BE INTEGRATED):
+
+       3.3.1) For: 'EC_FUNC_CAPS_LOCK_KEY'
+		   'EC_FUNC_NUM_LOCK_KEY'
+
+	      a) Before test you must have located 'Caps Lock' and 'Num Lock' keys.
+	      b) Test will ask you press such key. You have 5 seconds.
+	      c) Test verify if key's status has changed. Check EC transactions.
+	      d) Test will ask you press such key again. You have 5 seconds.
+	      c) Test verify if key's status has its original status. Check EC
+		 transactions.
+
+       3.3.2) For: 'EC_FUNC_LID_BUTTON'
+ 	    	   'EC_FUNC_BATTERY_BUTTON'
+		   'EC_FUNC_DOCKING_BUTTON'
+
+               a) Before test you must have located 'LID', 'Battery' and
+		  'Docking' buttons/switch.
+               b) Test will ask you press such buttons/switch. You have 5 seconds.
+               c) Test verify if buttons/switch's status has changed.
+		  Check EC transactions.
+               d) Test will ask you press such buttons/switch again. You have 5 seconds.
+               c) Test verify if buttons/switch's status has its original status.
+		  Check EC transactions.
+
+       3.3.3) For: 'EC_PERF_BUTTON_EVENT_WHILE_SUSPEND'
+
+	       a) Test will suspend system.
+	       b) While suspend, you must change status of whatever, 'LID', 'Battery'
+		  or 'Docking' button/switch.
+	       c) System will resume.
+	       d) Test check if button/switch status has changed.
+		  Check EC transactions.
+
+       3.3.4) For: 'EC_STRESS_BUTTON_EVENT_20_TIMES'
+
+	       a) Same as '3.3.2'. Repeat 20 times.
+
+       3.3.5) For: 'EC_STRESS_CAPS_LOCK_KEY_20_TIMES'
+		   'EC_STRESS_NUM_LOCK_KEY_20_TIMES'
+
+	       a) Same as '3.3.1'. Repeat 20 times.
+
+4) TEST PLAN:
+================================================================================
+
+Test Plan: https://docs.google.com/spreadsheets/d/18i0eSf67J3Af35XoNP831O1VqjXFG7VbeuDl660Y2fc/edit#gid=303960539
+
+Progress: https://docs.google.com/spreadsheets/d/14rYCp_HOUeik4MO_Z6GpSs0biZrynKzkqaIPJMmbh94/edit#gid=1793159889
+
+5) TO DOs:
+================================================================================
+
+        5.1) Port from LCK-GDC suite to LTP-DDT:
+
+	     a) Functional:
+   	     	- EC_FUNC_CAPS_LOCK_KEY
+   	     	- EC_FUNC_NUM_LOCK_KEY
+   	     	- EC_FUNC_LID_BUTTON
+   	     	- EC_FUNC_BATTERY_BUTTON
+   	     	- EC_FUNC_DOCKING_BUTTON
+
+	     b) Performance:
+	     	- EC_PERF_BUTTON_EVENT_WHILE_SUSPEND
+
+	     c) Stress:
+	        - EC_STRESS_BUTTON_EVENT_20_TIMES
+	        - EC_STRESS_CAPS_LOCK_KEY_20_TIMES
+	        - EC_STRESS_NUM_LOCK_KEY_20_TIMES
+
+       5.2) To develope in LTP-DDT:
+
+	     a) Functional:
+                - EC_XS_FUNC_REFCOUNT
+                - EC_FUNC_LOAD_EC_SYS_AS_BUILTIN
+		- EC_FUNC_LOAD_EC_SYS_AS_MODULE
+		- EC_FUNC_UNLOAD_EC_SYS_AS_MODULE
+		- EC_FUNC_VERIFY_BINDING
+
+	     b) Performance:
+		- EC_PERF_CHECK_DRIVER_AFTER_10_S3
+		- EC_PERF_CHECK_DRIVER_AFTER_10_S4
+		- EC_SYS_KPI_BOOT_TIME
+		- EC_SYS_KPI_SUSPEND_TIME
+		- EC_SYS_KPI_RESUME_TIME
+
+6) CONTACT:
+================================================================================
+
+Juan Carlos Alonso <juan.carlos.alonso@intel.com>

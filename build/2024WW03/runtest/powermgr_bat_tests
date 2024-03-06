@@ -1,0 +1,40 @@
+# @name Power Management BAT tests
+# @desc Basic Acceptance Tests for Power Management driver on Broadwell-U x86_64 HW platform.
+# @requires powermgr
+# @setup_requires
+
+#check kernel configuration
+POWER_XS_FUNC_CHK_KCFG_INTELIDLE powermgr_kconfig_check.sh -o y -c "$INTELIDLE_KCONFIG"
+POWER_XS_FUNC_CHK_KCFG_INTELPSTATE powermgr_kconfig_check.sh -o y -c "$INTELPSTATE_KCONFIG"
+
+#check dmesg of driver initcall
+POWER_XS_FUNC_INTELIDLE_INITCALL powermgr_dmesg_check.sh -t debug -p "$INTELIDLE_PATTERN"
+POWER_XS_FUNC_INTELIDLE_INITTIME powermgr_dmesg_check.sh -t time -p "$INTELIDLE_PATTERN"
+POWER_XS_FUNC_INTELPSTATE_INITCALL powermgr_dmesg_check.sh -t debug -p "$INTEL_PSTATE_PATTERN"
+POWER_XS_FUNC_INTELPSTATE_INITTIME powermgr_dmesg_check.sh -t time -p "$INTEL_PSTATE_PATTERN"
+POWER_XS_FUNC_CPUFREQ_INITCALL powermgr_dmesg_check.sh -t debug -p "$CPUFREQ_PATTERN"
+POWER_XS_FUNC_CPUFREQ_INITTIME powermgr_dmesg_check.sh -t time -p "$CPUFREQ_PATTERN"
+POWER_XS_FUNC_PMC_CORE_INITCALL powermgr_dmesg_check.sh -t debug -p "$PMC_CORE_PATTERN"
+
+#check sysfs procfs
+POWER_XS_FUNC_CHK_INTELIDLE_SYSFS powermgr_interface_check.sh -c 1
+POWER_XS_FUNC_CHK_INTELPSTATE_SYSFS powermgr_interface_check.sh -c 2
+POWER_XS_FUNC_CHK_CPUFREQ_SYSFS powermgr_interface_check.sh -c 9
+POWER_XS_FUNC_CHK_IDLE_DRV powermgr_interface_check.sh -c 3
+POWER_XS_FUNC_CHK_CPUFREQ_DRV powermgr_interface_check.sh -c 4
+POWER_XS_FUNC_CHK_ALL_S4_MODES powermgr_interface_check.sh -c 6
+# FIXME: /sys/power/image_size is writeable, check its default/preferred value is meaningless
+# POWER_XS_FUNC_CHK_S4_IMGSIZE powermgr_interface_check.sh -c 7
+POWER_XS_FUNC_CHK_S4_SWAPSIZE powermgr_interface_check.sh -c 8
+POWER_XS_FUNC_CHK_CPUFREQ_GOV powermgr_interface_check.sh -c 10
+
+# Check ACPI external resolution errors during Linux OS booting
+POWER_XS_FUNC_BOOTING_ACPI_ERROR powermgr_acpi_error_check.sh
+
+# Check system available clock source list
+POWER_XS_FUNC_SYSTEM_CLOCKSOURCE_CHECK powermgr_system_clocksource_check.sh
+# Check s0ix substate enable flag status in intel_pmc_core sysfs
+#POWER_XS_FUNC_S0IX_ENABLE_STATUS_FLAG_CHECK powermgr_interface_check.sh -c 11
+
+#Check which cstate table the intel_idle driver refers to
+POWER_XS_FUNC_CSTATE_NAME powermgr_cstate_tests.sh -c 11

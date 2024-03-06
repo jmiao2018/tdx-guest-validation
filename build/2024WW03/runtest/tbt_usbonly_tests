@@ -1,0 +1,14 @@
+# @name TBT_USBONLY_TESTS
+# @desc Check Thunderbolt usbonly mode test
+# @requires tbt
+# @setup_requires
+
+TBT_XS_FUNC_USBONLY_CHECK tbt_func_test.sh -s "usb_check"
+TBT_XS_FUNC_USBONLY_PLUGOUT tbt_func_test.sh -s "usb_po"
+TBT_XS_FUNC_USBONLY_PLUGIN tbt_func_test.sh -s "usb_poi"
+TBT_XS_FUNC_USBONLY_SSD_REJECT tbt_func_test.sh -s "usb_ahci_ssd"
+TBT_XS_FUNC_USBONLY_USB2.0 tbt_func_test.sh -s "usb_2.0_check"
+TBT_XS_FUNC_USBONLY_USB3.0 tbt_func_test.sh -s "usb_3.0_check"
+TBT_XS_FUNC_USBONLY_FREEZE tbt_func_test.sh -s "usb_freeze"
+TBT_XS_FUNC_USBONLY_S3 tbt_func_test.sh -s "usb_s3"
+TBT_XS_FUNC_USBONLY_S4 tbt_func_test.sh -s "usb_s4"

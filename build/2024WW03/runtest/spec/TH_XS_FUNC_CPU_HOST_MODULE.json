@@ -1,0 +1,71 @@
+{
+    "name": "TH_XS_FUNC_CPU_HOST_MODULE",
+    "initial_platform": "",
+    "cmdline": "intel_th_tests.sh -t host_module",
+    "steps": [],
+    "flags": [],
+    "summary": "Check if in CPU host mode, load/unload modules are correctly.",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "th_host_mode_cpu_func_tests",
+    "domain": "CPU",
+    "feature": "Intel_TH",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_INTEL_TH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_ACPI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_GTH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_STH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_MSU",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_PTI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-05-11T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

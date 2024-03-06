@@ -1,0 +1,36 @@
+{
+    "name": "5LP_XS_BAT_KCONFIG_TEST",
+    "initial_platform": "",
+    "cmdline": "5lp_test.sh -r KCONFIG_TEST",
+    "steps": [],
+    "flags": [],
+    "summary": "5 level paging kconfig checking",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "5lp_bat_tests",
+    "domain": "Memory",
+    "feature": "5LP",
+    "owner": "hongyuni",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_5LEVEL",
+            "values": [
+                "Y"
+            ],
+            "description": "Enabling 5-level-paging"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2019-04-08T00:40:00.000-0700",
+    "link": "",
+    "tips": ""
+}

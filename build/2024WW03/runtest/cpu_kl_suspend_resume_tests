@@ -1,0 +1,9 @@
+# @name CPU_KL_SUSPEND_RESUME_TESTS
+# @desc verify key locker s0, s3 and s4 status
+# @requires cpu/kl
+# @setup_requires
+# @package_requires msr-tools
+
+CPU_XS_FUNC_KL_IWKEY_FREEZE  kl_func.sh -i 11
+CPU_XS_FUNC_KL_IWKEY_SUSPEND kl_func.sh -i 12
+CPU_XS_FUNC_KL_IWKEY_RESUME  kl_func.sh -i 13

@@ -1,0 +1,2 @@
+# This file contains all the power management tests for LCK USB 2.0 Host driver
+ddt_intel/usbhost_2.0_suspendresume_func_tests

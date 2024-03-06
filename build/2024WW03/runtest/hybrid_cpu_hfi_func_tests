@@ -1,0 +1,6 @@
+# @name HYBRID_CPU_HFI_FUNC_TESTS
+# @desc HYBRID_CPU_HFI_FUNC_TESTS perform functional tests for Hybrid CPU HFI
+# @requires hybrid_cpu
+# @setup_requires
+
+HYBRID_CPU_XS_FUNC_HFI hybrid_cpu_tests.sh -t hfi

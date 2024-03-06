@@ -1,0 +1,18 @@
+# @name CPU_LASS_FUNC_TESTS
+# @desc Check lass function
+# @requires cpu/lass
+# @setup_requires
+
+CPU_XS_FUNC_LASS_CALL_GTOD lass_test g
+CPU_XS_FUNC_LASS_READ_GTOD_ADDR lass_test r
+CPU_XS_FUNC_LASS_VMREAD_GTOD_ADDR lass_test v
+CPU_XS_FUNC_LASS_VSYSCALL_EXCEPTION lass_test d
+CPU_XS_FUNC_LASS_VSYSCALL_GTOD lass_test t
+CPU_XS_FUNC_LASS_VTIME_EMULATION lass_test e
+CPU_XS_FUNC_LASS_GET_VSYS_MAP lass_test m
+CPU_XS_FUNC_LASS_READ_KERNEL_ADDR lass_test i
+CPU_XS_FUNC_LASS_SIG_VSYS_ADDR sig_lass_check v
+CPU_XS_FUNC_LASS_SIG_ILLEGAL_ADDR sig_lass_check i
+CPU_XS_FUNC_LASS_SIG_RANDOM_KERNEL_ADDR sig_lass_check r
+CPU_XS_FUNC_LASS_SIG_EXECUTE_VSYS sig_lass_check e
+CPU_XS_FUNC_LASS_SIG_EXECUTE_RANDOM_KERNEL sig_lass_check f

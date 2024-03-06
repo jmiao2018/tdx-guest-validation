@@ -1,0 +1,5 @@
+#This file contains all the performance tests for LCK SATA driver
+ddt_intel/sata_ext2_perf_tests
+ddt_intel/sata_ext3_perf_tests
+ddt_intel/sata_ext4_perf_tests
+ddt_intel/sata_vfat_perf_tests

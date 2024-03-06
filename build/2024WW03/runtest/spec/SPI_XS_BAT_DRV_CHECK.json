@@ -1,0 +1,64 @@
+{
+    "name": "SPI_XS_BAT_DRV_CHECK",
+    "initial_platform": "",
+    "cmdline": "driver_sysfs.sh -d \"spi\" -p",
+    "steps": [],
+    "flags": [],
+    "summary": "spi driver precondititions, kconfig & driver path check",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "spi_bat_tests",
+    "domain": "LPSS_IO",
+    "feature": "SPI",
+    "owner": "hongyuni",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_SPI_SPIDEV",
+            "values": [
+                "m"
+            ],
+            "description": "SPI test device /dev/spidevX.Y driver module"
+        },
+        {
+            "name": "CONFIG_SPI",
+            "values": [
+                "y"
+            ],
+            "description": "SPI controller device driver"
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "Serial IO SPI controller 1 <Enabled>",
+            "path": "Intel Advanced Menu -> PCH IO config -> SerialIO config -> Serial IO SPI controller 1",
+            "description": "Enable SPI controller for test"
+        },
+        {
+            "name": "WITT/MITT Test Device -> <Enabled - SPI1>",
+            "path": "Intel Advanced Menu -> PCH-IO config -> SerialIO config -> WITT/MITT Test Device",
+            "description": "Enable SPI test device for under controller SPI1"
+        },
+        {
+            "name": "WITT/MITT Device Selection -> <WITT>",
+            "path": "Intel Advanced Menu -> PCH-IO config -> SerialIO config -> WITT/MITT Device Selection -> <WITT>",
+            "description": "Enable SPI test device for under controller SPI1"
+        },
+        {
+            "name": "VT-d -> <Disabled>",
+            "path": "Intel Advanced Menu -> System Agent (SA) config -> VT-d -> <Disabled>",
+            "description": "Disable VT-d to fully enable test on /dev/spidevX.Y"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2017-10-15T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

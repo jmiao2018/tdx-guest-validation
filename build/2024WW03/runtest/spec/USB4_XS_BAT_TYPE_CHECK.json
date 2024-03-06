@@ -1,0 +1,43 @@
+{
+    "name": "USB4_XS_BAT_TYPE_CHECK",
+    "initial_platform": "",
+    "cmdline": "usb4_tests.sh -s usb4_type",
+    "steps": [],
+    "flags": [],
+    "summary": "Check USB4 type, if there was no USB4 type will fail the case",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usb4_bat_tests",
+    "domain": "IO",
+    "feature": "USB4",
+    "owner": "xupengfe",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB4",
+            "values": [
+                "m"
+            ],
+            "description": "For USB4 enabling"
+        },
+        {
+            "name": "CONFIG_USB4_NET",
+            "values": [
+                "m"
+            ],
+            "description": "For USB4 net  enabling"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-12-01T14:01:50.000-0800",
+    "link": "",
+    "tips": ""
+}

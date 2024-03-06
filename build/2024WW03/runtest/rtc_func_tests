@@ -1,0 +1,37 @@
+# @name RTC_FUNC_TESTS
+# @desc RTC_FUNC_TESTS perform functional tests for rtc driver using hwclock command.
+# Set hardware clock to system clock and vice versa also perform functional tests
+# for rtc driver exercising alarm setting, time RW, IOCTL.
+# @requires rtc
+# @setup_requires
+# RTC Functional tests
+
+RTC_XS_FUNC_HWCLOCK_TIME_READ rtc_hwclock.sh -g "all"
+
+RTC_XS_FUNC_HWCLOCK_TIME_WRITE rtc_hwclock.sh -r "19980318.012504" -u
+
+RTC_XS_FUNC_SET_HCTOSYS rtc_hwclock.sh -r "19980318.012504" -y "rtc"
+
+RTC_XS_FUNC_SET_SYSTOHC rtc_hwclock.sh -s "19980318.012504" -y "sys"
+
+RTC_XS_FUNC_SET_ALARM_30_SECS rtc_tests -device /dev/rtc -ioctltest alarm -ioctltestarg 30
+
+RTC_XS_FUNC_IOCTL_RONLY_RD_1 rtc_tests -device /dev/rtc -loop 1 -ioctltest readtime -readonly
+
+RTC_XS_FUNC_IOCTL_RONLY_RD_10 rtc_tests -device /dev/rtc -loop 10 -ioctltest readtime -readonly
+
+RTC_XS_FUNC_READTIME_1 rtc_tests -device /dev/rtc -ioctltest readtime
+
+RTC_XS_FUNC_SETGETTIME rtc_tests -device /dev/rtc -ioctltest setgettime
+
+RTC_XS_FUNC_NEG_SETGETTIME rtc_tests -device /dev/rtc -ioctltest setgettime -readonly
+
+RTC_XS_FUNC_SETGETTIME_30_DAY rtc_tests -device /dev/rtc -ioctltest setgettime -ioctltestarg 1
+
+RTC_XS_FUNC_SETGETTIME_LEAP rtc_tests -device /dev/rtc -ioctltest setgettime -ioctltestarg 2
+
+RTC_XS_FUNC_SETGETTIME_NONLEAP rtc_tests -device /dev/rtc -ioctltest setgettime -ioctltestarg 3
+
+RTC_XS_FUNC_UPDATE_INT_ON_OFF rtc_tests -device /dev/rtc -ioctltest updateint
+
+RTC_XS_FUNC_MODIFY_IRQ_FREQ rtc_tests -device /dev/rtc -ioctltest modifyirqfreq -ioctltestarg ${RTC_MAX_IRQ_FREQ:-512}

@@ -1,0 +1,56 @@
+{
+    "name": "USBGADGET_XS_FUNC_MIDI_CONFIGFS",
+    "initial_platform": "",
+    "cmdline": "usb_gadget_tests.sh -m midi -t configfs",
+    "steps": [],
+    "flags": [],
+    "summary": "usb gadget work as midi with configfs",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "usbgadget_func_tests",
+    "domain": "IO",
+    "feature": "USB_GADGET",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_DWC3",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_USB_GADGET",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_USB_CONFIGFS",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "xDCI Support ",
+            "path": "Intel Advanced Menu -> PCH-IO Configuration -> USB Configuration",
+            "description": "Set as Enabled"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2017-11-01T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please connect 2 typec port together on one DUT. Please make sure gadget related modules/configfs kconfig  as case name are enabled."
+}

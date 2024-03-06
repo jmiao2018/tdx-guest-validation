@@ -1,0 +1,23 @@
+#This file contains all the tests for LCK USBHOST driver
+ddt_intel/usbhost_2.0_lpm_func_tests
+ddt_intel/usbhost_2.0_rw_raw_func_tests
+ddt_intel/usbhost_2.0_suspendresume_func_tests
+ddt_intel/usbhost_3.0_lpm_func_tests
+ddt_intel/usbhost_3.0_rw_raw_func_tests
+ddt_intel/usbhost_3.0_suspendresume_func_tests
+ddt_intel/usbhost_3.1_lpm_func_tests
+ddt_intel/usbhost_3.1_rw_raw_func_tests
+ddt_intel/usbhost_3.1_suspendresume_func_tests
+ddt_intel/usbhost_bat_tests
+ddt_intel/usbhost_ext2_func_tests
+ddt_intel/usbhost_ext2_perf_tests
+ddt_intel/usbhost_ext3_func_tests
+ddt_intel/usbhost_ext3_perf_tests
+ddt_intel/usbhost_ext4_func_tests
+ddt_intel/usbhost_ext4_perf_tests
+ddt_intel/usbhost_type-c_lpm_func_tests
+ddt_intel/usbhost_type-c_rw_raw_func_tests
+ddt_intel/usbhost_type-c_suspendresume_func_tests
+ddt_intel/usbhost_vfat_func_tests
+ddt_intel/usbhost_vfat_perf_tests
+ddt_intel/usbhost_3.1_udisksctl_func_tests

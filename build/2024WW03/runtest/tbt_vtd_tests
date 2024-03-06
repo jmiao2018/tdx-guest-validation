@@ -1,0 +1,7 @@
+# @name TBT_VTD_TESTS
+# @desc Check Thunderbolt VTD and IOMMU tests
+# @requires tbt
+# @setup_requires
+
+TBT_XS_FUNC_VTD_ENABLE_TEST tbt_func_test.sh -s vtd_enable
+TBT_XS_FUNC_VTD_IOMMU_VERIFY tbt_func_test.sh -s iommu_verify

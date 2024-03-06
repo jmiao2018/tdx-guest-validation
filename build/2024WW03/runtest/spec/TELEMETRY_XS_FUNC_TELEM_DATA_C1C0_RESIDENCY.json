@@ -1,0 +1,35 @@
+{
+    "name": "TELEMETRY_XS_FUNC_TELEM_DATA_C1C0_RESIDENCY",
+    "initial_platform": "",
+    "cmdline": "telemetry_tests.sh -t telem_data_c1c0_residency",
+    "steps": [],
+    "flags": [],
+    "summary": "C1/C0 residency check",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "telemetry_func_tests",
+    "domain": "CPU",
+    "feature": "TELEMETRY",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [
+        {
+            "name": "stress-ng",
+            "distribution": "",
+            "install": "yun install stress-ng",
+            "description": ""
+        }
+    ],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2021-02-25T13:30:04.000-0800",
+    "link": "",
+    "tips": ""
+}

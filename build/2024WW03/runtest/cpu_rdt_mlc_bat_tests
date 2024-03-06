@@ -1,0 +1,8 @@
+# @name CPU_RDT_MLC_BAT_TESTS
+# @desc Check RDT(resource director technology) cpuinfo and cpuid
+# @requires cpu/rdt_mlc
+# @setup_requires
+
+CPU_XS_BAT_RDT_MLC_RDT_A_TEST cpu_bat.sh -n rdt -f rdt_a
+CPU_XS_BAT_RDT_MLC_CAT_L2_TEST cpu_bat.sh -n rdt -f cat_l2
+CPU_XS_FUNC_RDT_MLC_PROCESS_TEST rdt_func.sh -t cache_processes_test -p "259 80 4096 200"

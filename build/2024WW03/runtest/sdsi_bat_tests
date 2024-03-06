@@ -1,0 +1,59 @@
+# @name INTEL SDSI BAT TESTS
+# @desc Intel SDSI Basic Acceptance Tests
+# @requires intel_sdsi
+# @utility_requires intel_sdsi
+# @setup_requires
+# @libpath_requires testcases/bin
+
+# INTEL_SDSI BAT Tests
+SDSI_XS_BAT_DRIVER_LOAD_UNLOAD intel_sdsi.sh -t  load_unload
+SDSI_XS_BAT_DRIVER_UNBIND_BIND intel_sdsi.sh -t driver_unbind_bind
+SDSI_XS_BAT_DRIVER_INTERFACE intel_sdsi.sh -t sdsi_sysfs
+SDSI_XS_BAT_DRIVER_NODE_PER_SOCKET intel_sdsi.sh -t sdsi_per_socket
+SDSI_XS_BAT_SYSFS_ATTRI_REGISTER intel_sdsi.sh -t sysfs_register_attri
+SDSI_XS_BAT_SYSFS_ATTRI_CERTIFICATE intel_sdsi.sh -t sysfs_certificate_attri
+SDSI_XS_BAT_SYSFS_ATTRI_TELEMETRY intel_sdsi.sh -t sysfs_telemetry_attri
+SDSI_XS_BAT_SYSFS_ATTRI_TELEMETRY_CURRENT intel_sdsi.sh -t sysfs_telemetry_current_attri
+SDSI_XS_BAT_AVAILABLE_DEVICES intel_sdsi.sh -t sdsi_devices
+SDSI_XS_BAT_PPIN intel_sdsi.sh -t sdsi_ppin
+SDSI_XS_BAT_NVRAM_CONTENT_ERR_CHECK intel_sdsi.sh -t nvram_content_err_check
+SDSI_XS_BAT_ENABLE_STATUS intel_sdsi.sh -t enable_status
+SDSI_XS_BAT_SOCKET_ID intel_sdsi.sh -t sdsi_socket_id
+SDSI_XS_BAT_READ_TELEMETRY intel_sdsi.sh -t read_meter_telemetry
+SDSI_XS_BAT_READ_TELE_MMRC_COUNTER intel_sdsi.sh -t read_tele_mmrc_counter
+SDSI_XS_BAT_READ_TELE_FEATURE_COUNTER intel_sdsi.sh -t read_tele_enabled_feature_counter
+SDSI_XS_BAT_METER_CURRENT_UPDATE intel_sdsi.sh -t verify_meter_current_update
+SDSI_XS_BAT_ERASE_AKC_SOCEKT0 intel_sdsi.sh -t erase_akc_socket0
+SDSI_XS_BAT_ERASE_AKC_SOCEKT1 intel_sdsi.sh -t erase_akc_socket1
+SDSI_XS_BAT_PROVSION_AKC_FOR_SOCEKT0 intel_sdsi.sh -t provision_akc_socket0
+SDSI_XS_BAT_PROVSION_AKC_FOR_SOCEKT1 intel_sdsi.sh -t provision_akc_socket1
+SDSI_XS_BAT_PROVSION_CAP_FOR_SOCEKT0 intel_sdsi.sh -t provision_cap_socket0
+SDSI_XS_BAT_PROVSION_CAP_FOR_SOCEKT1 intel_sdsi.sh -t provision_cap_socket1
+SDSI_XS_BAT_PROVSION_MISMATCHING_CAP intel_sdsi.sh -t provision_cap_socket_negative
+# GNR HW AKC and CAP FILES
+SDSI_XS_BAT_PROVSION_AKC_FOR_SOCEKT0_GNR intel_sdsi.sh -t provision_akc_socket0_gnr
+SDSI_XS_BAT_PROVSION_CAP_FOR_SOCEKT0_GNR_BASE intel_sdsi.sh -t provision_cap_socket0_gnr_base
+SDSI_XS_BAT_PROVSION_CAP_FOR_SOCEKT0_GNR_SGX512 intel_sdsi.sh -t provision_cap_socket0_gnr_sgx512
+SDSI_XS_BAT_PROVSION_CAP_FOR_SOCEKT0_GNR_LARGE intel_sdsi.sh -t provision_cap_socket0_gnr_large
+SDSI_XS_BAT_ERASE_AKC_SOCEKT0_GNR intel_sdsi.sh -t erase_akc_socket0_gnr
+SDSI_XS_BAT_PROVSION_AKC_FOR_SOCEKT1_GNR intel_sdsi.sh -t provision_akc_socket1_gnr
+SDSI_XS_BAT_PROVSION_CAP_FOR_SOCEKT1_GNR_BASE intel_sdsi.sh -t provision_cap_socket1_gnr_base
+SDSI_XS_BAT_PROVSION_CAP_FOR_SOCEKT1_GNR_SGX512 intel_sdsi.sh -t provision_cap_socket1_gnr_sgx512
+SDSI_XS_BAT_ERASE_AKC_SOCEKT1_GNR intel_sdsi.sh -t erase_akc_socket1_gnr
+# Short stress to read sdsi registers or licence
+SDSI_S_STRESS_READ_REG intel_sdsi.sh -t stress_reading_reg
+SDSI_S_STRESS_READ_LIC intel_sdsi.sh -t stress_reading_lic
+SDSI_S_STRESS_READ_TELEMETRY intel_sdsi.sh -t stress_reading_tele
+# SDSi Attestation feature cases
+SDSI_XS_BAT_ATTESTATION_ADD_ROOTKEY_GNR_SIMICS intel_sdsi.sh -t attestation_adding_rootkey_gnr_simics
+SDSI_XS_BAT_ATTESTATION_ADD_ROOTKEY_GNR_PREPROD intel_sdsi.sh -t attestation_adding_rootkey_gnr_preprod
+SDSI_XS_BAT_ATTESTATION_ADD_ROOTKEY_GNR_PROD intel_sdsi.sh -t attestation_adding_rootkey_gnr_prod
+SDSI_XS_BAT_ATTESTATION_VERIFY_AUTHORIZATION intel_sdsi.sh -t attestation_verify_spdm_authorization
+SDSI_XS_BAT_ATTESTATION_STATE_MEASUREMENT intel_sdsi.sh -t spdm_meassurement_state
+SDSI_XS_BAT_ATTESTATION_SIGNED_STATE_MEASUREMENT intel_sdsi.sh -t spdm_meassurement_signed_state
+SDSI_XS_BAT_ATTESTATION_METER_MEASUREMENT intel_sdsi.sh -t spdm_meassurement_meter
+SDSI_XS_BAT_ATTESTATION_SIGNED_METER_MEASUREMENT intel_sdsi.sh -t spdm_meassurement_signed_meter
+SDSI_S_STRESS_ATTESTATION_MEASURE_STATE intel_sdsi.sh -t stress_spdm_meassurement_state
+SDSI_S_STRESS_ATTESTATION_MEASURE_SIGNED_STATE intel_sdsi.sh -t stress_spdm_meassurement_signed_state
+SDSI_S_STRESS_ATTESTATION_MEASURE_METER intel_sdsi.sh -t stress_spdm_meassurement_meter
+SDSI_S_STRESS_ATTESTATION_MEASURE_SIGNED_METER intel_sdsi.sh -t stress_spdm_meassurement_signed_meter

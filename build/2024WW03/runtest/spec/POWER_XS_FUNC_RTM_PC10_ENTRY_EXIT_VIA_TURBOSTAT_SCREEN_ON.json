@@ -1,0 +1,34 @@
+{
+    "name": "POWER_XS_FUNC_RTM_PC10_ENTRY_EXIT_VIA_TURBOSTAT_SCREEN_ON",
+    "initial_platform": "",
+    "cmdline": "powermgr_s0ix_tests.sh -c 4",
+    "steps": [],
+    "flags": [],
+    "summary": "Check runtime PC10 entry and exit via turbostat tool when screen ON",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "powermgr_s0ix_func_tests",
+    "domain": "Power",
+    "feature": "S0IX",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": true,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "turbostat",
+            "check": "",
+            "description": "Need test platform supported turbostat tool"
+        }
+    ],
+    "createDate": "2019-09-19T17:00:00.000-0700",
+    "link": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA",
+    "tips": ""
+}

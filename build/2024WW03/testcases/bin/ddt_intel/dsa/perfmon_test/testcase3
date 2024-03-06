@@ -1,0 +1,42 @@
+#!/bin/bash -Ex
+
+# Test event category = 'Engine', traffic class 1
+
+# To count total number of memory accesses from engine 1, on TC 1,
+# with transfer size 4KB or higher, software can use a combination of
+# the following events in the Engine Event Category.
+#
+# event 0x4, EV_NUM_READ - Number of reads issued.
+# event 0x8, EV_NUM_WRITE - Number of writes issued.
+#
+# Filters:
+#
+#   According to spec, only TC, SZ, and ENT filters apply to engine
+#   category, but if other filters e.g. wq set incorrectly, they will
+#   filter events out.
+#
+#   Also, current hw bug requires unused filters to be set to 0xff..
+#
+#   Set FLTCFG_WQ to 0x1 (Filter=WQ, Filter Value=0x1 i.e. WQ0)
+#   Set FLTCFG_SZ to 0x3 (Filter=Transfer Size, Filter Value=0x3)
+#     bit 0: size 0 - 512B
+#     bit 1: size 512B - 2KB
+#   Set FLTCFG_ENG to 0x1 (Filter=Engine, Filter Value=0x1 i.e. Eng0)
+#   Set FLTCFG_TC to 0x2 (Filter=TC, Filter Value=0x2 i.e. TC1)
+#   Set FLTCFG_PGSZ to 0x4 (Filter=PGSZ, Filter Value=0x7)
+#     Currently this isn't supported in hw
+#     bit 2: size 1G
+#
+# Setup:
+#   assumes setup_dsa_dmatest_disabled has been run
+
+perf stat -o $1 -e dsa0/event=0x4,event_category=0x1,filter_tc=0x1/,dsa0/event=0x8,event_category=0x1,filter_tc=0x1/,dsa0/event=0x4,event_category=0x1,filter_tc=0x2/,dsa0/event=0x8,event_category=0x1,filter_tc=0x2/ dsa_test -w 1 -l 1024 -o0x3 -t200
+
+# Expected output (similar to):
+
+# Performance counter stats for 'system wide':
+
+#                 3      dsa0/event=0x4,event_category=0x1,filter_wq=0x1,filter_tc=0x1,filter_pgsz=0x4,filter_sz=0x3,filter_eng=0x1/
+#                19      dsa0/event=0x8,event_category=0x1,filter_wq=0x1,filter_tc=0x1,filter_pgsz=0x4,filter_sz=0x3,filter_eng=0x1/
+
+#      12.289163341 seconds time elapsed

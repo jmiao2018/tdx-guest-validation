@@ -1,0 +1,7 @@
+# @name TH_TARGET_MODE_SR_FUNC_TESTS
+# @desc TH_TARGET_MODE_SR_FUNC_TESTS perform basic functional tests for Intel TH driver
+# @requires intel_th
+# @setup_requires
+
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC_MEM intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -m mem
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC_DISK intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -m disk

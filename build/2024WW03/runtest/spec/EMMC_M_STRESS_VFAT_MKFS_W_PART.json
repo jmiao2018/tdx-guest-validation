@@ -1,0 +1,34 @@
+{
+    "name": "EMMC_M_STRESS_VFAT_MKFS_W_PART",
+    "initial_platform": "",
+    "cmdline": "blk_device_erase_format_part.sh -d 'emmc' -f 'vfat'",
+    "steps": [],
+    "flags": [],
+    "summary": "Format device node partition in 'vfat' FS.",
+    "status": "Closed",
+    "priority": "P4",
+    "scenario": "emmc_vfat_stress_tests",
+    "domain": "IO",
+    "feature": "eMMC",
+    "owner": "hongyuni",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free EMMC partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-12-04T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

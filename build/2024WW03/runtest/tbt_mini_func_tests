@@ -1,0 +1,7 @@
+# @name TBT_MINI_FUNC_TESTS
+# @desc Read write files with usb connected by tbt mini interface(tbt 1/2)
+# @requires tbt_mini
+# @setup_requires
+
+TBT_MINI_XS_FUNC_RW_2.0_FLASH tbt_ssd_read_write.sh -b 1MB -c 100 -p 2.0 -d flash -t 2
+TBT_MINI_XS_FUNC_RW_3.0_FLASH tbt_ssd_read_write.sh -b 1MB -c 100 -p 3.0 -d flash -t 2

@@ -1,0 +1,14 @@
+# @name HYBRID_CPU_BAT_TESTS
+# @desc HYBRID_CPU_BAT_TESTS perform basic acceptance tests for Hybrid CPU
+# @requires hybrid_cpu
+# @setup_requires
+
+HYBRID_CPU_XS_FUNC_HGS_CPUINFO hybrid_cpu_tests.sh -t cpuinfo_hgs
+HYBRID_CPU_XS_FUNC_HGS_PLUS_CPUINFO hybrid_cpu_tests.sh -t cpuinfo_hgs_plus
+HYBRID_CPU_XS_FUNC_SYSFS hybrid_cpu_tests.sh -t sysfs
+HYBRID_CPU_XS_FUNC_HGS_CPUID hybrid_cpu_tests.sh -t cpuid_hgs
+HYBRID_CPU_XS_FUNC_HGS_PLUS_CPUID hybrid_cpu_tests.sh -t cpuid_hgs_plus
+HYBRID_CPU_XS_FUNC_HGS_PLUS_HRESET hybrid_cpu_tests.sh -t cpuid_hgs_plus_hreset
+HYBRID_CPU_XS_FUNC_HGS_TABLE hybrid_cpu_tests.sh -t hgs_table
+HYBRID_CPU_XS_FUNC_HGS_PLUS_TABLE hybrid_cpu_tests.sh -t hgs_plus_table
+HYBRID_CPU_XS_FUNC_ITMT_BASIC_CHECK hybrid_cpu_tests.sh -t itmt_basic

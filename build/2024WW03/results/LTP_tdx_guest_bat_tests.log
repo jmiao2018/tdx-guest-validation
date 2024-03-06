@@ -1,0 +1,268 @@
+INFO: creating /home/jmiao/2024WW03/results directory
+INFO: Filtering testscenarios based on gnr capabilities
+awk: cmd. line:1: warning: regexp escape sequence `\&' is not a known regexp operator
+If some fields are empty or look unusual you may have an old version.
+Compare to the current minimal requirements in Documentation/Changes.
+
+/etc/lsb-release
+/etc/os-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=21.10
+DISTRIB_CODENAME=impish
+DISTRIB_DESCRIPTION="Ubuntu 21.10"
+PRETTY_NAME="Ubuntu 21.10"
+NAME="Ubuntu"
+VERSION_ID="21.10"
+VERSION="21.10 (Impish Indri)"
+VERSION_CODENAME=impish
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=impish
+
+uname:
+Linux ubuntu 5.13.0-52-generic #59-Ubuntu SMP Wed Jun 15 20:17:13 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+
+/proc/cmdline
+BOOT_IMAGE=/boot/vmlinuz-5.13.0-52-generic root=UUID=26e7f5eb-842d-4368-be1b-f3130092b099 ro quiet splash dis_ucode_ldr vt.handoff=7
+
+Gnu C                  gcc (Ubuntu 11.2.0-7ubuntu2) 11.2.0
+Clang                  clang version 15.0.0 (https://github.com/llvm/llvm-project.git 4a368136693ba9c4e827702e9d390280c3d5e7ac)
+Gnu make               4.3
+util-linux             2.36.1
+mount                  linux 2.36.1 (libmount 2.36.1: selinux, smack, btrfs, namespaces, assert, debug)
+modutils               28
+e2fsprogs              1.46.3
+PPP                    2.4.9
+Linux C Library        gnu/libc.so.6
+Dynamic linker (ldd)   2.34
+Procps                 3.3.17
+Net-tools              2.10-alpha
+iproute2               0.4.0
+iputils                2.0
+ethtool                5.9
+Sh-utils               8.32
+Modules Loaded         xt_conntrack nft_chain_nat xt_MASQUERADE nf_nat nf_conntrack_netlink nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 xfrm_user xfrm_algo nft_counter xt_addrtype nft_compat nf_tables libcrc32c nfnetlink br_netfilter bridge stp llc rfcomm cmac algif_hash algif_skcipher af_alg overlay bnep snd_sof_pci_intel_tgl snd_sof_intel_hda_common soundwire_intel soundwire_generic_allocation soundwire_cadence snd_sof_intel_hda snd_sof_pci snd_sof_xtensa_dsp snd_hda_codec_hdmi snd_sof snd_soc_hdac_hda snd_hda_ext_core snd_soc_acpi_intel_match snd_soc_acpi soundwire_bus ledtrig_audio binfmt_misc snd_soc_core snd_compress intel_rapl_msr ac97_bus nls_iso8859_1 ath10k_pci mei_hdcp snd_pcm_dmaengine intel_rapl_common ath10k_core x86_pkg_temp_thermal snd_hda_intel intel_powerclamp snd_intel_dspcfg snd_intel_sdw_acpi ath snd_hda_codec kvm_intel snd_usb_audio snd_hda_core btusb snd_usbmidi_lib snd_hwdep btrtl i915 mac80211 kvm snd_seq_midi btbcm snd_seq_midi_event btintel crct10dif_pclmul snd_seq snd_rawmidi ghash_clmulni_intel bluetooth cfg80211 aesni_intel drm_kms_helper snd_seq_device mc cec dell_wmi snd_pcm crypto_simd dell_smbios cryptd dcdbas rc_core ecdh_generic joydev input_leds snd_timer ee1004 intel_cstate ecc libarc4 i2c_algo_bit efi_pstore snd fb_sys_fops mei_me syscopyarea sysfillrect sysimgblt soundcore mei sparse_keymap dell_wmi_descriptor dell_wmi_sysman wmi_bmof mac_hid acpi_pad acpi_tad sch_fq_codel coretemp ipmi_devintf ipmi_msghandler msr parport_pc ppdev lp parport drm ip_tables x_tables autofs4 hid_generic usbhid hid i2c_i801 crc32_pclmul i2c_smbus intel_lpss_pci r8169 nvme ahci xhci_pci intel_lpss nvme_core realtek libahci xhci_pci_renesas idma64 wmi video
+
+free reports:
+               total        used        free      shared  buff/cache   available
+Mem:        16105812     2010328      231464      267904    13864020    13485196
+Swap:        2097148      783168     1313980
+
+cpuinfo:
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Byte Order:                      Little Endian
+Address sizes:                   39 bits physical, 48 bits virtual
+CPU(s):                          12
+On-line CPU(s) list:             0-11
+Thread(s) per core:              2
+Core(s) per socket:              6
+Socket(s):                       1
+NUMA node(s):                    1
+Vendor ID:                       GenuineIntel
+CPU family:                      6
+Model:                           167
+Model name:                      11th Gen Intel(R) Core(TM) i5-11400 @ 2.60GHz
+Stepping:                        1
+CPU MHz:                         2600.000
+CPU max MHz:                     4400.0000
+CPU min MHz:                     800.0000
+BogoMIPS:                        5184.00
+Virtualization:                  VT-x
+L1d cache:                       288 KiB
+L1i cache:                       192 KiB
+L2 cache:                        3 MiB
+L3 cache:                        12 MiB
+NUMA node0 CPU(s):               0-11
+Vulnerability Itlb multihit:     Not affected
+Vulnerability L1tf:              Not affected
+Vulnerability Mds:               Not affected
+Vulnerability Meltdown:          Not affected
+Vulnerability Mmio stale data:   Vulnerable: Clear CPU buffers attempted, no microcode; SMT vulnerable
+Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:        Mitigation; Enhanced IBRS, IBPB conditional, RSB filling
+Vulnerability Srbds:             Not affected
+Vulnerability Tsx async abort:   Not affected
+Flags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+
+AppArmor enabled
+apparmor module is loaded.
+40 profiles are loaded.
+38 profiles are in enforce mode.
+   /snap/core/11743/usr/lib/snapd/snap-confine
+   /snap/core/11743/usr/lib/snapd/snap-confine//mount-namespace-capture-helper
+   /usr/bin/evince
+   /usr/bin/evince-previewer
+   /usr/bin/evince-previewer//sanitized_helper
+   /usr/bin/evince-thumbnailer
+   /usr/bin/evince//sanitized_helper
+   /usr/bin/man
+   /usr/lib/NetworkManager/nm-dhcp-client.action
+   /usr/lib/NetworkManager/nm-dhcp-helper
+   /usr/lib/connman/scripts/dhclient-script
+   /usr/lib/cups/backend/cups-pdf
+   /usr/lib/snapd/snap-confine
+   /usr/lib/snapd/snap-confine//mount-namespace-capture-helper
+   /usr/sbin/cups-browsed
+   /usr/sbin/cupsd
+   /usr/sbin/cupsd//third_party
+   /{,usr/}sbin/dhclient
+   docker-default
+   libreoffice-senddoc
+   libreoffice-soffice//gpg
+   libreoffice-xpdfimport
+   lsb_release
+   man_filter
+   man_groff
+   nvidia_modprobe
+   nvidia_modprobe//kmod
+   snap-update-ns.core
+   snap-update-ns.firefox
+   snap-update-ns.snap-store
+   snap.core.hook.configure
+   snap.firefox.firefox
+   snap.firefox.hook.configure
+   snap.snap-store.hook.configure
+   snap.snap-store.snap-store
+   snap.snap-store.ubuntu-software
+   snap.snap-store.ubuntu-software-local-file
+   tcpdump
+2 profiles are in complain mode.
+   libreoffice-oosplash
+   libreoffice-soffice
+0 profiles are in kill mode.
+0 profiles are in unconfined mode.
+3 processes have profiles defined.
+3 processes are in enforce mode.
+   /usr/sbin/cups-browsed (967315) 
+   /usr/sbin/cupsd (967311) 
+   /snap/snap-store/557/usr/bin/snap-store (2090) snap.snap-store.ubuntu-software
+0 processes are in complain mode.
+0 processes are unconfined but have a profile defined.
+0 processes are in mixed mode.
+0 processes are in kill mode.
+
+SELinux mode: unknown
+no big block device was specified on commandline.
+Tests which require a big block device are disabled.
+You can specify it with option -z
+COMMAND:    /home/jmiao/2024WW03/bin/ltp-pan   -e -S   -a 982741     -n 982741 -p -f /tmp/ltp-AiftuBdaTd/alltests -l /tmp/tmp.OFygZogTU0  -C /home/jmiao/2024WW03/output/LTP_RUN_ON-tmp.OFygZogTU0.failed -T /home/jmiao/2024WW03/output/LTP_RUN_ON-tmp.OFygZogTU0.tconf 
+LOG File: /tmp/tmp.OFygZogTU0
+FAILED COMMAND File: /home/jmiao/2024WW03/output/LTP_RUN_ON-tmp.OFygZogTU0.failed
+TCONF COMMAND File: /home/jmiao/2024WW03/output/LTP_RUN_ON-tmp.OFygZogTU0.tconf
+Running tests.......
+<<<test_start>>>
+tag=TDX_XS_BAT_GUEST_KCONFIG stime=1708308504
+cmdline="tdx_guest_bat.sh -t TD_KCONFIG"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0219_100824.942|TRACE|Start TDX guest kconfig checking:|
+|0219_100824.951|WARNING| common.sh:486:test_kconfigs() - CONFIG_INTEL_TDX_GUEST does not match y!|
+|0219_100824.952|ERROR| common.sh:212:die() - FATAL: die() is called by tdx_guest_bat.sh:51:main()|
+|0219_100824.954|ERROR| common.sh:213:die() - FATAL: TDX guest kconfig CONFIG_INTEL_TDX_GUEST is not set to y|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=1 corefile=no
+cutime=2 cstime=1
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_BAT_GUEST_CPUINFO stime=1708308504
+cmdline="cpu_bat.sh -n tdx -f tdx_guest"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0219_100824.989|TRACE|Test tdx:|
+|0219_100825.017|ERROR| common.sh:228:block_test() - block_test() is called by cpu_common.sh:157:cpu_info_check()|
+|0219_100825.019|ERROR| common.sh:229:block_test() - Result ====BLOCK==== : CPU not support:tdx_guest|
+|0219_100825.021|TRACE|-------- Teardown starts --------|
+|0219_100825.023|TRACE|Teardown handler: cpu_teardown|
+|0219_100825.042|TRACE|-------- Teardown ends ---------|
+<<<execution_status>>>
+initiation_status="ok"
+duration=1 termination_type=exited termination_id=2 corefile=no
+cutime=4 cstime=4
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_BAT_GUEST_DRIVER_KCONFIG stime=1708308505
+cmdline="tdx_guest_bat.sh -t TD_DRIVER_KCONFIG"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0219_100825.062|TRACE|Start TDX guest driver kconfig checking:|
+|0219_100825.068|WARNING| common.sh:486:test_kconfigs() - CONFIG_TDX_GUEST_DRIVER does not match y!|
+|0219_100825.076|WARNING| common.sh:486:test_kconfigs() - CONFIG_TDX_GUEST_DRIVER does not match m!|
+|0219_100825.078|ERROR| common.sh:212:die() - FATAL: die() is called by tdx_guest_bat.sh:58:main()|
+|0219_100825.079|ERROR| common.sh:213:die() - FATAL: TDX guest kconfig CONFIG_INTEL_TDX_GUEST is not set to y|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=1 corefile=no
+cutime=3 cstime=1
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_BAT_GUEST_ATTEST_DEV stime=1708308505
+cmdline="tdx_guest_bat.sh -t TD_ATTEST_DEV"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0219_100825.098|TRACE|Start TDX guest attestation device checking:|
+|0219_100825.100|ERROR| common.sh:212:die() - FATAL: die() is called by tdx_guest_bat.sh:67:main()|
+|0219_100825.102|ERROR| common.sh:213:die() - FATAL: TDX guest attestation device /dev/tdx_guest doesn't exist.|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=1 corefile=no
+cutime=1 cstime=1
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_BAT_GUEST_LAZY_ACCEPT_KCONFIG stime=1708308505
+cmdline="tdx_guest_bat.sh -t TD_LAZY_ACCEPT_KCONFIG"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0219_100825.127|TRACE|Start TDX guest lazy_accept kconfig checking:|
+|0219_100825.141|WARNING| common.sh:486:test_kconfigs() - CONFIG_UNACCEPTED_MEMORY does not match y!|
+|0219_100825.143|ERROR| common.sh:212:die() - FATAL: die() is called by tdx_guest_bat.sh:74:main()|
+|0219_100825.146|ERROR| common.sh:213:die() - FATAL: TDX guest kconfig CONFIG_UNACCEPTED_MEMORY is not set to y|
+Cleaning actions
+incrementing stop
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=1 corefile=no
+cutime=3 cstime=2
+<<<test_end>>>
+INFO: ltp-pan reported all tests PASS
+LTP Version: ltp-ddt_20231231-12-g9b4877fae6
+
+       ###############################################################"
+
+            Done executing testcases."
+            LTP Version:  ltp-ddt_20231231-12-g9b4877fae6
+            Result log is in the /tmp/tmp.OFygZogTU0 "
+       ###############################################################"
+
+Test Start Time: Mon Feb 19 10:08:24 2024
+-----------------------------------------
+Testcase                                           Result     Exit Value
+--------                                           ------     ----------
+TDX_XS_BAT_GUEST_KCONFIG                           FAIL       1    
+TDX_XS_BAT_GUEST_CPUINFO                           FAIL       2    
+TDX_XS_BAT_GUEST_DRIVER_KCONFIG                    FAIL       1    
+TDX_XS_BAT_GUEST_ATTEST_DEV                        FAIL       1    
+TDX_XS_BAT_GUEST_LAZY_ACCEPT_KCONFIG               FAIL       1    
+
+-----------------------------------------------
+Total Tests: 5
+Total Skipped Tests: 0
+Total Failures: 5
+Kernel Version: 5.13.0-52-generic
+Machine Architecture: x86_64
+Hostname: ubuntu
+

@@ -1,0 +1,9 @@
+# @name Check if sdio driver is operating using 4-bit bus width
+# @desc 4bit bus width is the maximum bus width SDIO supported. The driver should use 4-bit.
+# @requires sd
+# @setup_requires
+
+
+SD_S_FUNC_SDIO_4BIT_BUSWIDTH source "common.sh"; sdio_buswidth.sh -m '4'
+
+SD_S_FUNC_SDIO_HS_TIMING sdio_buswidth.sh -t -d "mmc"

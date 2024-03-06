@@ -1,0 +1,51 @@
+testcases/ddt_intel/dsa_test_suite/dsactl:
+	869819f65fd2a5801b922d3ea1e5abe7320dba1d
+
+testcases/ddt_intel/gpio_test_suite/libgpiod:
+	38f57b1084dcf92b24590ce1a7c4db32255277fc
+
+testcases/ddt_intel/iax_test_suite/iaxctl:
+	a836ce0e42052a69bffbbc14239ab4097f3b77f1
+
+testcases/ddt_intel/ipt_test_suite/processor-trace:
+	c848a85c3104e2f5780741f85de5c9e65476ece2
+
+testcases/ddt_intel/pmu_test_suite/chromiumos-wide-profiling:
+	593b034869b10e8b48df0f1cb175eac9531c046d
+
+testcases/ddt_intel/pmu_test_suite/os.linux.perf.test-suite:
+	82ca96a9616ff2342a41c1cc8b663f62dd549e6b
+
+testcases/ddt_intel/pmu_test_suite/pmu-tools:
+	0ddfbf6a1bd3b24ed314f3cb2fa36a7c5eee8a24
+
+testcases/ddt_intel/sgx_test_suite/linux-sgx:
+	4887b30b519d7bfc9f5de6e6330bc0034cce3d75
+
+testcases/ddt_intel/tmul_test_suite/tmul-test:
+	95156a1b95a0226d31fd6d945a67b7f10f6961e8
+
+tools/clkv/src:
+	037e0382746f04b36502e581c088d3a143cc45c4
+
+utils/avrdude/src:
+	0a580eaab4c894c3ac95877685fc7383f49f959a
+
+utils/binaries:
+	2402d46aa89d3cc5b58b1523e84b8a3380eaf8a5
+
+utils/lkvs/lkvs:
+	4fce28f2eae512362297ef5df09e769c6dd8b694
+
+utils/lzo:
+	0083878c235a89ef96a009d1ff0b500f3a364e4b
+
+utils/memtester/src:
+	c1acc5cb69419794402a75269fc988c86b091c0a
+
+utils/rt-app/src:
+	3a95bf5223ca394cb1a8daf59a12d0f899cedb32
+
+utils/zlib:
+	cacf7f1d4e3d44d871b605da3b647f07d718623f
+

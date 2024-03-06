@@ -1,0 +1,10 @@
+# @name CPU_VBMI_BAT_TESTS
+# @desc Check vbmi cpuinfo and cpuid
+# @requires cpu/vbmi
+# @setup_requires
+# @utility_requires bc
+
+CPU_XS_BAT_VBMI_CPU_INFO_TEST cpu_bat.sh -n vbmi -f vbmi
+CPU_XS_BAT_VBMI2_CPU_INFO_TEST cpu_bat.sh -n vbmi -f vbmi2
+CPU_XS_BAT_VBMI_CPU_ID_TEST cpu_bat.sh -n vbmi -p "7 1 0 1 c 1"
+CPU_XS_BAT_VBMI2_CPU_ID_TEST cpu_bat.sh -n vbmi -p "7 1 0 1 c 6"

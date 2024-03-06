@@ -1,0 +1,26 @@
+# @name TBT_MINI_BAT_TESTS
+# @desc Check Thunderbolt mini interface(tbt 1/2) sysfs files and driver tests
+# @requires tbt_mini
+# @setup_requires
+
+TBT_MINI_XS_BAT_CONFIG_TEST tbt_verify_sysfs_mod.sh -t config
+TBT_MINI_XS_BAT_USER_MODE_TEST tbt_verify_sysfs_mod.sh -t user
+TBT_MINI_XS_BAT_LOAD_UNLOAD_MOD_NET_TEST tbt_verify_sysfs_mod.sh -t mod_net
+TBT_MINI_XS_BAT_LOAD_UNLOAD_MOD_TEST tbt_verify_sysfs_mod.sh -t mod
+TBT_MINI_XS_BAT_MOD_TBT_NET_TIME tbt_verify_sysfs_mod.sh -t mod_net_time
+TBT_MINI_XS_BAT_MOD_TBT_TIME tbt_verify_sysfs_mod.sh -t mod_time
+TBT_MINI_XS_BAT_BIOS_SET_CHECK tbt_verify_sysfs_mod.sh -t bios_setting
+TBT_MINI_XS_BAT_ITEM_AUTHORIZED_TEST tbt_verify_sysfs_mod.sh -t item -f authorized
+TBT_MINI_XS_BAT_ITEM_DEVICE_TEST tbt_verify_sysfs_mod.sh -t item -f device
+TBT_MINI_XS_BAT_ITEM_DEVICE_NAME_TEST tbt_verify_sysfs_mod.sh -t item -f device_name
+TBT_MINI_XS_BAT_ITEM_LINK_SPEED_TEST tbt_verify_sysfs_mod.sh -t item -f link_speed
+TBT_MINI_XS_BAT_ITEM_LINK_WIDTH_TEST tbt_verify_sysfs_mod.sh -t item -f link_width
+TBT_MINI_XS_BAT_ITEM_NVM_AUTH_TEST tbt_verify_sysfs_mod.sh -t item -f nvm_authenticate
+TBT_MINI_XS_BAT_ITEM_NVM_VER_TEST tbt_verify_sysfs_mod.sh -t item -f nvm_version
+TBT_MINI_XS_BAT_ITEM_UEVENT_ID_VER_TEST tbt_verify_sysfs_mod.sh -t item -f uevent
+TBT_MINI_XS_BAT_ITEM_UNIQUE_ID_VER_TEST tbt_verify_sysfs_mod.sh -t item -f unique_id
+TBT_MINI_XS_BAT_ITEM_VENDOR_TEST tbt_verify_sysfs_mod.sh -t item -f vendor
+TBT_MINI_XS_BAT_ITEM_VENDOR_NAME_TEST tbt_verify_sysfs_mod.sh -t item -f vendor_name
+TBT_MINI_XS_BAT_DOMAIN_SECURITY_TEST tbt_verify_sysfs_mod.sh -t domain -f security
+TBT_MINI_XS_BAT_DOMAIN_UEVENT_TEST tbt_verify_sysfs_mod.sh -t domain -f uevent
+TBT_MINI_XS_BAT_DEVICE_TOPO_CHECK tbt_verify_sysfs_mod.sh -t topo

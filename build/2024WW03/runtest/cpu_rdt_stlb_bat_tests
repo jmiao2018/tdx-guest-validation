@@ -1,0 +1,8 @@
+# @name CPU_RDT_STLB_BAT_TESTS
+# @desc Check RDT(resource director technology) cpuinfo and cpuid
+# @requires cpu/rdt_stlb
+# @setup_requires
+
+CPU_XS_FUNC_RDT_STLB_ID_TEST cpu_bat.sh -n rdt -p "7 1 0 1 b 15"
+CPU_XS_FUNC_RDT_STLB_AVAILABLE_TEST cpu_bat.sh -n rdt -f stlb_qos
+CPU_XS_FUNC_RDT_STLB_CDP_TEST cpu_bat.sh -n rdt -f cdp

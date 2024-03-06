@@ -1,0 +1,14 @@
+# This file contains all the tests for LCK thunderbolt driver
+ddt_intel/tbt_bat_tests
+ddt_intel/tbt_func_tests
+ddt_intel/tbt_userspace_tests
+ddt_intel/tbt_none_tests
+ddt_intel/tbt_user_tests
+ddt_intel/tbt_secure_tests
+ddt_intel/tbt_dp_tests
+ddt_intel/tbt_rtd3_tests
+ddt_intel/tbt_nvm_tests
+ddt_intel/tbt_hotplug_tests
+ddt_intel/tbt_suspend_resume_tests
+ddt_intel/tbt_stress_tests
+ddt_intel/tbt_preboot_tests

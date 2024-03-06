@@ -1,0 +1,19 @@
+# @name PWM_FUNC_TESTS
+# @desc PWM_FUNC_TESTS perform functional tests to check pwm sysfs.
+# @requires pwm
+# @setup_requires
+
+#PWM Functional tests
+PWM_XS_FUNC_DRV_CHECK driver_sysfs.sh -d "pwm" -p
+
+PWM_XS_FUNC_PWMCHIP_SYSFS driver_sysfs.sh -d "pwm" -s h
+
+PWM_XS_FUNC_BIND_UNBIND_DRIVER bind_unbind_driver.sh "pwm"
+
+PWM_XS_FUNC_DRV_CHECK_LPSS driver_sysfs.sh -d "pwm_lpss" -p
+
+PWM_XS_FUNC_DRV_CHECK_LPSS_PALTFORM driver_sysfs.sh -d "pwm_lpss_platform" -p
+
+PWM_XS_FUNC_DRV_CHECK_LPSS_PCI driver_sysfs.sh -d "pwm_lpss_pci" -p
+
+PWM_XS_FUNC_DRV_CHECK_REGULATOR driver_sysfs.sh -d "pwm_regulator" -p

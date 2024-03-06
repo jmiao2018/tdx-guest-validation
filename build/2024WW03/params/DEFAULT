@@ -1,0 +1,112 @@
+#KCONFIG OF INTEL_IDLE, check kernel config of intel_idle, needed by POWER_XS_FUNC_CHK_KCFG_INTELIDLE
+#multi kernel config options should be delimated by |
+INTELIDLE_KCONFIG="CONFIG_INTEL_IDLE"
+
+#KCONFIG OF CPU_IDLE, check kernel config of cpu_idle, needed by POWER_XS_FUNC_CHK_KCFG_CPUIDLE
+#multi kernel config options should be delimated by |
+INTELPSTATE_KCONFIG="CONFIG_X86_INTEL_PSTATE"
+
+#Pattern for searching INTEL_IDLE initcall message from dmesg logs, needed by POWER_XS_FUNC_INTELIDLE_INITCALL
+#and POWER_XS_FUNC_INTELIDLE_INITTIME. Multi patterns should be delimated by |
+INTELIDLE_PATTERN="initcall.*intel_idle_init.*returned\s0"
+
+#Pattern for searching INTEL_PSTATE initcall message from dmesg logs, needed by POWER_XS_FUNC_INTELPSTATE_INITCALL
+#and POWER_XS_FUNC_INTELPSTATE_INITTIME. Multi patterns should be delimated by |
+INTEL_PSTATE_PATTERN="initcall.*intel_pstate_init.*returned\s0"
+
+#Pattern for searching CPUREQ initcall message from dmesg logs, needed by POWER_XS_FUNC_CPUFREQ_INITCALL
+#and POWER_XS_FUNC_CPUFREQ_INITTIME. Multi patterns should be delimated by |
+CPUFREQ_PATTERN="initcall.*cpufreq_core_init|initcall.*cpufreq_gov_performance_init|initcall.*cpufreq_gov_powersave_init"
+
+#Pattern is used to search related message from dmesg logs to check freeze power state in freezer pm_test mode,
+#needed by POWER_XS_FUNC_FREEZE_FREEZER. Multi patterns should be delimated by |
+FREEZE_FREEZER_PATTERN="PM: suspend entry \(s2idle\)|PM: suspend exit"
+
+#Pattern is used to search related message from dmesg logs to check freeze power state in devices pm_test mode,
+#needed by POWER_XS_FUNC_FREEZE_DEVICES. Multi patterns should be delimated by |
+FREEZE_DEVICES_PATTERN="PM: suspend entry \(s2idle\)|PM: suspend exit"
+
+#Pattern is used to search related message from dmesg logs to check freeze power state in platform pm_test mode,
+#needed by POWER_XS_FUNC_FREEZE_PLATFORM. Multi patterns should be delimated by |
+FREEZE_PLATFORM_PATTERN="PM: suspend entry \(s2idle\)|PM: suspend exit"
+
+#Pattern is used to search related message from dmesg logs to check freeze power state in none pm_test mode,
+#needed by POWER_XS_FUNC_FREEZE_NONE. Multi patterns should be delimated by |
+FREEZE_NONE_PATTERN="PM: suspend entry \(s2idle\)|PM: suspend exit"
+#FREEZE_NONE_PAUSE is used to "sleep" -- the interval between every loop
+FREEZE_NONE_PAUSE="10"
+#FREEZE_NONE_TIME is used to "rtcwake" -- usage: rtcwake -m xxx -s $FREEZE_NONE_TIME
+FREEZE_NONE_TIME="20"
+
+#Pattern is used to search related message from dmesg logs to check S3 power state in freezer pm_test mode,
+#needed by POWER_XS_FUNC_S3_FREEZER. Multi patterns should be delimated by |
+MEM_FREEZER_PATTERN="PM: suspend entry \(deep\)|PM: suspend exit"
+
+#Pattern is used to search related message from dmesg logs to check S3 power state in devices pm_test mode,
+#needed by POWER_XS_FUNC_S3_DEVICES. Multi patterns should be delimated by |
+MEM_DEVICES_PATTERN="PM: suspend entry \(deep\)|PM: suspend exit"
+
+#Pattern is used to search related message from dmesg logs to check S3 power state in platform pm_test mode,
+#needed by POWER_XS_FUNC_S3_PLATFORM. Multi patterns should be delimated by |
+MEM_PLATFORM_PATTERN="PM: suspend entry \(deep\)|PM: suspend exit"
+
+#Pattern is used to search related message from dmesg logs to check S3 power state in processors pm_test mode,
+#needed by POWER_XS_FUNC_S3_PROCESSORS. Multi patterns should be delimated by |
+MEM_PROCESSORS_PATTERN="PM: suspend entry \(deep\)|PM: suspend exit"
+
+#Pattern is used to search related message from dmesg logs to check S3 power state in core pm_test mode,
+#needed by POWER_XS_FUNC_S3_CORE. Multi patterns should be delimated by |
+MEM_CORE_PATTERN="PM: suspend entry \(deep\)|PM: suspend exit"
+
+#Pattern is used to search related message from dmesg logs to check S3 power state in none pm_test mode,
+#needed by POWER_XS_FUNC_S3_NONE. Multi patterns should be delimated by |
+MEM_NONE_PATTERN="PM: suspend entry \(deep\)|PM: suspend exit"
+#MEM_NONE_PAUSE is used to "sleep" -- the interval between every loop
+MEM_NONE_PAUSE="10"
+#MEM_NONE_TIME is used to "rtcwake" -- usage: rtcwake -m xxx -s $MEM_NONE_TIME
+MEM_NONE_TIME="20"
+
+#Pattern is used to search related message from dmesg logs to check S4 power state in freezer pm_test mode,
+#needed by POWER_XS_FUNC_S4_FREEZER. Multi patterns should be delimated by |
+DISK_FREEZER_PATTERN="hibernation entry|hibernation exit"
+
+#Pattern is used to search related message from dmesg logs to check S4 power state in devices pm_test mode,
+#needed by POWER_XS_FUNC_S4_DEVICES. Multi patterns should be delimated by |
+DISK_DEVICES_PATTERN="hibernation entry|hibernation exit"
+
+#Pattern is used to search related message from dmesg logs to check S4 power state in platform pm_test mode,
+#needed by POWER_XS_FUNC_S4_PLATFORM. Multi patterns should be delimated by |
+DISK_PLATFORM_PATTERN="hibernation entry|hibernation exit"
+
+#Pattern is used to search related message from dmesg logs to check S4 power state in processors pm_test mode,
+#needed by POWER_XS_FUNC_S4_PROCESSORS. Multi patterns should be delimated by |
+DISK_PROCESSORS_PATTERN="hibernation entry|hibernation exit"
+
+#Pattern is used to search related message from dmesg logs to check S4 power state in core pm_test mode,
+#needed by POWER_XS_FUNC_S4_CORE. Multi patterns should be delimated by |
+DISK_CORE_PATTERN="hibernation entry|hibernation exit"
+
+#Pattern is used to search related message from dmesg logs to check S4 power state in none pm_test mode,
+#needed by POWER_XS_FUNC_S4_NONE. Multi patterns should be delimated by |
+DISK_NONE_PATTERN="hibernation entry|hibernation exit"
+#DISK_NONE_PAUSE is used to "sleep" -- the interval between every loop
+DISK_NONE_PAUSE="20"
+#DISK_NONE_TIME is used to "rtcwake" -- usage: rtcwake -m xxx -s $DISK_NONE_TIME
+DISK_NONE_TIME="40"
+#DISK_NONE_TIME_SERVER is used to run on server "rtcwake" -- usage: rtcwake -m xxx -s $DISK_NONE_TIME""
+DISK_NONE_TIME_SERVER="120"
+
+#POWERMGR_SUSPEND_LOOP, loops of suspend tests. It must be positive integer
+POWERMGR_SUSPEND_LOOP="10"
+
+#CHK_CMDLINE_PATTERN, options that must be set in cmdline.
+CHK_CMDLINE_PATTERN="initcall_debug text log_buf_len=4M no_console_suspend ignore_loglevel resume="
+
+#USB_DWC3_PCI_ID for different platform dwc3 pci id
+USB_DWC3_PCI_ID="0"
+
+#IPERF HOST IP to set the HOST IP for PCI Iperf
+IPERFHOST="10.239.182.115"
+
+#PMC_CORE init check, needed by POWER_XS_FUNC_PMC_CORE_INITCALL
+PMC_CORE_PATTERN="pmc_core"

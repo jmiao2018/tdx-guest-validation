@@ -1,0 +1,7 @@
+# @name I2C_FUNC_TESTS_SUBSET_1
+# @desc I2C_FUNC_TESTS_SUBSET_1 perform functional tests for I2C driver in conjunction with i915
+# @requires i2c && i915
+# @setup_requires
+
+# LPSS: I2C driver
+I2C_XS_FUNC_I915_MONITOR_INFO i2c_tests.sh -c i915_monitor_info

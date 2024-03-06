@@ -1,0 +1,36 @@
+{
+    "name": "DSA_PERFMON_XS_FUNC_DRIVER_LOAD_UNLOAD",
+    "initial_platform": "",
+    "cmdline": "dsa_perfmon_tests.sh -t driver",
+    "steps": [],
+    "flags": [],
+    "summary": "unload and load the DSA driver, and check if the DSA perf driver still works.",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "dsa_perfmon_func_tests",
+    "domain": "CPU",
+    "feature": "DSA",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_INTEL_IDXD",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-11-23T13:55:58.000-0800",
+    "link": "",
+    "tips": ""
+}

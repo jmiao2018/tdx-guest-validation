@@ -1,0 +1,7 @@
+# @name CPU_LKGS_BAT_TESTS
+# @desc Check lkgs support
+# @requires cpu/lkgs
+# @setup_requires
+
+CPU_XS_BAT_LKGS_CPU_ID_TEST cpu_bat.sh -n lkgs -p "7 0 1 0 a 18"
+CPU_XS_BAT_LKGS_CPU_INFO_TEST cpu_bat.sh -n lkgs -f lkgs

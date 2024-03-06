@@ -1,0 +1,36 @@
+{
+    "name": "CPU_XS_FUNC_UMIP_LDT_64_EXCEPTION",
+    "initial_platform": "",
+    "cmdline": "umip_func.sh -n umip_ldt_64 -p l",
+    "steps": [],
+    "flags": [],
+    "summary": "Add one case when SIGSEGV solved, and then",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cpu_umip_func_tests",
+    "domain": "Security",
+    "feature": "UMIP",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_UMIP",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for UMIP"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2019-10-27T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

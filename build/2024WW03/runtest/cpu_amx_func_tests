@@ -1,0 +1,5 @@
+# @name CPU_AMX_FUNC_TESTS
+# @desc SPR AMX/TMUL related functional test
+# @requires cpu/tmul
+
+CPU_XS_FUNC_AMX_SW_TEST amx_func_test.sh

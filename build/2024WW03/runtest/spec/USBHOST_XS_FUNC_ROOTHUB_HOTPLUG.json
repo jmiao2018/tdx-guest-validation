@@ -1,0 +1,36 @@
+{
+    "name": "USBHOST_XS_FUNC_ROOTHUB_HOTPLUG",
+    "initial_platform": "",
+    "cmdline": "usb_sysfs_tests.sh -t hotplug",
+    "steps": [],
+    "flags": [],
+    "summary": "USB root hub hot plug test",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_bat_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2018-04-17T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure a usb device is connected"
+}

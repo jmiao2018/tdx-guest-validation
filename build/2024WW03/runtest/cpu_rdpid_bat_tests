@@ -1,0 +1,7 @@
+# @name CPU_RDPID_BAT_TESTS
+# @desc Check rdpid cpuinfo and cpuid
+# @requires cpu/rdpid
+# @setup_requires
+
+CPU_XS_BAT_RDPID_CPU_INFO_TEST cpu_bat.sh -n rdpid -f rdpid
+CPU_XS_BAT_RDPID_CPU_ID_TEST cpu_bat.sh -n rdpid -p "7 1 0 1 c 22"

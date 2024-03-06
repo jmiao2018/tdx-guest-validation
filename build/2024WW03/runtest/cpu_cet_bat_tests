@@ -1,0 +1,8 @@
+# @name CPU_CET_BAT_TESTS
+# @desc Check cet cpuinfo cpuid and kconfig
+# @requires cpu/cet
+# @setup_requires
+
+CPU_XS_BAT_CET_SHSTK_CPU_INFO_TEST cpu_bat.sh -n cet -f shstk
+CPU_XS_BAT_CET_SHSTK_CPU_ID_TEST cpu_bat.sh -n cet -p "7 0 0 0 c 7"
+CPU_XS_BAT_CET_KCONFIG_TEST cpu_bat.sh -k "CONFIG_X86_CET|CONFIG_X86_CET_USER|CONFIG_X86_SHADOW_STACK|CONFIG_X86_USER_SHADOW_STACK=y"

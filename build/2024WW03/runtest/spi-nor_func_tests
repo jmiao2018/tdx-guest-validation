@@ -1,0 +1,10 @@
+# @name spi-nor_func_tests
+# @desc spi-nor_func_tests perform functional tests for SPI-NOR device
+# @requires spi
+# @setup_requires
+
+SPI-NOR_S_FUNC_BIOS_WRITABLE_TEST spi-nor-test.sh -r WRITABLE_TEST
+
+SPI-NOR_S_FUNC_BIOS_WRITE_PROTECTION spi-nor-test.sh -r WRITE_PROTECTION
+
+SPI-NOR_S_FUNC_BIOS_BACKUP_TEST spi-nor-test.sh -r BIOS_BACKUP_TEST

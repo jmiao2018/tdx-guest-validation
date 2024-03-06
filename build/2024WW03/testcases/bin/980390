@@ -1,0 +1,2 @@
+#81145,980390,/home/jmiao/2024WW03/bin/ltp-pan -e -S -a 980390 -n 980390 -p -f 
+#81180,I2C_XS_BAT_DEV_ID_CHECK,i2c_basic_tests.sh -c 2                         

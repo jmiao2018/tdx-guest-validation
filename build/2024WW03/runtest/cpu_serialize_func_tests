@@ -1,0 +1,6 @@
+# @name CPU_SERIALIZE_FUNC_TESTS
+# @desc Check serialize function tests like sync core
+# @requires cpu/serialize
+# @setup_requires
+
+CPU_XS_FUNC_SERIALIZE_SYNC_CORE cpu_func.sh -s "driver" -n "sync_core_timing.ko" -p "PASS"

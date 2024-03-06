@@ -1,0 +1,28 @@
+# @name TPMI BAT TESTS
+# @desc Intel TPMI Basic Acceptance Tests
+# @requires powermgr/tpmi
+# @utility_requires rdmsr wrmsr 
+# @setup_requires
+
+#INTEL_TPMI BAT Tests
+TPMI_XS_BAT_ALL_DRIVERS_UNLOAD_LOAD intel_tpmi.sh -t tpmi_remove_all_drivers
+TPMI_XS_BAT_DRIVER_INTERFACE intel_tpmi.sh -t tpmi_sysfs
+TPMI_XS_BAT_DEBUGFS_INTERFACE intel_tpmi.sh -t tpmi_debugfs
+TPMI_XS_BAT_DUMP_POWER_FEATURE_STRUCTURE intel_tpmi.sh -t pm_feature_list
+TPMI_XS_BAT_POWER_FEATURE_LOCKED_DISABLE_STATUS intel_tpmi.sh -t dump_pfs_locked_disabled_status
+TPMI_XS_BAT_TPMI_ID_00_MEM_DUMP_READ intel_tpmi.sh -t mem_value_00
+TPMI_XS_BAT_TPMI_ID_01_MEM_DUMP_READ intel_tpmi.sh -t mem_value_01
+TPMI_XS_BAT_TPMI_ID_02_MEM_DUMP_READ intel_tpmi.sh -t mem_value_02
+TPMI_XS_BAT_TPMI_ID_03_MEM_DUMP_READ intel_tpmi.sh -t mem_value_03
+TPMI_XS_BAT_TPMI_ID_04_MEM_DUMP_READ intel_tpmi.sh -t mem_value_04
+TPMI_XS_BAT_TPMI_ID_05_MEM_DUMP_READ intel_tpmi.sh -t mem_value_05
+TPMI_XS_BAT_TPMI_ID_0A_MEM_DUMP_READ intel_tpmi.sh -t mem_value_0a
+TPMI_XS_BAT_TPMI_ID_06_MEM_DUMP_READ intel_tpmi.sh -t mem_value_06
+TPMI_XS_BAT_TPMI_ID_0C_MEM_DUMP_READ intel_tpmi.sh -t mem_value_0c
+TPMI_XS_BAT_TPMI_ID_0D_MEM_DUMP_READ intel_tpmi.sh -t mem_value_0d
+TPMI_XS_BAT_TPMI_ID_80_MEM_DUMP_READ intel_tpmi.sh -t mem_value_80
+TPMI_XS_BAT_TPMI_ID_81_MEM_DUMP_READ intel_tpmi.sh -t mem_value_81
+TPMI_XS_BAT_TPMI_ID_FD_MEM_DUMP_READ intel_tpmi.sh -t mem_value_fd
+TPMI_XS_BAT_TPMI_ID_FE_MEM_DUMP_READ intel_tpmi.sh -t mem_value_fe
+TPMI_XS_BAT_TPMI_ID_FF_MEM_DUMP_READ intel_tpmi.sh -t mem_value_ff
+TPMI_XS_BAT_TPMI_MEM_WRITE_READ intel_tpmi.sh -t mem_write_read

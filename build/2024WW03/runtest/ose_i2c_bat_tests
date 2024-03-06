@@ -1,0 +1,10 @@
+# @name ose_i2c_bat_tests
+# @desc ose_i2c_bat_tests perform BAT tests for I2C driver
+# @requires ose_i2c
+# @setup_requires
+
+OSE_I2C_XS_BAT_DEV_ID_CHECK ose_i2c_test.sh -t 1
+
+OSE_I2C_XS_BAT_DEV_CHECK ose_i2c_test.sh -t 2
+
+OSE_I2C_XS_BAT_BIND_UNBIND_DRV bind_unbind_driver.sh "ose_i2c"

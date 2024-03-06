@@ -1,0 +1,56 @@
+#!/bin/bash
+#
+# Copyright (C) 2011 Texas Instruments Incorporated - http://www.ti.com/
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation version 2.
+#
+# This program is distributed "as is" WITHOUT ANY WARRANTY of any
+# kind, whether express or implied; without even the implied warranty
+# of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+
+# Get testable I2C Bus Numbers for different platform.
+# by default return all the i2c bus numbers
+
+# Input:
+# Output: Testable i2cbus numbers
+
+source "common.sh"
+
+############################### CLI Params ###################################
+
+############################ DYNAMIC-DEFINED Params ##############################
+i2c_nodes=`ls /dev/i2c*` || die "No I2C nodes availble"
+i2cbus_numbers=""
+for i2c_node in $i2c_nodes; do
+  i2cbus_num=`echo $i2c_node | awk '{print substr ($0, length($0))}'`
+  i2cbus_numbers+=" $i2cbus_num"
+done
+
+############################ USER-DEFINED Params ##############################
+# Try to avoid defining values here, instead see if possible
+# to determine the value dynamically
+case $ARCH in
+esac
+case $DRIVER in
+esac
+case $SOC in
+esac
+case $MACHINE in
+  omap5-evm) i2cbus_numbers="0 4";;
+  ecs|ECS) i2cbus_numbers="1 2 3 4";;
+  anchor8|ANCHOR8) i2cbus_numbers="1 2 3 4";;
+  ecs2_8a|ECS2_8A) i2cbus_numbers="1 2 3 4";;
+  ecs2_7b|ECS2_7B) i2cbus_numbers="1 2 3 4";;
+  malata8|MALATA8) i2cbus_numbers="1 2 3 4";;
+  ecs2_10a|ECS2_10A) i2cbus_numbers="1 2 3 4";;
+esac
+
+if [ -z "i2cbus_numbers" ]; then
+  die "Failed to get i2cbus_numbers"
+else
+  echo $i2cbus_numbers
+fi

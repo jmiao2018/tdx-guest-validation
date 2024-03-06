@@ -1,0 +1,34 @@
+{
+    "name": "POWER_XS_FUNC_S2IDLE_S0IX_ENTRY_EXIT_VIA_PM_GRAPH_500_CYCLES",
+    "initial_platform": "",
+    "cmdline": "./sleepgraph.py -m freeze/mem/disk -multi 500 3 -rtcwake 15 -dev -sync -gzip -addlogs -o output",
+    "steps": [],
+    "flags": [],
+    "summary": "Check S2idle path S0ix entry and exit 500 cycles using seperate tool: pm_graph",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "powermgr_s0ix_stress_tests",
+    "domain": "Power",
+    "feature": "S0IX",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": true,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "pm_graph",
+            "check": "",
+            "description": "needs sleepgraph.py"
+        }
+    ],
+    "createDate": "2019-09-26T17:00:00.000-0700",
+    "link": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA",
+    "tips": ""
+}

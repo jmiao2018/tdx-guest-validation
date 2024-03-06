@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_XS_FUNC_UDISKSCTL_3.1_UAS",
+    "initial_platform": "",
+    "cmdline": "udisksct_tests.sh -p 3.1 -t uas",
+    "steps": [],
+    "flags": [],
+    "summary": "Check USB 3.1 uas device with udisksctl",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usbhost_3.1_udisksctl_func_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 3.1 UAS device",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-06-20T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure 3.x flash/uas device is connected as case name. Please make sure s/r to disk is working."
+}

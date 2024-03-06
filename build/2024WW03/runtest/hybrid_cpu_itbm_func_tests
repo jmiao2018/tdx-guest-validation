@@ -1,0 +1,9 @@
+# @name HYBRID_CPU_ITBM_FUNC_TESTS
+# @desc HYBRID_CPU_ITBM_FUNC_TESTS perform founctional tests for ITBM for Hybrid CPU
+# @requires hybrid_cpu
+# @setup_requires
+
+HYBRID_CPU_XS_FUNC_SYSTEM_ITBM_HEAVY_WORKLOAD_CORE hybrid_cpu_tests.sh -t workload_h_core
+HYBRID_CPU_XS_FUNC_SYSTEM_ITBM_HEAVY_WORKLOAD_ATOM hybrid_cpu_tests.sh -t workload_h_atom
+HYBRID_CPU_XS_FUNC_SYSTEM_ITBM_HEAVY_WORKLOAD_RT_APP hybrid_cpu_tests.sh -t workload_h_rt_app
+HYBRID_CPU_XS_FUNC_SYSTEM_ITBM_HEAVY_WORKLOAD_PACKAGE_POLICY hybrid_cpu_tests.sh -t  package_policy

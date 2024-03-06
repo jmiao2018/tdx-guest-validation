@@ -1,0 +1,50 @@
+{
+    "name": "CPU_XS_STRESS_CET_PERF_SHSTK_32_LOSS",
+    "initial_platform": "",
+    "cmdline": "cet_func.sh -t cet_perf_compare -p shstk_stress_32",
+    "steps": [],
+    "flags": [],
+    "summary": "Check shstk 32bit performance loss rate",
+    "status": "Closed",
+    "priority": "P3",
+    "scenario": "cpu_cet_stress_tests",
+    "domain": "Security",
+    "feature": "CET_USER",
+    "owner": "xupengfe",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_SHADOW_STACK_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For shadow stack enabling"
+        },
+        {
+            "name": "CONFIG_X86_BRANCH_TRACKING_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For IBT enabling"
+        },
+        {
+            "name": "CONFIG_X86_CET",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CET"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-09-16T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

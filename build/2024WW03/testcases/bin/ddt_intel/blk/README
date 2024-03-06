@@ -1,0 +1,46 @@
+SD Test Cases
+
+This file contains instructions how to set up the environment
+and how to run SD Test Cases.
+
+
+SET UP ENVIRONMENT
+========================================================================================================
+
+ 1. Independently on what platform will be used, it needs to have an SD slot.
+
+ 2. SD Test Cases execute test for SD, SDHC and SDXC. So need to get either:
+     - Prepare an SD at least 2GB and format it with at least one partition in 'vfat' FS, an SDHC at least
+       16GB and format it in 'vfat' FS and an SDXC at least 64GB and format it in 'vfat' FS.
+     - Prepare only an SDHC or SDXC at least 64GB and format it in 'vfat' FS.
+    It is recommended the second option since the technology device between the memories are the same,
+    the only differences is the speed and the storage capacity, but speed is not relevant for tests.
+
+ 3. Insert the SD into DUT's slot.
+
+RUN TESTCASES
+========================================================================================================
+
+ 1. Run "runandroid_build.sh --sdk 21 --platform $PLATFORM"
+     - $PLATFORM
+	* byt-cr-ecs (This the only one supported now)
+  * byt-cr-ecs2_7b
+	* byt-cr-ecs2_8a
+
+ 2. Run "runandroid_install.sh --tsid $TSID --platform $PLATFORM --sdk 21 --devid $DEV_ID --install"
+     - $TSID
+     	* ltp-ddt:        run all test scenario files defined in android-ddt-func-subset.
+  	  * ltp-ddt-stress: run all test scenario files defined in android-ddt-stress-subset.
+	    * ltp-ddt-perf:   run all test scenario files defined in android-ddt-perf-subset.
+	    * ltp-ddt-full:   run all test scenario files defined in android-ddt-fullset.
+
+     - $PLATFORM
+	    * byt-cr-ecs (this the only one supported now)
+	    * byt-cr-ecs2_7b
+	    * byt-cr-ecs2_8a
+
+     - $DEV_ID
+	    * Device ID get with 'adb devices' command.
+
+     - '--install' is optional, which is required the first time you run the test on DUT or there are
+       some updates of test cases.

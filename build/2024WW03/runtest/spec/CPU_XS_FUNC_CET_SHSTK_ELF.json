@@ -1,0 +1,50 @@
+{
+    "name": "CPU_XS_FUNC_CET_SHSTK_ELF",
+    "initial_platform": "",
+    "cmdline": "cet_func.sh -t elf_cet -n shadow_test_fork",
+    "steps": [],
+    "flags": [],
+    "summary": "Check shadow_test_fork, readelf -n should contain??'SHSTK' and 'IBT'",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cpu_cet_shstk_tests",
+    "domain": "Security",
+    "feature": "CET_USER",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_SHADOW_STACK_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For shadow stack enabling"
+        },
+        {
+            "name": "CONFIG_X86_BRANCH_TRACKING_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For IBT enabling"
+        },
+        {
+            "name": "CONFIG_X86_CET",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CET"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2018-06-18T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

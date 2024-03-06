@@ -1,0 +1,30 @@
+{
+    "name": "DSA_XS_FUNC_GUEST_USER_COMPVAL_4D4G4Q",
+    "initial_platform": "",
+    "cmdline": "dsa_user_test.sh -c 4d4g4q_user -o 0x06 -g 1",
+    "steps": [],
+    "flags": [],
+    "summary": "Test dsa on guest with user memory compare value",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "dsa_guest_user_func_tests",
+    "domain": "CPU",
+    "feature": "DSA",
+    "owner": "xinzhanz",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [
+        "intel iommu on sv on"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2021-08-05T15:00:44.000-0800",
+    "link": "",
+    "tips": "guest os only"
+}

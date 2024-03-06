@@ -1,0 +1,34 @@
+{
+    "name": "NVME_XS_FUNC_RW_EXT4_2P",
+    "initial_platform": "",
+    "cmdline": "blk_device_readwrite_partitions.sh -d \"nvme\" -p \"2\" -s \"ext4\" -w",
+    "steps": [],
+    "flags": [],
+    "summary": "Find and format NVME 2 partitions in fs type ext4 and write file of 100M between 2 partitions",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "nvme_partitions_func_tests",
+    "domain": "IO",
+    "feature": "NVME",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free NVME disk partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-06-06T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

@@ -1,0 +1,7 @@
+# @name CPU_VMDOS_FATAL_FUNC_TESTS
+# @desc CPU VMDOS function tests
+# @requires cpu/vmdos
+# @setup_requires
+
+CPU_XS_FUNC_VMDOS_FATAL_USER_TEST  sl_func.sh -t user -p "split_lock_detect=fatal"
+CPU_XS_FUNC_VMDOS_FATAL_ROOT_TEST  sl_func.sh -t root -p "split_lock_detect=fatal"

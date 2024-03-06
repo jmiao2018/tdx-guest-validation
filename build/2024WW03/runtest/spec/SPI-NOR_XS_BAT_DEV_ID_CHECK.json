@@ -1,0 +1,66 @@
+{
+    "name": "SPI-NOR_XS_BAT_DEV_ID_CHECK",
+    "initial_platform": "",
+    "cmdline": "spi_dev_info_check.sh -d \"spi_nor\" -p",
+    "steps": [],
+    "flags": [],
+    "summary": "spi-nor device id on pci bus check",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "spi-nor_bat_tests",
+    "domain": "LPSS_IO",
+    "feature": "SPI-NOR",
+    "owner": "hongyuni",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_SPI_INTEL_PCI",
+            "values": [
+                "m"
+            ],
+            "description": "Intel PCH/PCU SPI flash PCI driver"
+        },
+        {
+            "name": "CONFIG_MTD_SPI_NOR",
+            "values": [
+                "m"
+            ],
+            "description": "SPI-NOR flash device /dev/mtd driver module"
+        },
+        {
+            "name": "CONFIG_SPI_INTEL",
+            "values": [
+                "m"
+            ],
+            "description": "Intel SPI controller driver"
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "BIOS Guard -> <Disabled>",
+            "path": "[if option exist] Intel Advanced Menu -> CPU config ->BIOS Guard -> BIOS Guard -> <Disabled>",
+            "description": "This will enabled the BIOS Lock option in following path if option exists, otherwise, the following BIOS Lock option should be existing by default"
+        },
+        {
+            "name": "BIOS Lock -> <Disabled>",
+            "path": "Intel Advanced Menu -> PCH IO config -> Security config -> BIOS Lock -> <Disabled>",
+            "description": "Disable for SPI-NOR flash write access enabling"
+        },
+        {
+            "name": "Flash Protection Range -> <Disabled>",
+            "path": "Intel Advanced Menu -> PCH IO config -> Flash Protection Range -> <Disabled>",
+            "description": "Disable for SPI-NOR flash write access enabling"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2018-11-01T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

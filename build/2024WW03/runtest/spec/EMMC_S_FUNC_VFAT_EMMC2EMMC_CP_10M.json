@@ -1,0 +1,34 @@
+{
+    "name": "EMMC_S_FUNC_VFAT_EMMC2EMMC_CP_10M",
+    "initial_platform": "",
+    "cmdline": "blk_device_dd_readwrite_test.sh -f 'vfat' -b '1M' -c '10' -i 'cp' -d 'emmc'",
+    "steps": [],
+    "flags": [],
+    "summary": "Write a file of 10M size in 'vfat' from a MMC to another MMC",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "emmc_vfat_func_tests",
+    "domain": "IO",
+    "feature": "eMMC",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free EMMC partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-12-04T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

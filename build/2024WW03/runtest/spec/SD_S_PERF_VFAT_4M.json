@@ -1,0 +1,34 @@
+{
+    "name": "SD_S_PERF_VFAT_4M",
+    "initial_platform": "",
+    "cmdline": "blk_device_filesystem_perf_test.sh -f 'vfat' -s '4' -B '262144' -d 'sd' -c '1'",
+    "steps": [],
+    "flags": [],
+    "summary": "Find, format in 'vfat' and mount device node. Write a file of 4M size with a buffer size of: 262144 bytes",
+    "status": "Closed",
+    "priority": "P4",
+    "scenario": "sd_vfat_perf_tests",
+    "domain": "IO",
+    "feature": "SD",
+    "owner": "hongyuni",
+    "testType": "PERF",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free SD partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-12-04T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

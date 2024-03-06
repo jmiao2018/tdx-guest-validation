@@ -1,0 +1,14 @@
+# @name TBT_USER_TESTS
+# @desc Check Thunderbolt user mode test
+# @requires tbt
+# @setup_requires
+# @utility_requires boltctl
+
+TBT_XS_FUNC_USER_MODE_TEST tbt_func_test.sh -s user
+TBT_XS_FUNC_MONITOR_USER_TEST tbt_func_test.sh -s monitor_user
+TBT_XS_FUNC_USER_PLUG_OUT_TEST tbt_func_test.sh -s po
+TBT_XS_FUNC_USER_PLUG_IN_CHECK tbt_func_test.sh -s upic
+TBT_XS_FUNC_USER_PLUG_IN_ERROR_CHECK tbt_func_test.sh -s upie
+TBT_XS_FUNC_USER_PLUG_IN_ACC_CHECK tbt_func_test.sh -s upiac
+TBT_XS_FUNC_USER_PLUG_IN_ACC_ERROR tbt_func_test.sh -s upiae
+TBT_XS_FUNC_USER_VTD_AUTHORIZE tbt_func_test.sh -s uvtd

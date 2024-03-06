@@ -1,0 +1,2 @@
+# This file contains all stress tests for EC driver
+ddt_intel/ec_stress_tests

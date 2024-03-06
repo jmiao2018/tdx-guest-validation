@@ -1,0 +1,34 @@
+{
+    "name": "POWER_XS_FUNC_S2IDLE_S0IX_ENTRY_EXIT_VIA_PMCCORE_10_CYCLES",
+    "initial_platform": "",
+    "cmdline": "powermgr_s0ix_tests.sh -c 15",
+    "steps": [],
+    "flags": [],
+    "summary": "Check S2idle path S0ix entry and exit 10 cycles via intel_pmc_core sysfs",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "powermgr_s0ix_func_tests",
+    "domain": "Power",
+    "feature": "S0IX",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": true,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "intel_pmc_core driver",
+            "check": "",
+            "description": "intel_pmc_core driver need to enable test platform"
+        }
+    ],
+    "createDate": "2019-09-26T17:00:00.000-0700",
+    "link": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA",
+    "tips": ""
+}

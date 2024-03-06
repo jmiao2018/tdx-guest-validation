@@ -1,0 +1,14 @@
+# @name thermal_dptf_bat_tests
+# @desc thermal DPTF sysfs basic read and write
+# @requires thermal
+# @setup_requires
+
+#THERMAL_DPTF BAT Test
+THERMAL_XS_BAT_DPTF_ACPI_UUID_WRITE thermal_dptf.sh -t write_dptf_acpi_uuid 
+THERMAL_XS_BAT_DPTF_ACPI_ODVP_READ thermal_dptf.sh -t read_dptf_acpi_odvp
+THERMAL_XS_BAT_DPTF_PROCESSOR_PL_READ thermal_dptf.sh -t read_dptf_processor_thermal_power_limit
+THERMAL_XS_BAT_DTT_DEVICE_DRIVER_CHECK thermal_dptf.sh -t check_dtt_device_driver
+THERMAL_S_BAT_DPTF_WORKLOAD_TYPE_CHANGE thermal_dptf.sh -t check_workload_type_change
+# Test cases below do not support in latest v6.3 and further driver version
+THERMAL_XS_BAT_DPTF_PROCESSOR_WORKLOAD_READ thermal_dptf.sh -t read_dptf_processor_thermal_workload_type
+THERMAL_XS_BAT_DPTF_PROCESSOR_WORKLOAD_WRITE thermal_dptf.sh -t write_dptf_processor_thermal_workload_type

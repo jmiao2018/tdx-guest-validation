@@ -1,0 +1,7 @@
+# @name CPU_VP2_BAT_TESTS
+# @desc Check vp2 intersect cpuinfo and cpuid
+# @requires cpu/vp2
+# @setup_requires
+
+CPU_XS_BAT_VP2_CPU_INFO_TEST cpu_bat.sh -n vp2 -f "avx512_vp2intersect"
+CPU_XS_BAT_VP2_CPU_ID_TEST cpu_bat.sh -n vp2 -p "7 0 0 0 d 8"

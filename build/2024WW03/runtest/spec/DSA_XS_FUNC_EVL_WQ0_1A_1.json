@@ -1,0 +1,30 @@
+{
+    "name": "DSA_XS_FUNC_EVL_WQ0_1A_1",
+    "initial_platform": "Granite Rapids",
+    "cmdline": "event_log_test.sh -t 1a.1",
+    "steps": [],
+    "flags": [],
+    "summary": "Run event log test 1a.1 on wq0",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "dsa_event_log_func_tests",
+    "domain": "CPU",
+    "feature": "DSA",
+    "owner": "xinzhanz",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [
+        "intel_iommu=on,sm_on"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2022-08-07T16:06:45.000-0800",
+    "link": "",
+    "tips": ""
+}

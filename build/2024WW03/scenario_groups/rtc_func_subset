@@ -1,0 +1,4 @@
+# This file contains all the functional tests for LCK RTC driver
+ddt_intel/rtc_func_tests
+ddt_intel/rtc_hwclock_func_tests
+ddt_intel/rtc_ioctl_func_tests

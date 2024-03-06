@@ -1,0 +1,7 @@
+# @name TBT_DP_TESTS
+# @desc Check Thunderbolt dp only mode test
+# @requires tbt
+# @setup_requires
+
+TBT_XS_FUNC_DPONLY_MODE_TEST tbt_func_test.sh -s dp
+TBT_XS_FUNC_MONITOR_DP_TEST tbt_func_test.sh -s monitor_dp

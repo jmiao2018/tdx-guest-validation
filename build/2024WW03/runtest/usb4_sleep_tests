@@ -1,0 +1,8 @@
+# @name USB4_NVM_TESTS
+# @desc Check whether the USB4 device can work normally after sleep
+# @requires usb4
+# @setup_requires
+
+USB4_XS_FUNC_USB4_FREEZE usb4_tests.sh -s suspend -t freeze -p usb4
+USB4_XS_FUNC_USB4_S3 usb4_tests.sh -s suspend -t deep -p usb4
+USB4_XS_FUNC_USB4_S4 usb4_tests.sh -s suspend -t disk -p usb4

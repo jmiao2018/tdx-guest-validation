@@ -1,0 +1,7 @@
+# This file contains all the functional tests for LCK SD driver
+ddt_intel/sd_buswidth_func_tests
+ddt_intel/sd_ext2_func_tests
+ddt_intel/sd_ext3_func_tests
+ddt_intel/sd_ext4_func_tests
+ddt_intel/sd_vfat_func_tests
+ddt_intel/sd_iozone_func_tests

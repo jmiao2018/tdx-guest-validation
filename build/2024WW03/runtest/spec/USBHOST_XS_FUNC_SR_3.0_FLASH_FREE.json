@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_XS_FUNC_SR_3.0_FLASH_FREE",
+    "initial_platform": "",
+    "cmdline": "usb_suspend_resume_tests.sh -p 3.0 -t flash -s freeze",
+    "steps": [],
+    "flags": [],
+    "summary": "USB 3.0 flash storage with USB3.X port suspend to freeze/resume",
+    "status": "Closed",
+    "priority": "P4",
+    "scenario": "usbhost_3.0_suspendresume_func_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 3.0 flash storage device",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-11-01T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure 3.x flash/uas device is connected as case name. Please make sure s/r to freeze is working."
+}

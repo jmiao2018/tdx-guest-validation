@@ -1,0 +1,28 @@
+# NFS server address and export path, needed by ETH_S_FUNC_MULTI_PROCESSING,ETH_M_STRESS_MULTI_PROCESSING
+# These should be changed when deploying tests into a different test farm.
+# Once defined here in the param file, the values would overwrite the default ones
+# defined in the test case.
+#NFS_SERVER=
+#NFS_ROOT_PATH=
+
+# Block device nodes specified for MMC/EMMC/USB/SATA tests
+#SD_DEV_NODE="/dev/mmcblk0p1"
+#EMMC_DEV_NODE="/dev/mmcblk1p1"
+#USB_DEV_NODE="/dev/sdc1"
+#SATA_DEV_NODE="/dev/sdb1"
+
+# GPIO PLATFORM PATH
+#GPIO_PLTF_PATH="/sys/bus/platform/drivers/tigerlake-pinctrl/"
+# GPIOs reserved for the system.
+#GPIO_NUM_SKIPPED="248 253 403 458"
+
+# SPI_PCI_NODE and DEV_ID info
+SPI_PCI_NODE="0000:00:1e.3"
+SPI_PCI_NODE_SHORT="00:1e.3"
+SPI_DEV_ID="7a2b"
+SPI_BAT="true"
+SPI_FUNC="true"
+# SPI_NOR_PCI_NODE and DEV_ID info
+SPI_NOR_PCI_NODE="0000:00:1f.5"
+SPI_NOR_PCI_NODE_SHORT="00:1f.5"
+SPI_NOR_DEV_ID="7a24"

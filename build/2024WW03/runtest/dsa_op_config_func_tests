@@ -1,0 +1,20 @@
+# @name DSA_ACCFG_FUNC_TESTS
+# @desc DSA accel-config tool functional tests
+# @requires dsa2.0
+# @utility_requires
+
+DSA_XS_FUNC_OP_FEATURE_CHECK op_config_test.sh -t feature_check
+DSA_XS_FUNC_OP_DEFAULT_VALUE op_config_test.sh -t default_value
+DSA_XS_FUNC_OP_WRITE_ZERO op_config_test.sh -t write_0
+DSA_XS_FUNC_OP_CONFIG_DEFAULT op_config_test.sh -t config_default
+DSA_XS_FUNC_OP_WRITE_MEMORY op_config_test.sh -t write_memory_all
+DSA_XS_FUNC_OP_CONFIG_MEMORY op_config_test.sh -t config_memory
+DSA_XS_FUNC_OP_WQ0_ZERO_TEST op_config_test.sh -t wq_0_test
+DSA_XS_FUNC_OP_WQ0_COPY_TEST op_config_test.sh -t wq_memory_copy_test
+DSA_XS_FUNC_OP_WQ0_FILL_TEST op_config_test.sh -t wq_memory_fill_test
+DSA_XS_FUNC_OP_WQ1_ZERO_TEST op_config_test.sh -t wq_0_test -d 0 -w 1
+DSA_XS_FUNC_OP_WQ1_COPY_TEST op_config_test.sh -t wq_memory_copy_test -d 0 -w 1
+DSA_XS_FUNC_OP_WQ1_FILL_TEST op_config_test.sh -t wq_memory_fill_test -d 0 -w 1
+DSA_XS_FUNC_OP_WQ7_ZERO_TEST op_config_test.sh -t wq_0_test -d 0 -w 7
+DSA_XS_FUNC_OP_WQ10_COPY_TEST op_config_test.sh -t wq_memory_copy_test -d 0 -w 10
+DSA_XS_FUNC_OP_WQ15_FILL_TEST op_config_test.sh -t wq_memory_fill_test -d 0 -w 15

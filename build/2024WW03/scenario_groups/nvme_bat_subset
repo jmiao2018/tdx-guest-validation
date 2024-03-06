@@ -1,0 +1,2 @@
+# This file contains all the Basic Acceptance Tests for LCK NVME driver
+ddt_intel/nvme_bat_tests

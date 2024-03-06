@@ -1,0 +1,28 @@
+# @name MCE_TEST
+# @desc MCE_TEST do MCE and core test
+# @requires ras
+# @setup_requires
+
+MCE_S_FUNC_APEI_TEST ras_test.sh -t 1
+MCE_S_FUNC_EDAC_TEST ras_test.sh -t 2
+MCE_S_FUNC_EINJ_EXT ras_test.sh -t 3
+MCE_S_FUNC_EMCA_INJ ras_test.sh -t 4
+MCE_S_FUNC_ERST_INJ ras_test.sh -t 5
+MCE_S_FUNC_KVM_TEST ras_test.sh -t 6
+MCE_S_FUNC_PFA_TEST ras_test.sh -t 7
+
+MCE_L_FUNC_BSP_ON_OFF_CORE ras_test.sh -t 11
+MCE_L_FUNC_BSP_ON_OFF_NOS3S4 ras_test.sh -t 12
+MCE_S_FUNC_SRAR_DCU ras_test.sh -t 13
+MCE_S_FUNC_SRAR_IFU ras_test.sh -t 14
+MCE_S_FUNC_STRE_HWP_HARD ras_test.sh -t 15
+MCE_S_FUNC_STRE_HWP_SOFT ras_test.sh -t 16
+
+
+MCE_S_FUNC_HWP_SOFT ras_test.sh -t 21
+MCE_S_FUNC_HWP_HARD ras_test.sh -t 22
+MCE_S_FUNC_HWP_HUGE ras_test.sh -t 23
+MCE_S_FUNC_HWP_HUGE_OVER ras_test.sh -t 24
+MCE_S_FUNC_HWP_THP ras_test.sh -t 25
+
+

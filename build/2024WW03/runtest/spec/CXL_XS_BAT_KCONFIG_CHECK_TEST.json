@@ -1,0 +1,36 @@
+{
+    "name": "CXL_XS_BAT_KCONFIG_CHECK_TEST",
+    "initial_platform": "",
+    "cmdline": "cxl_tests.sh -s kconfig -p \"CONFIG_CXL_BUS=m\"",
+    "steps": [],
+    "flags": [],
+    "summary": "Check kconfig should contain CONFIG_CXL_BUS=m",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "cxl_bat_tests",
+    "domain": "IO",
+    "feature": "CXL",
+    "owner": "xupengfe",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_CXL_BUS",
+            "values": [
+                "m"
+            ],
+            "description": "Kconfig for CXL"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-05-27T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

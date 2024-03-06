@@ -1,0 +1,37 @@
+# @name CPU_VBMI_FUNC_TESTS
+# @desc CPU VBMI function tests
+# @requires cpu/vbmi
+# @setup_requires
+# @utility_requires bc
+CPU_XS_FUNC_VBMI_ZMM2_0_FF vbmi_func.sh -n vpmadd -p "0 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_1_FF vbmi_func.sh -n vpmadd -p "1 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_2_FF vbmi_func.sh -n vpmadd -p "2 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_3_FF vbmi_func.sh -n vpmadd -p "3 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_4_FF vbmi_func.sh -n vpmadd -p "4 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_5_FF vbmi_func.sh -n vpmadd -p "5 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_6_FF vbmi_func.sh -n vpmadd -p "6 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_7_FF vbmi_func.sh -n vpmadd -p "7 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_18_FF vbmi_func.sh -n vpmadd -p "18 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_19_FF vbmi_func.sh -n vpmadd -p "19 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_1F_FF vbmi_func.sh -n vpmadd -p "1F ff b"
+CPU_XS_FUNC_VBMI_ZMM2_20_FF vbmi_func.sh -n vpmadd -p "20 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_21_FF vbmi_func.sh -n vpmadd -p "21 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_30_FF vbmi_func.sh -n vpmadd -p "30 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_3A_FF vbmi_func.sh -n vpmadd -p "3A ff b"
+CPU_XS_FUNC_VBMI_ZMM2_3F_FF vbmi_func.sh -n vpmadd -p "3F ff b"
+CPU_XS_FUNC_VBMI_ZMM2_40_FF vbmi_func.sh -n vpmadd -p "40 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_41_FF vbmi_func.sh -n vpmadd -p "41 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_42_FF vbmi_func.sh -n vpmadd -p "42 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_43_FF vbmi_func.sh -n vpmadd -p "43 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_50_FF vbmi_func.sh -n vpmadd -p "50 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_60_FF vbmi_func.sh -n vpmadd -p "60 ff b"
+CPU_XS_FUNC_VBMI_ZMM2_FF_FF vbmi_func.sh -n vpmadd -p "ff ff b"
+CPU_XS_FUNC_VBMI_ZMM3_0_0 vbmi_func.sh -n vpmadd -p "0 0 b"
+CPU_XS_FUNC_VBMI_ZMM3_0_1 vbmi_func.sh -n vpmadd -p "0 1 b"
+CPU_XS_FUNC_VBMI_ZMM3_0_5 vbmi_func.sh -n vpmadd -p "0 5 b"
+CPU_XS_FUNC_VBMI_ZMM3_0_A vbmi_func.sh -n vpmadd -p "0 A b"
+CPU_XS_FUNC_VBMI_ZMM3_0_F vbmi_func.sh -n vpmadd -p "0 F b"
+CPU_XS_FUNC_VBMI_ZMM3_0_1FF vbmi_func.sh -n vpmadd -p "0 1FF b"
+CPU_XS_FUNC_VBMI_ZMM3_0_FFFF vbmi_func.sh -n vpmadd -p "0 FFFF b"
+CPU_XS_FUNC_VBMI_ZMM3_0_1FFFF vbmi_func.sh -n vpmadd -p "0 1FFFF b"
+CPU_XS_FUNC_VBMI_RANDOM vbmi_func.sh -n vpmadd -p random

@@ -1,0 +1,37 @@
+# @name SD_IOZONE_FUNC_TESTS
+# @desc SD read write test with Iozone tool whatever fs in card
+#   The device node is specified in get_blk_device_node.sh
+# @requires sd
+# @setup_requires
+
+SD_XS_FUNC_IO_1TH_4K blk_device_iozone_readwrite_test.sh -d "sd" -r "4k"
+
+SD_XS_FUNC_IO_1TH_512K blk_device_iozone_readwrite_test.sh -d "sd" -r "512k" -i "0" -i "1"
+
+SD_XS_FUNC_IO_1TH_64M blk_device_iozone_readwrite_test.sh -d "sd" -s "64m" -r "16k" -i "0" -i "1" -i "2"
+
+SD_S_FUNC_IO_1TH_1G blk_device_iozone_readwrite_test.sh -d "sd" -s "1g" -r "16k" -i "0" -i "1" -i "2" -i "8"
+
+SD_XS_FUNC_IO_2TH_4K blk_device_iozone_readwrite_test.sh -d "sd" -r "4k" -t "2"
+
+SD_XS_FUNC_IO_2TH_512K blk_device_iozone_readwrite_test.sh -d "sd" -r "512k" -i "0" -i "1" -t "2"
+
+SD_XS_FUNC_IO_2TH_64M blk_device_iozone_readwrite_test.sh -d "sd" -s "64m" -r "16k" -i "0" -i "1" -i "2" -t "2"
+
+SD_M_FUNC_IO_2TH_1G blk_device_iozone_readwrite_test.sh -d "sd" -s "1g" -r "16k" -i "0" -i "1" -i "2" -i "8" -t "2"
+
+SD_XS_FUNC_IO_3TH_4K blk_device_iozone_readwrite_test.sh -d "sd" -r "4k" -t "3"
+
+SD_XS_FUNC_IO_3TH_512K blk_device_iozone_readwrite_test.sh -d "sd" -r "512k" -i "0" -i "1" -t "3"
+
+SD_XS_FUNC_IO_3TH_64M blk_device_iozone_readwrite_test.sh -d "sd" -s "64m" -r "16k" -i "0" -i "1" -i "2" -t "3"
+
+SD_M_FUNC_IO_3TH_1G blk_device_iozone_readwrite_test.sh -d "sd" -s "1g" -r "16k" -i "0" -i "1" -i "2" -i "8" -t "3"
+
+SD_XS_FUNC_IO_4TH_4K blk_device_iozone_readwrite_test.sh -d "sd" -r "4k" -t "4"
+
+SD_XS_FUNC_IO_4TH_512K blk_device_iozone_readwrite_test.sh -d "sd" -r "512k" -i "0" -i "1" -t "4"
+
+SD_XS_FUNC_IO_4TH_64M blk_device_iozone_readwrite_test.sh -d "sd" -s "64m" -r "16k" -i "0" -i "1" -i "2" -t "4"
+
+SD_M_FUNC_IO_4TH_1G blk_device_iozone_readwrite_test.sh -d "sd" -s "1g" -r "16k" -i "0" -i "1" -i "2" -i "8" -t "4"

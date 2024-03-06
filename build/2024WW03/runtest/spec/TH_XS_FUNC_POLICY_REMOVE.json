@@ -1,0 +1,126 @@
+{
+    "name": "TH_XS_FUNC_POLICY_REMOVE",
+    "initial_platform": "",
+    "cmdline": "intel_th_tests.sh -t policy_remove -s default -d 0-msc0 -p basic",
+    "steps": [],
+    "flags": [],
+    "summary": "Check if multi policy nodes can be removed.",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "th_target_mode_func_tests",
+    "domain": "CPU",
+    "feature": "Intel_TH",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_STM",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_STM_PROTO_BASIC",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_STM_DUMMY",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_STM_SOURCE_CONSOLE",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_PCI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_ACPI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_GTH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_STH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_MSU",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_PTI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_STM_SOURCE_FTRACE",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_STM_SOURCE_HEARTBEAT",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "PCH trace hub",
+            "path": "",
+            "description": "PCH trace hub as target mode:https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2019-12-29T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

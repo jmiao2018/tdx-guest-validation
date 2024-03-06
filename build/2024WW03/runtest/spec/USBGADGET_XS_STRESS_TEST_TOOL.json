@@ -1,0 +1,49 @@
+{
+    "name": "USBGADGET_XS_STRESS_TEST_TOOL",
+    "initial_platform": "",
+    "cmdline": "usb_gadget_stress.sh -t 1000",
+    "steps": [],
+    "flags": [],
+    "summary": "USBGADGET_XS_STRESS_TEST_TOOL",
+    "status": "Closed",
+    "priority": "P4",
+    "scenario": "usbgadget_stress_tests",
+    "domain": "IO",
+    "feature": "USB_GADGET",
+    "owner": "feiyi",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_DWC3",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_USB_GADGET",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "xDCI Support ",
+            "path": "Intel Advanced Menu -> PCH-IO Configuration -> USB Configuration",
+            "description": "Set as Enabled"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2018-02-22T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please connect 2 typec port together on one DUT. Please make sure gadget related modules kconfig are enabled."
+}

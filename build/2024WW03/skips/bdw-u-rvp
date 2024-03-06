@@ -1,0 +1,3 @@
+PCI_XS_FUNC_GET_SPEED_WIDTH
+#no hwp msr reg on broadwell-u
+POWER_XS_FUNC_HWP_S3

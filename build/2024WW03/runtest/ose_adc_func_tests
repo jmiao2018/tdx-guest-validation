@@ -1,0 +1,10 @@
+# @name ADC_FUNC_TESTS
+# @desc ADC  tests
+# @requires ose_adc
+# @setup_requires
+
+# ADC test
+ADC_XS_FUNC_DEVICE  adc_tests.sh -t dev
+ADC_XS_FUNC_DEVICE_CHECK  adc_tests.sh -t dev_check
+ADC_XS_FUNC_DRIVER adc_tests.sh -t driver
+ADC_XS_FUNC_PULLING adc_tests.sh -t pulling

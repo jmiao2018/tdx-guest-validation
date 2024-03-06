@@ -1,0 +1,10 @@
+# @name USB4_FUNC_TESTS
+# @desc Check USB4 device, RTD3 and so on function tests
+# @requires usb4
+# @setup_requires
+
+USB4_XS_FUNC_DEVICE_CHECK usb4_tests.sh -s usb4_device
+USB4_XS_FUNC_RTD3_TEST usb4_tests.sh -s usb4_rtd3
+USB4_XS_FUNC_HOTPLUG_RTD3_TEST usb4_tests.sh -s usb4_hotplug_rtd3
+USB4_XS_FUNC_PLUGIN_GR_NOAUTH_CL1 usb4_tests.sh -s plugin_usb4_noauth_CL1
+USB4_XS_FUNC_PLUGIN_GR_AUTH_CL0 usb4_tests.sh -s plugin_usb4_auth_CL0

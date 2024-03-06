@@ -1,0 +1,5 @@
+# This file contains all the performance tests for LCK eMMC driver
+ddt_intel/emmc_ext2_perf_tests
+ddt_intel/emmc_ext3_perf_tests
+ddt_intel/emmc_ext4_perf_tests
+ddt_intel/emmc_vfat_perf_tests

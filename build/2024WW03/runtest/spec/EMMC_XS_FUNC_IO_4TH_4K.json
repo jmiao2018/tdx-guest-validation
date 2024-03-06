@@ -1,0 +1,34 @@
+{
+    "name": "EMMC_XS_FUNC_IO_4TH_4K",
+    "initial_platform": "",
+    "cmdline": "blk_device_iozone_readwrite_test.sh -d \"emmc\" -r \"4k\" -t \"4\"",
+    "steps": [],
+    "flags": [],
+    "summary": "Write/Read data to eMMC with Iozone with 4 threads and record size of 4K",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "emmc_iozone_func_tests",
+    "domain": "IO",
+    "feature": "eMMC",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free EMMC partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-04-11T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

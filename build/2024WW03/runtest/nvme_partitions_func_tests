@@ -1,0 +1,29 @@
+# @name NVME_PARTITION_FUNC_TESTS
+# @desc NVME_PARTITION_FUNC_TESTS contains tests for create, delete, mount,
+#       umount partitons and to write/read data between partitions.
+# @requires nvme
+# @setup_requires
+
+NVME_XS_FUNC_CREATE_1P blk_device_create_erase_partition.sh -d "nvme" -p "1"
+
+NVME_XS_FUNC_FORMAT_1P_ALL_FS blk_device_readwrite_partitions.sh -d "nvme" -p "1" -f
+
+NVME_XS_FUNC_MOUNT_1P_ALL_MODES blk_device_readwrite_partitions.sh -d "nvme" -p "1" -f -m
+
+NVME_XS_FUNC_CREATE_2P blk_device_create_erase_partition.sh -d "nvme" -p "2"
+
+NVME_XS_FUNC_FORMAT_2P_ALL_FS blk_device_readwrite_partitions.sh -d "nvme" -p "2" -f
+
+NVME_XS_FUNC_MOUNT_2P_ALL_MODES blk_device_readwrite_partitions.sh -d "nvme" -p "2" -f -m
+
+NVME_XS_FUNC_RW_EXT2_2P blk_device_readwrite_partitions.sh -d "nvme" -p "2" -s "ext2" -w
+
+NVME_XS_FUNC_RW_EXT3_2P blk_device_readwrite_partitions.sh -d "nvme" -p "2" -s "ext3" -w
+
+NVME_XS_FUNC_RW_EXT4_2P blk_device_readwrite_partitions.sh -d "nvme" -p "2" -s "ext4" -w
+
+NVME_XS_FUNC_RW_VFAT_2P blk_device_readwrite_partitions.sh -d "nvme" -p "2" -s "vfat" -w
+
+NVME_XS_FUNC_CREATE_3P blk_device_create_erase_partition.sh -d "nvme" -p "3"
+
+NVME_XS_FUNC_CREATE_4P blk_device_create_erase_partition.sh -d "nvme" -p "4"

@@ -1,0 +1,34 @@
+{
+    "name": "RAPL_XS_FUNC_READ_DRAM_ENERGY_WITH_WORKLOAD",
+    "initial_platform": "",
+    "cmdline": "rapl_power_check.sh -p dram",
+    "steps": [],
+    "flags": [],
+    "summary": "Check whether RAPL DRAM energy increase when running mem workload with memtester tool ",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "rapl_func_tests",
+    "domain": "Power",
+    "feature": "Intel_RAPL",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "memtester",
+            "check": "",
+            "description": "memtester need to run as the workload"
+        }
+    ],
+    "createDate": "2020-05-27T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

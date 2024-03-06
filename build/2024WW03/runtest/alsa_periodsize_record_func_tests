@@ -1,0 +1,20 @@
+# @name Testing for various period sizes
+# @desc Do record for various period sizes
+# @requires alsa && hda
+ALSA_S_FUNC_CAP_PRDSZ_1 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 1 -F ALSA_M_FUNC_CAP_PRDSZ_1.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 1 -F ALSA_M_FUNC_CAP_PRDSZ_1.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_2 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 2 -F ALSA_M_FUNC_CAP_PRDSZ_2.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 2 -F ALSA_M_FUNC_CAP_PRDSZ_2.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_4 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 4 -F ALSA_M_FUNC_CAP_PRDSZ_4.snd';do_cmd 'alsa_tests.sh -t playback -p 4 -F ALSA_M_FUNC_CAP_PRDSZ_4.snd'
+ALSA_S_FUNC_CAP_PRDSZ_8 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 8 -F ALSA_M_FUNC_CAP_PRDSZ_8.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 8 -F ALSA_M_FUNC_CAP_PRDSZ_8.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_16 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 16 -F ALSA_M_FUNC_CAP_PRDSZ_16.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 16 -F ALSA_M_FUNC_CAP_PRDSZ_16.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_32 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 32 -F ALSA_M_FUNC_CAP_PRDSZ_32.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 32 -F ALSA_M_FUNC_CAP_PRDSZ_32.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_64 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 64 -F ALSA_M_FUNC_CAP_PRDSZ_64.snd -d 20';do_cmd 'alsa_tests.sh -t playback -p 64 -F ALSA_M_FUNC_CAP_PRDSZ_64.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_128 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 128 -F ALSA_M_FUNC_CAP_PRDSZ_128.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 128 -F ALSA_M_FUNC_CAP_PRDSZ_128.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_256 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 256 -F ALSA_M_FUNC_CAP_PRDSZ_256.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 256 -F ALSA_M_FUNC_CAP_PRDSZ_256.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_512 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 512 -F ALSA_M_FUNC_CAP_PRDSZ_512.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 512 -F ALSA_M_FUNC_CAP_PRDSZ_512.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_1024 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 1024 -F ALSA_M_FUNC_CAP_PRDSZ_1024.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 1024 -F ALSA_M_FUNC_CAP_PRDSZ_1024.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_2046 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 2046 -F ALSA_M_FUNC_CAP_PRDSZ_2046.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 2046 -F ALSA_M_FUNC_CAP_PRDSZ_2046.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_4096 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 4096 -F ALSA_M_FUNC_CAP_PRDSZ_4096.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 4096 -F ALSA_M_FUNC_CAP_PRDSZ_4096.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_8192 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 8192 -F ALSA_M_FUNC_CAP_PRDSZ_8192.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 8192 -F ALSA_M_FUNC_CAP_PRDSZ_8192.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_16384 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 16384 -F ALSA_M_FUNC_CAP_PRDSZ_16384.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 16384 -F ALSA_M_FUNC_CAP_PRDSZ_16384.snd -d 20'
+ALSA_S_FUNC_CAP_PRDSZ_32768 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -p 32768 -F ALSA_M_FUNC_CAP_PRDSZ_32768.snd -d 20'; do_cmd 'alsa_tests.sh -t playback -p 32768 -F ALSA_M_FUNC_CAP_PRDSZ_32768.snd -d 20'
+

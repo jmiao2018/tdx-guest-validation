@@ -1,0 +1,224 @@
+/root/2024WW03/runltp: line 100: warning: setlocale: LC_TIME: cannot change locale (en_US.UTF-8): No such file or directory
+/root/2024WW03/runltp: line 100: warning: setlocale: LC_TIME: cannot change locale (en_US.UTF-8)
+INFO: creating /root/2024WW03/results directory
+INFO: Filtering testscenarios based on gnr capabilities
+awk: cmd. line:1: warning: regexp escape sequence `\&' is not a known regexp operator
+If some fields are empty or look unusual you may have an old version.
+Compare to the current minimal requirements in Documentation/Changes.
+
+/etc/os-release
+/etc/redhat-release
+/etc/system-release
+NAME="Red Hat Enterprise Linux"
+VERSION="9.4 (Plow)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="9.4"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="Red Hat Enterprise Linux 9.4 Beta (Plow)"
+ANSI_COLOR="0;31"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:9::baseos"
+HOME_URL="https://www.redhat.com/"
+DOCUMENTATION_URL="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 9"
+REDHAT_BUGZILLA_PRODUCT_VERSION=9.4
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="9.4 Beta"
+Red Hat Enterprise Linux release 9.4 Beta (Plow)
+Red Hat Enterprise Linux release 9.4 Beta (Plow)
+
+uname:
+Linux localhost.localdomain 5.14.0-427.el9.x86_64 #1 SMP PREEMPT_DYNAMIC Fri Feb 23 01:51:18 EST 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+/proc/cmdline
+BOOT_IMAGE=(hd0,gpt3)/vmlinuz-5.14.0-427.el9.x86_64 root=UUID=246adf04-9e27-46a8-964c-b46f3e8e730e console=tty0 console=ttyS0,115200n8 no_timer_check net.ifnames=0 crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M
+
+Gnu C                 
+Clang                 
+util-linux             2.37.4
+mount                  linux 2.37.4 (libmount 2.37.4: selinux, btrfs, namespaces, assert, debug)
+modutils               28
+e2fsprogs              1.46.5
+Linux C Library         1 root root 2592544 Jan 30 15:36 /lib64/libc.so.6
+Dynamic linker (ldd)   2.34
+Procps                 3.3.17
+iproute2               1.3.0
+iputils                20210202
+ethtool                6.2
+Sh-utils               8.32
+Modules Loaded         rfkill vfat fat intel_rapl_msr intel_rapl_common tdx_guest tsm intel_uncore_frequency_common nfit libnvdimm iTCO_wdt iTCO_vendor_support i2c_i801 lpc_ich i2c_smbus pcspkr drm fuse xfs libcrc32c ahci libahci libata crct10dif_pclmul crc32_pclmul crc32c_intel virtio_net ghash_clmulni_intel virtio_blk net_failover failover virtio_console serio_raw sunrpc dm_mirror dm_region_hash dm_log dm_mod
+
+free reports:
+               total        used        free      shared  buff/cache   available
+Mem:         3543820      407172     2555520       16928      823288     3136648
+Swap:              0           0           0
+
+cpuinfo:
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Address sizes:                      52 bits physical, 57 bits virtual
+Byte Order:                         Little Endian
+CPU(s):                             1
+On-line CPU(s) list:                0
+Vendor ID:                          GenuineIntel
+BIOS Vendor ID:                     Red Hat
+Model name:                         06/cf
+BIOS Model name:                    RHEL-9.2.0 PC (Q35 + ICH9, 2009)
+CPU family:                         6
+Model:                              207
+Thread(s) per core:                 1
+Core(s) per socket:                 1
+Socket(s):                          1
+Stepping:                           2
+BogoMIPS:                           3800.00
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat clflush dts mmx fxsr sse sse2 ss ht tm syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq dtes64 ds_cpl ssse3 sdbg fma cx16 pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tdx_guest fsgsbase bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 wbnoinvd avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq la57 rdpid bus_lock_detect cldemote movdiri movdir64b fsrm md_clear serialize tsxldtrk amx_bf16 avx512_fp16 amx_tile amx_int8 flush_l1d arch_capabilities
+Hypervisor vendor:                  KVM
+Virtualization type:                full
+L1d cache:                          32 KiB (1 instance)
+L1i cache:                          32 KiB (1 instance)
+L2 cache:                           4 MiB (1 instance)
+L3 cache:                           16 MiB (1 instance)
+NUMA node(s):                       1
+NUMA node0 CPU(s):                  0
+Vulnerability Gather data sampling: Not affected
+Vulnerability Itlb multihit:        Not affected
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Not affected
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; Enhanced / Automatic IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS SW sequence
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+
+AppArmor disabled
+
+SELinux status:                 enabled
+SELinuxfs mount:                /sys/fs/selinux
+SELinux root directory:         /etc/selinux
+Loaded policy name:             targeted
+Current mode:                   enforcing
+Mode from config file:          enforcing
+Policy MLS status:              enabled
+Policy deny_unknown status:     allowed
+Memory protection checking:     actual (secure)
+Max kernel policy version:      33
+no big block device was specified on commandline.
+Tests which require a big block device are disabled.
+You can specify it with option -z
+COMMAND:    /root/2024WW03/bin/ltp-pan   -e -S   -a 1435     -n 1435 -p -f /tmp/ltp-svGHKMjGmv/alltests -l /tmp/tmp.sciL7XYMKx  -C /root/2024WW03/output/LTP_RUN_ON-tmp.sciL7XYMKx.failed -T /root/2024WW03/output/LTP_RUN_ON-tmp.sciL7XYMKx.tconf 
+LOG File: /tmp/tmp.sciL7XYMKx
+FAILED COMMAND File: /root/2024WW03/output/LTP_RUN_ON-tmp.sciL7XYMKx.failed
+TCONF COMMAND File: /root/2024WW03/output/LTP_RUN_ON-tmp.sciL7XYMKx.tconf
+Running tests.......
+<<<test_start>>>
+tag=TDX_XS_BAT_GUEST_KCONFIG stime=1710483362
+cmdline="tdx_guest_bat.sh -t TD_KCONFIG"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021602.975|TRACE|Start TDX guest kconfig checking:|
+|0315_021602.981|TRACE|CONFIG_INTEL_TDX_GUEST matches with expect y|
+|0315_021602.982|TRACE|TDX guest kconfig test PASS|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=0 cstime=0
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_BAT_GUEST_CPUINFO stime=1710483362
+cmdline="cpu_bat.sh -n tdx -f tdx_guest"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021602.995|TRACE|Test tdx:|
+|0315_021602.997|TRACE|/proc/cpuinfo contain 'tdx_guest'|
+|0315_021602.997|TRACE|-------- Teardown starts --------|
+|0315_021602.998|TRACE|Teardown handler: cpu_teardown|
+|0315_021603.003|TRACE|-------- Teardown ends ---------|
+<<<execution_status>>>
+initiation_status="ok"
+duration=1 termination_type=exited termination_id=0 corefile=no
+cutime=2 cstime=0
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_BAT_GUEST_DRIVER_KCONFIG stime=1710483363
+cmdline="tdx_guest_bat.sh -t TD_DRIVER_KCONFIG"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021603.011|TRACE|Start TDX guest driver kconfig checking:|
+|0315_021603.016|WARNING| common.sh:486:test_kconfigs() - CONFIG_TDX_GUEST_DRIVER does not match y!|
+|0315_021603.020|TRACE|CONFIG_TDX_GUEST_DRIVER matches with expect m|
+|0315_021603.021|TRACE|TDX guest driver kconfig test PASS|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=1 cstime=1
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_BAT_GUEST_ATTEST_DEV stime=1710483363
+cmdline="tdx_guest_bat.sh -t TD_ATTEST_DEV"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021603.030|TRACE|Start TDX guest attestation device checking:|
+|0315_021603.030|TRACE|TDX guest attestation device exists.|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=0 cstime=0
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_BAT_GUEST_LAZY_ACCEPT_KCONFIG stime=1710483363
+cmdline="tdx_guest_bat.sh -t TD_LAZY_ACCEPT_KCONFIG"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021603.040|TRACE|Start TDX guest lazy_accept kconfig checking:|
+|0315_021603.044|TRACE|CONFIG_UNACCEPTED_MEMORY matches with expect y|
+|0315_021603.045|TRACE|TDX guest lazy_accept kconfig test PASS|
+Cleaning actions
+incrementing stop
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=1 cstime=0
+<<<test_end>>>
+INFO: ltp-pan reported all tests PASS
+LTP Version: ltp-ddt_20231231-12-g9b4877fae6
+
+       ###############################################################"
+
+            Done executing testcases."
+            LTP Version:  ltp-ddt_20231231-12-g9b4877fae6
+            Result log is in the /tmp/tmp.sciL7XYMKx "
+       ###############################################################"
+
+Test Start Time: Fri Mar 15 02:16:02 2024
+-----------------------------------------
+Testcase                                           Result     Exit Value
+--------                                           ------     ----------
+TDX_XS_BAT_GUEST_KCONFIG                           PASS       0    
+TDX_XS_BAT_GUEST_CPUINFO                           PASS       0    
+TDX_XS_BAT_GUEST_DRIVER_KCONFIG                    PASS       0    
+TDX_XS_BAT_GUEST_ATTEST_DEV                        PASS       0    
+TDX_XS_BAT_GUEST_LAZY_ACCEPT_KCONFIG               PASS       0    
+
+-----------------------------------------------
+Total Tests: 5
+Total Skipped Tests: 0
+Total Failures: 0
+Kernel Version: 5.14.0-427.el9.x86_64
+Machine Architecture: x86_64
+Hostname: localhost.localdomain
+

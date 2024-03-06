@@ -1,0 +1,34 @@
+{
+    "name": "POWER_XS_FUNC_RTM_PKG6_ENTRY",
+    "initial_platform": "",
+    "cmdline": "powermgr_s0ix_tests.sh -c 17",
+    "steps": [],
+    "flags": [],
+    "summary": "Check server CPU Package C-state 6 entry and residency during runtime",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "powermgr_cstate_func_c6_tests",
+    "domain": "Power",
+    "feature": "Intel_Idle",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [
+        {
+            "name": "unknown",
+            "path": "unknown",
+            "description": "Different server platform may have different BIOS option to enable package c-state, by default it is disabled, need to enable it first"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2021-Nov-03T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

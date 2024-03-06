@@ -1,0 +1,9 @@
+# @name CXL3.0_GENERAL_FUNC_TESTS
+# @desc Check CXL3.0 general functional test
+# @requires cxl3.0
+# @setup_requires
+
+CXL3_XS_FUNC_BASIC_CXL_ACPI cxl_tests.sh -s cxl_acpi
+CXL3_XS_FUNC_BASIC_CXL_PCI_ROOT cxl_tests.sh -s cxl_root
+CXL3_XS_FUNC_BASIC_CXL_MAILBOX cxl_tests.sh -s cxl_mailbox
+CXL3_XS_FUNC_GENERAL_CXL_ATTACHED_MEM cxl_tests.sh -s cxl_list_mem

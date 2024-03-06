@@ -1,0 +1,10 @@
+# @name RTC_STRESS_TESTS
+# @desc RTC_STRESS_TESTS perform stress tests for rtc driver exercising alarm
+#       setting, time RW, IOCTL.
+# @requires rtc
+# @setup_requires
+
+#RTC Stress tests
+RTC_S_STRESS_SETGETIME_100 rtc_tests -device /dev/rtc -ioctltest setgettime -loop 100
+
+RTC_XL_STRESS_ALARM_30_MINS rtc_tests -device /dev/rtc -ioctltest alarm -ioctltestarg 1800

@@ -1,0 +1,9 @@
+# @name Power Intel Powerclamp stress tests
+# @desc Stress Tests for Intel Powerclamp driver
+# @requires powermgr
+# @utility_requires pgrep shuf
+
+#perform stress test cases
+POWER_S_FUNC_POWERCLAMP_LONG_LASTING_TEST powerclamp_idle_inject_tests.sh -l 180
+POWER_S_FUNC_POWERCLAMP_RANDOM_IDLE_INJECT_ON_OFF powerclamp_idle_inject_tests.sh -r 180
+POWER_S_FUNC_POWERCLAMP_RANDOM_CPU_ON_OFF powerclamp_idle_inject_tests.sh -s 180

@@ -1,0 +1,10 @@
+# @name CPU_RAR_BAT_TESTS
+# @desc Check Remote Action Request for TLB shoot down bat tests
+# @requires cpu/rar
+# @setup_requires
+
+CPU_XS_BAT_RAR_CPU_ID_TEST cpu_bat.sh -n rar -p "7 0 0 0 d 30"
+CPU_XS_BAT_RAR_KCONFIG_TEST cpu_bat.sh -k "CONFIG_X86_INTEL_RAR=y"
+CPU_XS_BAT_RAR_X86_FEATURE_PCID cpu_feature 145
+CPU_XS_BAT_RAR_X86_FEATURE_INVPCID cpu_feature 298
+CPU_XS_BAT_RAR_CPU_INFO_TEST cpu_bat.sh -n rar -f rar

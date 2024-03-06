@@ -1,0 +1,10 @@
+# @name CPU_AIA_FUNC_TESTS
+# @desc Accelerator Interfacing Arch func test cases
+# @requires cpu/aia
+# @setup_requires
+
+CPU_XS_FUNC_AIA_MOVDIRI_INSTRUCTION aia_func.sh -t aia_test -p "movdiri"
+CPU_XS_FUNC_AIA_MOVDIR64B_INSTRUCTION aia_func.sh -t aia_test -p "movdir64b"
+CPU_XS_FUNC_AIA_TPAUSE_INSTRUCTION aia_func.sh -t aia_test -p "tpause"
+CPU_XS_FUNC_AIA_UMWAIT_INSTRUCTION aia_func.sh -t aia_test -p "umwait"
+CPU_XS_FUNC_AIA_UMONITOR_INSTRUCTION aia_func.sh -t aia_test -p "umonitor"

@@ -1,0 +1,8 @@
+# @name smbus_bat_tests
+# @desc smbus_bat_tests perform BAT tests for SMBus driver
+# @requires smbus
+# @utility_requires i2cdetect i2cdump i2cget i2cset
+
+SMBUS_XS_BAT_DRV_CHECK smbus_function_test.sh -r "DRV_CHECK"
+
+SMBUS_XS_BAT_DEV_CHECK smbus_function_test.sh -r "DEV_CHECK"

@@ -1,0 +1,34 @@
+{
+    "name": "POWER_XS_FUNC_RTM_PKG6_RESIDENCY",
+    "initial_platform": "",
+    "cmdline": "powermgr_s0ix_tests.sh -c 18",
+    "steps": [],
+    "flags": [],
+    "summary": "Verify Server platform runtime PC6 residency and stability with 10 cycles PC6 residency check",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "powermgr_cstate_func_c6_tests",
+    "domain": "Power",
+    "feature": "Intel_Idle",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [
+        {
+            "name": "Package C State Control--> No Limit ",
+            "path": "\"EDKII Menu\" -> \"Socket Configuration\" -> \"Advanced Power Management Config\"",
+            "description": "Package C State Control"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2022-02-28T20:39:25.000-0800",
+    "link": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA#IntelReferencePlatformsBIOSandKconfigoptionstorunLTPDDTforIA-SapphireRapidsSPR/EGS(SimicsandPost-Si)",
+    "tips": ""
+}

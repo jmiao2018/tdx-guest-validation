@@ -1,0 +1,13 @@
+# @name TBT_PREBOOT_TESTS
+# @desc Check thunderbolt devices preboot works well
+# @requires tbt
+# @setup_requires
+# @utility_requires boltctl
+
+TBT_XS_FUNC_ACL_CHECK tbt_preboot_acl.sh -s acl_check
+TBT_XS_FUNC_ACL_CLEAN tbt_preboot_acl.sh -s acl_clean
+TBT_XS_FUNC_ACL_CLEAN_PLUG tbt_preboot_acl.sh -s acl_clean_plug
+TBT_XS_FUNC_ACL_WRONG tbt_preboot_acl.sh -s acl_wrong
+TBT_XS_FUNC_ACL_SET_FIRST tbt_preboot_acl.sh -s acl_set_first
+TBT_XS_FUNC_ACL_CLEAN_RECOVER tbt_preboot_acl.sh -s acl_clean_recover
+TBT_XS_FUNC_ACL_SET_ALL tbt_preboot_acl.sh -s acl_set_all

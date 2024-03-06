@@ -1,0 +1,7 @@
+# @name TBT_NONE_TESTS
+# @desc Check Thunderbolt none mode test
+# @requires tbt
+# @setup_requires
+
+TBT_XS_FUNC_NONE_MODE_TEST tbt_func_test.sh -s none
+TBT_XS_FUNC_MONITOR_NONE_TEST tbt_func_test.sh -s monitor_none

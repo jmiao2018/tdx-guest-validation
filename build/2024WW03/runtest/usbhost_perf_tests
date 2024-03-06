@@ -1,0 +1,7 @@
+# @name USBHOST_PERF_TESTS
+# @desc Performance test for usb host.
+# @requires usbhost
+# @setup_requires
+#
+
+USB_XS_FUNC_CHK_XHCI_INITCALL xhci_check.sh initcall

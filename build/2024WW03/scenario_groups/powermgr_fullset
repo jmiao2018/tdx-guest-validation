@@ -1,0 +1,18 @@
+#This file contains all the tests for LCK power management driver
+ddt_intel/powerclamp_bat_tests
+ddt_intel/powerclamp_func_tests
+ddt_intel/powerclamp_stress_tests
+ddt_intel/powermgr_bat_tests
+ddt_intel/powermgr_cstate_func_tests
+ddt_intel/powermgr_hibernation_func_tests
+ddt_intel/powermgr_pstate_func_tests
+ddt_intel/powermgr_pstate_func_tests_smallcore
+ddt_intel/powermgr_pstate_freq_func_tests
+ddt_intel/powermgr_pstate_per_cpu_perf_limit_tests
+ddt_intel/powermgr_pstate_HT_slibing_freq_limit_tests
+ddt_intel/powermgr_pstate_no_hwp_tests
+ddt_intel/powermgr_runtime_func_tests
+ddt_intel/powermgr_s0ix_func_tests
+ddt_intel/powermgr_s0ix_func_tests_smallcore
+ddt_intel/rapl_bat_tests
+ddt_intel/rapl_func_tests

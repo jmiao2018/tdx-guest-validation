@@ -1,0 +1,2 @@
+# This file contains all the Functional Tests for LCK SPI driver
+ddt_intel/spi_func_tests

@@ -1,0 +1,50 @@
+{
+    "name": "CPU_XS_BAT_CET_IBT_CPU_INFO_TEST",
+    "initial_platform": "",
+    "cmdline": "cpu_bat.sh -n cet -f ibt",
+    "steps": [],
+    "flags": [],
+    "summary": "/proc/cpuinfo shows the availability of ibt",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cpu_cet_bat_tests",
+    "domain": "Security",
+    "feature": "CET_KERNEL",
+    "owner": "xupengfe",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_SHADOW_STACK_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For shadow stack enabling"
+        },
+        {
+            "name": "CONFIG_X86_BRANCH_TRACKING_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For IBT enabling"
+        },
+        {
+            "name": "CONFIG_X86_CET",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CET"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2018-02-25T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

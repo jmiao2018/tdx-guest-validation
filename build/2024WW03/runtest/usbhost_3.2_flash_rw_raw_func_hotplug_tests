@@ -1,0 +1,9 @@
+# @name USBHOST_3.2_FLASH_RW_RAW_FUNC_HOTPLUG_TESTS
+# @desc usbhost read/write tests
+# @requires usbhost
+# @setup_requires
+
+# USBHOST  USBHOST_3.2_FLASH_RW_RAW_FUNC_HOTPLUG_TESTS
+USBHOST_XS_FUNC_RW_3.2_FLASH_HOTPLUG usb_read_write_tests.sh -b 1MB -c 10 -p 3.2 -t flash -e hotplug -d 1 -f switch
+USBHOST_XS_FUNC_RW_3.2_FLASH_HOTPLUG_HUB usb_read_write_tests.sh -b 1MB -c 10 -p 3.2 -t flash -e hotplug -d 2 -h 1 -f switch
+USBHOST_XS_FUNC_RW_3.2_FLASH_HOTPLUG_MHUB usb_read_write_tests.sh -b 1MB -c 10 -p 3.2 -t flash -e hotplug -d 3 -h 5 -f switch

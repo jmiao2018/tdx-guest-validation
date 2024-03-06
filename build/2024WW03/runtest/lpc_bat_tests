@@ -1,0 +1,27 @@
+# @name LPC_BAT_TESTS
+# @desc LPC_BAT_TESTS perform basic acceptance tests for LPC driver
+# @requires lpc
+# @setup_requires
+
+LPC_FUNC_CHECK_LPC_DRIVER_PRECONDITIONS driver_sysfs.sh -d "lpc_ich" -p
+
+LPC_FUNC_BIND_UNBIND_LPC_DRIVER bind_unbind_driver.sh "lpc_ich"
+
+# Block first, no device id for new platform LCK-5380
+#LPC_FUNC_ENUMERATION_DEVICE_ID driver_sysfs.sh -d "lpc_ich" -e
+
+LPC_FUNC_CHECK_PSMOUSE_DRIVER_SYSFS driver_sysfs.sh -d "psmouse" -s "a"
+
+LPC_FUNC_BIND_UNBIND_PSMOUSE_DRIVER bind_unbind_driver.sh "psmouse"
+
+LPC_FUNC_CHECK_ATKBD_DRIVER_SYSFS driver_sysfs.sh -d "atkbd" -s "a"
+
+LPC_FUNC_CHECK_ATKBD_DRIVER_PRECONDITIONS driver_sysfs.sh -d "atkbd" -p
+
+LPC_FUNC_BIND_UNBIND_ATKBD_DRIVER bind_unbind_driver.sh "atkbd"
+
+LPC_FUNC_CHECK_BOUNDS_SYSFS_PS2_CONNECTED check_lpc_sysfs.sh
+
+LPC_FUNC_LPC_DEVICES_CONNECTED check_devices.sh
+
+LPC_FUNC_CHECK_PSMOUSE_DRIVER_PRECONDITIONS driver_sysfs.sh -d "psmouse" -p

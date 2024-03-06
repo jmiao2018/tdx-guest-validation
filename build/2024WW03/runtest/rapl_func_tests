@@ -1,0 +1,53 @@
+# @name RAPL Functional Tests
+# @desc Functional Tests for RAPL driver on CNL x86_64 HW platform and beyond
+# @requires powermgr/rapl
+# @utility_requires rdmsr wrmsr perl memtester bc perf
+
+# RAPL package domain tests
+RAPL_XS_FUNC_READ_PKG_ENERGY_STATUS rapl_power_check.sh -e pkg
+RAPL_XS_FUNC_READ_PKG_ENERGY_WITH_WORKLOAD rapl_power_check.sh -p pkg
+RAPL_XS_FUNC_READ_PKG_POWER_LIMIT_75 rapl_power_check.sh -l pkg 75
+RAPL_XS_FUNC_READ_PKG_POWER_LIMIT_50 rapl_power_check.sh -l pkg 50
+
+# RAPL CPU domain tests
+RAPL_XS_FUNC_READ_PP0_ENERGY_STATUS rapl_power_check.sh -e core
+RAPL_XS_FUNC_READ_PP0_ENERGY_WITH_WORKLOAD rapl_power_check.sh -p core
+
+# RAPL Graphic domain tests
+RAPL_XS_FUNC_READ_PP1_ENERGY_STATUS rapl_power_check.sh -e uncore
+RAPL_XS_FUNC_READ_PP1_ENERGY_WITH_WORKLOAD rapl_power_check.sh -p uncore
+
+# RAPL DRAM domain tests
+RAPL_XS_FUNC_READ_DRAM_ENERGY_WITH_WORKLOAD rapl_power_check.sh -p dram
+
+# RAPL PERF Turbostat name comparing tests for server and client
+RAPL_XS_FUNC_DOMAIN_NAME_COMPARE_PERF_TURBOSTAT rapl_perf_tests.sh -t legacy_sysfs_perf_name_compare
+
+# RAPL PERF Turbostat energy comparing tests for client
+RAPL_S_FUNC_ENERGY_COMPARE_PERF_LOAD_CLIENT rapl_perf_tests.sh -t legacy_sysfs_perf_energy_compare_workload_client
+RAPL_S_FUNC_ENERGY_COMPARE_TURBO_LOAD_CLIENT rapl_perf_tests.sh -t legacy_sysfs_turbostat_energy_compare_workload_client
+
+# RAPL PERF Turbostat energy comparing tests for server
+RAPL_S_FUNC_ENERGY_COMPARE_PERF_LOAD_SERVER rapl_perf_tests.sh -t legacy_sysfs_perf_energy_compare_workload_server
+RAPL_S_FUNC_ENERGY_COMPARE_TURBO_LOAD_SERVER rapl_perf_tests.sh -t legacy_sysfs_turbostat_energy_compare_workload_server
+
+# Multiple Packages CPU Pkg and DRAM Power comparing
+RAPL_S_FUNC_MULTIPLE_SOCKETS_PKG_DRAM_STRESS_POWER_COMPARE rapl_perf_tests.sh -t multiple_packages_stress_power_compare
+RAPL_S_FUNC_MULTIPLE_SOCKETS_PKG_IDLE_POWER_COMPARE rapl_perf_tests.sh -t multiple_packages_idle_power_compare
+
+# Enable RAPL control
+RAPL_XS_FUNC_ENABLE_RAPL_CONTROL rapl_perf_tests.sh -t enable_rapl_control_after_power_limit_change
+
+# Verify RAPL domains when package CPUs offline
+# This case only supports on GNR and further TPMI based server platforms
+RAPL_XS_FUNC_RAPL_DOMAIN_PACKAGE_OFFLINE rapl_perf_tests.sh -t verify_rapl_domains_package_offline
+
+# Verify RAPL PL1,PL2,PL4 Power value after RAPL Control enable and disable
+RAPL_XS_FUNC_PL1_AFTER_ENABLE_DISABLE rapl_perf_tests.sh -t rapl_control_enable_disable_pl1
+RAPL_XS_FUNC_PL2_AFTER_ENABLE_DISABLE rapl_perf_tests.sh -t rapl_control_enable_disable_pl2
+RAPL_XS_FUNC_PL4_AFTER_ENABLE_DISABLE rapl_perf_tests.sh -t rapl_control_enable_disable_pl4
+
+# Verify on client only as linux does not expose 0x601 for Server
+RAPL_XS_FUNC_PL4_LOW_VALUE rapl_perf_tests.sh -t rapl_control_pl4_low_value
+RAPL_XS_FUNC_PL4_HIGH_VALUE rapl_perf_tests.sh -t rapl_control_pl4_high_value
+

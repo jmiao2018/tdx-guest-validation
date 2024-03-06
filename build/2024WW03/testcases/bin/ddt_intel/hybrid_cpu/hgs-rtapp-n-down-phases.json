@@ -1,0 +1,62 @@
+{
+	"tasks" : {
+		"rt-app-thr0" : {
+			"instance" : 1,
+			"loop" : -1,
+			"priority": -19,
+			"phases" : {
+				"p0" : {
+					"loop" : 5000,
+					"run" :   900,
+					"sleep" : 100
+				},
+				"p1" : {
+					"loop" : 5000,
+					"run" :   800,
+					"sleep" : 200
+				},
+				"p2" : {
+					"loop" : 5000,
+					"run" :   700,
+					"sleep" : 300
+				},
+				"p3" : {
+					"loop" : 5000,
+					"run" :   600,
+					"sleep" : 400
+				},
+				"p4" : {
+					"loop" : 5000,
+					"run" :   500,
+					"sleep" : 500
+				},
+				"p5" : {
+					"loop" : 5000,
+					"run" :   400,
+					"sleep" : 600
+				},
+				"p6" : {
+					"loop" : 5000,
+					"run" :   300,
+					"sleep" : 700
+				},
+				"p7" : {
+					"loop" : 5000,
+					"run" :   200,
+					"sleep" : 800
+				},
+				"p8" : {
+					"loop" : 5000,
+					"run" :   100,
+					"sleep" : 900
+				},
+			}
+		}
+	},
+	"global" : {
+		"duration" : 45,
+		"calibration" : "CPU0",
+		"default_policy" : "SCHED_OTHER",
+		"log_size" : "Disable"
+	}
+}

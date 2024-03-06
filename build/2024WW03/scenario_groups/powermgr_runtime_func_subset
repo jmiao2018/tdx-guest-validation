@@ -1,0 +1,2 @@
+# This file contains all the runtime functional tests for LCK Power driver
+ddt_intel/powermgr_runtime_func_tests

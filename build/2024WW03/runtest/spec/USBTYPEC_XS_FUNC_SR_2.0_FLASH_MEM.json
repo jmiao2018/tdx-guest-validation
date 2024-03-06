@@ -1,0 +1,42 @@
+{
+    "name": "USBTYPEC_XS_FUNC_SR_2.0_FLASH_MEM",
+    "initial_platform": "",
+    "cmdline": "usb_suspend_resume_tests.sh -p 2.0 -t flash -s mem",
+    "steps": [],
+    "flags": [],
+    "summary": "USB 2.0 Flash with multi-hub suspend to mem on TYPEC port",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_type-c_suspendresume_func_tests",
+    "domain": "IO",
+    "feature": "USB_TYPEC",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 2.0 flash storage device",
+            "check": "",
+            "description": "Need connect to typec port"
+        }
+    ],
+    "createDate": "2017-11-25T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure 2.0/3.x flash/uas device is connected to typec port as case name.Please make sure s/r to mem is working."
+}

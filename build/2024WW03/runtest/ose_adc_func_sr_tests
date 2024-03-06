@@ -1,0 +1,8 @@
+# @name ADC_FUNC_SR_TESTS
+# @desc adc with sr tests
+# @requires ose_adc
+# @setup_requires
+
+# ADC SR test
+ADC_XS_FUNC_DISK adc_tests.sh -t disk
+ADC_XS_FUNC_MEM adc_tests.sh -t mem

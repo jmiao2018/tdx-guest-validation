@@ -1,0 +1,57 @@
+{
+    "name": "USBHOST_XS_STRESS_SWITCH_USB_STORAGE",
+    "initial_platform": "",
+    "cmdline": "usb_switch_tests.sh -p 2.0-flash -q 3.0-flash -r 3.0-uas -s 3.1-uas -t 100",
+    "steps": [],
+    "flags": [],
+    "summary": "USB storage switch stress",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_stress_storage_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 2.0 flash storage device",
+            "check": "",
+            "description": "Need connect to one usb switch deivce then to DUT"
+        },
+        {
+            "name": "USB 3.0 flash storage device",
+            "check": "",
+            "description": "Need connect to one usb switch deivce then to DUT"
+        },
+        {
+            "name": "USB 3.0 UAS device",
+            "check": "",
+            "description": "Need connect to one usb switch deivce then to DUT"
+        },
+        {
+            "name": "USB 3.1 UAS device",
+            "check": "",
+            "description": "Need connect to one usb switch deivce then to DUT"
+        }
+    ],
+    "createDate": "2018-01-14T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure special device is connected as case name. Switch automation need special HW."
+}

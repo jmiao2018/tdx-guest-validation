@@ -1,0 +1,9 @@
+# @name CXL3.0_BAT_TESTS
+# @desc Check CXL IO/Memory feature bat cases files
+# @requires cxl3.0
+# @setup_requires
+
+CXL3_XS_BAT_KCONFIG_CXLBUS cxl_tests.sh -s kconfig -p "CONFIG_CXL_BUS=m"
+CXL3_XS_BAT_KCONFIG_CXLMEM cxl_tests.sh -s kconfig -p "CONFIG_CXL_MEM=m"
+CXL3_XS_BAT_KCONFIG_COMMAND cxl_tests.sh -s kconfig -p "CONFIG_CXL_MEM_RAW_COMMANDS=y"
+CXL3_XS_BAT_CXL3_PCIE_LIST cxl_tests.sh -s cxl3_pcie_list

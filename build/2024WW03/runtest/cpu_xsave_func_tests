@@ -1,0 +1,21 @@
+# @name CPU_XSAVE_FUNC_TESTS
+# @desc CPU XSAVE function tests
+# @requires cpu/xsave
+# @setup_requires
+# @package_requires
+
+CPU_XS_FUNC_XSAVE_AVXMDB xsave_func.sh -n avxmdb -p "null"
+CPU_XS_FUNC_XSAVE_SCHEDCHECK_NULL xsave_func.sh -n schedcheck -p "null"
+CPU_XS_FUNC_XSAVE_SCHEDCHECK_1088 xsave_func.sh -n schedcheck -p "1088"
+CPU_XS_FUNC_XSAVE_THREADCHECK_LOAD xsave_func.sh -n threadcheck_load -p "null"
+CPU_XS_FUNC_XSAVE_CPU_SUPPORT_LIST xsave_list
+CPU_XS_FUNC_XSAVE_OFFSET_CHECK xsave_func.sh -f offset
+CPU_XS_FUNC_XSAVE_BAD_FPU_CHECK xsave_func.sh -f bad_fpu -n xsave_test
+CPU_XS_FUNC_XSAVE_INSTRUCTION xsave_ins
+CPU_XS_FUNC_XSAVE_SIGNAL_HANDLE xsave_func.sh -n xsave_signal_handle -p "null"
+CPU_XS_FUNC_XSAVE_AVX2_YMM xsave_func.sh -n xstate_test -p "2"
+CPU_XS_FUNC_XSAVE_AVX512_OPMASK xsave_func.sh -n xstate_test -p "5"
+CPU_XS_FUNC_XSAVE_PKRU xsave_func.sh -n xstate_test -p "9"
+CPU_XS_FUNC_XSAVE_FORK_LOOP xsave_func.sh -n xsave_fork_loop -p "null"
+CPU_XS_FUNC_XSAVE_FORK_TEST xsave_func.sh -n xsave_fork_test -p "null"
+CPU_XS_FUNC_XSAVE_XSTATE_TEST xstate_64

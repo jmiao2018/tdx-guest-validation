@@ -1,0 +1,18 @@
+# @name Ethernet ping test
+# @desc Brings net iface up and pings default gw. The multi interface tests dynamically figure out the number of eth interfaces supported by the kernel and run the test on all interfaces. So, it is required for each interface to be connected to a separate subnet for tests to be run on all interfaces. If kernel supports multiple interfaces but test can only be run on one interface due to EVM limitation, please use test cases with INTFCS suffix in file below
+# @requires eth
+# @utility_requires ethtool udhcpc iperf
+
+
+ETH_S_STRESS_PING_VARIOUS_SIZES  eth_ping_tests.sh -c pingon_stress_size
+
+ETH_M_STRESS_PING_300S eth_ping_tests.sh -c pingon_stress_time
+
+ETH_M_STRESS_UP_DOWN_ALL_100L  eth_ping_tests.sh -c ifupdown -l 100
+
+
+#ping one interface at background, at the same time, down other all inferfaces then up it
+ETH_M_STRESS_PING_ONE_UPDOWN_100 eth_ping_tests.sh -c ping_updown -l 100
+
+#ping one interface at background, at the same time, down other all inferfaces
+ETH_M_STRESS_PING_ONE_DOWN_100 eth_ping_tests.sh -c ping_down -l 100

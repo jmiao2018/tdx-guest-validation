@@ -1,0 +1,97 @@
+                    PULSE WIDTH MODULATION (PWM) TEST SUITE
+================================================================================
+
+1) TEST CASES OVERVIEW:
+================================================================================
+
+                    AUTO    MANUAL
+                   ------   ------
+'pwm-func-tests'  : 14 TC
+
+2) PRECONDITIONS:
+================================================================================
+
+Before run PWM test cases be aware you meet below preconditions:
+
+  2.1) To run functional TCs that check PWM drivers configured as module you
+       need to compile a kernel with following kconfig options:
+
+       - 'CONFIG_PWM=y'
+       - 'CONFIG_PWM_SYSFS=y'
+       - 'CONFIG_PWM_LPSS=m'
+       - 'CONFIG_PWM_LPSS_PCI=m'
+       - 'CONFIG_PWM_LPSS_PLATFORM=m'
+       - 'CONFIG_PWM_PCA9685=m'
+       - 'CONFIG_BACKLIGHT_PWM=m'
+       - 'CONFIG_REGULATOR_PWM=m'
+
+  2.2) To run functional TCs that check PWM drivers configured as builtin (to be
+       integrated) you need to compile a kernel with following kconfig options:
+
+       - 'CONFIG_PWM=y'
+       - 'CONFIG_PWM_SYSFS=y'
+       - 'CONFIG_PWM_LPSS=y'
+       - 'CONFIG_PWM_LPSS_PCI=y'
+       - 'CONFIG_PWM_LPSS_PLATFORM=y'
+       - 'CONFIG_PWM_PCA9685=y'
+       - 'CONFIG_BACKLIGHT_PWM=y'
+       - 'CONFIG_REGULATOR_PWM=y'
+
+3) HOW TO RUN PWM TEST CASES:
+================================================================================
+
+  3.1) To run test cases:
+
+       ./runtests.sh -p $PLATFORM -f ddt_intel/pwm-func-tests -P $PLATFORM -o ./results
+
+4) TEST PLAN:
+================================================================================
+
+Test Plan: https://docs.google.com/spreadsheets/d/1zvhBYOCOWpvH2kZD_0OPn9BqLNBRVXnwGB_pK3I0Umo/edit#gid=1369358731
+
+Progress: https://docs.google.com/spreadsheets/d/14rYCp_HOUeik4MO_Z6GpSs0biZrynKzkqaIPJMmbh94/edit#gid=540448811
+
+5) TO DOs:
+================================================================================
+
+        5.1) Port from LCK-GDC suite to LTP-DDT:
+
+	     a) Functional:
+   	     	- PWM_FUNC_LOAD_LPSS_AS_BUILTIN
+   	     	- PWM_FUNC_LOAD_LPSS_PCI_AS_BUILTIN
+   	     	- PWM_FUNC_LOAD_LPSS_PLATFORM_AS_BUILTIN
+   	     	- PWM_FUNC_LOAD_LPSS_REGULATOR_AS_BUILTIN
+   	     	- PWM_FUNC_LOAD_BACKLIGHT_AS_BUILTIN
+
+       5.2) To develope in LTP-DDT:
+
+	     a) Functional:
+                - PWM_FUNC_LPSS_PCI_VERIFY_BINDING
+		- PWM_FUNC_LPSS_PCI_BIND_UNBIND_DRIVER
+		- PWM_FUNC_LPSS_PLATFORM_VERIFY_BINDING
+		- PWM_FUNC_LPSS_PLATFORM_BIND_UNBIND_DRIVER
+		- PWM_FUNC_REGULATOR_VERIFY_BINDING
+		- PWM_FUNC_REGULATOR_BIND_UNBIND_DRIVER
+		- PWM_FUNC_BACKLIGHT_VERIFY_BINDING
+		- PWM_FUNC_BACKLIGHT_BIND_UNBIND_DRIVER
+
+	     b) Performance:
+		- PWM_PERF_CHECK_PCI_AFTER_10_S3
+		- PWM_PERF_CHECK_PCI_AFTER_10_S4
+		- PWM_PERF_CHECK_PLATFORM_AFTER_10_S3
+		- PWM_PERF_CHECK_PLATFORM_AFTER_10_S4
+		- PWM_PERF_CHECK_REGULATOR_AFTER_10_S3
+		- PWM_PERF_CHECK_REGULATOR_AFTER_10_S4
+		- PWM_PERF_CHECK_BACKLIGHT_AFTER_10_S3
+		- PWM_PERF_CHECK_BACKLIGHT_AFTER_10_S4
+		- PWM_REGULATOR_KPI_BOOT_TIME
+		- PWM_REGULATOR_KPI_SUSPEND_TIME
+		- PWM_REGULATOR_KPI_RESUME_TIME
+		- PWM_BACKLIGHT_KPI_BOOT_TIME
+		- PWM_BACKLIGHT_KPI_SUSPEND_TIME
+		- PWM_BACKLIGHT_KPI_RESUME_TIME
+
+6) CONTACT:
+================================================================================
+
+Juan Carlos Alonso <juan.carlos.alonso@intel.com>

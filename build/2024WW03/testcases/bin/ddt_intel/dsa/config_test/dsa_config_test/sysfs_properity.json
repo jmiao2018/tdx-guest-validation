@@ -1,0 +1,580 @@
+{
+    "device": {
+        "type": "dir",
+        "dir_type": "device",
+        "enable_cmd": "enable-device",
+        "disable_cmd": "disable-device",
+        "config_cmd": "config-device",
+        "attributes": {
+            "cdev_major": {
+                "name": "cdev_major",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "clients": {
+                "name": "clients",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "cmd_status": {
+                "name": "cmd_status",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "string"
+            },
+            "configurable": {
+                "name": "configurable",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "errors": {
+                "name": "errors",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "string"
+            },
+            "event_log_size": {
+                "name": "event_log_size",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "min_max",
+                "value_range": [64, 65535],
+                "typical_invalid_value":[-1, 63],
+                "config_option_short": "-e",
+                "config_option_long": "--event-log-size"
+            },
+            "gen_cap": {
+                "name": "gen_cap",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "string"
+            },
+            "ims_size": {
+                "name": "ims_size",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "string"
+            },
+            "max_batch_size": {
+                "name": "max_batch_size",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "max_engines": {
+                "name": "max_engines",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "max_groups": {
+                "name": "max_groups",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "max_read_buffers": {
+                "name": "max_read_buffers",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "max_transfer_size": {
+                "name": "max_transfer_size",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "max_work_queues": {
+                "name": "max_work_queues",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "max_work_queues_size": {
+                "name": "max_work_queues_size",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "numa_node": {
+                "name": "numa_node",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "op_cap": {
+                "name": "op_cap",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "string"
+            },
+            "pasid_enabled": {
+                "name": "pasid_enabled",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int"
+            },
+            "state": {
+                "name": "state",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "string",
+                "value_range_type": "enum",
+                "value_range": ["enabled", "disable"]
+            },
+            "read_buffer_limit": {
+                "name": "read_buffer_limit",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "min_max",
+                "value_range": [0, 96],
+                "typical_invalid_value":[-1, 97],
+                "config_option_short": "-l",
+                "config_option_long": "--read-buffer-limit"
+            },
+            "uevent": {
+                "name": "uevent",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "multi-lines"
+            },
+            "vdev_create": {
+                "name": "vdev_create",
+                "type": "attribute",
+                "permission": "200",
+                "description": "",
+                "value_type": "string"
+            },
+            "vdev_remove": {
+                "name": "vdev_remove",
+                "type": "attribute",
+                "permission": "200",
+                "description": "",
+                "value_type": "string"
+            },
+            "version": {
+                "name": "version",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "string"
+            }
+        }
+    },
+    "engine": {
+        "type": "dir",
+        "dir_type": "engine",
+        "config_cmd": "config-engine",
+        "attributes": {
+            "group_id": {
+                "name": "group_id",
+                "type": "attribute",
+                "permission": "644",
+                "description": "Group id for this engine, -1: ungrouped, 0-N: grouped to group N",
+                "value_type": "int",
+                "value_range_type": "calculated",
+                "value_range": [],
+                "typical_invalid_value":[-1],
+                "config_option_short": "-g",
+                "config_option_long": "--group-id"
+            },
+            "uevent": {
+                "name": "uevent",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "multi-lines",
+                "value_range_type": "null",
+                "value_range": []
+            }
+        }
+    },
+    "wq": {
+        "type": "dir",
+        "dir_type": "wq",
+        "enable_cmd": "enable-wq",
+        "disable_cmd": "disable-wq",
+        "config_cmd": "config-wq",
+        "attributes": {
+            "ats_disable": {
+                "name": "ats_disable",
+                "type": "attribute",
+                "permission": "644",
+                "description": "ats disable of wq",
+                "value_type": "int",
+                "value_range_type": "enum",
+                "value_range": [0, 1],
+                "config_option_short": "-a",
+                "config_option_long": "--ats-disable"
+            },
+            "block_on_fault": {
+                "name": "block_on_fault",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "enum",
+                "value_range": [0, 1],
+                "config_option_short": "-b",
+                "config_option_long": "--block-on-fault"
+            },
+            "cdev_minor": {
+                "name": "cdev_minor",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "",
+                "value_range": []
+            },
+            "clients": {
+                "name": "clients",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "",
+                "value_range": []
+            },
+            "dma_chans": {
+                "name": "dma_chans",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "",
+                "value_range": []
+            },
+            "driver_name": {
+                "name": "driver_name",
+                "type": "attribute",
+                "permission": "644",
+                "description": "Driver ame of work queue",
+                "value_type": "string",
+                "value_range_type": "enum",
+                "value_range": ["user", "dmaengine", "crypto"],
+                "typical_invalid_value":["", "None", "none", "null", "NaN"],
+                "config_option_short": "-d",
+                "config_option_long": "--driver-name"
+            },
+            "enqcmds_retries": {
+                "name": "enqcmds_retries",
+                "type": "attribute",
+                "permission": "644",
+                "description": "enqcmds retries of wq",
+                "value_type": "int",
+                "value_range_type": "min_max",
+                "value_range": [0,64],
+                "typical_invalid_value":[-1]
+            },
+            "group_id": {
+                "name": "group_id",
+                "type": "attribute",
+                "permission": "644",
+                "description": "Group id for this work queue, -1: ungrouped, 0-N: grouped to group N",
+                "value_type": "int",
+                "value_range_type": "calculated",
+                "value_range": [],
+                "typical_invalid_value":[-1],
+                "config_option_short": "-g",
+                "config_option_long": "--group-id"
+            },
+            "mode": {
+                "name": "mode",
+                "type": "attribute",
+                "permission": "644",
+                "description": "Work queue mode: shared/dedicated",
+                "value_type": "string",
+                "value_range_type": "enum",
+                "value_range": ["shared", "dedicated"],
+                "typical_invalid_value":["", "None", "none", "null", "NaN"],
+                "config_option_short": "-m",
+                "config_option_long": "--mode"
+            },
+            "max_batch_size": {
+                "name": "max_batch_size",
+                "type": "attribute",
+                "permission": "644",
+                "description": "max batch size",
+                "value_type": "int",
+                "value_range_type": "min_max",
+                "value_range": [1,1024],
+                "typical_invalid_value":[-1],
+                "config_option_short": "-c",
+                "config_option_long": "--max-batch-size"
+            },
+            "max_transfer_size": {
+                "name": "max_transfer_size",
+                "type": "attribute",
+                "permission": "644",
+                "description": "max transfer size",
+                "value_type": "int",
+                "value_range_type": "min_max",
+                "value_range": [1,2147483648],
+                "typical_invalid_value":[-1],
+                "config_option_short": "-x",
+                "config_option_long": "--max-transfer-size"
+            },
+            "name": {
+                "name": "name",
+                "type": "attribute",
+                "permission": "644",
+                "description": "Name of work queue",
+                "value_type": "string",
+                "value_range_type": "enum",
+                "value_range": ["user", "dmaengine", "crypto", "app1", "guest1"],
+                "typical_invalid_value":["", "None", "none", "null", "NaN"],
+                "config_option_short": "-n",
+                "config_option_long": "--name"
+            },
+            "occupancy": {
+                "name": "occupancy",
+                "type": "attribute",
+                "permission": "444",
+                "description": "occupancy of wq",
+                "value_type": "int",
+                "value_range_type": "",
+                "value_range": []
+            },
+            "op_config": {
+                "name": "op_config",
+                "type": "attribute",
+                "permission": "644",
+                "description": "per wq opcode config",
+                "value_type": "string",
+                "value_range_type": "all",
+                "value_range": [],
+                "typical_valid_value":["0000007b,00bf07ff", "0"],
+                "typical_invalid_value":[""],
+                "config_option_short": "-o",
+                "config_option_long": "--op-config"
+            },
+            "prs_disable": {
+                "name": "prs_disable",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "enum",
+                "value_range": [0, 1],
+                "config_option_short": "-r",
+                "config_option_long": "--prs-disable"
+            },
+            "priority": {
+                "name": "priority",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "min_max",
+                "value_range": [0, 15],
+                "typical_invalid_value":[-1, 16],
+                "config_option_short": "-p",
+                "config_option_long": "--priority"
+            },
+            "size": {
+                "name": "size",
+                "type": "attribute",
+                "permission": "644",
+                "description": "Wq size, sum of wq size for all wqs should less equal than device.max_work_queues_size",
+                "value_type": "int",
+                "value_range_type": "calculated",
+                "value_range": [],
+                "typical_invalid_value":[-1],
+                "config_option_short": "-s",
+                "config_option_long": "--wq-size"
+            },
+            "state": {
+                "name": "state",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "string",
+                "value_range_type": "enum",
+                "value_range": ["disable", "enabled"]
+            },
+            "threshold": {
+                "name": "threshold",
+                "type": "attribute",
+                "permission": "644",
+                "description": "Descriptor submission threshold for shared wq. Treated as wq size if it's greater than it. Ignored for dedicated wq.",
+                "value_type": "int",
+                "value_range_type": "calculated",
+                "value_range": [],
+                "typical_invalid_value":[-1],
+                "config_option_short": "-t",
+                "config_option_long": "--threshold"
+            },
+            "type": {
+                "name": "type",
+                "type": "attribute",
+                "permission": "644",
+                "description": "WQ type: user/kernel.",
+                "value_type": "string",
+                "value_range_type": "enum",
+                "value_range": ["none", "user", "kernel"],
+                "typical_invalid_value":["", "None", "null", "NaN"],
+                "config_option_short": "-y",
+                "config_option_long": "--type"
+            },
+            "uevent": {
+                "name": "uevent",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "lines",
+                "value_range_type": "null",
+                "value_range": []
+            },
+            "uuid": {
+                "name": "uuid",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "string",
+                "value_range_type": "null",
+                "value_range": []
+            }
+        }
+    },
+    "group": {
+        "type": "dir",
+        "dir_type": "group",
+        "config_cmd": "config-group",
+        "attributes": {
+            "batch_progress_limit": {
+                "name": "batch_progress_limit",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "min_max",
+                "value_range": [0, 3],
+                "config_option_short": "-p",
+                "config_option_long": "--batch-progress-limit"
+            },
+            "desc_progress_limit": {
+                "name": "desc_progress_limit",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "min_max",
+                "value_range": [0, 3],
+                "config_option_short": "-d",
+                "config_option_long": "--desc-progress-limit"
+            },
+            "engines": {
+                "name": "engines",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "string",
+                "value_range_type": "",
+                "value_range": []
+            },
+            "read_buffers_allowed": {
+                "name": "read_buffers_allowed",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "",
+                "value_range": [],
+                "config_option_short": "-t",
+                "config_option_long": "--read-buffers-allowed"
+            },
+            "read_buffers_reserved": {
+                "name": "read_buffers_reserved",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "",
+                "value_range": [],
+                "config_option_short": "-r",
+                "config_option_long": "--read-buffers-reserved"
+            },
+            "traffic_class_a": {
+                "name": "traffic_class_a",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "min_max",
+                "value_range": [1, 1],
+                "typical_invalid_value":["", "None", "none", "null", "NaN", -1, 8],
+                "config_option_short": "-a",
+                "config_option_long": "--traffic-class-a"
+            },
+            "traffic_class_b": {
+                "name": "traffic_class_b",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "min_max",
+                "value_range": [1, 1],
+                "typical_invalid_value":["", "None", "none", "null", "NaN", -1, 8],
+                "config_option_short": "-b",
+                "config_option_long": "--traffic-class-b"
+            },
+            "uevent": {
+                "name": "uevent",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "lines",
+                "value_range_type": "null",
+                "value_range": []
+            },
+            "use_read_buffer_limit": {
+                "name": "use_read_buffer_limit",
+                "type": "attribute",
+                "permission": "644",
+                "description": "",
+                "value_type": "int",
+                "value_range_type": "enum",
+                "value_range": [0, 1],
+                "config_option_short": "-l",
+                "config_option_long": "--use-read-buffer-limit"
+            },
+            "work_queues": {
+                "name": "work_queues",
+                "type": "attribute",
+                "permission": "444",
+                "description": "",
+                "value_type": "string",
+                "value_range_type": "calculated",
+                "value_range": []
+            }
+        }
+    }
+}

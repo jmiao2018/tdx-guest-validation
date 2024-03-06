@@ -1,0 +1,7 @@
+# @name CPU_LASS_BAT_TESTS
+# @desc Check lass cpuid
+# @requires cpu/lass
+# @setup_requires
+
+CPU_XS_BAT_LASS_CPU_INFO_TEST cpu_bat.sh -n lass -f lass
+CPU_XS_BAT_LASS_CPU_ID_TEST cpu_bat.sh -n lass -p "7 0 1 0 a 6"

@@ -1,0 +1,24 @@
+# @name TELEMETRY_FUNC_TESTS
+# @desc telemetry function tests
+# @requires telemetry_watcher
+# @setup_requires
+
+# telemetry test
+TELEMETRY_XS_FUNC_WATCHER_DRIVER telemetry_tests.sh -t watcher_driver
+TELEMETRY_XS_FUNC_TRCR_SYSFS telemetry_tests.sh -t trcr_sysfs
+TELEMETRY_XS_FUNC_TRCR_SYSFS_COMMON telemetry_tests.sh -t trcr_sysfs_common
+TELEMETRY_XS_FUNC_TRCR_SYSFS_MODE_SET telemetry_tests.sh -t trcr_sysfs_mode_set
+TELEMETRY_XS_FUNC_TRCR_SYSFS_PERIOD_US_SET telemetry_tests.sh -t trcr_sysfs_period_us_set
+TELEMETRY_XS_FUNC_TRCR_SYSFS_DESTINATION_SET telemetry_tests.sh -t trcr_sysfs_destination_set
+TELEMETRY_XS_FUNC_TRCR_SYSFS_VECTOR_SET telemetry_tests.sh -t trcr_sysfs_vector_set
+TELEMETRY_XS_FUNC_SMPLR_SYSFS telemetry_tests.sh -t smplr_sysfs
+TELEMETRY_XS_FUNC_SMPLR_SYSFS_COMMON telemetry_tests.sh -t smplr_sysfs_common
+TELEMETRY_XS_FUNC_SMPLR_SYSFS_MODE_SET telemetry_tests.sh -t smplr_sysfs_mode_set
+TELEMETRY_XS_FUNC_SMPLR_SYSFS_PERIOD_US_SET telemetry_tests.sh -t smplr_sysfs_period_us_set
+TELEMETRY_XS_FUNC_SMPLR_SYSFS_VECTOR_SET telemetry_tests.sh -t smplr_sysfs_vector_set
+TELEMETRY_XS_FUNC_SMPLR_DATA telemetry_tests.sh -t smplr_data
+TELEMETRY_XS_FUNC_WATCHER_DATA_CHECK telemetry_tests.sh -t watcher_data
+TELEMETRY_XS_FUNC_WATCHER_PERIODIC telemetry_tests.sh -t watcher_periodic
+TELEMETRY_XS_FUNC_WATCHER_SHARED telemetry_tests.sh -t watcher_shared
+TELEMETRY_XS_FUNC_WATCHER_GUID telemetry_tests.sh -t watcher_guid
+TELEMETRY_XS_FUNC_WATCHER_LIMIT_NE telemetry_tests.sh -t watcher_limit_ne

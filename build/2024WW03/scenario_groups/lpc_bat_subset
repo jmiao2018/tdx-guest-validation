@@ -1,0 +1,2 @@
+# This file contains all the Basic Acceptance Tests for LCK LPC driver
+ddt_intel/lpc_bat_tests

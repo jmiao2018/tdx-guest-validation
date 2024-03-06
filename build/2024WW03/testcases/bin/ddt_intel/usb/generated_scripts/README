@@ -1,0 +1,20 @@
+USB Host BAT
+------------
+
+
+Targeted HW platforms:
+ Haswell-U
+ Broadwell-U
+ Broadwell-Y
+
+
+Required Linux kernel config options:
+ CONFIG_USB_XHCI_HCD=m
+ CONFIG_USB_XHCI_PCI=m
+
+/!\ Use "make menuconfig" command to update Linux kernel config file and enable some potentially dependent options /!\
+
+
+Hardware dependencies:
+ 2 USB keys with specific name
+ Network connection using a USB to ethernet dongle

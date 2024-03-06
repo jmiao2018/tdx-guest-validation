@@ -1,0 +1,30 @@
+{
+    "name": "IDXD_ACCFG_XS_FUNC_CFG_WQ_BATCH_SIZE",
+    "initial_platform": "Granite Rapids",
+    "cmdline": "accel_test.sh -t config-wq_maxbatchsize",
+    "steps": [],
+    "flags": [],
+    "summary": "accel-config command to configure wq max batch size",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "dsa_accfg_func_tests",
+    "domain": "CPU",
+    "feature": "IDXD_ACCFG",
+    "owner": "xinzhanz",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [
+        "intel_iommu=on,sm_on"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2022-05-24T20:16:39.000-0800",
+    "link": "",
+    "tips": ""
+}

@@ -1,0 +1,27 @@
+GPIO Test
+--------
+Targeted HW platforms:
+ Broalwell-U
+ Baytrail-T
+
+Purpose:
+ Mainly test sysfs interfaces of GPIO. To validate its basic functions like:
+ direction setting, interrupt setting, troggle setting .e.g.
+
+Driver source:
+ They are hardware-specific, you may find Intel's at ${Linux-kernel-tree}/drivers/
+pinctrl/intel/
+
+Required Linux kernel config options:
+ Options are hardware-specific, however, those options must be enabled:
+ CONFIG_GPIOLIB=y
+ CONFIG_GPIO_ACPI=y
+ CONFIG_GPIO_SYSFS=y
+
+/!\ Use "make menuconfig" command to update Linux kernel config file and enable some potentially dependent options /!\
+
+NOTE:
+ If CONFIG_GPIO_SYSFS is not enabled, there will be no sysfs nodes of GPIO under sysfs.
+
+Hardware dependencies:
+ byt-t-t100

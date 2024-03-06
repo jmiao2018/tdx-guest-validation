@@ -1,0 +1,43 @@
+{
+    "name": "TELEMETRY_XS_FUNC_PCI_DRIVER",
+    "initial_platform": "",
+    "cmdline": "telemetry_tests.sh -t pci_driver",
+    "steps": [],
+    "flags": [],
+    "summary": "Check if load/unload PCI drvier ok.",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "telemetry_func_tests",
+    "domain": "CPU",
+    "feature": "TELEMETRY",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "MFD_INTEL_PMT",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "INTEL_PMT_TELEMETRY",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-04-28T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

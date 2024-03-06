@@ -1,0 +1,271 @@
+/root/2024WW03/runltp: line 100: warning: setlocale: LC_TIME: cannot change locale (en_US.UTF-8): No such file or directory
+/root/2024WW03/runltp: line 100: warning: setlocale: LC_TIME: cannot change locale (en_US.UTF-8)
+INFO: creating /root/2024WW03/results directory
+INFO: Filtering testscenarios based on gnr capabilities
+awk: cmd. line:1: warning: regexp escape sequence `\&' is not a known regexp operator
+If some fields are empty or look unusual you may have an old version.
+Compare to the current minimal requirements in Documentation/Changes.
+
+/etc/os-release
+/etc/redhat-release
+/etc/system-release
+NAME="Red Hat Enterprise Linux"
+VERSION="9.4 (Plow)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="9.4"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="Red Hat Enterprise Linux 9.4 Beta (Plow)"
+ANSI_COLOR="0;31"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:9::baseos"
+HOME_URL="https://www.redhat.com/"
+DOCUMENTATION_URL="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 9"
+REDHAT_BUGZILLA_PRODUCT_VERSION=9.4
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="9.4 Beta"
+Red Hat Enterprise Linux release 9.4 Beta (Plow)
+Red Hat Enterprise Linux release 9.4 Beta (Plow)
+
+uname:
+Linux localhost.localdomain 5.14.0-427.el9.x86_64 #1 SMP PREEMPT_DYNAMIC Fri Feb 23 01:51:18 EST 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+/proc/cmdline
+BOOT_IMAGE=(hd0,gpt3)/vmlinuz-5.14.0-427.el9.x86_64 root=UUID=246adf04-9e27-46a8-964c-b46f3e8e730e console=tty0 console=ttyS0,115200n8 no_timer_check net.ifnames=0 crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M
+
+Gnu C                 
+Clang                 
+util-linux             2.37.4
+mount                  linux 2.37.4 (libmount 2.37.4: selinux, btrfs, namespaces, assert, debug)
+modutils               28
+e2fsprogs              1.46.5
+Linux C Library         1 root root 2592544 Jan 30 15:36 /lib64/libc.so.6
+Dynamic linker (ldd)   2.34
+Procps                 3.3.17
+iproute2               1.3.0
+iputils                20210202
+ethtool                6.2
+Sh-utils               8.32
+Modules Loaded         rfkill vfat fat intel_rapl_msr intel_rapl_common tdx_guest tsm intel_uncore_frequency_common nfit libnvdimm iTCO_wdt iTCO_vendor_support i2c_i801 lpc_ich i2c_smbus pcspkr drm fuse xfs libcrc32c ahci libahci libata crct10dif_pclmul crc32_pclmul crc32c_intel virtio_net ghash_clmulni_intel virtio_blk net_failover failover virtio_console serio_raw sunrpc dm_mirror dm_region_hash dm_log dm_mod
+
+free reports:
+               total        used        free      shared  buff/cache   available
+Mem:         3543820      408612     2554008       16928      823476     3135208
+Swap:              0           0           0
+
+cpuinfo:
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Address sizes:                      52 bits physical, 57 bits virtual
+Byte Order:                         Little Endian
+CPU(s):                             1
+On-line CPU(s) list:                0
+Vendor ID:                          GenuineIntel
+BIOS Vendor ID:                     Red Hat
+Model name:                         06/cf
+BIOS Model name:                    RHEL-9.2.0 PC (Q35 + ICH9, 2009)
+CPU family:                         6
+Model:                              207
+Thread(s) per core:                 1
+Core(s) per socket:                 1
+Socket(s):                          1
+Stepping:                           2
+BogoMIPS:                           3800.00
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat clflush dts mmx fxsr sse sse2 ss ht tm syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq dtes64 ds_cpl ssse3 sdbg fma cx16 pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tdx_guest fsgsbase bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 wbnoinvd avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq la57 rdpid bus_lock_detect cldemote movdiri movdir64b fsrm md_clear serialize tsxldtrk amx_bf16 avx512_fp16 amx_tile amx_int8 flush_l1d arch_capabilities
+Hypervisor vendor:                  KVM
+Virtualization type:                full
+L1d cache:                          32 KiB (1 instance)
+L1i cache:                          32 KiB (1 instance)
+L2 cache:                           4 MiB (1 instance)
+L3 cache:                           16 MiB (1 instance)
+NUMA node(s):                       1
+NUMA node0 CPU(s):                  0
+Vulnerability Gather data sampling: Not affected
+Vulnerability Itlb multihit:        Not affected
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Not affected
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; Enhanced / Automatic IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS SW sequence
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+
+AppArmor disabled
+
+SELinux status:                 enabled
+SELinuxfs mount:                /sys/fs/selinux
+SELinux root directory:         /etc/selinux
+Loaded policy name:             targeted
+Current mode:                   enforcing
+Mode from config file:          enforcing
+Policy MLS status:              enabled
+Policy deny_unknown status:     allowed
+Memory protection checking:     actual (secure)
+Max kernel policy version:      33
+no big block device was specified on commandline.
+Tests which require a big block device are disabled.
+You can specify it with option -z
+COMMAND:    /root/2024WW03/bin/ltp-pan   -e -S   -a 2328     -n 2328 -p -f /tmp/ltp-IWezBpmTqT/alltests -l /tmp/tmp.JudFUK51yV  -C /root/2024WW03/output/LTP_RUN_ON-tmp.JudFUK51yV.failed -T /root/2024WW03/output/LTP_RUN_ON-tmp.JudFUK51yV.tconf 
+LOG File: /tmp/tmp.JudFUK51yV
+FAILED COMMAND File: /root/2024WW03/output/LTP_RUN_ON-tmp.JudFUK51yV.failed
+TCONF COMMAND File: /root/2024WW03/output/LTP_RUN_ON-tmp.JudFUK51yV.tconf
+Running tests.......
+<<<test_start>>>
+tag=TDX_XS_FUNC_GUEST_LAZY_ACCEPT_VMSTAT stime=1710483363
+cmdline="tdx_guest_func.sh -t LAZY_ACCEPT_VMSTAT"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021603.446|TRACE|Start TDX guest lazy_accept vmstat checking:|
+Failed to set locale, defaulting to C.UTF-8
+Failed to set locale, defaulting to C.UTF-8
+Error: There are no enabled repositories in "/etc/yum.repos.d", "/etc/yum/repos.d", "/etc/distro.repos.d".
+stress: error: (194) unrecognized option: --vm-keep
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+|0315_021607.818|ERROR| common.sh:212:die() - FATAL: die() is called by tdx_guest_func.sh:73:main()|
+|0315_021607.819|ERROR| common.sh:213:die() - FATAL: TDX guest lazy_accept vmstat test FAILED. Please make sure this TC executed once TDX guest bootup.|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=4 termination_type=exited termination_id=1 corefile=no
+cutime=49 cstime=14
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_FUNC_GUEST_LAZY_ACCEPT_MEMINFO stime=1710483367
+cmdline="tdx_guest_func.sh -t LAZY_ACCEPT_MEMINFO"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021607.829|TRACE|Start TDX guest lazy_accept meminfo checking:|
+vmstat: 204800; meminfo= 819200
+|0315_021607.833|TRACE|TDX guest lazy_accept meminfo test PASS|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=1 cstime=1
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_FUNC_GUEST_LAZY_ACCEPT_NEG stime=1710483367
+cmdline="tdx_guest_func.sh -t LAZY_ACCEPT_NEG"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021607.842|TRACE|Start TDX guest lazy_accept disable checking:|
+|0315_021607.844|ERROR| common.sh:212:die() - FATAL: die() is called by tdx_guest_func.sh:94:main()|
+|0315_021607.845|ERROR| common.sh:213:die() - FATAL: TDX guest lazy_accept meminfo test FAILED with nr_unaccepted: 204800|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=1 corefile=no
+cutime=0 cstime=0
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_FUNC_GUEST_EBIZZY stime=1710483367
+cmdline="tdx_guest_func.sh -t EBIZZY_FUNC"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021607.854|TRACE|Start TDX guest ebizzy test 10s with malloc|
+10548 records/s
+real 10.00 s
+user  2.28 s
+sys   7.63 s
+|0315_021617.858|TRACE|Start TDX guest ebizzy test 10s with mmap|
+8130 records/s
+real 10.00 s
+user  1.70 s
+sys   8.18 s
+|0315_021627.862|TRACE|TDX guest ebizzy test PASS|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=20 termination_type=exited termination_id=0 corefile=no
+cutime=400 cstime=1582
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_M_FUNC_GUEST_COPY_LARGE_FILE stime=1710483387
+cmdline="tdx_guest_func.sh -t COPY_LARGE_FILE"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021627.871|TRACE|Copy large file into TDX guest, under construction.|
+|0315_021627.872|TRACE|Already automated in XVS.|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=0 cstime=0
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_M_FUNC_GUEST_BUILD_KERNEL stime=1710483387
+cmdline="tdx_guest_func.sh -t BUILD_KERNEL"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021627.881|TRACE|Build kernel inside TDX guest, under construction.|
+|0315_021627.882|TRACE|Already automated in XVS.|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=1 cstime=0
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_FUNC_GUEST_ATTEST_GET_TDREPORT stime=1710483387
+cmdline="tdx_guest_func.sh -t GET_TDREPORT"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021627.891|TRACE|TD attestation - 1 global.verify_report|
+# tdx-attest-test.c:196:verify_reportmac:Expected 0 (0) == ret (-1)
+# verify_reportmac: Test terminated by assertion
+# tdx-attest-test.c:217:verify_rtmr_extend:Expected 0 (0) == ioctl(devfd, TDX_CMD_EXTEND_RTMR, &req) (-1)
+# verify_rtmr_extend: Test terminated by assertion
+# tdx-attest-test.c:259:verify_quote:Expected 0 (0) == ioctl(devfd, TDX_CMD_GET_QUOTE, &req) (-1)
+# verify_quote: Test terminated by assertion
+|0315_021629.087|TRACE|TD attestation - 1 global.verify_report PASS.|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=2 termination_type=exited termination_id=0 corefile=no
+cutime=1 cstime=1
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_FUNC_GUEST_ATTEST_VERIFY_TDREPORT stime=1710483389
+cmdline="tdx_guest_func.sh -t VERIFY_TDREPORT"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021629.098|TRACE|TD attestation - 2 global.verify_reportmac|
+# tdx-attest-test.c:196:verify_reportmac:Expected 0 (0) == ret (-1)
+# verify_reportmac: Test terminated by assertion
+# tdx-attest-test.c:217:verify_rtmr_extend:Expected 0 (0) == ioctl(devfd, TDX_CMD_EXTEND_RTMR, &req) (-1)
+# verify_rtmr_extend: Test terminated by assertion
+# tdx-attest-test.c:259:verify_quote:Expected 0 (0) == ioctl(devfd, TDX_CMD_GET_QUOTE, &req) (-1)
+# verify_quote: Test terminated by assertion
+|0315_021629.224|ERROR| common.sh:212:die() - FATAL: die() is called by tdx_guest_func.sh:53:attest_result()|
+|0315_021629.225|ERROR| common.sh:213:die() - FATAL: TD attestation - 2 global.verify_reportmac FAIL.|
+Cleaning actions
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=1 corefile=no
+cutime=1 cstime=0
+<<<test_end>>>
+<<<test_start>>>
+tag=TDX_XS_FUNC_GUEST_ATTEST_GET_TDQUOTE stime=1710483389
+cmdline="tdx_guest_func.sh -t GET_TDQUOTE"
+contacts=""
+analysis=exit
+<<<test_output>>>
+|0315_021629.235|TRACE|TD attestation - 4 global.verify_quote|
+# tdx-attest-test.c:196:verify_reportmac:Expected 0 (0) == ret (-1)
+# verify_reportmac: Test terminated by assertion
+# tdx-attest-test.c:217:verify_rtmr_extend:Expected 0 (0) == ioctl(devfd, TDX_CMD_EXTEND_RTMR, &req) (-1)

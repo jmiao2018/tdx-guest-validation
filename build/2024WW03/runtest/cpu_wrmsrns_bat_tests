@@ -1,0 +1,6 @@
+# @name CPU_WRMSRNS_BAT_TESTS
+# @desc Check wrmsrns support
+# @requires cpu/wrmsrns
+# @setup_requires
+
+CPU_XS_BAT_WRMSRNS_CPU_ID_TEST cpu_bat.sh -n wrmsrns -p "7 0 1 0 a 19"

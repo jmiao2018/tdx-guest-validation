@@ -1,0 +1,79 @@
+################################################################################
+##                                                                            ##
+## Copyright (c) Intel Corp., 2017                                            ##
+##                                                                            ##
+## This program is free software;  you can redistribute it and#or modify      ##
+## it under the terms of the GNU General Public License as published by       ##
+## the Free Software Foundation; either version 2 of the License, or          ##
+## (at your option) any later version.                                        ##
+##                                                                            ##
+## This program is distributed in the hope that it will be useful, but        ##
+## WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY ##
+## or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License   ##
+## for more details.                                                          ##
+##                                                                            ##
+## You should have received a copy of the GNU General Public License          ##
+## along with this program;  if not, write to the Free Software Foundation,   ##
+## Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA           ##
+##                                                                            ##
+################################################################################
+## File:         runtests                                                     ##
+##                                                                            ##
+## Description:  This file is a autocomplete script for runtests.sh           ##
+##                                                                            ##
+## Author:       Ning Han <ningx.han@intel.com>                               ##
+##                                                                            ##
+## History:      Apr 11 2017 - Created - NingHan                              ##
+##                                                                            ##
+################################################################################
+
+if [[ "$1" == "" ]]; then
+	LTPROOT=$(dirname $(dirname $(readlink -e $BASH_SOURCE)))
+else
+	LTPROOT=$1
+fi
+
+function _runtests()
+{
+	local cur prev opts
+
+	cur=${COMP_WORDS[COMP_CWORD]}
+	prev=${COMP_WORDS[COMP_CWORD-1]}
+
+	if echo $prev | grep -q "runtests.sh"; then
+		opts="-p -P -f -g -o -c -C -a -d -R -S -A -h"
+		COMPREPLY=( $(compgen -W "$opts" -- $cur) )
+	else
+		case $prev in
+			-p)
+				platforms=$(ls ${LTPROOT}/platforms)
+				COMPREPLY=( $(compgen -W "$platforms" -- $cur) )
+				;;
+			-P)
+				parameters="$(ls ${LTPROOT}/params)"
+				COMPREPLY=( $(compgen -W "$parameters" -- $cur) )
+				;;
+			-f)
+				scenarios="$(ls ${LTPROOT}/runtest/ddt_intel | tr " " "\n" | awk '{print "ddt_intel/"$1}')"
+				COMPREPLY=( $(compgen -W "$scenarios" -- $cur) )
+				;;
+			-g)
+				groups="$(ls ${LTPROOT}/scenario_groups)"
+				COMPREPLY=( $(compgen -W "$groups" -- $cur) )
+				;;
+			-S)
+				skips="$(ls ${LTPROOT}/skips)"
+				COMPREPLY=( $(compgen -W "$skips" -- $cur) )
+				;;
+
+			-C)
+				cases="$(${LTPROOT}/bin/testcase_summary.py -t)"
+				COMPREPLY=( $(compgen -W "$cases" -- $cur) )
+				;;
+		esac
+	fi
+
+	return
+}
+
+complete -F _runtests -o filenames ./runtests.sh

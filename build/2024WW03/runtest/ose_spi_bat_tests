@@ -1,0 +1,12 @@
+# @name spi_bat_tests
+# @desc spi_bat_tests perform BAT tests for SPI driver
+# @requires ose_spi
+# @setup_requires
+
+OSE_SPI_XS_BAT_DEV_ID_CHECK ose_spi_dev_info_check.sh -d "ose_spi" -p
+
+OSE_SPI_XS_BAT_DRV_CHECK driver_sysfs.sh -d "ose_spi" -p
+
+OSE_SPI_XS_BAT_DEV_CHECK driver_sysfs.sh -d "ose_spi" -s "h"
+
+OSE_SPI_XS_BAT_BIND_UNBIND_DRV bind_unbind_driver.sh "ose_spi"

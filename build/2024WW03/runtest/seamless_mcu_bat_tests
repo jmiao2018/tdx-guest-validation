@@ -1,0 +1,10 @@
+# @name seamless_mcu_bat_tests
+# @desc test MCU BAT
+# @requires seamless
+
+SEAMLESS_XS_BAT_CHECK_MSR1 seamless_mcu_bat_tests.sh mcu_check_msr1
+SEAMLESS_XS_BAT_CHECK_MSR2 seamless_mcu_bat_tests.sh mcu_check_msr2
+SEAMLESS_XS_BAT_CHECK_UNF_MCU seamless_mcu_bat_tests.sh mcu_check_uniform
+SEAMLESS_XS_BAT_CHECK_STAGING seamless_mcu_bat_tests.sh mcu_check_staging
+SEAMLESS_XS_BAT_CHECK_ROLLBACK seamless_mcu_bat_tests.sh mcu_check_rollback
+

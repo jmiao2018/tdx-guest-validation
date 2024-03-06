@@ -1,0 +1,11 @@
+# @name LAM_FUNC_TESTS
+# @desc LAM test cases malloc/mmap/syscall/fork/uring/pasid
+# @requires lam
+
+LAM_S_FUNC_MALLOC lam_test.sh -t 1
+LAM_S_FUNC_MAX_BITS lam_test.sh -t 2
+LAM_S_FUNC_MMAP lam_test.sh -t 3
+LAM_S_FUNC_SYSCALL lam_test.sh -t 4
+LAM_S_FUNC_URING lam_test.sh -t 5
+LAM_S_FUNC_INHERIT lam_test.sh -t 6
+LAM_S_FUNC_PASID lam_test.sh -t 7

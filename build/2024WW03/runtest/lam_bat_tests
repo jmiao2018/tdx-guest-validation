@@ -1,0 +1,5 @@
+# @name LAM_BAT_TESTS
+# @desc LAM contains BAT tests for cpuid checking
+# @requires lam
+
+LAM_S_BAT_CPUID lam_test.sh -t 8

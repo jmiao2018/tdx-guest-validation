@@ -1,0 +1,8 @@
+# @name TELEMETRY_PCH_FUNC_TESTS
+# @desc pch telemetry function tests
+# @requires telemetry
+# @utility_requires stress-ng
+# @setup_requires
+
+# telemetry test
+TELEMETRY_XS_FUNC_PCH_DATA telemetry_tests.sh -t pch_telemetry

@@ -1,0 +1,15 @@
+# @name TPMI PEM LONG STRESS TESTS
+# @desc Intel TPMI PEM Basic Acceptance Tests
+# @requires powermgr/pem
+# @utility_requires perf
+# @setup_requires
+
+#TPMI_PEM LONG STRESS Tests
+PEM_STRESS_RAPL_LIMIT_CHANGE_TPMI_GROUP_1HR tpmi_pem.sh -t perf_stat_rapl_pl1_pl2_multi_group_tpmi_change_1hr
+PEM_STRESS_RAPL_LIMIT_CHANGE_PECI_GROUP_1HR tpmi_pem.sh -t perf_stat_rapl_pl1_pl2_multi_group_peci_change_1hr
+PEM_STRESS_SST_PP_CHANGE_LEVEL3_GROUP_1HR tpmi_pem.sh -t perf_stat_sst_pp_change_to_level3_group_1hr
+PEM_STRESS_SST_PP_CHANGE_LEVEL4_GROUP_1HR tpmi_pem.sh -t perf_stat_sst_pp_change_to_level4_group_1hr
+PEM_STRESS_PERF_STAT_ALL_CPU_EVENT_BASE_FREQ_1HR tpmi_pem.sh -t perf_stat_all_cpu_event_any_1hr
+PEM_STRESS_PERF_STAT_CPU_1_EVENT_ANY_P01_1HR tpmi_pem.sh -t perf_stat_cpu_1_event_any_p01_1hr
+PEM_STRESS_PERF_STAT_ALL_CPU_EVENT_ANY_PM_1HR tpmi_pem.sh -t perf_stat_all_cpu_event_any_pm_1hr
+PEM_STRESS_PERF_STAT_ALL_CPU_EVENT_ANY_PM_12HR tpmi_pem.sh -t perf_stat_all_cpu_event_any_pm_12hr

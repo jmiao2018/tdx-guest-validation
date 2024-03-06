@@ -1,0 +1,8 @@
+# @name CPU_STRESS_SL_TESTS
+# @desc CPU SL stress
+# @requires cpu/sl
+# @setup_requires
+# @package_requires msr-tools
+
+CPU_S_STRESS_SL_ON_PROCESS sl_stress.sh -a on -m user -p "10000 30 1024 1000"
+CPU_S_STRESS_SL_ON_CACHESIZE sl_stress.sh -a on -m user -p "1000 90 8192 500"

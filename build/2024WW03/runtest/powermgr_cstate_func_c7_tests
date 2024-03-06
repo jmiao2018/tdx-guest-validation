@@ -1,0 +1,17 @@
+# @name Power Management cstate tests
+# @desc intel cstate Tests for Power Management driver.
+# @requires powermgr/cc7
+# @setup_requires
+
+POWER_XS_FUNC_CPU_CORE_C7_RESIDENCY_ACPI_IDLE_RTM powermgr_cstate_tests.sh -c 1 -t 30
+POWER_XS_FUNC_CPU_CORE_C7_RESIDENCY_ACPI_S2IDLE powermgr_cstate_tests.sh -c 2 -t 30
+POWER_XS_FUNC_CPU_CORE_C7_RESIDENCY_INTEL_IDLE_RTM powermgr_cstate_tests.sh -c 4 -t 30
+POWER_XS_FUNC_CPU_CORE_C7_RESIDENCY_INTEL_S2IDLE powermgr_cstate_tests.sh -c 5 -t 30
+POWER_XS_FUNC_ALL_CPU_C7_RESIDENCY powermgr_cstate_tests.sh -c 9 -t 3
+#Cases to disable Core Cstate and check related Package Cstate for client platforms
+POWER_S_FUNC_DISABLE_CC8_GET_PC6_CHECK powermgr_cstate_tests.sh -c 12
+POWER_S_FUNC_DISABLE_CC10_GET_PC8_CHECK powermgr_cstate_tests.sh -c 13
+POWER_S_FUNC_DISABLE_CC7_GET_PC6_CHECK powermgr_cstate_tests.sh -c 19
+POWER_S_FUNC_DISABLE_CC8_GET_PC7_CHECK powermgr_cstate_tests.sh -c 20
+POWER_S_FUNC_DISABLE_CC9_GET_PC8_CHECK powermgr_cstate_tests.sh -c 21
+POWER_S_FUNC_DISABLE_CC10_GET_PC9_CHECK powermgr_cstate_tests.sh -c 22

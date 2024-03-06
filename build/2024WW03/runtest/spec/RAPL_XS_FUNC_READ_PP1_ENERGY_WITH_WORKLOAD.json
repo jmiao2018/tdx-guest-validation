@@ -1,0 +1,34 @@
+{
+    "name": "RAPL_XS_FUNC_READ_PP1_ENERGY_WITH_WORKLOAD",
+    "initial_platform": "",
+    "cmdline": "rapl_power_check.sh -p uncore",
+    "steps": [],
+    "flags": [],
+    "summary": "Check whether RAPL GFX energy increase when running with gfx workload using glxgears tool",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "rapl_func_tests",
+    "domain": "Power",
+    "feature": "Intel_RAPL",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "glxgears",
+            "check": "",
+            "description": "glxgears need to run as the workload"
+        }
+    ],
+    "createDate": "2020-05-27T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

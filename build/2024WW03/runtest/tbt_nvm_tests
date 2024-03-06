@@ -1,0 +1,9 @@
+# @name TBT_NVM_TEST
+# @desc thunderbolt NVM downgrade and upgrade test
+# @requires tbt
+# @setup_requires
+
+TBT_XS_FUNC_NVM_DOWNGRADE tbt_func_test.sh -s nvm_downgrade
+TBT_XS_FUNC_NVM_UPGRADE tbt_func_test.sh -s nvm_upgrade
+TBT_XS_FUNC_EP_DOWNGRADE tbt_func_test.sh -s ep_downgrade
+TBT_XS_FUNC_EP_UPGRADE tbt_func_test.sh -s ep_upgrade

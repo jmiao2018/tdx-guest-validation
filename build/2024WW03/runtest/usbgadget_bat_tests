@@ -1,0 +1,10 @@
+# @name UABGADGET_BAT_TESTS
+# @desc usb gadget bat tests
+# @requires usbgadget
+# @setup_requires
+
+# USBGADGET BAT test
+USBGADGET_XS_FUNC_PCI_NEW_ID_CHECK usb_pci_id_tests.sh -d $USB_DWC3_PCI_ID -t id_check
+USBGADGET_XS_FUNC_DWC3_CHECK usb_pci_id_tests.sh -t module_check
+USBGADGET_XS_FUNC_TRACE usb_trace_tests.sh -t gadget
+USBGADGET_XS_FUNC_KCONFIG_CHECK usb_gadget_tests.sh -m kconfig

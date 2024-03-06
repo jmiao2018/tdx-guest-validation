@@ -1,0 +1,24 @@
+# @name TH_TARGET_MODE_W_CPU_FUNC_TESTS
+# @desc TH_TARGET_MODE_W_CPU_FUNC_TESTS perform basic test with CPU th enabled in BIOS
+# @requires intel_th
+# @setup_requires
+
+TH_XS_FUNC_CPU_MSC0_DEFAULT_TRACE_BASIC intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic
+TH_XS_FUNC_CPU_MSC0_CONSOLE_TRACE_BASIC intel_th_tests.sh -t msu_trace -s console -d 0-msc0 -p basic
+TH_XS_FUNC_CPU_MSC1_DEFAULT_TRACE_BASIC intel_th_tests.sh -t msu_trace -s default -d 0-msc1 -p basic
+TH_XS_FUNC_CPU_MSC1_CONSOLE_TRACE_BASIC intel_th_tests.sh -t msu_trace -s console -d 0-msc1 -p basic
+TH_XS_FUNC_CPU_MSC0_DEFAULT_TRACE_MIPI intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p mipi
+TH_XS_FUNC_CPU_MSC0_CONSOLE_TRACE_MIPI intel_th_tests.sh -t msu_trace -s console -d 0-msc0 -p mipi
+TH_XS_FUNC_CPU_MSC1_DEFAULT_TRACE_MIPI intel_th_tests.sh -t msu_trace -s default -d 0-msc1 -p mipi
+TH_XS_FUNC_CPU_MSC1_CONSOLE_TRACE_MIPI intel_th_tests.sh -t msu_trace -s console -d 0-msc1 -p mipi
+TH_XS_FUNC_CPU_MSC0_FTRACE_TRACE_BASIC intel_th_tests.sh -t msu_trace -s ftrace -d 0-msc0 -p basic
+TH_XS_FUNC_CPU_MSC0_FTRACE_TRACE_MIPI intel_th_tests.sh -t msu_trace -s ftrace -d 0-msc0 -p mipi
+TH_XS_FUNC_CPU_MSC1_FTRACE_TRACE_BASIC intel_th_tests.sh -t msu_trace -s ftrace -d 0-msc1 -p basic
+TH_XS_FUNC_CPU_MSC1_FTRACE_TRACE_MIPI intel_th_tests.sh -t msu_trace -s ftrace -d 0-msc1 -p mipi
+TH_XS_FUNC_CPU_MSC0_HEARTBEAT_TRACE_BASIC intel_th_tests.sh -t msu_trace -s heartbeat.0 -d 0-msc0 -p basic
+TH_XS_FUNC_CPU_MSC0_HEARTBEAT_TRACE_MIPI intel_th_tests.sh -t msu_trace -s heartbeat.0 -d 0-msc0 -p mipi
+TH_XS_FUNC_CPU_MSC1_HEARTBEAT_TRACE_BASIC intel_th_tests.sh -t msu_trace -s heartbeat.0 -d 0-msc1 -p basic
+TH_XS_FUNC_CPU_MSC1_HEARTBEAT_TRACE_MIPI intel_th_tests.sh -t msu_trace -s heartbeat.0 -d 0-msc1 -p mipi
+TH_XS_FUNC_CPU_MSC0_DEFAULT_TRACE_BASIC_SINK_NOWARP intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -c 5
+TH_XS_FUNC_CPU_MSC0_DEFAULT_TRACE_BASIC_SINK_WRAP intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -c 6
+TH_XS_FUNC_CPU_CHECK_HOST intel_th_tests.sh -t host_n_cpu

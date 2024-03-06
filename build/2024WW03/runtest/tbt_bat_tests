@@ -1,0 +1,30 @@
+# @name TBT_BAT_TESTS
+# @desc Check Thunderbolt sysfs files and load/unload module
+# @requires tbt
+# @setup_requires
+
+TBT_XS_BAT_CONFIG_TEST tbt_verify_sysfs_mod.sh -t config
+TBT_XS_BAT_USER_MODE_TEST tbt_verify_sysfs_mod.sh -t user
+TBT_XS_BAT_TBT_DEVICE_ID tbt_verify_sysfs_mod.sh -t device_id
+TBT_XS_BAT_LOAD_UNLOAD_MOD_NET_TEST tbt_verify_sysfs_mod.sh -t mod_net
+TBT_XS_BAT_LOAD_UNLOAD_MOD_TEST tbt_verify_sysfs_mod.sh -t mod
+TBT_XS_BAT_MOD_TBT_NET_TIME tbt_verify_sysfs_mod.sh -t mod_net_time
+TBT_XS_BAT_MOD_TBT_TIME tbt_verify_sysfs_mod.sh -t mod_time
+TBT_XS_BAT_BIOS_SET_CHECK tbt_verify_sysfs_mod.sh -t bios_setting
+TBT_XS_BAT_ITEM_AUTHORIZED_TEST tbt_verify_sysfs_mod.sh -t item -f authorized
+TBT_XS_BAT_ITEM_DEVICE_TEST tbt_verify_sysfs_mod.sh -t item -f device
+TBT_XS_BAT_ITEM_DEVICE_NAME_TEST tbt_verify_sysfs_mod.sh -t item -f device_name
+TBT_XS_BAT_ITEM_NVM_AUTH_TEST tbt_verify_sysfs_mod.sh -t item -f nvm_authenticate
+TBT_XS_BAT_ITEM_NVM_VER_TEST tbt_verify_sysfs_mod.sh -t item -f nvm_version
+TBT_XS_BAT_ITEM_UEVENT_ID_VER_TEST tbt_verify_sysfs_mod.sh -t item -f uevent
+TBT_XS_BAT_ITEM_UNIQUE_ID_VER_TEST tbt_verify_sysfs_mod.sh -t item -f unique_id
+TBT_XS_BAT_ITEM_VENDOR_TEST tbt_verify_sysfs_mod.sh -t item -f vendor
+TBT_XS_BAT_ITEM_VENDOR_NAME_TEST tbt_verify_sysfs_mod.sh -t item -f vendor_name
+TBT_XS_BAT_DOMAIN_SECURITY_TEST tbt_verify_sysfs_mod.sh -t domain -f security
+TBT_XS_BAT_DOMAIN_UEVENT_TEST tbt_verify_sysfs_mod.sh -t domain -f uevent
+TBT_XS_BAT_DEVICE_TOPO_CHECK tbt_verify_sysfs_mod.sh -t topo
+TBT_XS_BAT_CM_MODE_CHECK tbt_verify_sysfs_mod.sh -t cm_mode
+TBT_XS_BAT_TBT_TYPE_CHECK tbt_verify_sysfs_mod.sh -t tbt_type
+TBT_XS_BAT_TBT_BOOT_INIT_CHECK tbt_verify_sysfs_mod.sh -t boot_init
+TBT_XS_BAT_TBT_KCONFIG_USB4_DEBUGFS_WRITE cpu_bat.sh -k "CONFIG_USB4_DEBUGFS_WRITE=y"
+TBT_XS_BAT_TBT_KCONFIG_USB4_MARGINING cpu_bat.sh -k "CONFIG_USB4_DEBUGFS_MARGINING=y"

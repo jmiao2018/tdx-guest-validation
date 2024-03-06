@@ -1,0 +1,12 @@
+# @name CPU_FRED_BAT_TESTS
+# @desc Check fred support
+# @requires cpu/fred
+# @setup_requires
+
+CPU_XS_BAT_FRED_CPU_ID_TEST cpu_bat.sh -n fred -p "7 0 1 0 a 17"
+CPU_XS_BAT_CONFIG_FRED cpu_bat.sh -k "CONFIG_X86_FRED=y"
+CPU_XS_BAT_CMDLINE_FRED_ENABLE cpu_fred_bat.sh -t fred_cmdline
+CPU_XS_BAT_FRED_CPU_INFO_TEST cpu_bat.sh -n fred -f fred
+CPU_XS_BAT_FRED_ENABLE_DMESG_TEST cpu_bat.sh -d "Initialize FRED on CPU"
+CPU_XS_BAT_FRED_TEST_MODULE_INSTALL cpu_fred_bat.sh -t fred_test_module
+CPU_XS_BAT_FRED_TEST_ENABLE_CR4 cpu_fred_bat.sh -t fred_enable_cr4

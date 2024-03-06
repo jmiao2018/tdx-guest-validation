@@ -1,0 +1,6 @@
+# @name ALSA stress test
+# @desc Doing long duration test for capture,playback and loopback.
+
+# @requires alsa && hda
+ALSA_M_STRESS_CAP source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -d 600 -F ALSA_L_STRESS_CAP.snd'; do_cmd 'alsa_tests.sh -t playback -d 600 -F ALSA_L_STRESS_CAP.snd'
+ALSA_M_STRESS_LPBK source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -d 600'

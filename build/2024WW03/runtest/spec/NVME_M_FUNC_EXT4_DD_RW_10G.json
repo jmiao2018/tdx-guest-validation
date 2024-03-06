@@ -1,0 +1,34 @@
+{
+    "name": "NVME_M_FUNC_EXT4_DD_RW_10G",
+    "initial_platform": "",
+    "cmdline": "blk_device_dd_readwrite_test.sh -f \"ext4\" -b \"1M\" -c \"1024\" -l 10 -w -d \"nvme\"",
+    "steps": [],
+    "flags": [],
+    "summary": "Find, format in 'ext4' and mount device node. Write a file of 10G size",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "nvme_ext4_func_tests",
+    "domain": "IO",
+    "feature": "NVME",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free NVME disk partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-02-05T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

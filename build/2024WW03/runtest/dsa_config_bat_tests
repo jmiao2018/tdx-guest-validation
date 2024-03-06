@@ -1,0 +1,9 @@
+# @name DSA_CONFIG_BAT_TESTS
+# @desc DSA config basic accpetance tests
+# @requires dsa
+# @utility_requires
+
+DSA_XS_BAT_CHECK_DEV_NUM dsa_config_test_runner.py test_bat_check_device_number
+DSA_XS_BAT_CHECK_SYSFS_DEV_PERM dsa_config_test_runner.py test_bat_check_sysfs_device_permission
+DSA_XS_BAT_CHECK_SYSFS_DRV_PERM dsa_config_test_runner.py test_bat_check_sysfs_driver_permission
+DSA_XS_BAT_LOAD_UNLOAD dsa_config_test_runner.py test_bat_load_unload

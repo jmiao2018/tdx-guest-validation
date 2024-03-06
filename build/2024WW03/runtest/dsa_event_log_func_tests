@@ -1,0 +1,39 @@
+# @name DSA_ACCFG_FUNC_TESTS
+# @desc DSA accel-config tool functional tests
+# @requires dsa2.0
+# @utility_requires
+
+DSA_XS_FUNC_EVL_PRS_CHECK event_log_test.sh -t prs_disable
+DSA_XS_FUNC_EVL_LOG_SIZE event_log_test.sh -t event_log_size
+DSA_XS_FUNC_EVL_WQ0_1A_0 event_log_test.sh -t 1a.0
+DSA_XS_FUNC_EVL_WQ0_1A_1 event_log_test.sh -t 1a.1
+DSA_XS_FUNC_EVL_WQ0_1B event_log_test.sh -t 1b
+DSA_XS_FUNC_EVL_WQ0_2A event_log_test.sh -t 2a
+DSA_XS_FUNC_EVL_WQ0_2B event_log_test.sh -t 2b
+DSA_XS_FUNC_EVL_WQ0_3_0 event_log_test.sh -t 3.0
+DSA_XS_FUNC_EVL_WQ0_3_1 event_log_test.sh -t 3.1
+DSA_XS_FUNC_EVL_WQ0_4A_0 event_log_test.sh -t 4a.0
+DSA_XS_FUNC_EVL_WQ0_4A_1 event_log_test.sh -t 4a.1
+DSA_XS_FUNC_EVL_WQ0_4B event_log_test.sh -t 4b
+DSA_XS_FUNC_EVL_WQ0_6A event_log_test.sh -t 6a
+DSA_XS_FUNC_EVL_WQ0_6B event_log_test.sh -t 6b
+DSA_XS_FUNC_EVL_WQ0_6C_0 event_log_test.sh -t 6c.0
+DSA_XS_FUNC_EVL_WQ0_6C_1 event_log_test.sh -t 6c.1
+DSA_XS_FUNC_EVL_WQ0_6D_0 event_log_test.sh -t 6d.0
+DSA_XS_FUNC_EVL_WQ0_6D_1 event_log_test.sh -t 6d.1
+DSA_XS_FUNC_EVL_WQ1_1A_0 event_log_test.sh -t 1a.0 -d 0 -w 1
+DSA_XS_FUNC_EVL_WQ1_1A_1 event_log_test.sh -t 1a.1 -d 0 -w 1
+DSA_XS_FUNC_EVL_WQ2_1B event_log_test.sh -t 1b -d 0 -w 2
+DSA_XS_FUNC_EVL_WQ3_2A event_log_test.sh -t 2a -d 0 -w 3
+DSA_XS_FUNC_EVL_WQ4_2B event_log_test.sh -t 2b -d 0 -w 4
+DSA_XS_FUNC_EVL_WQ5_3_0 event_log_test.sh -t 3.0 -d 0 -w 5
+DSA_XS_FUNC_EVL_WQ6_3_1 event_log_test.sh -t 3.1 -d 0 -w 6
+DSA_XS_FUNC_EVL_WQ7_4A_0 event_log_test.sh -t 4a.0 -d 0 -w 7
+DSA_XS_FUNC_EVL_WQ8_4A_1 event_log_test.sh -t 4a.1 -d 0 -w 8
+DSA_XS_FUNC_EVL_WQ9_4B event_log_test.sh -t 4b -d 0 -w 9
+DSA_XS_FUNC_EVL_WQ10_6A event_log_test.sh -t 6a -d 0 -w 10
+DSA_XS_FUNC_EVL_WQ11_6B event_log_test.sh -t 6b -d 0 -w 11
+DSA_XS_FUNC_EVL_WQ12_6C_0 event_log_test.sh -t 6c.0 -d 0 -w 12
+DSA_XS_FUNC_EVL_WQ13_6C_1 event_log_test.sh -t 6c.1 -d 0 -w 13
+DSA_XS_FUNC_EVL_WQ14_6D_0 event_log_test.sh -t 6d.0 -d 0 -w 14
+DSA_XS_FUNC_EVL_WQ15_6D_1 event_log_test.sh -t 6d.1 -d 0 -w 15

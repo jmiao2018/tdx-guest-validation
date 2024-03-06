@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_S_PERF_EXT2_2M_SYNC",
+    "initial_platform": "",
+    "cmdline": "blk_device_filesystem_perf_test.sh -f 'ext2' -s '2' -o 'sync' -B '262144' -d 'usb' -c '1'",
+    "steps": [],
+    "flags": [],
+    "summary": "Performance test for usb device mount as sync mode and ext2, buffer size as 262144 and filesize as 2M",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_ext2_perf_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "PERF",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB storage device",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-06-06T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure a usb device is connected"
+}

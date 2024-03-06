@@ -1,0 +1,8 @@
+# @name EDAC_TEST
+# @desc EDAC_TEST check edac module successfully registered
+# @requires edac
+# @setup_requires
+
+EDAC_XS_FUNC_DRV_CHECK edac_check.sh -t 1
+
+EDAC_XS_FUNC_FS_CHECH edac_check.sh -t 2

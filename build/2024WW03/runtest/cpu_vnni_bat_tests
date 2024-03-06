@@ -1,0 +1,7 @@
+# @name CPU_VNNI_BAT_TESTS
+# @desc Check vnni cpuinfo and cpuid
+# @requires cpu/vnni
+# @setup_requires
+
+CPU_XS_BAT_VNNI_CPU_INFO_TEST cpu_bat.sh -n vnni -f avx512_vnni
+CPU_XS_BAT_VNNI_CPU_ID_TEST cpu_bat.sh -n vnni -p "7 1 0 1 c 11"

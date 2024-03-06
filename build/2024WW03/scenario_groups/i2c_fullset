@@ -1,0 +1,5 @@
+# This file contains all the tests for LCK I2C driver
+ddt_intel/i2c_bat_tests
+ddt_intel/i2c_func_tests
+ddt_intel/i2c_i915_func_tests
+ddt_intel/i2c_stress_tests

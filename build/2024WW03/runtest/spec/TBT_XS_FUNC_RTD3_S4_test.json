@@ -1,0 +1,55 @@
+{
+    "name": "TBT_XS_FUNC_RTD3_S4_test",
+    "initial_platform": "",
+    "cmdline": "tbt_rtd3.sh -c 0 -s rtd3_host_s4",
+    "steps": [],
+    "flags": [],
+    "summary": "Check host controller was in D3 mode, and then s4 sleep, after wake up and wait 8s, Controller should in D3 again.",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "tbt_rtd3_tests",
+    "domain": "IO",
+    "feature": "Thunderbolt",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB4",
+            "values": [
+                "m"
+            ],
+            "description": "TBT3 and USB4 both used USB4 kconfig now"
+        },
+        {
+            "name": "CONFIG_USB4_NET",
+            "values": [
+                "m"
+            ],
+            "description": "For TBT thunderbolt net function enabling"
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "BIOS_wiki",
+            "path": "wiki_link",
+            "description": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [
+        {
+            "name": "Need plugged in devices",
+            "check": "Check is there tbt3 docker with USB2.0 USB3.0 insert plugged in",
+            "description": "For Thunderbolt tbt3 devices tests"
+        }
+    ],
+    "createDate": "2018-05-24T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

@@ -1,0 +1,9 @@
+# @name WDT_BAT_TESTS
+# @desc WDT_BAT_TESTS perform Basic Aceptance Test for Watchdog Timer
+# @requires watchdog
+
+WDT_XS_FUNC_DRV_CHECK driver_sysfs.sh -d "wdt" -p
+
+WDT_XS_FUNC_DEV_CHECK driver_sysfs.sh -d "wdt" -s "h"
+
+WDT_XS_FUNC_BIND_UNBIND_DRV bind_unbind_driver.sh "wdt"

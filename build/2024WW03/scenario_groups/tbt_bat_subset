@@ -1,0 +1,2 @@
+#This file contains tests for LCK thunderbolt driver bat cases
+ddt_intel/tbt_bat_tests

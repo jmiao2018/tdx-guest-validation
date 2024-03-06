@@ -1,0 +1,47 @@
+{
+    "name": "USBHOST_XS_FUNC_MOUSE_MHUB",
+    "initial_platform": "",
+    "cmdline": "usb_peripheral_tests.sh -m mouse -t 5",
+    "steps": [],
+    "flags": [],
+    "summary": "USB mouse with multi hub test",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_peripheral_mhub_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB mouse",
+            "check": "",
+            "description": ""
+        },
+        {
+            "name": "USB hub",
+            "check": "",
+            "description": "Need connect 5 hub between usb device and DUT"
+        }
+    ],
+    "createDate": "2017-12-17T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure specific usb device with multi usb hub is connected as case name. "
+}

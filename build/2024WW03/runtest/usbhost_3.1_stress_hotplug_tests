@@ -1,0 +1,9 @@
+# @name USBHOST_3.1_STRESS_HOTPLUG_TESTS
+# @desc usbhost read/write stress tests
+# @requires usbhost && usb3.1
+# @setup_requires
+# @utility_requires avrdude
+
+# USBHOST STRESS HOTPLUG TESTS FOR USB 3.1
+USBHOST_XS_STRESS_3.1_FLASH_HOTPLUG usb_read_write_tests.sh -b 1MB -c 10 -p 3.1 -t flash -e hotplug -d 1 -s 1000
+USBHOST_XS_STRESS_3.1_UAS_HOTPLUG usb_read_write_tests.sh -b 1MB -c 10 -p 3.1 -t uas -e hotplug -d 3 -s 1000

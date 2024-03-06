@@ -1,0 +1,36 @@
+{
+    "name": "5LP_XS_BAT_CPUINFO_TEST",
+    "initial_platform": "",
+    "cmdline": "cpu_bat.sh -n 5lp -f la57",
+    "steps": [],
+    "flags": [],
+    "summary": "5 level paging cpuinfo checking",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "5lp_bat_tests",
+    "domain": "Memory",
+    "feature": "5LP",
+    "owner": "hongyuni",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_5LEVEL",
+            "values": [
+                "Y"
+            ],
+            "description": "Enabling 5-level-paging"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2019-04-08T00:40:00.000-0700",
+    "link": "",
+    "tips": ""
+}

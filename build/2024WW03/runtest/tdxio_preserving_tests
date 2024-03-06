@@ -1,0 +1,17 @@
+# @name tdxio_guest_func_tests
+# @desc Check tdx-io interaction with preserving
+# @requires tdx-io
+# @setup_requires
+# @utility_requires
+
+# VM preserving
+TDXCON_XS_FUNC_VMP_HIGHER_SEAM tdxio_host_bat.sh -t VMP
+TDXCON_XS_FUNC_VMP_SAME_SEAM tdxio_host_bat.sh -t VMP
+TDXCON_XS_FUNC_VMP_LOWER_SEAM tdxio_host_bat.sh -t VMP
+TDXCON_XS_FUNC_VMP_IMCOMPATIBLE_LDR tdxio_host_bat.sh -t VMP
+TDXCON_XS_FUNC_VMP_IMCOMPATIBLE_SEAM tdxio_host_bat.sh -t VMP
+TDXCON_XS_FUNC_VMP_TDRUNNING tdxio_host_bat.sh -t VMP
+TDXCON_XS_FUNC_VMP_CPUOFFLINE tdxio_host_bat.sh -t VMP
+TDXCON_M_STRESS_VMP_STRESSUPDATE tdxio_host_bat.sh -t VMP
+
+# TD preserving - tend to drop

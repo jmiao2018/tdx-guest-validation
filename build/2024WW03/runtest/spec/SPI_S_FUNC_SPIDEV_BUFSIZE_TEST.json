@@ -1,0 +1,64 @@
+{
+    "name": "SPI_S_FUNC_SPIDEV_BUFSIZE_TEST",
+    "initial_platform": "",
+    "cmdline": "run-spi-test.sh -d \"/dev/spidev0.0\" -r \"e\"",
+    "steps": [],
+    "flags": [],
+    "summary": "check spidev bufsize parameter setting to limit the maximum data size transfer support",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "spi_func_tests",
+    "domain": "LPSS_IO",
+    "feature": "SPI",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_SPI_SPIDEV",
+            "values": [
+                "m"
+            ],
+            "description": "SPI test device /dev/spidevX.Y driver module"
+        },
+        {
+            "name": "CONFIG_SPI",
+            "values": [
+                "y"
+            ],
+            "description": "SPI controller device driver"
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "Serial IO SPI controller 1 <Enabled>",
+            "path": "Intel Advanced Menu -> PCH IO config -> SerialIO config -> Serial IO SPI controller 1",
+            "description": "Enable SPI controller for test"
+        },
+        {
+            "name": "WITT/MITT Test Device -> <Enabled - SPI1>",
+            "path": "Intel Advanced Menu -> PCH-IO config -> SerialIO config -> WITT/MITT Test Device",
+            "description": "Enable SPI test device for under controller SPI1"
+        },
+        {
+            "name": "WITT/MITT Device Selection -> <WITT>",
+            "path": "Intel Advanced Menu -> PCH-IO config -> SerialIO config -> WITT/MITT Device Selection -> <WITT>",
+            "description": "Enable SPI test device for under controller SPI1"
+        },
+        {
+            "name": "VT-d -> <Disabled>",
+            "path": "Intel Advanced Menu -> System Agent (SA) config -> VT-d -> <Disabled>",
+            "description": "Disable VT-d to fully enable test on /dev/spidevX.Y"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2018-12-09T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

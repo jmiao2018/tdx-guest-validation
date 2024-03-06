@@ -1,0 +1,38 @@
+# @name USBHOST_PERIPHERAL_FUNC_TESTS
+# @desc usbhost different peripheral tests
+# @requires usbhost && powermgr
+# @setup_requires
+
+# USBHOST DIFFERENT PERIPHERAL TEST
+USBHOST_XS_FUNC_PRINTER usb_peripheral_tests.sh -m printer -p "03f0:df11" -n "DeskJet-1110-series"
+USBHOST_XS_FUNC_PRINTER_FREE usb_peripheral_tests.sh -m printer -s freeze -p "03f0:df11" -n "DeskJet-1110-series"
+USBHOST_XS_FUNC_PRINTER_MEM usb_peripheral_tests.sh -m printer -s mem -p "03f0:df11" -n "DeskJet-1110-series"
+USBHOST_XS_FUNC_PRINTER_DISK usb_peripheral_tests.sh -m printer -s disk -p "03f0:df11" -n "DeskJet-1110-series"
+USBHOST_XS_FUNC_SCANNER usb_peripheral_tests.sh -m scanner -p "04a9:190e" -n "Canon"
+USBHOST_XS_FUNC_SCANNER_FREE usb_peripheral_tests.sh -m scanner -s freeze -p "04a9:190e" -n "Canon"
+USBHOST_XS_FUNC_SCANNER_MEM usb_peripheral_tests.sh -m scanner -s mem -p "04a9:190e" -n "Canon"
+USBHOST_XS_FUNC_SCANNER_DISK usb_peripheral_tests.sh -m scanner -s disk -p "04a9:190e" -n "Canon"
+USBHOST_XS_FUNC_HEADSET usb_peripheral_tests.sh -m headset -p "046d:0a38" -n "Headset"
+USBHOST_XS_FUNC_HEADSET_FREE usb_peripheral_tests.sh -m headset -s freeze -p "046d:0a38" -n "Headset"
+USBHOST_XS_FUNC_HEADSET_MEM usb_peripheral_tests.sh -m headset -s mem -p "046d:0a38" -n "Headset"
+USBHOST_XS_FUNC_HEADSET_DISK usb_peripheral_tests.sh -m headset -s disk -p "046d:0a38" -n "Headset"
+USBHOST_XS_FUNC_LOW_KEYBOARD usb_peripheral_tests.sh -m lkeyboard
+USBHOST_XS_FUNC_LOW_KEYBOARD_FREE usb_peripheral_tests.sh -m lkeyboard -s freeze
+USBHOST_XS_FUNC_LOW_KEYBOARD_MEM usb_peripheral_tests.sh -m lkeyboard -s mem
+USBHOST_XS_FUNC_LOW_KEYBOARD_DISK usb_peripheral_tests.sh -m lkeyboard -s disk
+USBHOST_XS_FUNC_HIGH_KEYBOARD usb_peripheral_tests.sh -m hkeyboard
+USBHOST_XS_FUNC_HIGH_KEYBOARD_FREE usb_peripheral_tests.sh -m hkeyboard -s freeze
+USBHOST_XS_FUNC_HIGH_KEYBOARD_MEM usb_peripheral_tests.sh -m hkeyboard -s mem
+USBHOST_XS_FUNC_HIGH_KEYBOARD_DISK usb_peripheral_tests.sh -m hkeyboar -s disk
+USBHOST_XS_FUNC_MOUSE usb_peripheral_tests.sh -m mouse
+USBHOST_XS_FUNC_MOUSE_FREE usb_peripheral_tests.sh -m mouse -s freeze
+USBHOST_XS_FUNC_MOUSE_MEM usb_peripheral_tests.sh -m mouse -s mem
+USBHOST_XS_FUNC_MOUSE_DISK usb_peripheral_tests.sh -m mouse -s disk
+USBHOST_XS_FUNC_CAMERA usb_peripheral_tests.sh -m camera
+USBHOST_XS_FUNC_CAMERA_FREE usb_peripheral_tests.sh -m camera -s freeze
+USBHOST_XS_FUNC_CAMERA_MEM usb_peripheral_tests.sh -m camera -s mem
+USBHOST_XS_FUNC_CAMERA_DISK usb_peripheral_tests.sh -m camera -s disk
+USBHOST_XS_FUNC_ETHERNET usb_peripheral_tests.sh -m ethernet
+USBHOST_XS_FUNC_ETHERNET_FREE usb_peripheral_tests.sh -m ethernet -s freeze
+USBHOST_XS_FUNC_ETHERNET_MEM usb_peripheral_tests.sh -m ethernet -s mem
+USBHOST_XS_FUNC_ETHERNET_DISK usb_peripheral_tests.sh -m ethernet -s disk

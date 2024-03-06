@@ -1,0 +1,55 @@
+{
+    "name": "TBT_XS_FUNC_PERF_SUMMARY_USB3",
+    "initial_platform": "",
+    "cmdline": "tbt_ssd_read_write.sh -p 3.0 -d flash -m summary",
+    "steps": [],
+    "flags": [],
+    "summary": "Summary USB3 IOMMU bounce buffer/no bounce buffer gap rate",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "tbt_perf_tests",
+    "domain": "IO",
+    "feature": "Thunderbolt",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB4",
+            "values": [
+                "m"
+            ],
+            "description": "TBT3 and USB4 both used USB4 kconfig now"
+        },
+        {
+            "name": "CONFIG_USB4_NET",
+            "values": [
+                "m"
+            ],
+            "description": "For TBT thunderbolt net function enabling"
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "BIOS_wiki",
+            "path": "wiki_link",
+            "description": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [
+        {
+            "name": "Need plugged in devices",
+            "check": "Check is there tbt3 docker with USB2.0 USB3.0 insert plugged in",
+            "description": "For Thunderbolt tbt3 devices tests"
+        }
+    ],
+    "createDate": "2019-02-17T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

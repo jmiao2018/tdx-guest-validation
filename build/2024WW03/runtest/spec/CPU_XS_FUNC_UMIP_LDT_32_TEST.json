@@ -1,0 +1,36 @@
+{
+    "name": "CPU_XS_FUNC_UMIP_LDT_32_TEST",
+    "initial_platform": "",
+    "cmdline": "umip_func.sh -n umip_ldt_32 -p null",
+    "steps": [],
+    "flags": [],
+    "summary": "32bit check instruction memory address correct or not",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cpu_umip_func_tests",
+    "domain": "Security",
+    "feature": "UMIP",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_UMIP",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for UMIP"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2017-11-28T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

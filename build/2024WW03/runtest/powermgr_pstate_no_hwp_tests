@@ -1,0 +1,11 @@
+# @name Power Management pstate tests
+# @desc intel pstate Tests for Power Management driver.
+# @requires powermgr
+# @setup_requires
+# @package_requires msr-tools
+# @cmdline_requires intel_pstate=no_hwp
+
+POWER_XS_FUNC_INTELPSTATE_NO_HWP_POWERSAVE_TURBO powermgr_pstate_freq_step_tests.sh -t yes -m powersave -c one
+POWER_XS_FUNC_INTELPSTATE_NO_HWP_PERF_TURBO powermgr_pstate_freq_step_tests.sh -t yes -m performance -c one
+POWER_XS_FUNC_INTELPSTATE_NO_HWP_POWERSAVE_NO_TURBO powermgr_pstate_freq_step_tests.sh -t no -m powersave -c one
+POWER_XS_FUNC_INTELPSTATE_NO_HWP_PERF_NO_TURBO powermgr_pstate_freq_step_tests.sh -t no -m performance -c one

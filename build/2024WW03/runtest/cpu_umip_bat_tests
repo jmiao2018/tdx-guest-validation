@@ -1,0 +1,8 @@
+# @name CPU_UMIP_BAT_TESTS
+# @desc Check umip cpuinfo and cpuid
+# @requires cpu/umip
+# @setup_requires
+
+CPU_XS_BAT_UMIP_CPU_INFO_TEST cpu_bat.sh -n umip -f umip
+CPU_XS_BAT_UMIP_CPU_ID_TEST cpu_bat.sh -n umip -p "7 1 0 1 c 2"
+CPU_XS_BAT_UMIP_KCONFIG_UMIP_TEST cpu_bat.sh -k "CONFIG_X86_INTEL_UMIP|CONFIG_X86_UMIP=y"

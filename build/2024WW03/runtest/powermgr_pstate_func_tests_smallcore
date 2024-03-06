@@ -1,0 +1,9 @@
+# @name Power Management pstate tests for small core
+# @desc intel pstate tests for Power Management driver on BXT/GLK x86_64 HW platform.
+# @requires powermgr && smallcore
+# @setup_requires
+# @package_requires msr-tools
+
+POWER_XS_FUNC_OPERATION_MODE_OFF powermgr_pstate_tests.sh -c 21
+POWER_XS_FUNC_OPERATION_MODE_PASSIVE powermgr_pstate_tests.sh -c 22
+POWER_XS_FUNC_OPERATION_MODE_ACTIVE powermgr_pstate_tests.sh -c 23

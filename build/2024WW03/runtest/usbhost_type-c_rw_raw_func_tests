@@ -1,0 +1,14 @@
+# @name usbhost basic func tests
+# @desc usbhost read/write tests
+# @requires usbhost && usbtypec
+# @setup_requires
+
+# USBTYPEC READ & WRITE TESTS FOR USB Type-C
+USBTYPEC_XS_FUNC_RW_3.1_UAS usb_read_write_tests.sh -b 1MB -c 100 -p 3.1 -t uas
+USBTYPEC_XS_FUNC_RW_3.1_UAS_HUB usb_read_write_tests.sh -b 1MB -c 100 -p 3.1 -t uas -h 1
+USBTYPEC_XS_FUNC_RW_3.0_FLASH usb_read_write_tests.sh -b 1MB -c 100 -p 3.0 -t flash
+USBTYPEC_XS_FUNC_RW_3.0_UAS usb_read_write_tests.sh -b 1MB -c 100 -p 3.0 -t uas
+USBTYPEC_XS_FUNC_RW_3.0_FLASH_HUB usb_read_write_tests.sh -b 1MB -c 100 -p 3.0 -t flash -h 1
+USBTYPEC_XS_FUNC_RW_3.0_UAS_HUB usb_read_write_tests.sh -b 1MB -c 100 -p 3.0 -t uas -h 1
+USBTYPEC_XS_FUNC_RW_2.0_FLASH usb_read_write_tests.sh -b 1MB -c 100 -p 2.0 -t flash
+USBTYPEC_XS_FUNC_RW_2.0_FLASH_HUB usb_read_write_tests.sh -b 1MB -c 100 -p 2.0 -t flash -h 1

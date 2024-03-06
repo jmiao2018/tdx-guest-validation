@@ -1,0 +1,14 @@
+# @name Power Management pstate acpi cppc tests
+# @desc intel pstate acpi cppc Tests for hybrid SKU.
+# @requires powermgr
+# @setup_requires
+# @package_requires msr-tools
+
+POWER_XS_BAT_ACPI_CPPC_PCORE_SYSFS powermgr_acpi_cppc.sh -t pcore
+POWER_XS_BAT_ACPI_CPPC_ECORE_SYSFS powermgr_acpi_cppc.sh -t ecore
+POWER_XS_BAT_ACPI_CPPC_NOMINAL_PERF_COMPARE powermgr_acpi_cppc.sh -t perf_compare
+POWER_XS_BAT_ACPI_CPPC_NOMINAL_FREQ_COMPARE powermgr_acpi_cppc.sh -t freq_compare
+POWER_XS_BAT_PCORE_HIGH_FREQ_HWP_CAP_CPPC powermgr_acpi_cppc.sh -t pcore_high_freq_comp_hwp_cap_cppc
+POWER_XS_BAT_ECORE_HIGH_FREQ_HWP_CAP_CPPC powermgr_acpi_cppc.sh -t ecore_high_freq_comp_hwp_cap_cppc
+POWER_XS_BAT_PCORE_MIN_FREQ_SYSFS_MSR powermgr_acpi_cppc.sh -t pcore_min_freq_comp_cpufreq_msr_platform_info
+POWER_XS_BAT_ECORE_MIN_FREQ_SYSFS_MSR powermgr_acpi_cppc.sh -t ecore_min_freq_comp_cpufreq_msr_platform_info

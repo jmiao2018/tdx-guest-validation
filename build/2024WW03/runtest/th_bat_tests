@@ -1,0 +1,23 @@
+# @name TH_BAT_TESTS
+# @desc TH_BAT_TESTS perform basic acceptance tests for Intel TH driver
+# @requires intel_th
+# @setup_requires
+
+TH_XS_FUNC_DEV_CHECK driver_sysfs.sh -d "ith" -s "a"
+TH_XS_FUNC_BIND_UNBIND_DRIVER bind_unbind_driver.sh "ith"
+TH_MSU_XS_FUNC_DRV_CHECK driver_sysfs.sh -d "msc" -p
+TH_MSU_XS_FUNC_DEV_CHECK driver_sysfs.sh -d "msc" -s "a"
+TH_MSU_XS_FUNC_BIND_UNBIND_DRIVER bind_unbind_driver.sh "msc"
+TH_PTI_XS_FUNC_DRV_CHECK driver_sysfs.sh -d "pti" -p
+TH_PTI_XS_FUNC_BIND_UNBIND_DRIVER bind_unbind_driver.sh "pti"
+TH_STH_XS_FUNC_DEV_CHECK driver_sysfs.sh -d "sth" -s "a"
+TH_STH_XS_FUNC_BIND_UNBIND_DRIVER bind_unbind_driver.sh "sth"
+TH_XS_FUNC_IOCTL_SET_ID intel_th_tests.sh -t ioctl_set
+TH_XS_FUNC_IOCTL_GET_ID intel_th_tests.sh -t ioctl_get
+TH_XS_FUNC_GTH_SYSFS intel_th_tests.sh -t gth_sysfs
+TH_XS_FUNC_MSU_SYSFS_CHECK intel_th_tests.sh -t msu_sysfs_check
+TH_XS_FUNC_GTH_REMOVE intel_th_tests.sh -t gth_remove
+TH_XS_FUNC_PCI_REMOVE intel_th_tests.sh -t pci_remove
+TH_XS_FUNC_PTI_SYSFS intel_th_tests.sh -t pti_sysfs
+TH_XS_FUNC_STM_SYSFS intel_th_tests.sh -t stm_sysfs
+TH_XS_FUNC_POLICY_SYSFS intel_th_tests.sh -t policy_sysfs

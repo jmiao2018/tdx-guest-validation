@@ -1,0 +1,10 @@
+# @name usbhost basic func tests
+# @desc usbhost read/write tests
+# @requires usbhost
+# @setup_requires
+
+# USBHOST READ & WRITE TESTS FOR USB 3.0
+USBHOST_XS_FUNC_RW_3.0_FLASH usb_read_write_tests.sh -b 1MB -c 100 -p 3.0 -t flash
+USBHOST_XS_FUNC_RW_3.0_UAS usb_read_write_tests.sh -b 1MB -c 100 -p 3.0 -t uas
+USBHOST_XS_FUNC_RW_3.0_FLASH_HUB usb_read_write_tests.sh -b 1MB -c 100 -p 3.0 -t flash -h 1
+USBHOST_XS_FUNC_RW_3.0_UAS_HUB usb_read_write_tests.sh -b 1MB -c 100 -p 3.0 -t uas -h 1

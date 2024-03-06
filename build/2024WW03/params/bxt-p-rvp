@@ -1,0 +1,21 @@
+# NFS server address and export path, needed by ETH_S_FUNC_MULTI_PROCESSING,ETH_M_STRESS_MULTI_PROCESSING
+# These should be changed when deploying tests into a different test farm.
+# Once defined here in the param file, the values would overwrite the default ones
+# defined in the test case.
+#NFS_SERVER=
+#NFS_ROOT_PATH=
+
+# Block device nodes specified for MMC/EMMC/USB/SATA tests
+#SD_DEV_NODE=
+#EMMC_DEV_NODE=
+#USB_DEV_NODE=
+#SATA_DEV_NODE="/dev/sda4"
+
+# Sound card configuration file specified for alsabat tests
+ALSA_CONFIGURATION_FILE="asound.state"
+
+# GPIO PLATFORM PATH
+GPIO_PLTF_PATH="/sys/bus/platform/drivers/broxton-pinctrl/"
+
+# GPIOs reserved for the system.
+GPIO_NUM_SKIPPED="270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 298 300 301 302 303 304 305 306 307 308 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330"

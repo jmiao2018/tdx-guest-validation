@@ -1,0 +1,34 @@
+#!/bin/bash -Ex
+
+# Test event category = 'Address Translation', model-specific events
+
+# To estimate frequency of occurrence of an event, software needs to
+# use 2 distinct counters." "To estimate frequency (expressed as a
+# percentage) of ATC full condition, software can program counter 0 to
+# count EV_ATC_ALLOC events and counter 1 to count EV_ATC_NO_ALLOC
+# events.
+#
+# event 0x40, ATC_ALLOC - Num translation requests to ATC
+# event 0x80, ATC_NO_ALLOC - Num translation requests to ATC failed alloc
+#
+# Filters:
+#
+#   According to spec, only ENG filters apply to these events, but if
+#   other filters e.g. wq set incorrectly, they will filter events
+#   out.
+#
+#   These are a model-specific events.
+#
+# Setup:
+#   assumes setup_dsa_dmatest_disabled has been run
+
+perf stat -o $1 -e dsa0/event=0x40,event_category=0x2/,dsa0/event=0x80,event_category=0x2/ dsa_test -w 1 -l 1024 -o0x3 -t200
+
+# Expected output:
+
+# Performance counter stats for 'system wide':
+
+#               134      dsa0/event=0x40,event_category=0x2,filter_wq=0xffff,filter_tc=0xff,filter_pgsz=0xf,filter_sz=0xff,filter_eng=0xff/
+#                96      dsa0/event=0x80,event_category=0x2,filter_wq=0xffff,filter_tc=0xff,filter_pgsz=0xf,filter_sz=0xff,filter_eng=0xff/
+
+#      16.496939814 seconds time elapsed

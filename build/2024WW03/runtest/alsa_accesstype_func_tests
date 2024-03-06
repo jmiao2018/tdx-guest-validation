@@ -1,0 +1,22 @@
+# @name ALSA memory access type test
+# @desc Loopback the audio with Non-Interleaved format or mmap access.
+#       The playback tests in alsa_tests.sh will try to
+#       fetch (if -u option is not specified) a file from server
+#       http://gtopentest-server.gt.design.ti.com based on the
+#       sample format, rate and number of channels; if the fetch
+#       fails playback will use /dev/urandom as the source. It
+#       is recommended to change the url to an existing server
+#       in the test environment or to add the -u option in the
+#       playback scenarios so that a valid audio source file is
+#       used during playback tests.
+# @requires alsa && hda
+ALSA_XS_FUNC_LPBK_AT_NINTER_D10 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -a 0 -d 10'
+ALSA_S_FUNC_LPBK_AT_NINTER_D60 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -a 0 -d 60'
+ALSA_S_FUNC_LPBK_AT_NINTER_D150 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -a 0 -d 150'
+ALSA_XS_FUNC_LPBK_AT_MMAP_D10 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -a 1 -d 10'
+ALSA_S_FUNC_LPBK_AT_MMAP_D60 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -a 1 -d 60'
+ALSA_S_FUNC_LPBK_AT_MMAP_D150 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -a 1 -d 150'
+ALSA_S_FUNC_PLBK_AT_NINTER source 'common.sh' ;  do_cmd 'alsa_tests.sh -t playback -a 0 -F ALSA_M_FUNC_PLBK_AT_NINTER.raw'
+ALSA_S_FUNC_PLBK_AT_MMAP source 'common.sh' ;  do_cmd 'alsa_tests.sh -t playback -a 1 -F ALSA_M_FUNC_PLBK_AT_MMAP.raw'
+ALSA_XS_FUNC_CAP_AT_NINTER source 'common.sh' ;  do_cmd 'alsa_tests.sh -t capture -a 0 -F ALSA_M_FUNC_CAP_AT_NINTER.snd';do_cmd 'alsa_tests.sh -t playback -a 0 -F ALSA_M_FUNC_CAP_AT_NINTER.snd'
+ALSA_XS_FUNC_CAP_AT_MMAP source 'common.sh' ;  do_cmd 'alsa_tests.sh -t capture -a 1 -F ALSA_M_FUNC_CAP_AT_MMAP.snd'; do_cmd 'alsa_tests.sh -t playback -a 1 -F ALSA_M_FUNC_CAP_AT_MMAP.snd'

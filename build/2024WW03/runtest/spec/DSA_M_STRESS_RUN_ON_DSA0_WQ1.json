@@ -1,0 +1,31 @@
+{
+    "name": "DSA_M_STRESS_RUN_ON_DSA0_WQ1",
+    "cmdline": "user_stress.sh -t wq_shared_mode -d 0 -w 1",
+    "initial_platform": "Granite Rapids",
+    "summary": "Run dsa_test in parallel on wq1",
+    "status": "Closed",
+    "steps": [],
+    "flags": [],
+    "priority": "P4",
+    "scenario": "dsa_func_stress_tests",
+    "domain": "CPU",
+    "feature": "DSA",
+    "owner": "xinzhanz",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [
+        "intel_iommu=on",
+        "sm_on"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2023-09-07T15:54:28.000-0800",
+    "link": "",
+    "tips": ""
+}

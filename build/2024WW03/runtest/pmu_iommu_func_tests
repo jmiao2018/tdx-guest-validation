@@ -1,0 +1,8 @@
+# @name PMU_IOMMU_FUNC_TESTS
+# @desc PMU  tests
+# @requires pmu
+# @setup_requires
+
+# PMU tests
+PMU_IOMMU_XS_FUNC_CLOCKS pmu_iommu_tests.sh -t iommu_clocks
+PMU_IOMMU_XS_FUNC_ALL_BASIC pmu_iommu_tests.sh -t iommu_all_basic

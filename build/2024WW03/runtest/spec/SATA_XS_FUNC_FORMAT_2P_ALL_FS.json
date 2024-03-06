@@ -1,0 +1,34 @@
+{
+    "name": "SATA_XS_FUNC_FORMAT_2P_ALL_FS",
+    "initial_platform": "",
+    "cmdline": "blk_device_readwrite_partitions.sh -d \"sata\" -p \"2\" -f",
+    "steps": [],
+    "flags": [],
+    "summary": "Find and format SATA 2 partitions in all fs type (ext2,ext3,ext4,vfat)",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "sata_partitions_func_tests",
+    "domain": "IO",
+    "feature": "SATA",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free sata disk partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-06-06T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

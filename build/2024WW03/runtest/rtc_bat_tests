@@ -1,0 +1,15 @@
+# @name RTC_BAT_TESTS
+# @desc RTC_BAT_TESTS perform functional tests to check sysfs/procfs driver info.
+# @requires rtc
+# @setup_requires
+# RTC Bat tests
+
+RTC_XS_FUNC_SYS_ENTRY_PRESENT check_node_in_sysfs.sh -d "rtc" -m "1" -s "rtc0"
+
+RTC_XS_FUNC_PROC_INFO_CHECK_1 rtc_driver_info_check.sh -c "rtc_time" -c "rtc_date" -c "alrm_time" -c "alrm_date" -c "alarm_IRQ" -c "alrm_pending" -c "update_IRQ_enable"
+
+RTC_XS_FUNC_PROC_INFO_CHECK_2 rtc_driver_info_check.sh -c "periodic_IRQ_enable" -c "periodic_IRQ_frequency" -c "max_user_IRQ_frequency" -c "24h"
+
+RTC_XS_FUNC_PROC_INFO_CHECK_3 rtc_driver_info_check.sh -c "BCD" -c "periodic_IRQ" -c "update_IRQ" -c "DST_enable" -c "BCD" -c "HPET_emulated"
+
+RTC_XS_FUNC_SYSFS_ENTRY_PRESENT check_rtc_sysfs.sh

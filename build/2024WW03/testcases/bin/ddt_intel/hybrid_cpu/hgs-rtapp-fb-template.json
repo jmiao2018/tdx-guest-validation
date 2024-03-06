@@ -1,0 +1,35 @@
+/* The second thread spans 4 instances, otherwise this is same as 2-thread case*/
+{
+	"tasks" : {
+		"rt-app-thr0" : {
+			"instance" : 1,
+			"loop" : -1,
+			"priority": -19,
+			"phases" : {
+				"p0" : {
+					"loop" : 5000,
+					"run" :   800,
+					"sleep" : 200
+				}
+			}
+		},
+		"rt-app-thr1" : {
+			"instance" : $instance,
+			"loop" : -1,
+			"priority": -19,
+			"phases" : {
+				"p0" : {
+					"loop" : 5000,
+					"run" :   50,
+					"sleep" : 950
+				}
+			}
+		}
+	},
+	"global" : {
+		"duration" : 40,
+		"calibration" : "CPU0",
+		"default_policy" : "SCHED_OTHER",
+		"log_size" : "Disable"
+	}
+}

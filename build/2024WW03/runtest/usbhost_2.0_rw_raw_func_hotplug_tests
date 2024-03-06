@@ -1,0 +1,10 @@
+# @name usbhost basic func tests
+# @desc usbhost read/write tests
+# @requires usbhost
+# @setup_requires
+# @utility_requires avrdude
+# @libpath_requires testcases/bin/ddt_intel/usb
+# USBHOST READ & WRITE TESTS FOR USB 2.0
+USBHOST_XS_FUNC_RW_2.0_FLASH_HOTPLUG usb_read_write_tests.sh -b 1MB -c 10 -p 2.0 -t flash -e hotplug -d 1
+USBHOST_XS_FUNC_RW_2.0_FLASH_HOTPLUG_HUB usb_read_write_tests.sh -b 1MB -c 10 -p 2.0 -t flash -e hotplug -d 1 -h 1
+USBHOST_XS_FUNC_RW_2.0_FLASH_HOTPLUG_MHUB usb_read_write_tests.sh -b 1MB -c 10 -p 2.0 -t flash -e hotplug -d 1 -h 2

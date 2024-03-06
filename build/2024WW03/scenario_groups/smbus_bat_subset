@@ -1,0 +1,2 @@
+# This file contains all the Basic Acceptance Tests for LCK SMBus driver
+ddt_intel/smbus_bat_tests

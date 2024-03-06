@@ -1,0 +1,7 @@
+# @name RAO_FUNC_TESTS
+# @desc Functional Tests for rao.
+# @requires rao
+# @setup_requires
+#
+RAO_XS_FUNC_DISABLE rao_tests.sh -t disable
+

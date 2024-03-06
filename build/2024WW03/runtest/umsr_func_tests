@@ -1,0 +1,6 @@
+# @name UMSR_FUNC_TESTS
+# @desc user msr function Test cases 
+# @requires umsr
+
+UMSR_XS_FUNC_UMSR_TEST umsr_test.sh 
+

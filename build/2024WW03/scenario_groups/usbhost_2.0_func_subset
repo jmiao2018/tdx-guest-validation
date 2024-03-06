@@ -1,0 +1,3 @@
+# This file contains all the functional tests for LCK USB 2.0 Host driver
+ddt_intel/usbhost_2.0_lpm_func_tests
+ddt_intel/usbhost_2.0_rw_raw_func_tests

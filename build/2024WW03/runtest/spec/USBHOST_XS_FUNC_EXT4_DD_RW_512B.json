@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_XS_FUNC_EXT4_DD_RW_512B",
+    "initial_platform": "",
+    "cmdline": "blk_device_dd_readwrite_test.sh -f 'ext4' -b '512' -c '1' -d 'usb'",
+    "steps": [],
+    "flags": [],
+    "summary": "Read and Write 512B data on a USB Flash partition with EXT4 filesystem",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_ext4_func_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB storage device",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-10-31T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure a usb device is connected"
+}

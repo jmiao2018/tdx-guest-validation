@@ -1,0 +1,9 @@
+# @name CPU_MFC_FUNC_TESTS
+# @desc CPU most favored core function tests
+# @requires cpu/mfc
+# @setup_requires
+# @package_requires
+
+CPU_XS_FUNC_MFC_MOVE_FAVORED_CORE mfc_func.sh -p basic
+CPU_XS_FUNC_MFC_MSR_CHECK mfc_func.sh -p mfc_msr
+CPU_XS_FUNC_MFC_FAVORED_CORE_CHECK mfc_func.sh -p core_check

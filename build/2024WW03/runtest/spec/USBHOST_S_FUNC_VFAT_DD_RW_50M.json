@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_S_FUNC_VFAT_DD_RW_50M",
+    "initial_platform": "",
+    "cmdline": "blk_device_dd_readwrite_test.sh -f 'vfat' -b '5M' -c '10' -d 'usb'",
+    "steps": [],
+    "flags": [],
+    "summary": "Read and Write 50MB data on a USB Flash partition with VFAT filesystem",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_vfat_func_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB storage device",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-10-31T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

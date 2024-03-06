@@ -1,0 +1,7 @@
+# @name USBTYPEC_STORAGE_FUNC_TESTS
+# @desc usbtypec sysfs tests
+# @requires usbhost && usbtypec
+# @setup_requires
+
+# USBTYPEC test, need connect a usb storgae device on usb typec port
+USBTYPEC_XS_FUNC_STORAGE_SYSFS_CHECK usb_typec_tests.sh -t storage

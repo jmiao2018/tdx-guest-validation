@@ -1,0 +1,20 @@
+# @name tdx_booting_tests
+# @desc Check TD bootup with different qemu configurations
+# @requires tdx
+# @setup_requires
+# @utility_requires
+
+TDX_XS_FUNC_BOOT_C_1_S_1_M_1 tdx_bootup.sh -t TD_BOOUP -c 1
+TDX_XS_FUNC_BOOT_C_1_S_1_M_16 tdx_bootup.sh -t TD_BOOUP -c 1
+TDX_XS_FUNC_BOOT_C_4_S_1_M_4 tdx_bootup.sh -t TD_BOOUP -c 4
+TDX_XS_FUNC_BOOT_C_4_S_2_M_4 tdx_bootup.sh -t TD_BOOUP -c 4
+TDX_XS_FUNC_BOOT_C_4_S_2_M_96 tdx_bootup.sh -t TD_BOOUP -c 4
+TDX_XS_FUNC_BOOT_C_64_S_8_M_96 tdx_bootup.sh -t TD_BOOUP -c 64
+TDX_XS_FUNC_BOOT_C_288_S_1_M_1 tdx_bootup.sh -t TD_BOOUP -c 288
+TDX_XS_FUNC_BOOT_C_288_S_8_M_96 tdx_bootup.sh -t TD_BOOUP -c 288
+TDX_XS_FUNC_BOOT_DEBUG_ON tdx_bootup.sh -t DEBUG_OPTION -d on
+TDX_XS_FUNC_BOOT_DEBUG_OFF tdx_bootup.sh -t DEBUG_OPTION -d off
+TDX_XS_FUNC_BOOT_DEVICE_FILTER_DISABLE tdx_bootup.sh -t FILTER_DISABLE
+TDX_XS_FUNC_BOOT_ALLOW_ACPI tdx_bootup.sh -t FILTER_ACPI
+TDX_XS_FUNC_BOOT_ALLOW_DEVICE tdx_bootup.sh -t FILTER_PCI
+TDX_XS_FUNC_BOOT_ALLOW_DEVICE_NEGATIVE tdx_bootup.sh -t FILTER_NEGATIVE

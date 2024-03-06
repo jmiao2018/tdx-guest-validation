@@ -1,0 +1,8 @@
+# @name usbhost basic func tests
+# @desc usbhost lpm tests
+# @requires usbhost && usbtypec
+# @setup_requires
+
+# USBHOST LPM TESTS FOR USB Type-C
+USBTYPEC_XS_FUNC_LPM_3.0_FLASH usb_lpm_tests.sh -p 3.0 -t flash
+USBTYPEC_XS_FUNC_LPM_3.1_UAS usb_lpm_tests.sh -p 3.1 -t uas

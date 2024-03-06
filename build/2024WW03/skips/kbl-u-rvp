@@ -1,0 +1,2 @@
+# Add TCs to skip from execution of kbl-s-rvp
+PCI_FUNC_ENUMERATION_DEVICE

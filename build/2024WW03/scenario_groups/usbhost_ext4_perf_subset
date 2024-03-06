@@ -1,0 +1,2 @@
+# This file contains the performance tests for LCK USB Host driver with EXT4 fs
+ddt_intel/usbhost_ext4_perf_tests

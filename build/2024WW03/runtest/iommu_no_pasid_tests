@@ -1,0 +1,7 @@
+# @name IOMMU_NO_PASID_TESTS
+# @desc Check IOMMU NO PASID tests
+# @requires iommu
+# @setup_requires
+
+IOMMU_XS_BAT_NO_PASID iommu_tests.sh -s "no_pasid"
+IOMMU_XS_BAT_NO_PRS iommu_tests.sh -s "no_prs"

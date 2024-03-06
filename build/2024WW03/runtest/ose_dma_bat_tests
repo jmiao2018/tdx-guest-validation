@@ -1,0 +1,18 @@
+# @name ose_dma_bat_tests
+# @desc ose_dma_bat_tests perform BAT tests for DMA driver
+# @requires ose_dma
+# @setup_requires
+
+OSE_DMA_XS_BAT_DEV_ID0_CHECK ose_dma_test.sh -t 1
+
+OSE_DMA_XS_BAT_DEV_ID1_CHECK ose_dma_test.sh -t 2
+
+OSE_DMA_XS_BAT_DEV_ID2_CHECK ose_dma_test.sh -t 3
+
+OSE_DMA_XS_BAT_DEV0_CHECK ose_dma_test.sh -t 3
+
+OSE_DMA_XS_BAT_DEV1_CHECK ose_dma_test.sh -t 5
+
+OSE_DMA_XS_BAT_DEV2_CHECK ose_dma_test.sh -t 6
+
+OSE_DMA_XS_BAT_BIND_UNBIND_DRV bind_unbind_driver.sh "ose_dma"

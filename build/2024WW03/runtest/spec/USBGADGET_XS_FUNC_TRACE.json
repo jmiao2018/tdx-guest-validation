@@ -1,0 +1,49 @@
+{
+    "name": "USBGADGET_XS_FUNC_TRACE",
+    "initial_platform": "",
+    "cmdline": "usb_trace_tests.sh -t gadget",
+    "steps": [],
+    "flags": [],
+    "summary": "USB DWC3 trace check",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usbgadget_bat_tests",
+    "domain": "IO",
+    "feature": "USB_GADGET",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_DWC3",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_USB_GADGET",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "xDCI Support ",
+            "path": "Intel Advanced Menu -> PCH-IO Configuration -> USB Configuration",
+            "description": "Set as Enabled"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2017-11-25T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please connect 2 typec port together on one DUT. Please make sure gadget related modules kconfig are enabled."
+}

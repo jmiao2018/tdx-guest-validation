@@ -1,0 +1,49 @@
+{
+    "name": "USBGADGET_XS_FUNC_DWC3_CHECK",
+    "initial_platform": "",
+    "cmdline": "usb_pci_id_tests.sh -t module_check",
+    "steps": [],
+    "flags": [],
+    "summary": "dwc3 module check",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usbgadget_bat_tests",
+    "domain": "IO",
+    "feature": "USB_GADGET",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_DWC3",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_USB_GADGET",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "xDCI Support ",
+            "path": "Intel Advanced Menu -> PCH-IO Configuration -> USB Configuration",
+            "description": "Set as Enabled"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2017-11-01T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please connect 2 typec port together on one DUT. Please make sure gadget related modules kconfig are enabled."
+}

@@ -1,0 +1,12 @@
+# @name TBT_PERF_TESTS
+# @desc Check Thunderbolt performance tests after involved tbt IOMMU
+# @requires tbt
+# @setup_requires
+
+TBT_XS_FUNC_PERF_USB2_RW tbt_ssd_read_write.sh -p 2.0 -d flash -m perf
+TBT_XS_FUNC_PERF_USB3_RW tbt_ssd_read_write.sh -p 3.0 -d flash -m perf
+TBT_XS_FUNC_PERF_SSD_RW tbt_ssd_read_write.sh -p ssd -m perf
+TBT_XS_FUNC_PERF_SUMMARY_USB2 tbt_ssd_read_write.sh -p 2.0 -d flash -m summary
+TBT_XS_FUNC_PERF_SUMMARY_USB3 tbt_ssd_read_write.sh -p 3.0 -d flash -m summary
+TBT_XS_FUNC_PERF_SUMMARY_SSD tbt_ssd_read_write.sh -p ssd -m summary
+TBT_XS_FUNC_PERF_SSD_IOZONE tbt_ssd_read_write.sh -p ssd -m iozone

@@ -1,0 +1,22 @@
+# @name CPU_RAR_FUNC_TESTS
+# @desc CPU RAR function tests
+# @requires cpu/rar
+# @package_requires msr-tools
+# @setup_requires
+
+CPU_XS_FUNC_RAR_TLB_4G_4K_SPEED rar_func.sh -n test-tlb -s "speed" -p "0x100000000 0x1000"
+CPU_XS_FUNC_RAR_TLB_RANDOM_4G_4K_SPEED rar_func.sh -n test-tlb -s "speed" -p "-r 0x100000000 0x1000"
+CPU_XS_FUNC_RAR_TLB_2G_4K_SPEED rar_func.sh -n test-tlb -s "speed" -p "0x80000000 0x1000"
+CPU_XS_FUNC_RAR_TLB_RANDOM_2G_4K_SPEED rar_func.sh -n test-tlb -s "speed" -p "-r 0x80000000 0x1000"
+CPU_XS_FUNC_RAR_TLB_64K_4K_SPEED rar_func.sh -n test-tlb -s "speed" -p "0x10000 0x1000"
+CPU_XS_FUNC_RAR_TLB_RANDOM_64K_4K_SPEED rar_func.sh -n test-tlb -s "speed" -p "-r 0x10000 0x1000"
+CPU_XS_FUNC_RAR_TLB_16K_4K_SPEED rar_func.sh -n test-tlb -s "speed" -p "0x4000 0x1000"
+CPU_XS_FUNC_RAR_TLB_RANDOM_16K_4K_SPEED rar_func.sh -n test-tlb -s "speed" -p "-r 0x4000 0x1000"
+CPU_XS_FUNC_RAR_TLB_16G_4K_SPEED rar_func.sh -n test-tlb -s "speed" -p "0x400000000 0x1000"
+CPU_XS_FUNC_RAR_TLB_MSR_CF rar_func.sh -s "msr" -p "0x0cf 1"
+CPU_XS_FUNC_RAR_TLB_MSR_RAR_CTRL rar_func.sh -s "msr" -p "0x0ed 31"
+CPU_XS_FUNC_RAR_DMESG rar_func.sh -s "dmesg"
+CPU_XS_FUNC_RAR_TLB_HUGE_PAGE_4G_2M rar_func.sh -n test-tlb -s "huge_page" -p "-H 0x100000000 0x200000"
+CPU_XS_FUNC_RAR_TLB_FLUSH_1_1 rar_func.sh -n tlb_flush -s "test" -p "1 1 10 40"
+CPU_XS_FUNC_RAR_TLB_FLUSH_3_3 rar_func.sh -n tlb_flush -s "test" -p "3 3 10 200"
+CPU_XS_FUNC_RAR_TLB_FLUSH_7_7 rar_func.sh -n tlb_flush -s "test" -p "7 7 10 180"

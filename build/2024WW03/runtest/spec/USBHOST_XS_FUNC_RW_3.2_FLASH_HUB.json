@@ -1,0 +1,47 @@
+{
+    "name": "USBHOST_XS_FUNC_RW_3.2_FLASH_HUB",
+    "initial_platform": "",
+    "cmdline": "usb_read_write_tests.sh -b 1MB -c 100 -p 3.2 -t flash -h 1",
+    "steps": [],
+    "flags": [],
+    "summary": "3.2 flash hub",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_3.2_rw_raw_func_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 3.2 flash storage device",
+            "check": "",
+            "description": ""
+        },
+        {
+            "name": "USB 3.2 hub",
+            "check": "",
+            "description": "Need connect 1 hub between usb device and DUT"
+        }
+    ],
+    "createDate": "2018-01-13T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure 3.x flash/uas device is connected a usb 3.x hub as case name. Hotplug automation need special HW."
+}

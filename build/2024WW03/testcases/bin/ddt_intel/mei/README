@@ -1,0 +1,7 @@
+0.5
+0. mei           -- mei module, common functionality
+1. gever.py      -- get fw version string from mkhi client
+2. fwu.py        -- get fw checkpoint image from fw update client
+3. stress-ver.py -- loop over getversin for (open, connect, getver, close)
+4. stress.py     -- write single byte to a client w/o reading
+5. connect-all.py -- connect all mei clients on the system

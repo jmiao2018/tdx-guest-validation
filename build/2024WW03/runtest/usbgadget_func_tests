@@ -1,0 +1,22 @@
+# @name usbhost basic func tests
+# @desc usbhost read/write tests
+# @requires usbhost && usbgadget
+# @setup_requires
+# @utility_requires ifconfig
+
+# USBGADGET test
+USBGADGET_XS_FUNC_SERIAL_CONFIGFS usb_gadget_tests.sh -m serial -t configfs
+USBGADGET_XS_FUNC_STORAGE_CONFIGFS usb_gadget_tests.sh -m storage -t configfs
+USBGADGET_XS_FUNC_MIDI_CONFIGFS usb_gadget_tests.sh -m midi -t configfs
+USBGADGET_XS_FUNC_RNDIS_CONFIGFS usb_gadget_tests.sh -m rndis -t configfs
+USBGADGET_XS_FUNC_PRINTER_CONFIGFS usb_gadget_tests.sh -m printer -t configfs
+USBGADGET_XS_FUNC_AUDIO1_CONFIGFS usb_gadget_tests.sh -m audio1 -t configfs
+USBGADGET_XS_FUNC_AUDIO2_CONFIGFS usb_gadget_tests.sh -m audio2 -t configfs
+USBGADGET_XS_FUNC_SERIAL_MODULE usb_gadget_tests.sh -m serial -t module
+USBGADGET_XS_FUNC_STORAGE_MODULE usb_gadget_tests.sh -m storage -t module
+USBGADGET_XS_FUNC_MIDI_MODULE usb_gadget_tests.sh -m midi -t module
+USBGADGET_XS_FUNC_RNDIS_MODULE usb_gadget_tests.sh -m rndis -t module
+USBGADGET_XS_FUNC_PRINTER_MODULE usb_gadget_tests.sh -m printer -t module
+USBGADGET_XS_FUNC_AUDIO_MODULE usb_gadget_tests.sh -m audio -t module
+USBGADGET_XS_FUNC_WEBCAM_MODULE usb_gadget_tests.sh -m webcam -t module
+USBGADGET_XS_FUNC_ZERO_MODULE usb_gadget_tests.sh -m zero -t module

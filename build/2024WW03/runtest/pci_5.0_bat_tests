@@ -1,0 +1,6 @@
+# @name PCI_BAT_GEN5_TESTS
+# @desc Check pci gen5 device speed
+# @requires pci5.0
+# @setup_requires
+
+PCI_XS_FUNC_GEN5_DETECT_SPEED pci_basic_tests.sh -c 8

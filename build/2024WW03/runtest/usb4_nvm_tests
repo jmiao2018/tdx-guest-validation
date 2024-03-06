@@ -1,0 +1,7 @@
+# @name USB4_NVM_TESTS
+# @desc Check USB4 device NVM restore and flash function
+# @requires usb4
+# @setup_requires
+
+USB4_XS_FUNC_USB4_DEVICE_NVM_RESTORE usb4_tests.sh -s usb4_device_nvm_restore
+USB4_XS_FUNC_GR_NVM_FLASH usb4_tests.sh -s usb4_gr_nvm_flash -p 30

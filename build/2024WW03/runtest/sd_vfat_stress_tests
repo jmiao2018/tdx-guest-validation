@@ -1,0 +1,19 @@
+# @name SD-STRESS-TESTS
+# @desc SD-STRESS-TESTS perform all stress Test Cases for vfat
+# @requires sd && vfat
+# @setup_requires
+
+SD_M_STRESS_VFAT_DD_RW_100M blk_device_dd_readwrite_test.sh -f 'vfat' -b '10M' -c '10' -d 'sd' -l '100'
+
+SD_L_STRESS_VFAT_CP_100M blk_device_dd_readwrite_test.sh -f 'vfat' -b '10M' -c '10' -i 'cp' -d 'sd' -l '100'
+
+SD_M_STRESS_VFAT_WR_TARBALL blk_device_tarball_write_test.sh -f 'vfat' -d 'sd' -T 'gz' -s '100M' -l '100'
+
+SD_M_STRESS_VFAT_DD_RW_10G blk_device_dd_readwrite_test.sh -f 'vfat' -b '1M' -c '1024' -d 'sd' -l '10' -w
+
+SD_XL_STRESS_VFAT_DD_RW_50G blk_device_dd_readwrite_test.sh -f 'vfat' -b '1M' -c '1024' -d 'sd' -l '50' -w
+
+#Format and FS Check TC's on VFAT
+SD_M_STRESS_VFAT_MKFS_W_PART blk_device_erase_format_part.sh -d 'sd' -f 'vfat'
+
+SD_S_STRESS_VFAT_FSCK_W_PART blk_device_filesystem_check.sh -d 'sd' -f 'vfat'

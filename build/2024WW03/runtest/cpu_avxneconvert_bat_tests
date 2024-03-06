@@ -1,0 +1,6 @@
+# @name CPU_AVXNECONVERT_BAT_TESTS
+# @desc Check AVX_NE_CONVERT cpuinfo and cpuid
+# @requires cpu/avx_ne_convert
+# @setup_requires
+
+CPU_XS_BAT_AVX_NE_CONVERT_CPU_ID_TEST cpu_bat.sh -n avx_ne_convert -p "7 0 1 0 d 5"

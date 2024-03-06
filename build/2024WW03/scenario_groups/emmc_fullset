@@ -1,0 +1,16 @@
+#This file contains all the tests for LCK eMMC driver
+ddt_intel/emmc_bat_tests
+ddt_intel/emmc_ext2_func_tests
+ddt_intel/emmc_ext2_perf_tests
+ddt_intel/emmc_ext2_stress_tests
+ddt_intel/emmc_ext3_func_tests
+ddt_intel/emmc_ext3_perf_tests
+ddt_intel/emmc_ext3_stress_tests
+ddt_intel/emmc_ext4_func_tests
+ddt_intel/emmc_ext4_perf_tests
+ddt_intel/emmc_ext4_stress_tests
+ddt_intel/emmc_iozone_func_tests
+ddt_intel/emmc_partitions_func_tests
+ddt_intel/emmc_vfat_func_tests
+ddt_intel/emmc_vfat_perf_tests
+ddt_intel/emmc_vfat_stress_tests

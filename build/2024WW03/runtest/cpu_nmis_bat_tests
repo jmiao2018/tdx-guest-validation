@@ -1,0 +1,11 @@
+# @name CPU_NMIS_BAT_TESTS
+# @desc Check nmis support
+# @requires cpu/nmis
+# @setup_requires
+
+CPU_XS_BAT_NMIS_CPU_ID_TEST cpu_bat.sh -n nmi_source -p "7 0 1 0 a 20"
+CPU_XS_BAT_CONFIG_NMIS cpu_bat.sh -k "CONFIG_X86_INTEL_NMI_SOURCE=y"
+CPU_XS_BAT_CONFIG_NMIS_SELFTEST cpu_bat.sh -k "CONFIG_DEBUG_NMI_SELFTEST=y"
+CPU_XS_BAT_NMIS_CPU_INFO_TEST cpu_bat.sh -n nmi_source -f nmi_source
+CPU_XS_BAT_NMIS_IPI_TEST cpu_nmis_bat.sh -t nmis_ipi_test
+CPU_XS_BAT_NMIS_PMI_TEST cpu_nmis_bat.sh -t nmis_pmi_test

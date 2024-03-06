@@ -1,0 +1,40 @@
+                 UNIVERSAL FLASH STORAGE (UFS) TEST SUITE
+================================================================================
+
+1) TEST CASES OVERVIEW:
+================================================================================
+
+TEST SCENARIO                 AUTO    MANUAL
+-------------                ------   ------
+'ufs_bat_tests'            :  4 TC     --
+'ufs_ext2_func_tests'      : 11 TC     --
+'ufs_ext3_func_tests'      : 11 TC     --
+'ufs_ext4_func_tests'      : 11 TC     --
+'ufs_vfat_func_tests'      : 11 TC     --
+--------------------------------------------
+Total                       :48 TC     --
+--------------------------------------------
+
+2) PRECONDITIONS:
+================================================================================
+
+- These test cases delete/create partitions, mount/umount partitions
+  and format partitions.
+  These test cases need a free device to run smoothly, otherwise they will fail.
+
+3) HOW TO RUN eMMC TEST CASES:
+================================================================================
+
+- To run all BAT test cases:
+  ./runtests.sh -p $PLATFORM -P $PLATFORM -g ufs_bat_subset -o ./results
+
+- To run all functional test cases:
+  ./runtests.sh -p $PLATFORM -P $PLATFORM -g ufs_func_subset -o ./results
+
+- To run all BAT & functional test cases:
+  ./runtests.sh -p $PLATFORM -P $PLATFORM -g ufs_fullset -o ./results
+
+4) CONTACT:
+================================================================================
+
+Hongyu Ning <hongyu.ning@intel.com>

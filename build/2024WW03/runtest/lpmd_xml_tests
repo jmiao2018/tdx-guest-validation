@@ -1,0 +1,32 @@
+# @name LPMD CONFIGURATION XML FUNCTIONAL TESTS
+# @desc Intel Low Power Mode Daemone Configuration Functional Tests
+# @requires powermgr/lpmd
+# @utility_requires
+# @setup_requires
+
+#INTEL_LPMD XML Functional Tests
+LPMD_S_XML_DEFAULT_CONFIGURATION intel_lpmd.sh -t lpmd_default
+LPMD_S_XML_CPUS_FIXED intel_lpmd.sh -t xml_lp_mode_cpus_fixed
+LPMD_S_XML_MODE_1 intel_lpmd.sh -t xml_mode_1
+LPMD_S_XML_MODE_2 intel_lpmd.sh -t xml_mode_2
+LPMD_S_XML_POWER_DEF_0 intel_lpmd.sh -t xml_power_slider_def_0
+LPMD_S_XML_POWER_DEF_1 intel_lpmd.sh -t xml_power_slider_def_1
+LPMD_S_XML_HFI_LPM_ENABLE intel_lpmd.sh -t xml_hfi_lpm_enable
+LPMD_S_XML_HFI_SUV_ENABLE intel_lpmd.sh -t xml_hfi_suv_enable
+LPMD_S_XML_UTIL_ENTRY_THRESHOLD_0 intel_lpmd.sh -t xml_util_entry_thres_0
+LPMD_S_XML_UTIL_EXIT_THRESHOLD_0 intel_lpmd.sh -t xml_util_exit_thres_0
+LPMD_S_XML_UTIL_ENTRY_DELAY_500MS intel_lpmd.sh -t xml_util_entry_delay_500ms
+LPMD_S_XML_UTIL_EXIT_DELAY_500MS intel_lpmd.sh -t xml_util_exit_delay_500ms
+LPMD_S_XML_UTIL_ENTRY_HYST_5000MS intel_lpmd.sh -t xml_util_entry_hyst_5000ms
+LPMD_S_XML_UTIL_EXIT_HYST_5000MS intel_lpmd.sh -t xml_util_exit_hyst_5000ms
+LPMD_S_XML_IGNORE_ITMT intel_lpmd.sh -t xml_ignore_itmt
+LPMD_S_XML_MODE0_DEFAULT_STRESS intel_lpmd.sh -t stress_full_mode0_default
+LPMD_S_XML_MODE0_SYSTEMD_STRESS intel_lpmd.sh -t stress_full_mode0_systemd
+LPMD_S_XML_MODE0_DAEMONIZED_STRESS intel_lpmd.sh -t stress_full_mode0_daemonize
+LPMD_S_XML_MODE1_DEFAULT_STRESS intel_lpmd.sh -t stress_full_mode1_default
+LPMD_S_XML_MODE2_DEFAULT_STRESS intel_lpmd.sh -t stress_full_mode2_default
+LPMD_S_XML_DEFAULT_NON_LP_CPU_IDLE_IOWAIT_CHECK intel_lpmd.sh -t default_non_lp_cpu_idle_iowait_check
+LPMD_S_XML_NON_FIXED_LP_CPU_IDLE_IOWAIT_CHECK intel_lpmd.sh -t fixed_non_lp_cpu_idle_iowait_check
+LPMD_S_XML_DAEMONIZED_KILL_PROCESS_CHECK intel_lpmd.sh -t negative_daemonized_kill_process
+LPMD_S_XML_SYSTEMD_KILL_PROCESS_CHECK intel_lpmd.sh -t negative_systemd_kill_process
+

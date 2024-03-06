@@ -1,0 +1,2 @@
+# This file contains all the Basic Acceptance Tests for LCK WDT driver
+ddt_intel/wdt_bat_tests

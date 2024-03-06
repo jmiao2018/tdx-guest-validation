@@ -1,0 +1,2 @@
+#This file contains all the hibernation tests for LCK power management driver
+ddt_intel/powermgr_hibernation_func_tests

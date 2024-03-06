@@ -1,0 +1,4 @@
+# This file contains all tests for EC driver
+ddt_intel/ec_func_tests
+ddt_intel/ec_perf_tests
+ddt_intel/ec_stress_tests

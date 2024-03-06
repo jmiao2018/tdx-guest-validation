@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_S_PERF_EXT3_100M_BUFS",
+    "initial_platform": "",
+    "cmdline": "blk_device_filesystem_perf_test.sh -f 'ext3' -s '100' -B '102400 262144 524288 1048576 5242880' -d 'usb'",
+    "steps": [],
+    "flags": [],
+    "summary": "Performance test for usb device as ext3, buffer size as different and filesize as 100M",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_ext3_perf_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "PERF",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB storage device",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-06-06T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure a usb device is connected"
+}

@@ -1,0 +1,10 @@
+# @name TH_TARGET_MODE_W_CPU_FUNC_TESTS
+# @desc TH_TARGET_MODE_W_CPU_FUNC_TESTS perform basic test with CPU th enabled in BIOS
+# @requires intel_th
+# @setup_requires
+
+TH_XS_FUNC_MULTI_TH_DEVICE_W_CPU intel_th_tests.sh -t mth_cpu
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC_W_CPU intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic
+TH_XS_FUNC_PCH_MSC1_DEFAULT_TRACE_BASIC_W_CPU intel_th_tests.sh -t msu_trace -s default -d 0-msc1 -p basic
+TH_XS_FUNC_CPU_MSC0_DEFAULT_TRACE_BASIC_W_PCH intel_th_tests.sh -t msu_trace -s default -d 1-msc0 -p basic
+TH_XS_FUNC_CPU_MSC1_DEFAULT_TRACE_BASIC_W_PCH intel_th_tests.sh -t msu_trace -s default -d 1-msc1 -p basic

@@ -1,0 +1,2 @@
+#82043,981288,/home/jmiao/2024WW03/bin/ltp-pan -e -S -a 981288 -n 981288 -p -f 
+#82124,TDX_XS_BAT_GUEST_LAZY_ACCEPT_KCONFIG,tdx_guest_bat.sh -t TD_LAZY_ACCEPT_

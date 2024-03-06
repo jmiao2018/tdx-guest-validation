@@ -1,0 +1,24 @@
+# @name SD-PERF-TESTS
+# @desc SD-PERF-TESTS perform all performance Test Cases for ext2
+# @requires sd && ext2
+# @setup_requires
+
+SD_S_PERF_EXT2_2M blk_device_filesystem_perf_test.sh -f 'ext2' -s '2' -B '262144' -d 'sd' -c '1'
+
+SD_S_PERF_EXT2_2M_SYNC blk_device_filesystem_perf_test.sh -f 'ext2' -s '2' -o 'sync' -B '262144' -d 'sd' -c '1'
+
+SD_S_PERF_EXT2_4M blk_device_filesystem_perf_test.sh -f 'ext2' -s '4' -B '262144' -d 'sd' -c '1'
+
+SD_S_PERF_EXT2_8M blk_device_filesystem_perf_test.sh -f 'ext2' -s '8' -B '262144' -d 'sd' -c '1'
+
+SD_S_PERF_EXT2_10M blk_device_filesystem_perf_test.sh -f 'ext2' -s '10' -B '262144' -d 'sd'
+
+SD_S_PERF_EXT2_10M_BUFS blk_device_filesystem_perf_test.sh -f 'ext2' -s '10' -B '4096 8192 16384 32768 65536' -d 'sd'
+
+SD_S_PERF_EXT2_100M blk_device_filesystem_perf_test.sh -f 'ext2' -s '100' -B '262144' -d 'sd'
+
+SD_S_PERF_EXT2_100M_BUFS blk_device_filesystem_perf_test.sh -f 'ext2' -s '100' -B '102400 262144 524288 1048576 5242880' -d 'sd'
+
+SD_S_PERF_EXT2_100M_SYNC blk_device_filesystem_perf_test.sh -f 'ext2' -s '100' -o 'sync' -B '262144' -d 'sd'
+
+SD_S_PERF_EXT2_100M_SYNC_BUFS blk_device_filesystem_perf_test.sh -f 'ext2' -s '100' -o 'sync' -B '102400 262144 524288 1048576 5242880' -d 'sd'

@@ -1,0 +1,65 @@
+                      REAL TIME CLOCK (RTC) TEST SUITE
+================================================================================
+
+1) TEST CASES OVERVIEW:
+================================================================================
+
+  1.1) In 'runtest/ddt_intel/upstream':
+
+                                   AUTO    MANUAL
+                                  ------   ------
+       'rtc_bat_tests'          :  2 TC
+       'rtc_hwclock_func_tests' :  6 TC
+       'rtc_ioctl_func_tests'   : 10 TC
+       'rtc_stress_tests'       :  2 TC
+
+  1.2) In 'scenario_groups':
+
+       'rtc_all_tests': * ddt_intel/rtc_bat_tests
+			* ddt_intel/rtc_hwclock_func_tests
+			* ddt_intel/rtc_ioctl_func_tests
+			* ddt_intel/rtc_stress_tests
+
+2) PRECONDITIONS:
+================================================================================
+
+Before run RTC test cases be aware you meet below preconditions:
+
+  2.1) For fully automated TCs:
+
+       a) Kernel compiled with CONFIG_RTC_DRV_CMOS=y, 'rtc_cmos' as builtin.
+       b) Kernel compiled with CONFIG_RTC_HCTOSYS=y, hw clock to sys clock enabled.
+       c) Kernel compiled with CONFIG_RTC_SYSTOHC=y, sys clock to hw clock enabled.
+
+3) HOW TO RUN RTC TEST CASES:
+================================================================================
+
+  3.1) To run an specific test scenario:
+
+	./runtests.sh -p $PLATFORM -f ddt_intel/$TEST_SCENARIO -P $PLATFORM -o ./results
+
+  3.2) To run full test cases:
+
+	./runtests.sh -p $PLATFORM -g rtc_all_tests -P $PLATFORM -o ./results
+
+4) TEST PLAN:
+================================================================================
+
+Test Plan: https://docs.google.com/spreadsheets/d/1IctkLq2GbhtMcJ9Qo7DiueZDNrDXyC9xoX8ghRVOfDw/edit#gid=541261229
+
+Progress: https://docs.google.com/spreadsheets/d/14rYCp_HOUeik4MO_Z6GpSs0biZrynKzkqaIPJMmbh94/edit#gid=1442776910
+
+5) TO DOs:
+================================================================================
+
+        5.1) Port from LCK-GDC suite to LTP-DDT:
+
+	     a) Performance:
+		- RTC_KPI_BOOT_TIME
+		- RTC_KPI_SUSPEND_TIME
+		- RTC_KPI_RESUME_TIME
+
+6) CONTACT:
+================================================================================
+
+Juan Carlos Alonso <juan.carlos.alonso@intel.com>

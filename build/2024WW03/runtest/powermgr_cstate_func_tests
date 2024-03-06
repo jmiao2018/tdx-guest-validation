@@ -1,0 +1,15 @@
+# @name Power Management cstate tests
+# @desc intel cstate Tests for Power Management driver.
+# @requires powermgr
+# @setup_requires
+
+POWER_XS_FUNC_CSTATE_SWITCH_ACPI_IDLE powermgr_cstate_tests.sh -c 3 -t 30
+POWER_XS_FUNC_CSTATE_SWITCH_INTEL_IDLE powermgr_cstate_tests.sh -c 6 -t 30
+POWER_XS_FUNC_CSTATE_PERF_EVENTS_CLIENT powermgr_cstate_tests.sh -c 15
+POWER_XS_FUNC_CPUS_OFFLINE_ONLINE_STRESS powermgr_cstate_tests.sh -c 16
+POWER_XS_FUNC_OVERRIDE_RESIDENCY_LATENCY powermgr_cstate_tests.sh -c 17
+POWER_XS_FUNC_CORE_CSTATES_LIST_VERIFY powermgr_cstate_tests.sh -c 18
+# Below 3 cases are designed for server platform perf cstates and check
+POWER_XS_FUNC_CSTATE_PERF_EVENTS_SERVER powermgr_cstate_tests.sh -c 23
+POWER_XS_FUNC_CORE_CSTATE_PERF_EVENT_UPDATE_SERVER powermgr_cstate_tests.sh -c 24
+POWER_XS_FUNC_PKG_CSTATE_PERF_EVENT_UPDATE_SERVER powermgr_cstate_tests.sh -c 25

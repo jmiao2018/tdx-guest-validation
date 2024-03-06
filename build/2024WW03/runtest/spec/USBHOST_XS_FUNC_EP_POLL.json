@@ -1,0 +1,36 @@
+{
+    "name": "USBHOST_XS_FUNC_EP_POLL",
+    "initial_platform": "",
+    "cmdline": "usb_sysfs_tests.sh -t ep",
+    "steps": [],
+    "flags": [],
+    "summary": "USB wakeup as disable + suspend/resume test",
+    "status": "Closed",
+    "priority": "P4",
+    "scenario": "usbhost_sysfs_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2017-12-17T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

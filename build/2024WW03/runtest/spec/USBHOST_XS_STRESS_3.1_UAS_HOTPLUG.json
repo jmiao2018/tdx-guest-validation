@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_XS_STRESS_3.1_UAS_HOTPLUG",
+    "initial_platform": "",
+    "cmdline": "usb_read_write_tests.sh -b 1MB -c 10 -p 3.1 -t uas -e hotplug -d 3 -s 1000",
+    "steps": [],
+    "flags": [],
+    "summary": "USB 3.1 uas device hotplug stress test",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_3.1_stress_hotplug_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 3.1 UAS device",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-04-17T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure 3.x flash/uas device is connected as case name. Hotplug automation need special HW."
+}

@@ -1,0 +1,41 @@
+# @name DSA_ACCFG_FUNC_TESTS
+# @desc DSA accel-config tool functional tests
+# @requires dsa_accfg
+# @utility_requires
+
+IDXD_ACCFG_XS_FUNC_VERSION accel_test.sh -t version
+IDXD_ACCFG_XS_FUNC_HELP accel_test.sh -t help
+IDXD_ACCFG_XS_FUNC_LIST_CMDS accel_test.sh -t list-cmds
+IDXD_ACCFG_XS_FUNC_LIST accel_test.sh -t list
+IDXD_ACCFG_XS_FUNC_LOAD_CONFIG accel_test.sh -t load-config_h
+IDXD_ACCFG_XS_FUNC_SAVE_CONFIG accel_test.sh -t save-config_h
+IDXD_ACCFG_XS_FUNC_DIS_DEVICE accel_test.sh -t disable-device_h
+IDXD_ACCFG_XS_FUNC_EN_DEVICE accel_test.sh -t enable-device_h
+IDXD_ACCFG_XS_FUNC_DIS_WQ accel_test.sh -t disable-wq_h
+IDXD_ACCFG_XS_FUNC_EN_WQ accel_test.sh -t enable-wq_h
+IDXD_ACCFG_XS_FUNC_CFG_DEVICE accel_test.sh -t config-device_h
+IDXD_ACCFG_XS_FUNC_CFG_GROUP accel_test.sh -t config-group_h
+IDXD_ACCFG_XS_FUNC_CFG_WQ accel_test.sh -t config-wq_h
+IDXD_ACCFG_XS_FUNC_CFG_ENGINE accel_test.sh -t config-engine_h
+IDXD_ACCFG_XS_FUNC_CFG_GROUPID accel_test.sh -t config-engine_groupid
+IDXD_ACCFG_XS_FUNC_CFG_WQ_MODE accel_test.sh -t config-wq_mode
+IDXD_ACCFG_XS_FUNC_CFG_WQ_SIZE accel_test.sh -t config-wq_size
+IDXD_ACCFG_XS_FUNC_CFG_WQ_GROUPID accel_test.sh -t config-wq_groupid
+IDXD_ACCFG_XS_FUNC_CFG_WQ_PRIORITY accel_test.sh -t config-wq_priority
+IDXD_ACCFG_XS_FUNC_CFG_WQ_BOF accel_test.sh -t config-wq_blockonfault
+IDXD_ACCFG_XS_FUNC_CFG_WQ_BATCH_SIZE accel_test.sh -t config-wq_maxbatchsize
+IDXD_ACCFG_XS_FUNC_CFG_WQ_XFER_SIZE accel_test.sh -t config-wq_maxxfersize
+IDXD_ACCFG_XS_FUNC_CFG_WQ_TYPE accel_test.sh -t config-wq_type
+IDXD_ACCFG_XS_FUNC_CFG_WQ_NAME accel_test.sh -t config-wq_name
+IDXD_ACCFG_XS_FUNC_CFG_DRIVER_NAME accel_test.sh -t config-wq_drivername
+IDXD_ACCFG_XS_FUNC_CFG_WQ_THRESHOLD accel_test.sh -t config-wq_threshold
+IDXD_ACCFG_XS_FUNC_EN_DIS_DEDICATED accel_test.sh -t enable_disable_dedicated
+IDXD_ACCFG_XS_FUNC_EN_DIS_SHARED accel_test.sh -t enable_disable_shared
+IDXD_ACCFG_XS_FUNC_CFG_WQ_OP accel_test.sh -t config-wq_op_config
+IDXD_ACCFG_XS_FUNC_CFG_WQ_PRS accel_test.sh -t config-wq_prs_disable
+IDXD_ACCFG_XS_FUNC_CFG_EVL_SIZE accel_test.sh -t config-event_log_size
+IDXD_ACCFG_XS_FUNC_CFG_GROUP_B accel_test.sh -t config-group_batch_progress_limit
+IDXD_ACCFG_XS_FUNC_CFG_GROUP_D accel_test.sh -t config-group_desc_progress_limit
+IDXD_ACCFG_XS_FUNC_CFG_GROUP_T accel_test.sh -t config-group_read_buffers_allowed
+IDXD_ACCFG_XS_FUNC_CFG_GROUP_R accel_test.sh -t config-group_read_buffers_reserved
+IDXD_ACCFG_XS_FUNC_CFG_GROUP_L accel_test.sh -t config-group_use_read_buffer_limit

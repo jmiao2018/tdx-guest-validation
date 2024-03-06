@@ -1,0 +1,8 @@
+# @name USBHOST_STRESS_BOOTUP_TESTS
+# @desc usbhost stress with read/write
+# @requires usbhost
+# @setup_requires
+
+# USBHOST BOOTUP STRESS TEST
+
+USBHOST_STRESS_BOOTUP_TESTS usb_boot.sh -b '1024' -c '10' -s 300

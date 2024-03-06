@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_XS_FUNC_SCANNER_DISK",
+    "initial_platform": "",
+    "cmdline": "usb_peripheral_tests.sh -m scanner -s disk -p \"04a9:190e\" -n \"Canon\"",
+    "steps": [],
+    "flags": [],
+    "summary": "USB printer + suspend to disk/resume",
+    "status": "Closed",
+    "priority": "P4",
+    "scenario": "usbhost_peripheral_func_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB scanner",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-11-01T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure specific usb device is connected as case name. Please make sure s/r to disk is working."
+}

@@ -1,0 +1,9 @@
+# @name IAX_CONFIG_BAT_TESTS
+# @desc IAX config basic accpetance tests
+# @requires iax
+# @utility_requires
+
+IAX_XS_BAT_CHECK_DEV_NUM dsa_config_test_runner.py -d iax test_bat_check_device_number
+IAX_XS_BAT_CHECK_SYSFS_DEV_PERM dsa_config_test_runner.py -d iax test_bat_check_sysfs_device_permission
+IAX_XS_BAT_CHECK_SYSFS_DRV_PERM dsa_config_test_runner.py -d iax test_bat_check_sysfs_driver_permission
+IAX_XS_BAT_LOAD_UNLOAD dsa_config_test_runner.py -d iax test_bat_load_unload

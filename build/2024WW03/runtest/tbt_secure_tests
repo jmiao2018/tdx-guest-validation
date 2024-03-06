@@ -1,0 +1,16 @@
+# @name TBT_SECURE_TESTS
+# @desc Check Thunderbolt secure mode test
+# @requires tbt
+# @setup_requires
+# @utility_requires boltctl
+
+TBT_XS_FUNC_SECURE_MODE_WRONG tbt_func_test.sh -s secure_wrong
+TBT_XS_FUNC_SECURE_MODE_VERIFY tbt_func_test.sh -s secure_verify
+TBT_XS_FUNC_MONITOR_SECURE_TEST tbt_func_test.sh -s monitor_secure
+TBT_XS_FUNC_SECURE_PLUG_OUT_TEST tbt_func_test.sh -s po
+TBT_XS_FUNC_SECURE_PLUG_IN_CHECK tbt_func_test.sh -s spic
+TBT_XS_FUNC_SECURE_PLUG_IN_ERROR_CHECK tbt_func_test.sh -s spie
+TBT_XS_FUNC_SECURE_PLUG_IN_APPROVE tbt_func_test.sh -s spiaw
+TBT_XS_FUNC_SECURE_PLUG_IN_UPDATE_KEY tbt_func_test.sh -s spiu
+TBT_XS_FUNC_SECURE_PLUG_IN_VERIFY_KEY tbt_func_test.sh -s spiv
+TBT_XS_FUNC_SECURE_VTD_AUTHORIZE tbt_func_test.sh -s svtd

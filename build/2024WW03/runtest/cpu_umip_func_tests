@@ -1,0 +1,39 @@
+# @name CPU_UMIP_FUNC_TESTS
+# @desc CPU UMIP function tests
+# @requires cpu/umip
+# @setup_requires
+# @package_requires libx32gcc-4.8-dev libc6-dev-i386
+
+CPU_XS_FUNC_UMIP_BASIC_64_SGDT umip_func.sh -n umip_test_basic_64 -p g
+CPU_XS_FUNC_UMIP_BASIC_64_SIDT umip_func.sh -n umip_test_basic_64 -p i
+CPU_XS_FUNC_UMIP_BASIC_64_SLDT umip_func.sh -n umip_test_basic_64 -p l
+CPU_XS_FUNC_UMIP_BASIC_64_SMSW umip_func.sh -n umip_test_basic_64 -p m
+CPU_XS_FUNC_UMIP_BASIC_64_STR umip_func.sh -n umip_test_basic_64 -p t
+CPU_XS_FUNC_UMIP_OPNDS_64_STR umip_func.sh -n umip_test_opnds_64 -p t
+CPU_XS_FUNC_UMIP_OPNDS_64_SLDT umip_func.sh -n umip_test_opnds_64 -p l
+CPU_XS_FUNC_UMIP_OPNDS_64_SMSW umip_func.sh -n umip_test_opnds_64 -p m
+CPU_XS_FUNC_UMIP_EXCP_64_MAPERR umip_func.sh -n umip_exceptions_64 -p m
+CPU_XS_FUNC_UMIP_EXCP_64_LOCK_PREFIX umip_func.sh -n umip_exceptions_64 -p l
+CPU_XS_FUNC_UMIP_EXCP_64_REGISTER_OPERAND umip_func.sh -n umip_exceptions_64 -p r
+CPU_XS_FUNC_UMIP_BASIC_32_SGDT umip_func.sh -n umip_test_basic_32 -p g
+CPU_XS_FUNC_UMIP_BASIC_32_SIDT umip_func.sh -n umip_test_basic_32 -p i
+CPU_XS_FUNC_UMIP_BASIC_32_SLDT umip_func.sh -n umip_test_basic_32 -p l
+CPU_XS_FUNC_UMIP_BASIC_32_SMSW umip_func.sh -n umip_test_basic_32 -p m
+CPU_XS_FUNC_UMIP_BASIC_32_STR umip_func.sh -n umip_test_basic_32 -p t
+CPU_XS_FUNC_UMIP_OPNDS_32_STR umip_func.sh -n umip_test_opnds_32 -p t
+CPU_XS_FUNC_UMIP_OPNDS_32_SLDT umip_func.sh -n umip_test_opnds_32 -p l
+CPU_XS_FUNC_UMIP_OPNDS_32_SMSW umip_func.sh -n umip_test_opnds_32 -p m
+CPU_XS_FUNC_UMIP_EXCP_32_MAPERR umip_func.sh -n umip_exceptions_32 -p m
+CPU_XS_FUNC_UMIP_EXCP_32_LOCK_PREFIX umip_func.sh -n umip_exceptions_32 -p l
+CPU_XS_FUNC_UMIP_EXCP_32_REGISTER_OPERAND umip_func.sh -n umip_exceptions_32 -p r
+CPU_XS_FUNC_UMIP_EXCP_32_SELECT_NULL umip_func.sh -n umip_exceptions_32 -p n
+CPU_XS_FUNC_UMIP_EXCP_32_OUTSIDE_ADDR umip_func.sh -n umip_exceptions_32 -p d
+CPU_XS_FUNC_UMIP_LDT_32_TEST umip_func.sh -n umip_ldt_32 -p null
+CPU_XS_FUNC_UMIP_LDT_16_TEST umip_func.sh -n umip_ldt_16 -p null
+CPU_XS_FUNC_UMIP_LDT_64_TEST umip_func.sh -n umip_ldt_64 -p null
+CPU_XS_FUNC_UMIP_LDT_64_EXCEPTION umip_func.sh -n umip_ldt_64 -p l
+CPU_XS_FUNC_UMIP_DMESG_SGDT umip_func.sh -n umip_gp_test -p g -c sgdt
+CPU_XS_FUNC_UMIP_DMESG_SIDT umip_func.sh -n umip_gp_test -p i -c sidt
+CPU_XS_FUNC_UMIP_DMESG_SLDT umip_func.sh -n umip_gp_test -p l -c sldt
+CPU_XS_FUNC_UMIP_DMESG_SMSW umip_func.sh -n umip_gp_test -p m -c smsw
+CPU_XS_FUNC_UMIP_DMESG_STR umip_func.sh -n umip_gp_test -p t -c str

@@ -1,0 +1,44 @@
+# @name PT_FUNC_PERF_TESTS
+# @desc Funcfional Tests for perf tool
+# @requires ipt
+# @setup_requires
+# @utility_requires java javac
+
+PT_XS_FUNC_PERF_PACKAGE_FILTER perf_tests.sh -t fp
+PT_XS_FUNC_PERF_DISABLE_BRANCH perf_tests.sh -t disablebranch
+PT_XS_FUNC_PERF_DISABLE_BRANCH_PT perf_tests.sh -t pt
+PT_XS_FUNC_PERF_POWER_EVENT perf_tests.sh -t pwr_evt
+PT_XS_FUNC_PERF_POWER_EVENT_BRANCH perf_tests.sh -t pwr_evt_branch
+PT_XS_FUNC_PERF_POWER_EVENT_ITRACE perf_tests.sh -t pwr_evt_itrace
+PT_XS_FUNC_PERF_POWER_EVENT_PYTHON perf_tests.sh -t python
+PT_XS_FUNC_PERF_PTWRITE perf_tests.sh -t ptwrite
+PT_XS_FUNC_PERF_CPL_USER perf_tests.sh -t user
+PT_XS_FUNC_PERF_CPL_KERNEL perf_tests.sh -t kernel
+PT_XS_FUNC_PERF_TIME_CYC perf_tests.sh -t cyc
+PT_XS_FUNC_PERF_TIME_MTC perf_tests.sh -t mtc
+PT_XS_FUNC_PERF_TIME_FULL perf_tests.sh -t time
+PT_XS_FUNC_PERF_PEBS perf_tests.sh -t pebs
+PT_XS_FUNC_PERF_INJECT perf_tests.sh -t inject
+PT_XS_FUNC_PERF_LBR perf_tests.sh -t lbr
+PT_XS_FUNC_PERF_STOP perf_tests.sh -t stop
+PT_XS_FUNC_PERF_FILTER perf_tests.sh -t filter
+PT_XS_FUNC_PERF_FILTER_KERNEL perf_tests.sh -t filter_kernel
+PT_XS_FUNC_PERF_FILTER_KERNEL_CPU perf_tests.sh -t filter_kernel_cpu
+PT_XS_FUNC_PERF_MTOPA perf_tests.sh -t mtopa
+PT_XS_FUNC_PERF_MD_NONROOT perf_tests.sh -t md_nonroot
+PT_XS_FUNC_PERF_SAMPLE perf_tests.sh -t sample
+PT_XS_FUNC_PERF_JAVA perf_tests.sh -t java
+PT_XS_FUNC_PERF_CPL_USER_MULTITIME perf_tests.sh -t user_m
+PT_XS_FUNC_PERF_CPL_KERNEL_MULTITIME perf_tests.sh -t kernel_m
+PT_XS_FUNC_PERF_NMI_WATCHDOG_DISABLE perf_tests.sh -t nmi_watchdog_disable
+PT_XS_FUNC_PERF_NMI_WATCHDOG_ENABLE perf_tests.sh -t nmi_watchdog_enable
+PT_XS_FUNC_PERF_MISS_FREQUENCY perf_tests.sh -t miss_frequency
+PT_XS_FUNC_PERF_VIRTUAL_LBR perf_tests.sh -t virtual_lbr
+PT_XS_FUNC_PERF_DATA_LOST perf_tests.sh -t lost_data
+PT_XS_FUNC_PERF_NOTNT perf_tests.sh -t notnt
+PT_XS_FUNC_PERF_EVENT_TRACE perf_tests.sh -t event_trace
+PT_XS_FUNC_PERF_TOOL_TEST perf_tests.sh -t tool_test
+PT_XS_FUNC_PTTT_ENABLE perf_tests.sh -t pttt_enable
+PT_XS_FUNC_PTTT_TRIGGER_NUM perf_tests.sh -t pttt_trigger_num
+PT_XS_FUNC_PTTT_PAUSE_RESUME perf_tests.sh -t pttt_pause_resume
+PT_XS_FUNC_PTTT_DR_MATCH perf_tests.sh -t pttt_dr_match

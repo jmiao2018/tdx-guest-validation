@@ -1,0 +1,2 @@
+# This file contains all the BAT tests for LCK GPIO driver
+ddt_intel/gpio_bat_tests

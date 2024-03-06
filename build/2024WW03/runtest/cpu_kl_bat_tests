@@ -1,0 +1,15 @@
+# @name CPU_KL_BAT_TESTS
+# @desc Check key locker cpuid
+# @requires cpu/kl
+# @setup_requires
+
+CPU_XS_BAT_KL_CPU_ID_TEST cpu_bat.sh -n kl -p "7 1 0 1 c 23"
+CPU_XS_BAT_KL_AES_ENABLED cpu_bat.sh -n kl -p "0x19 1 0 1 b 0"
+CPU_XS_BAT_KL_AES_WIDE cpu_bat.sh -n kl -p "0x19 1 0 1 b 2"
+CPU_XS_BAT_KL_IWKEYBACKUP cpu_bat.sh -n kl -p "0x19 1 0 1 b 4"
+CPU_XS_BAT_KL_BITMAP0_HANDLE cpu_bat.sh -n kl -p "0x19 1 0 1 a 0"
+CPU_XS_BAT_KL_BITMAP1_HANDLE cpu_bat.sh -n kl -p "0x19 1 0 1 a 1"
+CPU_XS_BAT_KL_BITMAP2_HANDLE cpu_bat.sh -n kl -p "0x19 1 0 1 a 2"
+CPU_XS_BAT_KL_RANDOM_IWKEY cpu_bat.sh -n kl -p "0x19 1 0 1 c 1"
+CPU_XS_BAT_KL_KCONFIG_AESINTEL_TEST cpu_bat.sh -k "CONFIG_CRYPTO_AES_KL=m"
+CPU_XS_BAT_KL_LOAD_UNLOAD_MODULE kl_func.sh -l 2

@@ -1,0 +1,18 @@
+# @name Power Clamp BAT tests
+# @desc Basic Acceptance Tests for Power Clamp driver on Broadwell-U x86_64 HW platform.
+# @requires powermgr
+# @utility_requires pgrep
+
+#check kernel configuration
+POWER_XS_FUNC_CHK_KCFG_POWERCLAMP source "common.sh"; test_kconfigs "m" "CONFIG_INTEL_POWERCLAMP"
+
+#load and unload powerclamp modules
+POWER_XS_FUNC_LOAD_UNLOAD_POWERCLAMP source "common.sh"; powerclamp_module_tests.sh -l
+
+#check sysfs
+POWER_XS_FUNC_READ_POWERCLAMP_SYSFS source "common.sh"; powerclamp_module_tests.sh -r
+POWER_XS_FUNC_WRITE_POWERCLAMP_SYSFS source "common.sh"; powerclamp_module_tests.sh -w 50
+POWER_XS_FUNC_WRITE_POWERCLAMP_SYSFS_NEG source "common.sh"; powerclamp_module_tests.sh -n -w "abc"
+
+#check dmesg
+POWER_XS_FUNC_POWERCLAMP_CHK_IDLE_INJECT_DMESG source "common.sh"; powerclamp_module_tests.sh -d

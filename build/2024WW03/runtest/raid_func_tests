@@ -1,0 +1,8 @@
+# @name RAID_FUNC_TESTS
+# @desc raid basic tests
+# @requires raid
+# @setup_requires
+
+# RAID test
+RAID_XS_FUNC_CPUINFO raid_tests.sh -t 1
+RAID_XS_FUNC_RAIDTEST raid_tests.sh -t 2

@@ -1,0 +1,18 @@
+# @name TPMI RAPL tests
+# @desc Basic Acceptance Tests for TPMI RAPL driver on GNR server platform and beyond
+# @requires powermgr/rapl
+# @utility_requires rdmsr wrmsr perl bc
+
+TPMI_XS_BAT_RAPL_DRIVER_LOAD_UNLOAD tpmi_rapl_tests.sh -t load_unload_tpmi_rapl
+TPMI_XS_BAT_CHK_RAPL_SYSFS tpmi_rapl_tests.sh -t tpmi_rapl_sysfs
+TPMI_XS_BAT_CHK_RAPL_PKG_DOMAIN tpmi_rapl_tests.sh -t tpmi_rapl_pkg_domain
+TPMI_XS_BAT_CHK_RAPL_PSYS_DOMAIN tpmi_rapl_tests.sh -t tpmi_rapl_psys_domain
+TPMI_XS_BAT_CHK_RAPL_DRAM_DOMAIN tpmi_rapl_tests.sh -t tpmi_rapl_dram_domain
+TPMI_S_BAT_CHK_RAPL_PKG_WORKLOAD tpmi_rapl_tests.sh -t tpmi_rapl_pkg_workload
+TPMI_S_BAT_CHK_RAPL_DRAM_WORKLOAD tpmi_rapl_tests.sh -t tpmi_rapl_dram_workload
+TPMI_S_BAT_CHK_RAPL_POWER_LIMIT_75 tpmi_rapl_tests.sh -t tpmi_rapl_pkg_power_limit_75
+TPMI_S_BAT_CHK_RAPL_POWER_LIMIT_50 tpmi_rapl_tests.sh -t tpmi_rapl_pkg_power_limit_50
+# TPMI RAPL PERF TURBOSTAT Comparing tests
+TPMI_XS_FUNC_RAPL_DOMAIN_NAME_COMPARE_PERF_TURBOSTAT rapl_perf_tests.sh -t tpmi_sysfs_perf_name_compare
+TPMI_S_FUNC_RAPL_ENERGY_COMPARE_PERF_LOAD rapl_perf_tests.sh -t tpmi_sysfs_perf_energy_compare_workload_server
+TPMI_S_FUNC_RAPL_ENERGY_COMPARE_TURBO_LOAD rapl_perf_tests.sh -t tpmi_sysfs_turbostat_energy_compare_workload_server

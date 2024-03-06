@@ -1,0 +1,31 @@
+{
+    "name": "DSA_XS_FUNC_USER_PASID_ENABLED_CHECK",
+    "cmdline": "dsa_func_test.sh -t pasid_enabled_check -d 0",
+    "initial_platform": "Diamond Rapids",
+    "summary": "Test if sva is enabled with attribut pasid_enabled and the value should be 1",
+    "status": "Closed",
+    "steps": [],
+    "flags": [],
+    "priority": "P1",
+    "scenario": "dsa3_user_func_tests",
+    "domain": "CPU",
+    "feature": "DSA3",
+    "owner": "xinzhanz",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [
+        "intel_iommu=on",
+        "sm_on"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2023-07-11T18:37:27.000-0800",
+    "link": "",
+    "tips": ""
+}

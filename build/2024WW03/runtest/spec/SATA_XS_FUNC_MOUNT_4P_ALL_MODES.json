@@ -1,0 +1,34 @@
+{
+    "name": "SATA_XS_FUNC_MOUNT_4P_ALL_MODES",
+    "initial_platform": "",
+    "cmdline": "blk_device_readwrite_partitions.sh -d \"sata\" -p \"4\" -f -m",
+    "steps": [],
+    "flags": [],
+    "summary": "Find and format SATA 4 partitions in all fs type (ext2,ext3,ext4,vfat) and mount in modes: ro,rw,sync,async separately",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "sata_partitions_func_tests",
+    "domain": "IO",
+    "feature": "SATA",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free sata disk partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-06-06T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

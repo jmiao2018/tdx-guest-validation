@@ -1,0 +1,16 @@
+# @name DMATEST
+# @desc DMATEST uses dmatest.ko module to runs tests on all available dma channels
+# @requires dma
+
+DMA_XS_FUNC_DRV_CHECK dma_test.sh -l 1 -t 1
+
+DMA_XS_FUNC_ACPI_ENUM dma_test.sh -l 1 -t 2
+
+# TEMPORARILY DISABLED DUE TO NOT SUPPORT MEMORY TO MEMORY TRANSFER
+#DMA_S_FUNC_4096SIZE_100ITER dma_test.sh -l 1 -t 3 -p 1 -i 100 -b 4096
+
+#DMA_M_FUNC_4096SIZE_10000ITER dma_test.sh -l 1 -t 3 -p 1 -i 10000 -b 4096
+
+#DMA_S_FUNC_65536SIZE_100ITER dma_test.sh -l 1 -t 3 -p 1 -i 100 -b 65536
+
+#DMA_M_FUNC_65536SIZE_10000ITER dma_test.sh -l 1 -t 3 -p 1 -i 10000 -b 65536

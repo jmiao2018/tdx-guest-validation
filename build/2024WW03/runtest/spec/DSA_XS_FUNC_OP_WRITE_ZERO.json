@@ -1,0 +1,30 @@
+{
+    "name": "DSA_XS_FUNC_OP_WRITE_ZERO",
+    "initial_platform": "Granite Rapids",
+    "cmdline": "op_config_test.sh -t write_0",
+    "steps": [],
+    "flags": [],
+    "summary": "Test if opcode config could be set 0",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "dsa_op_config_func_tests",
+    "domain": "CPU",
+    "feature": "DSA",
+    "owner": "xinzhanz",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [
+        "intel_iommu=on,sm_on"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2022-08-07T15:35:57.000-0800",
+    "link": "",
+    "tips": ""
+}

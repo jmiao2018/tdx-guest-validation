@@ -1,0 +1,7 @@
+# @name PMU_SUITE_TESTS
+# @desc PMU suite tests
+# @requires pmu
+# @setup_requires
+
+# PMU test suit
+PMU_S_FUNC_SUITE pmu_suite_tests.sh

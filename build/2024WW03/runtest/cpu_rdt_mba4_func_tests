@@ -1,0 +1,9 @@
+# @name CPU_RDT_MBA4_FUNC_TESTS
+# @desc test sanity and functional tests for mba4
+# @requires cpu/mba4
+# @setup_requires
+
+RDT_XS_FUNC_RESCTRL_MBA4 cpu_rdt_resctrl_tests.sh -t mba4 -o sanity -v 1
+RDT_XS_FUNC_NEG_RESCTRL_MBA4 cpu_rdt_resctrl_tests.sh -t mba4 -o sanity -v 0
+RDT_XS_PERF_RESCTRL_MBA4_UNDER_NON_COMPETITION cpu_rdt_resctrl_tests.sh -t mba4 -o function -v 0
+RDT_XS_PERF_RESCTRL_MBA4_UNDER_COMPETITION cpu_rdt_resctrl_tests.sh -t mba4 -o function -v 1

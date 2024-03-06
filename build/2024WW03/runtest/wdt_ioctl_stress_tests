@@ -1,0 +1,9 @@
+# @name WDT_IOCTL_STRESS_TEST
+# @desc Watchdog Timer ioctls stress tests
+# @requires watchdog
+
+WDT_S_STRESS_KEEPALIVE wdt_tests.sh -i "keepalive" -l "120"
+
+WDT_S_STRESS_WRITE wdt_tests.sh -i "write" -l "120"
+
+WDT_S_STRESS_SETTIMEOUT_RNDM wdt_tests.sh -i "settimeout" -r -l "120"

@@ -1,0 +1,24 @@
+# @name ose_pwm_func_tests
+# @desc ose_pwm_func_tests perform func tests for PWM driver
+# @requires ose_pwm
+# @setup_requires
+
+OSE_PWM_XS_FUNC_LPSS0_D0_N_P100K pwm.sh -p "all" -d 0 -o "normal" -e 100000
+
+OSE_PWM_XS_FUNC_LPSS0_D25_N_P50K pwm.sh -p "all" -d 25 -o "normal" -e 50000
+
+OSE_PWM_XS_FUNC_LPSS0_D50_N_P10 pwm.sh -p "all" -d 50 -o "normal" -e 10
+
+OSE_PWM_XS_FUNC_LPSS0_D75_N_P50K pwm.sh -p "all" -d 75 -o "normal" -e 50000
+
+OSE_PWM_XS_FUNC_LPSS0_D100_N_P100K pwm.sh -p "all" -d 100 -o "normal" -e 100000
+
+OSE_PWM_XS_FUNC_LPSS0_D0_I_P50K pwm.sh -p "all" -d 0 -o "inverted" -e 50000
+
+OSE_PWM_XS_FUNC_LPSS0_D25_I_P100K pwm.sh -p "all" -d 25 -o "inverted" -e 100000
+
+OSE_PWM_XS_FUNC_LPSS0_D50_I_P100K pwm.sh -p "all" -d 50 -o "inverted" -e 100000
+
+OSE_PWM_XS_FUNC_LPSS0_D75_I_P10 pwm.sh -p "all" -d 75 -o "inverted" -e 10
+
+OSE_PWM_XS_FUNC_LPSS0_D100_I_P50K pwm.sh -p "all" -d 100 -o "inverted" -e 50000

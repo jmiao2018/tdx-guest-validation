@@ -1,0 +1,6 @@
+# @name GPIO_FUNC_TESTS
+# @desc GPIO_FUNC_TESTS perform FUNC TCs for GPIO driver
+# @requires gpio
+# @setup_requires
+
+GPIO_XS_FUNC_GPIOD_TEST gpio_libtool.sh -c gpiod-test

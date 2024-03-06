@@ -1,0 +1,16 @@
+# @name USBTYPEC_FUNC_TESTS
+# @desc usbtypec sysfs tests
+# @requires usbhost && usbtypec
+# @setup_requires
+
+# USBTYPEC test
+USBTYPEC_XS_FUNC_SYSFS usb_typec_tests.sh -t sysfsinfo
+USBTYPEC_XS_FUNC_DATAROLE_POLLING usb_typec_tests.sh -t datap
+USBTYPEC_XS_FUNC_POWERROLE_POLLING usb_typec_tests.sh -t powerp
+USBTYPEC_XS_FUNC_TRACE usb_trace_tests.sh -t ucsi
+USBTYPEC_XS_FUNC_KCONFIG_CHECK usb_typec_tests.sh -t kconfig
+USBTYPEC_XS_FUNC_MODULE_CHECK usb_typec_tests.sh -t module
+USBTYPEC_XS_FUNC_VCONN_SOURCE_POLLING  usb_typec_tests.sh -t vconn_source
+USBTYPEC_XS_FUNC_POWER_OPERATION_MODE_POLLING usb_typec_tests.sh -t power_operation_mode
+USBTYPEC_XS_FUNC_SUPPORTED_ACCESSORY_MODES_POLLING usb_typec_tests.sh -t supported_accessory_modes
+USBTYPEC_XS_FUNC_SYSFS_ALL usb_typec_tests.sh -t all

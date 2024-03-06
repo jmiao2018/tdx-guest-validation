@@ -1,0 +1,7 @@
+# @name CPU_VAES_BAT_TESTS
+# @desc Check vaes cpuinfo and cpuid
+# @requires cpu/vaes
+# @setup_requires
+
+CPU_XS_BAT_VAES_CPU_INFO_TEST cpu_bat.sh -n vaes -f vaes
+CPU_XS_BAT_VAES_CPU_ID_TEST cpu_bat.sh -n vaes -p "7 1 0 1 c 9"

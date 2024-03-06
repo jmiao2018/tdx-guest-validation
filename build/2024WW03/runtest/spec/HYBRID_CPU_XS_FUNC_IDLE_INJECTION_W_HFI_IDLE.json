@@ -1,0 +1,30 @@
+{
+    "name": "HYBRID_CPU_XS_FUNC_IDLE_INJECTION_W_HFI_IDLE",
+    "initial_platform": "",
+    "cmdline": "idle_injection_tests.sh -t hfi_idle -d 30",
+    "steps": [],
+    "flags": [],
+    "summary": "Check if idle injection is working with specific value with intel_hfi_idle=30",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "hybrid_cpu_idle_injection_func_tests",
+    "domain": "CPU",
+    "feature": "HYBRID_CPU",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [
+        "intel_hfi_idle=30"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2021-12-31T09:21:28.000-0800",
+    "link": "",
+    "tips": "In intel-next or upstream source there is a utility tools/power/x86/intel-speed-select  You can use \"make\" to build."
+}

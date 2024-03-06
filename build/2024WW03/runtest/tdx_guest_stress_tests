@@ -1,0 +1,8 @@
+# @name tdx_guest_stress_tests
+# @desc Check tdx guest stress status
+# @requires tdx
+# @setup_requires
+# @utility_requires
+
+TDX_M_STRESS_GUEST_RANDOM_NUMBER_URANDOM tdx_guest_stress.sh -t TDX_GUEST_RANDOM_NUMBER_GENERATION
+TDX_M_STRESS_GUEST_EBIZZY tdx_guest_stress.sh -t TDX_STRESS_GUEST_EBIZZY

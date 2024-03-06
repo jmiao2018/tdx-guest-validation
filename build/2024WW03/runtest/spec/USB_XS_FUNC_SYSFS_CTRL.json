@@ -1,0 +1,36 @@
+{
+    "name": "USB_XS_FUNC_SYSFS_CTRL",
+    "initial_platform": "",
+    "cmdline": "verify_sysfs_xhci_controllers.sh",
+    "steps": [],
+    "flags": [],
+    "summary": "verify controllers files exist on sysfs",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usbhost_bat_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2017-10-31T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure a usb device is connected"
+}

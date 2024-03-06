@@ -1,0 +1,8 @@
+# @name TPM_FUNC_TESTS
+# @desc tpm function tests
+# @requires tpm
+
+TPM_XS_FUNC_AUTH tpm_func.sh -p "ecmd" -c "python3 -m unittest -v tpm2_smoke.SmokeTest.test_seal_with_auth" -f "fail"
+TPM_XS_FUNC_LONG_AUTH tpm_func.sh -p "ecmd" -c "python3 -m unittest -v tpm2_smoke.SmokeTest.test_seal_with_too_long_auth" -f "fail"
+TPM_XS_FUNC_SHORT_CMD tpm_func.sh -p "ecmd" -c "python3 -m unittest -v tpm2_smoke.SmokeTest.test_too_short_cmd" -f "fail"
+TPM_XS_FUNC_WRONG_AUTH tpm_func.sh -p "ecmd" -c "python3 -m unittest -v tpm2_smoke.SmokeTest.test_unseal_with_wrong_auth" -f "fail"

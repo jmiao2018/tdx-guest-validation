@@ -1,0 +1,34 @@
+#!/bin/bash -Ex
+
+# Test event category 0x0 = 'WQ', test workload run multiple times
+
+# To count total number of descriptor submissions using ENQCMD or
+# ENQCMDS, software can use a single counter to aggregate counts of
+# the following events in the WQ category
+
+# event 0x1, EV_ENQ_SUCCESS_LIMPORTAL - Number of successful
+# ENQCMD/ENQCMDS (NP writes) submitted to limited portal.
+
+# event 0x4, EV_ENQ_SUCCESS_UNLIMPORTAL - Number of successful
+# ENQCMD/ENQCMDS (NP writes) submitted to unlimited portal.
+
+# event 0x10, EV_DWQ_SUCCESS - Number of successful posted
+# writes to DWQ.
+
+# All filters set to default value of 0xFF (no constraints).
+#
+# Setup:
+#   assumes setup_dsa_dmatest_disabled has been run
+
+perf stat -o $1 -e dsa0/event=0x1,event_category=0x0/,dsa0/event=0x4,event_category=0x0/,dsa0/event=0x10,event_category=0x0/ dsa_test -w 1 -l 1024 -o0x3 -t200
+
+# Expected output (similar to):
+
+# Performance counter stats for 'system wide':
+
+#                 0      dsa0/event=0x1,event_category=0x0/
+#                 0      dsa0/event=0x4,event_category=0x0/
+#                19      dsa0/event=0x10,event_category=0x0/
+
+#      14.529620647 seconds time elapsed
+

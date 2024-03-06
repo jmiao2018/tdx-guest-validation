@@ -1,0 +1,10 @@
+# @name DSA_KTEST_STRESS_TESTS
+# @desc DSA kernel level stress tests
+# @requires dsa
+# @utility_requires
+
+DSA_M_STRESS_KTEST_64C_1T_10000 idxd_ktest.sh -c 64 -t 1 -i 10000
+DSA_M_STRESS_KTEST_8C_8T_10000 idxd_ktest.sh -c 8 -t 8 -i 10000
+DSA_M_STRESS_KTEST_1C_64T_10000 idxd_ktest.sh -c 1 -t 64 -i 10000
+DSA_M_STRESS_KTEST_32C_64T_10000 idxd_ktest.sh -c 32 -t 64 -i 10000
+DSA_M_STRESS_KTEST_64C_64T_10000 idxd_ktest.sh -c 64 -t 64 -i 10000

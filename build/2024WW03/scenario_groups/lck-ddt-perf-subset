@@ -1,0 +1,20 @@
+# This file contains all the performance test scenarios for Linux Core Kernel Device Drivers
+ddt_intel/ec_perf_tests
+ddt_intel/emmc_ext2_perf_tests
+ddt_intel/emmc_ext3_perf_tests
+ddt_intel/emmc_ext4_perf_tests
+ddt_intel/emmc_vfat_perf_tests
+ddt_intel/eth_dualcard_perf_tests
+ddt_intel/eth_iperf_perf_tests
+ddt_intel/sd_ext2_perf_tests
+ddt_intel/sd_ext3_perf_tests
+ddt_intel/sd_ext4_perf_tests
+ddt_intel/sd_vfat_perf_tests
+ddt_intel/sata_ext2_perf_tests
+ddt_intel/sata_ext3_perf_tests
+ddt_intel/sata_ext4_perf_tests
+ddt_intel/sata_vfat_perf_tests
+ddt_intel/usbhost_ext2_perf_tests
+ddt_intel/usbhost_ext3_perf_tests
+ddt_intel/usbhost_ext4_perf_tests
+ddt_intel/usbhost_vfat_perf_tests

@@ -1,0 +1,7 @@
+# @name TBT_MINI_SUSPEND_RESUME_TEST
+# @desc thunderbolt mini(tbt 1/2) sleep test and check thunderbolt function
+# @requires tbt_mini
+# @setup_requires
+
+TBT_MINI_XS_FUNC_S3_TBT_TEST tbt_func_test.sh -s suspend -t deep -p tbt
+TBT_MINI_XS_FUNC_S4_TBT_TEST tbt_func_test.sh -s suspend -t disk -p tbt

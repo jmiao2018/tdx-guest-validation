@@ -1,0 +1,34 @@
+{
+    "name": "EMMC_XS_FUNC_FORMAT_3P_ALL_FS",
+    "initial_platform": "",
+    "cmdline": "blk_device_readwrite_partitions.sh -d \"emmc\" -p \"3\" -f",
+    "steps": [],
+    "flags": [],
+    "summary": "Find and format eMMC 3 partitions in all fs type (ext2,ext3,ext4,vfat)",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "emmc_partitions_func_tests",
+    "domain": "IO",
+    "feature": "eMMC",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free EMMC partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-06-06T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

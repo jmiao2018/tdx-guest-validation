@@ -1,0 +1,8 @@
+# @name CPU_DLSM_BAT_TESTS
+# @desc Check dlsm(Dynamic Lock Step Mode) cpuinfo cpuid and kconfig
+# @requires cpu/dlsm
+# @setup_requires
+
+CPU_XS_BAT_DLSM_CPU_ID_TEST cpu_bat.sh -n dlsm -p "7 0 1 0 d 12"
+CPU_XS_BAT_DLSM_CPU_INFO_TEST cpu_bat.sh -n dlsm -f dlsm
+CPU_XS_BAT_DLSM_KCONFIG_TEST cpu_bat.sh -k "CONFIG_X86_LOCKSTEP=y"

@@ -1,0 +1,11 @@
+# @name Power Intel Powerclamp Functional tests
+# @desc Functional Tests for Intel Powerclamp driver
+# @requires powermgr
+# @utility_requires pgrep shuf
+
+#check kernel idle injection
+POWER_XS_FUNC_POWERCLAMP_CHECK_KIDLE_INJECT powerclamp_idle_inject_tests.sh -c
+POWER_XS_FUNC_POWERCLAMP_FORCED_MODULE_UNLOAD powerclamp_idle_inject_tests.sh -f
+POWER_XS_FUNC_POWERCLAMP_CPU_ONLINE_OFFLINE powerclamp_idle_inject_tests.sh -o
+POWER_XS_FUNC_POWERCLAMP_CHECK_PERF_POWER_CONTROL powerclamp_idle_inject_tests.sh -p
+POWER_XS_FUNC_POWERCLAMP_INCREMENTAL_IDLE_INJECT powerclamp_idle_inject_tests.sh -i 10

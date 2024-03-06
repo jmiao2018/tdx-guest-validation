@@ -1,0 +1,34 @@
+# @name PWM_FUNC_TESTS
+# @desc PWM_FUNC_TESTS perform functional tests to check pwm sysfs.
+# @requires pwm
+# @setup_requires
+
+PWM_XS_FUNC_LPSS0_D0_N_P100K pwm.sh -p "all" -d 0 -o "normal" -e 100000
+
+PWM_XS_FUNC_LPSS0_D25_N_P50K pwm.sh -p "all" -d 25 -o "normal" -e 50000
+
+PWM_XS_FUNC_LPSS0_D50_N_P10 pwm.sh -p "all" -d 50 -o "normal" -e 10
+
+PWM_XS_FUNC_LPSS0_D75_N_P50K pwm.sh -p "all" -d 75 -o "normal" -e 50000
+
+PWM_XS_FUNC_LPSS0_D100_N_P100K pwm.sh -p "all" -d 100 -o "normal" -e 100000
+
+PWM_XS_FUNC_LPSS0_D0_I_P50K pwm.sh -p "all" -d 0 -o "inverted" -e 50000
+
+PWM_XS_FUNC_LPSS0_D25_I_P100K pwm.sh -p "all" -d 25 -o "inverted" -e 100000
+
+PWM_XS_FUNC_LPSS0_D50_I_P100K pwm.sh -p "all" -d 50 -o "inverted" -e 100000
+
+PWM_XS_FUNC_LPSS0_D75_I_P10 pwm.sh -p "all" -d 75 -o "inverted" -e 10
+
+PWM_XS_FUNC_LPSS0_D100_I_P50K pwm.sh -p "all" -d 100 -o "inverted" -e 50000
+
+PWM_XS_FUNC_INTEL_BLIGHT_0PER pwm_backlight.sh -b "intel_backlight" -p 0 -i 1
+
+PWM_XS_FUNC_INTEL_BLIGHT_25PER pwm_backlight.sh -b "intel_backlight" -p 25 -i 1
+
+PWM_XS_FUNC_INTEL_BLIGHT_50PER pwm_backlight.sh -b "intel_backlight" -p 50 -i 1
+
+PWM_XS_FUNC_INTEL_BLIGHT_75PER pwm_backlight.sh -b "intel_backlight" -p 75 -i 1
+
+PWM_XS_FUNC_INTEL_BLIGHT_100PER pwm_backlight.sh -b "intel_backlight" -p 100 -i 1

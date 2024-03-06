@@ -1,0 +1,7 @@
+# @name HYBRID_CPU_OVERCLOCK_BAT_TESTS
+# @desc HYBRID_CPU_OVERCLOCK_BAT_TESTS perform basic acceptance tests for Hybrid CPU with overclock
+# @requires hybrid_cpu
+# @setup_requires
+
+HYBRID_CPU_XS_FUNC_ITMT_BASIC_CHECK_OVERCLOCK hybrid_cpu_tests.sh -t itmt_basic
+

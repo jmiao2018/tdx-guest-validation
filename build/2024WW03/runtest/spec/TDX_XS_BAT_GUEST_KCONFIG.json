@@ -1,0 +1,79 @@
+{
+    "name": "TDX_XS_BAT_GUEST_KCONFIG",
+    "initial_platform": "Sapphire Rapids",
+    "cmdline": "tdx_guest_bat.sh -t TD_KCONFIG",
+    "steps": [],
+    "flags": [],
+    "summary": "Check guest kernel kconfig item for TDX enabling",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "tdx_guest_bat_tests",
+    "domain": "Security",
+    "feature": "TDX",
+    "owner": "hongyuni",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_INTEL_TDX_GUEST",
+            "values": [
+                "y"
+            ],
+            "description": "TDX kvm guest kconfig"
+        }
+    ],
+    "packages": [
+        {
+            "name": "expect",
+            "distribution": "general expect utility tool",
+            "install": "expect-dev",
+            "description": "expect is a tool for automating interactive applications according to a script"
+        }
+    ],
+    "bios": [
+        {
+            "name": "Total Memory Encryption <Enable>",
+            "path": "EDKII Menu -> Socket Configuration -> Processor Configuration",
+            "description": "TDX enabling pre-condition"
+        },
+        {
+            "name": "Total Memory Encryption Multi-Tenant <Enable>",
+            "path": "EDKII Menu -> Socket Configuration -> Processor Configuration",
+            "description": "TDX enabling pre-condition"
+        },
+        {
+            "name": "Mktme memory integrity <Enable>",
+            "path": "EDKII Menu -> Socket Configuration -> Processor Configuration",
+            "description": "TDX enabling pre-condition"
+        },
+        {
+            "name": "Trust Domain Extension (TDX) <Enable>",
+            "path": "EDKII Menu -> Socket Configuration -> Processor Configuration",
+            "description": "TDX enabling"
+        },
+        {
+            "name": "TME-MT/TDX key split [2 or 3]",
+            "path": "EDKII Menu -> Socket Configuration -> Processor Configuration",
+            "description": "TDX enabling related"
+        },
+        {
+            "name": "MMIO high base <16T>",
+            "path": "EDKII Menu -> Socket Configuration -> common ref code configuration",
+            "description": "TDX enabling related"
+        },
+        {
+            "name": "Limit CPU PA to 46 bits <Disable>",
+            "path": "EDKII Menu -> Socket Configuration -> Processor Configuration",
+            "description": "TDX enabling related"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2021-01-04T15:09:21.000-0800",
+    "link": "",
+    "tips": ""
+}

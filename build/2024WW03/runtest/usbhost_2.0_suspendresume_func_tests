@@ -1,0 +1,9 @@
+# @name usbhost basic func tests
+# @desc usbhost suspend to resume tests
+# @requires usbhost && powermgr
+# @setup_requires
+
+# USBHOST SUSPEND RESUME TESTS FOR USB 2.0
+USBHOST_XS_FUNC_SR_2.0_FLASH_FREE usb_suspend_resume_tests.sh -p 2.0 -t flash -s freeze
+USBHOST_XS_FUNC_SR_2.0_FLASH_MEM usb_suspend_resume_tests.sh -p 2.0 -t flash -s mem
+USBHOST_XS_FUNC_SR_2.0_FLASH_DISK usb_suspend_resume_tests.sh -p 2.0 -t flash -s disk

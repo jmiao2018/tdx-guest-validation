@@ -1,0 +1,23 @@
+# @name SATA_BAT_TESTS
+# @desc SATA_BAT_TESTS contains BAT tests for sata diver
+# @requires sata
+# @setup_requires
+# @utility_requires pvdisplay hdparm
+
+SATA_XS_FUNC_DRV_CHECK blk_device_bat_test.sh -d "sata" -c "1"
+
+SATA_XS_FUNC_DEV_CHECK blk_device_bat_test.sh -d "sata" -c "2"
+
+SATA_XS_FUNC_GET_NAME blk_device_bat_test.sh -d "sata" -c "3"
+
+SATA_XS_FUNC_MOUNT_PART blk_device_bat_test.sh -d "sata" -c "4"
+
+SATA_XS_FUNC_ENUM_DEVICE blk_device_specification.sh -e
+
+SATA_XS_FUNC_AHCI_SPEC blk_device_specification.sh -a
+
+SATA_XS_FUNC_GEN3_SPEC blk_device_specification.sh -g
+
+SATA_XS_FUNC_POWER_MGMT_D0 blk_power_management.sh
+
+SATA_XS_FUNC_NCQ_SPEC blk_native_command_queueing.sh -d "sata"

@@ -1,0 +1,6 @@
+# @name CPU_MODEL_ID_TESTS
+# @desc CPU model ID function tests
+# @requires cpu
+# @setup_requires
+
+CPU_XS_FUNC_MODEL_ID_TEST cpu_model_id_test.sh 

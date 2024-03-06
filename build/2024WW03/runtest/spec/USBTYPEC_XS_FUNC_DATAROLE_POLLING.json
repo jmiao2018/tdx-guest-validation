@@ -1,0 +1,70 @@
+{
+    "name": "USBTYPEC_XS_FUNC_DATAROLE_POLLING",
+    "initial_platform": "",
+    "cmdline": "usb_typec_tests.sh -t datap",
+    "steps": [],
+    "flags": [],
+    "summary": "data_role value test",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usbtypec_func_tests",
+    "domain": "IO",
+    "feature": "USB_TYPEC",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_TYPEC_UCSI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_TYPEC",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_TYPEC_TPS6598X",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_TYPEC_TCPCI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_UCSI_ACPI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "USB typec or UCSI or UCMX",
+            "path": "",
+            "description": "Please make sure TCSS is enabled in BIOS as https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2017-11-01T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure TCSS related FW is flashed successfully."
+}

@@ -1,0 +1,24 @@
+BT Driver Test
+
+Usage:
+-c <testcase ID> - Testcase ID
+	1	Test kernel module load/unload
+	2	Test BT HCI device is enumerated and MAC address is valid
+	3	Test switch on BT device
+	4	Test switch off BT device
+	5	Test BT scanning for Peer BT devices
+-d <ADB S/N> - ADB serial number
+-p <PLATFORM> - Platform file to identify HW/SW features for DUT
+	The specified file should be found in platforms/ dir
+	byt-cr-ecs
+	byt-cr-anchor8
+	byt-cr-mrd7
+	byt-cr-t100
+-l  List all the test cases
+-o  <DIR> Output directory for storing test log files
+-O  <DIR> Output directory for storing test report files for TRC
+-r  Report file(csv format) is generated for TRC
+-i  <Info> Information used for generating TRC report
+-f  Force to create a new Test Report file for TRC
+-a  All tests are to be run in sequence
+-P	<Peer Name> Peer BT device name

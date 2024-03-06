@@ -1,0 +1,11 @@
+# @name PMU_SUITE_TESTS
+# @desc PMU suite tests
+# @requires pmu && hybrid_cpu
+# @setup_requires
+
+# PMU test suit
+PMU_S_FUNC_SUITE_CORE_OFFLINE pmu_suite_tests.sh -t core
+PMU_S_FUNC_SUITE_ATOM_OFFLINE pmu_suite_tests.sh -t atom
+PMU_S_FUNC_SUITE_CORE_DISABLE pmu_suite_tests.sh
+PMU_S_FUNC_SUITE_ATOM_DISABLE pmu_suite_tests.sh
+

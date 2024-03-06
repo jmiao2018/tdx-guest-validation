@@ -1,0 +1,5 @@
+#This file contains all the performance tests for LCK NVME driver
+ddt_intel/nvme_ext2_perf_tests
+ddt_intel/nvme_ext3_perf_tests
+ddt_intel/nvme_ext4_perf_tests
+ddt_intel/nvme_vfat_perf_tests

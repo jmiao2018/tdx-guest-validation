@@ -1,0 +1,7 @@
+# @name I2C_BAT_TESTS_SUBSET_0
+# @desc perform BAT tests for I2C driver
+# @requires i2c
+
+I2C_XS_BAT_CHAR_DEV_NODE_CHECK i2c_bat_tests.sh -c check_char_node
+I2C_XS_BAT_DRV_CHECK i2c_basic_tests.sh -c 0
+I2C_XS_BAT_DEV_ID_CHECK i2c_basic_tests.sh -c 2

@@ -1,0 +1,9 @@
+# @name Power Management s0ix substate tests
+# @desc intel s0ix Tests for tigerlake, elkhart and afterwards client platforms
+# @requires powermgr
+# @setup_requires
+
+POWER_XS_FUNC_S0I2_1_ENTRY_ONCE powermgr_s0ix_substate_tests.sh -c 1
+POWER_XS_FUNC_S0I3_0_ENTRY_ONCE powermgr_s0ix_substate_tests.sh -c 2
+POWER_XS_FUNC_S0I3_2_ENTRY_ONCE powermgr_s0ix_substate_tests.sh -c 3
+POWER_XS_FUNC_S0I3_4_ENTRY_ONCE powermgr_s0ix_substate_tests.sh -c 4

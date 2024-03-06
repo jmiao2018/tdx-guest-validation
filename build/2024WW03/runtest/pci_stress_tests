@@ -1,0 +1,11 @@
+# @name pci_stress_tests
+# @desc Check pci driver basic function and feature
+# @requires pci
+# @utility_requires lspci
+# @setup_requires
+
+PCIe_STRESS_ETH_PING_1MIN iface=`pci_eth_search_device.sh` || die "error getting pcie eth interface name";  pci_run_eth_test.sh -i "$iface" -o 4
+
+PCIe_STRESS_ETH_PING_10MIN iface=`pci_eth_search_device.sh` || die "error getting pcie eth interface name";  pci_run_eth_test.sh -i "$iface" -o 5
+
+PCIe_STRESS_ETH_PING_20MIN iface=`pci_eth_search_device.sh` || die "error getting pcie eth interface name";  pci_run_eth_test.sh -i "$iface" -o 6

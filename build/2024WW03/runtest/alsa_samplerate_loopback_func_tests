@@ -1,0 +1,23 @@
+# @name Testing for various sampling rates
+# @desc Do capture and loopback for various sample rates
+#       The playback tests in alsa_tests.sh will try to
+#       fetch (if -u option is not specified) a file from server
+#       http://gtopentest-server.gt.design.ti.com based on the
+#       sample format, rate and number of channels; if the fetch
+#       fails playback will use /dev/urandom as the source. It
+#       is recommended to change the url to an existing server
+#       in the test environment or to add the -u option in the
+#       playback scenarios so that a valid audio source file is
+#       used during playback tests.
+# @requires alsa && hda
+ALSA_S_FUNC_LPBK_SMPRT_8000 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -r 8000 -d 20'
+ALSA_S_FUNC_LPBK_SMPRT_11025 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -r 11025 -d 20'
+ALSA_S_FUNC_LPBK_SMPRT_16000 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -r 16000 -d 20'
+ALSA_S_FUNC_LPBK_SMPRT_22050 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -r 22050 -d 20'
+ALSA_S_FUNC_LPBK_SMPRT_24000 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -r 24000 -d 20'
+ALSA_S_FUNC_LPBK_SMPRT_32000 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -r 32000 -d 20'
+ALSA_S_FUNC_LPBK_SMPRT_44100	source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -r 44100'
+ALSA_S_FUNC_LPBK_SMPRT_48000	source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -r 48000'
+ALSA_S_FUNC_LPBK_SMPRT_88200 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -r 88200 -d 20'
+ALSA_S_FUNC_LPBK_SMPRT_96000 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -r 96000 -d 20'
+ALSA_XS_FUNC_LPBK_SMPRT_192000 source 'common.sh' ;  do_cmd 'alsa_tests.sh -t loopback -r 192000 -d 30'

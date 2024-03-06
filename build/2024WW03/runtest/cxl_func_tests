@@ -1,0 +1,22 @@
+# @name CXL_FUNC_TESTS
+# @desc Check CXL function
+# @requires cxl
+# @setup_requires
+
+CXL_XS_FUNC_CXL_CAP cxl_tests.sh -s "cxl_tool" -b "pcie_check" -p "e" -f "cap:0023"
+CXL_XS_FUNC_CXL_RCEC_CAP cxl_tests.sh -s "cxl_tool" -b "pcie_check" -p "e" -f "cap:0007"
+CXL_XS_FUNC_CXL_REG_VENDOR pcie_check x 0x4 16 0x1e98
+CXL_XS_FUNC_CXL_REG_REVISION pcie_check x 0x6 4 0x0
+CXL_XS_FUNC_CXL_REG_LENGTH pcie_check x 0x6 16 0x380
+CXL_XS_FUNC_CXL_REG_DVSEC_ID pcie_check x 0x8 16 0x0
+CXL_XS_FUNC_CXL_REG_CAP_IO pcie_check X 0xa 16 0x2
+CXL_XS_FUNC_CXL_MEM_CAP_LOGIC cxl_tests.sh -s cxl_mem_hdm
+CXL_XS_FUNC_CXL_RCEC_CORRECT cxl_tests.sh -s cxl_rcec -p "correctable"
+CXL_XS_FUNC_CXL_RCEC_FATAL cxl_tests.sh -s cxl_rcec -p "fatal"
+CXL_XS_FUNC_CXL_RCEC_MIXED cxl_tests.sh -s cxl_rcec -p "mixed-corr-nonfatal"
+CXL_XS_FUNC_CXL_RCEC_MULTIPLE cxl_tests.sh -s cxl_rcec -p "multiple-corr-nonfatal"
+CXL_XS_FUNC_CXL_RCEC_NONFATAL cxl_tests.sh -s cxl_rcec -p "nonfatal"
+CXL_XS_FUNC_CXL_RCEC_MEM_BAR1_HIGH cxl_tests.sh -s cxl_mem -p 20
+CXL_XS_FUNC_CXL_RCEC_FATAL_HANDLE cxl_tests.sh -s cxl_rcec_handle -p "fatal"
+CXL_XS_FUNC_CXL_REG_CONFIG_LOCK pcie_check x 0x14 1 1
+CXL_XS_FUNC_CXL_REG_CACHE_MODIFY pcie_check x 0x10 1 0

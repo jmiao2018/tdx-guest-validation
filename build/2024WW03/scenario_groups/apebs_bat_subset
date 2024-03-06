@@ -1,0 +1,2 @@
+# This file contains all the Basic Acceptance Tests for adaptive PEBS
+ddt_intel/apebs_bat_tests

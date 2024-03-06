@@ -1,0 +1,6 @@
+# @name CXL_DRIVER_TESTS
+# @desc Check CXL driver tests
+# @requires cxl
+# @setup_requires
+
+CXL_XS_FUNC_DRIVER_ABNORMAL_CHECK cxl_tests.sh -s "cxl_driver" -b "lvf.ko" -p "null" -f "abnormal"

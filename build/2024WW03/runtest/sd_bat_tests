@@ -1,0 +1,15 @@
+# @name SD_BAT_TESTS
+# @desc SD_BAT_TESTS contains BAT tests for sd driver
+# @requires sd
+# @setup_requires
+
+SD_XS_FUNC_DRV_CHECK blk_device_bat_test.sh -d "sd" -c "1"
+
+SD_XS_FUNC_DEV_CHECK blk_device_bat_test.sh -d "sd" -c "2"
+
+SD_XS_FUNC_GET_NAME blk_device_bat_test.sh -d "sd" -c "3"
+
+SD_XS_FUNC_MOUNT_PART blk_device_bat_test.sh -d "sd" -c "4"
+
+SD_XS_FUNC_BIND_UNBIND_DRV bind_unbind_driver.sh "sdhci"
+SD_XS_FUNC_64DMA_CHECK sd_64.sh

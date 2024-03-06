@@ -1,0 +1,2 @@
+# This file contains all the Basic Acceptance Tests for LCK RTC driver
+ddt_intel/rtc_bat_tests

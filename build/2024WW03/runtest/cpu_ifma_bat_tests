@@ -1,0 +1,7 @@
+# @name CPU_IFMA_BAT_TESTS
+# @desc Check ifma cpuinfo and cpuid
+# @requires cpu/ifma
+# @setup_requires
+
+CPU_XS_BAT_IFMA_CPU_INFO_TEST cpu_bat.sh -n ifma -f avx512ifma
+CPU_XS_BAT_IFMA_CPU_ID_TEST cpu_bat.sh -n ifma -p "7 1 0 1 b 21"

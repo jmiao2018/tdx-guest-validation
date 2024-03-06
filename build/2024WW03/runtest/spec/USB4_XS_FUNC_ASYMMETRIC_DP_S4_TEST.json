@@ -1,0 +1,47 @@
+{
+    "name": "USB4_XS_FUNC_ASYMMETRIC_DP_S4_TEST",
+    "initial_platform": "Raptor Lake",
+    "cmdline": "thunderbolt.asym_threshold=20000 thunderbolt.dyndbg",
+    "steps": ["Step 1: Boot up USB4v2 supported platform like RPL-HX with USB4v2 root controller like Bobcat B0 card",
+              "Step 2: Connected USB4v2 device like Bullshark card, check asymmetric was not triggered, 80/80Gbps rx/tx speed",
+              "Step 3: Connected one 8K monitor in graphic mode with Bullshark, asymmetric should be triggered, 120/40Gbps rx/tx speed",
+              "Step 4: Executed S4 sleep: rtcwake -m disk -s 100",
+              "Step 5: After wake up, DP tunnel should recover in order, for example 0:13 <-> 1:12 (DP) should not change, asymmetric 120/40Gbps rx/tx speed should be triggered also"],
+    "flags": [],
+    "summary": "Boot up RPL-HX with cmdline thunderbolt.asym_threshold=20000, connected Bullshark AIC, connected 1*8K monitor and should trigger the asymmetric 120/40Gbps, then s2idle sleep, after wake up, check DP IN tunnel should not change and asymmetric should be triggered",
+    "status": "Closed",
+    "priority": "P3",
+    "scenario": "",
+    "domain": "IO",
+    "feature": "USB4",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Manual",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB4",
+            "values": [
+                "m"
+            ],
+            "description": "For USB4 enabling"
+        },
+        {
+            "name": "CONFIG_USB4_NET",
+            "values": [
+                "m"
+            ],
+            "description": "For USB4 net  enabling"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2023-11-13T17:01:00.000-0700",
+    "link": "",
+    "tips": ""
+}

@@ -1,0 +1,2 @@
+# This file contains all the Basic Acceptance Tests for LCK USB Host driver
+ddt_intel/usbhost_bat_tests

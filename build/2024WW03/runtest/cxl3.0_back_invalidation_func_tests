@@ -1,0 +1,6 @@
+# @name CXL3.0_BACK_INVALIDATION_FUNC_TESTS
+# @desc Check CXL3.0 back invalidation feature functional test
+# @requires cxl3.0
+# @setup_requires
+
+CXL3_XS_FUNC_BACK_INVALIDATION_DECODER_CAP cxl_tests.sh -s cxl_dmesg_check -p "cxl_core cap" -f "ID: 12"

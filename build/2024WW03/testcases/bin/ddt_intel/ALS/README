@@ -1,0 +1,32 @@
+Ambient Light Sensor (ALS) Driver Test
+
+Usage:
+-c <testcase ID> - Testcase ID
+ 1	Test kernel module load/unload
+ 2	Test I2C bus driver bind/unbind
+ 3	Test ALS device is enumerated in /sys/bus/iio/devices
+ 4	Test ALS device is enumerated in /sys/bus/acpi/devices
+ 5	Test get sensor's illuminance value via in_illuminance_input
+ 6	Test changing calibration scale value via in_illuminance_calibscale
+ 7	Test changing sensor's integration time via in_illuminance_integration_time
+-p <PLATFORM> - Platform file to identify HW/SW features for DUT
+				The specified file should be found in platforms/ dir
+	PLATFORM list:
+	byt-cr-ecs
+	byt-cr-anchor8
+	byt-cr-mrd7
+	byt-cr-t10
+-d <ADB S/N> - ADB serial number (optional)
+-l - List all available test cases
+-o  - Output directory for storing test log files
+-O  - Output directory for storing test report files for TRC
+-r  Report file(csv format) is generated for TRC
+-i  Information used for generating TRC report
+-f  Force to create a new Test Report file for TRC
+-a  All tests are to be run in sequence
+
+Example:
+* Run test case 2 for testing I2C bus driver bind/unbind
+	./ALS_fPos_drv_test.sh -p byt-cr-anchor8 -d 013FB182 -c 2
+* List all available ALS driver test cases
+	./ALS_fPos_drv_test.sh -p byt-cr-anchor8 -l

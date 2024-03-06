@@ -1,0 +1,6 @@
+# @name HYBRID_CPU_SOC_BAT_TESTS
+# @desc HYBRID_CPU_SOC_BAT_TESTS perform basic acceptance tests for Hybrid CPU soc atom
+# @requires hybrid_cpu
+# @setup_requires
+
+HYBRID_CPU_XS_FUNC_SOC_ATOM hybrid_cpu_tests.sh -t soc_atom

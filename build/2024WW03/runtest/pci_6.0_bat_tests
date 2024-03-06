@@ -1,0 +1,8 @@
+# @name PCI_BAT_GEN6_TESTS
+# @desc Check pci gen6 device speed
+# @requires pci6.0
+# @setup_requires
+
+PCI_XS_FUNC_GEN6_LNKCAP_SPEED pci_basic_tests.sh -c 9
+PCI_XS_FUNC_GEN6_DETECT_SPEED pci_basic_tests.sh -c 10
+PCI_XS_FUNC_GEN6_LNKCTL2_SPEED pci_basic_tests.sh -c 11

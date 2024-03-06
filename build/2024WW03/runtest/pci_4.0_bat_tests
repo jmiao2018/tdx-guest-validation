@@ -1,0 +1,6 @@
+# @name PCI_BAT_TESTS
+# @desc Check pci driver basic function and features
+# @requires pci4.0
+# @setup_requires
+
+PCI_XS_FUNC_GEN4_DETECT_SPEED pci_basic_tests.sh -c 7

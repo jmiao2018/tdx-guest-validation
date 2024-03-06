@@ -1,0 +1,36 @@
+{
+    "name": "CXL_XS_FUNC_CXL_RCEC_FATAL_HANDLE",
+    "initial_platform": "",
+    "cmdline": "cxl_tests.sh -s cxl_rcec_handle -p \"fatal\"",
+    "steps": [],
+    "flags": [],
+    "summary": "Check CXL RCEC fatal event should be handled correctly",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cxl_func_tests",
+    "domain": "IO",
+    "feature": "CXL",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_PCI_CXL",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CXL"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-11-30T11:18:51.000-0800",
+    "link": "",
+    "tips": ""
+}

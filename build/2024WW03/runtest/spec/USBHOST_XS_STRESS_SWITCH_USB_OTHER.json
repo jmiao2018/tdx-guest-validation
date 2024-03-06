@@ -1,0 +1,57 @@
+{
+    "name": "USBHOST_XS_STRESS_SWITCH_USB_OTHER",
+    "initial_platform": "",
+    "cmdline": "usb_switch_tests.sh -p printer -q scanner -r headset -s camera -t 100",
+    "steps": [],
+    "flags": [],
+    "summary": "USB different peripherals switch stress",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_stress_other_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB printer",
+            "check": "",
+            "description": "Need connect to one usb switch deivce then to DUT"
+        },
+        {
+            "name": "USB camera",
+            "check": "",
+            "description": "Need connect to one usb switch deivce then to DUT"
+        },
+        {
+            "name": "USB scanner",
+            "check": "",
+            "description": "Need connect to one usb switch deivce then to DUT"
+        },
+        {
+            "name": "USB headset",
+            "check": "",
+            "description": "Need connect to one usb switch deivce then to DUT"
+        }
+    ],
+    "createDate": "2018-01-14T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure special device is connected as case name. Switch automation need special HW."
+}

@@ -1,0 +1,6 @@
+# @name USB4_FUNC_TESTS
+# @desc Check platform should not access in D3 when boot with USB3.0 on GR dev
+# @requires usb4
+# @setup_requires
+
+USB4_XS_FUNC_BOOT_WITH_GR_CHECK usb4_tests.sh -s usb4_gr_boot

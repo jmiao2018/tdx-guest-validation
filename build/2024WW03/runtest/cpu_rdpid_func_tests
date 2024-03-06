@@ -1,0 +1,7 @@
+# @name CPU_RDPID_FUNC_TESTS
+# @desc CPU RDPID function tests
+# @requires cpu/rdpid
+# @setup_requires
+
+CPU_XS_FUNC_RDPID_VDSO_FUNC rdpid_func.sh -n test_vdso -p null
+CPU_XS_FUNC_RDPID_VGETCPU_SPEED rdpid_func.sh -n timing_test -p "50M vgetcpu"

@@ -1,0 +1,12 @@
+# @name TBT_USERSPACE_TESTS
+# @desc Check thunderbolt tools for userspace tests works as expected
+# @requires tbt
+# @setup_requires
+# @utility_requires boltctl
+
+TBT_XS_FUNC_ADM_TOPO tbt_tools.sh -s adm_topo
+TBT_XS_FUNC_ADM_APPROVE_ALL tbt_tools.sh -s adm_approve_all
+TBT_XS_FUNC_ADM_DEVICES tbt_tools.sh -s adm_devices
+TBT_XS_FUNC_ADM_ACL tbt_tools.sh -s adm_acl
+TBT_XS_FUNC_ADM_RM_FIRST tbt_tools.sh -s adm_remove_first
+TBT_XS_FUNC_ADM_RM_ALL tbt_tools.sh -s adm_remove_all

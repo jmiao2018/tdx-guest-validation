@@ -1,0 +1,36 @@
+{
+    "name": "CPU_XS_FUNC_UMIP_EXCP_32_OUTSIDE_ADDR",
+    "initial_platform": "",
+    "cmdline": "umip_func.sh -n umip_exceptions_32 -p d",
+    "steps": [],
+    "flags": [],
+    "summary": "32bit check instruction effective address is outside the segment, and #GP is as expected: unsigned short seg_sel; ??'mov $0x2000, %%eax\\n'??...??'mov %0, %%' #sel '\\n' //16bit for seg_sel, 32bit for sel?? : \\?? :'m' (seg_sel));",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cpu_umip_func_tests",
+    "domain": "Security",
+    "feature": "UMIP",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_UMIP",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for UMIP"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2018-06-18T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

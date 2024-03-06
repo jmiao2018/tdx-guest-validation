@@ -1,0 +1,10 @@
+# @name tdx_guest_func_tests
+# @desc Check tdx guest internal implementaion / dev branch
+# @requires tdx
+# @setup_requires
+# @utility_requires
+
+TDX_M_FUNC_GUEST_DA_DEV_AUTHORIZE_ALL tdx_bootup.sh -t FILTER_PCI
+TDX_M_FUNC_GUEST_DA_DEV_AUTHORIZE_ALL_NEGATIVE tdx_bootup.sh -t FILTER_NEGATIVE
+TDX_M_FUNC_GUEST_DA_FIRMWARE_ALLOW_TYPE tdx_bootup.sh -t FILTER_PCI
+TDX_M_FUNC_GUEST_DA_FIRMWARE_DENY_TYPE tdx_bootup.sh -t FILTER_NEGATIVE

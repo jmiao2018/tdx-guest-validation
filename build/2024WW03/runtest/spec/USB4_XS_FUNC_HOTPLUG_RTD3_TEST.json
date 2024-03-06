@@ -1,0 +1,40 @@
+{
+  "name": "USB4_XS_FUNC_HOTPLUG_RTD3_TEST",
+  "initial_platform": "",
+  "cmdline": "usb4_tests.sh -s usb4_hotplug_rtd3",
+  "steps": [],
+  "flags": [],
+  "summary": "Check 3 times plug out and plug in tests and USB4 root pci should access in D3 in each time hot plug idle 25s",
+  "status": "Closed",
+  "priority": "P2",
+  "scenario": "usb4_rtd3_tests",
+  "domain": "IO",
+  "feature": "USB4",
+  "owner": "xupengfe",
+  "testType": "FUNC",
+  "execType": "Auto",
+  "poweron": false,
+  "presilicon": false,
+  "clientOnly": false,
+  "serverOnly": false,
+  "kparams": [],
+  "kconfigs": [
+    {
+      "name": "CONFIG_USB4",
+      "values": ["m"],
+      "description": ""
+    }
+  ],
+  "packages": [],
+  "bios": [],
+  "peripherals": [
+    {
+      "name": "Need plugged in GR USB4 device only and controled by cleware",
+      "check": "Need plugged in GR USB4 device only and controled by cleware",
+      "description": "For Thunderbolt usb4 device hotplug and rtd3 tests"
+    }
+  ],
+  "createDate": "2021-10-19T11:48:10.000-0800",
+  "link": "",
+  "tips": ""
+}

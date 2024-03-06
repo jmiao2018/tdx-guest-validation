@@ -1,0 +1,8 @@
+# @name CPU_XSAVE_CET_FUNC_TESTS
+# @desc CPU XSAVE function tests
+# @requires cpu/xsave && cpu/cet
+# @setup_requires
+# @package_requires
+
+CPU_XS_FUNC_XSAVE_CET_SYS_VERIFY xsave_func.sh -n ptrace_sys_states -p "cet"
+CPU_XS_FUNC_XSAVE_CET_SIZE_VERIFY xsave_list 11 16

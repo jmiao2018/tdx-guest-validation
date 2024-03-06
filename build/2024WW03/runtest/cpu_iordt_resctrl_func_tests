@@ -1,0 +1,13 @@
+# @name IORDT_RESCTRL_TESTS
+# @desc some IORDT sanity tests
+# @requires cpu/iordt
+# @setup_requires
+
+IORDT_XS_FUNC_RESCTRL cpu_rdt_resctrl_tests.sh -t iordt -o sanity -v 3
+IORDT_XS_FUNC_NEG_RESCTRL_1 cpu_rdt_resctrl_tests.sh -t iordt -o sanity -v 2
+IORDT_XS_FUNC_NEG_RESCTRL_2 cpu_rdt_resctrl_tests.sh -t iordt -o sanity -v 1
+IORDT_S_FUNC_CACHE_EXCLUSIVE_TEST cpu_rdt_resctrl_tests.sh -t iordt -o function -v 0
+IORDT_S_FUNC_CACHE_OVERLAP_TEST cpu_rdt_resctrl_tests.sh -t iordt -o function -v 1
+IORDT_S_FUNC_CACHE_MBM_TEST cpu_rdt_resctrl_tests.sh -t iordt -o function -v 2
+IORDT_S_FUNC_NOCACHE_MBM_TEST cpu_rdt_resctrl_tests.sh -t iordt -o function -v 3
+IORDT_S_FUNC_NEG_CACHE_TEST cpu_rdt_resctrl_tests.sh -t iordt -o function -v 4

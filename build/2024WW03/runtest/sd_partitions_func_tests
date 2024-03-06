@@ -1,0 +1,37 @@
+# @name SD_PARTITION_FUNC_TESTS
+# @desc SD_PARTITION_FUNC_TESTS contains tests for create, delete, mount,
+#       umount partitions and to write/read data between partitions.
+# @requires sd
+# @setup_requires
+
+SD_XS_FUNC_CREATE_1P blk_device_create_erase_partition.sh -d "sd" -p "1"
+
+SD_XS_FUNC_FORMAT_1P_ALL_FS blk_device_readwrite_partitions.sh -d "sd" -p "1" -f
+
+SD_XS_FUNC_MOUNT_1P_ALL_MODES blk_device_readwrite_partitions.sh -d "sd" -p "1" -f -m
+
+SD_XS_FUNC_CREATE_2P blk_device_create_erase_partition.sh -d "sd" -p "2"
+
+SD_XS_FUNC_FORMAT_2P_ALL_FS blk_device_readwrite_partitions.sh -d "sd" -p "2" -f
+
+SD_XS_FUNC_MOUNT_2P_ALL_MODES blk_device_readwrite_partitions.sh -d "sd" -p "2" -f -m
+
+SD_XS_FUNC_RW_EXT2_2P blk_device_readwrite_partitions.sh -d "sd" -p "2" -s "ext2" -w
+
+SD_XS_FUNC_CREATE_3P blk_device_create_erase_partition.sh -d "sd" -p "3"
+
+SD_XS_FUNC_FORMAT_3P_ALL_FS blk_device_readwrite_partitions.sh -d "sd" -p "3" -f
+
+SD_XS_FUNC_MOUNT_3P_ALL_MODES blk_device_readwrite_partitions.sh -d "sd" -p "3" -f -m
+
+SD_XS_FUNC_RW_EXT3_3P blk_device_readwrite_partitions.sh -d "sd" -p "3" -s "ext3" -w
+
+SD_XS_FUNC_CREATE_4P blk_device_create_erase_partition.sh -d "sd" -p "4"
+
+SD_XS_FUNC_FORMAT_4P_ALL_FS blk_device_readwrite_partitions.sh -d "sd" -p "4" -f
+
+SD_XS_FUNC_MOUNT_4P_ALL_MODES blk_device_readwrite_partitions.sh -d "sd" -p "4" -f -m
+
+SD_XS_FUNC_RW_EXT4_4P blk_device_readwrite_partitions.sh -d "sd" -p "4" -s "ext4" -w
+
+SD_XS_FUNC_RW_VFAT_4P blk_device_readwrite_partitions.sh -d "sd" -p "4" -s "vfat" -w

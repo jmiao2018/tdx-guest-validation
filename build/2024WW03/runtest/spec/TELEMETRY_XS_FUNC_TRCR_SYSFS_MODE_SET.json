@@ -1,0 +1,43 @@
+{
+    "name": "TELEMETRY_XS_FUNC_TRCR_SYSFS_MODE_SET",
+    "initial_platform": "",
+    "cmdline": "telemetry_tests.sh -t trcr_sysfs_mode_set",
+    "steps": [],
+    "flags": [],
+    "summary": "Watcher tracer sysfs mode set check",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "telemetry_watcher_func_tests",
+    "domain": "CPU",
+    "feature": "TELEMETRY",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "INTEL_PMT_WATCHER",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "MFD_INTEL_PMT",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2021-10-20T15:08:45.000-0800",
+    "link": "",
+    "tips": ""
+}

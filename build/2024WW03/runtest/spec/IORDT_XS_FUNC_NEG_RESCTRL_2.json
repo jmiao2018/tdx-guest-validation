@@ -1,0 +1,30 @@
+{
+    "name": "IORDT_XS_FUNC_NEG_RESCTRL_2",
+    "initial_platform": "",
+    "cmdline": "cpu_rdt_resctrl_tests.sh -t iordt -o sanity -v 1",
+    "steps": [],
+    "flags": [],
+    "summary": "do IORDT sanity test",
+    "status": "Closed",
+    "priority": "P4",
+    "scenario": "cpu_iordt_resctrl_func_tests",
+    "domain": "Memory",
+    "feature": "IORDT",
+    "owner": "zhouyou",
+    "testType": "FUNC",
+    "execType": "Semi",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [
+        "rdt=!cmt_io,!mbm_io"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2022-04-07T16:24:00.000-0800",
+    "link": "",
+    "tips": ""
+}

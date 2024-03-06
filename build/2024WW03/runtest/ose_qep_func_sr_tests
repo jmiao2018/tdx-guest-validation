@@ -1,0 +1,8 @@
+# @name QEP_FUNC_SR_TESTS
+# @desc QEP with s/r tests
+# @requires ose_qep
+# @setup_requires
+
+# QEP test
+QEP_XS_FUNC_DISK qep_tests.sh -t disk
+QEP_XS_FUNC_MEM qep_tests.sh -t mem

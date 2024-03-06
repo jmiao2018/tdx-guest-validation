@@ -1,0 +1,2 @@
+#018712,1017957,/home/jmiao/2024WW03/bin/ltp-pan -e -S -a 1017957 -n 1017957 -p
+#018909,TDX_XS_FUNC_GUEST_VE_HANDLER_HALT,tdx_guest_func.sh -t VE_HALT         

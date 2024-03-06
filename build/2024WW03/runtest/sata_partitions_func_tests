@@ -1,0 +1,37 @@
+# @name SATA_PARTITION_FUNC_TESTS
+# @desc SATA_PARTITION_FUNC_TESTS contains tests for create, delete, mount,
+#       umount partitions and write/read data between partitions.
+# @requires sata && ext2 && ext3 && ext4 && vfat
+# @setup_requires
+
+SATA_XS_FUNC_CREATE_1P blk_device_create_erase_partition.sh -d "sata" -p "1"
+
+SATA_XS_FUNC_FORMAT_1P_ALL_FS blk_device_readwrite_partitions.sh -d "sata" -p "1" -f
+
+SATA_XS_FUNC_MOUNT_1P_ALL_MODES blk_device_readwrite_partitions.sh -d "sata" -p "1" -f -m
+
+SATA_XS_FUNC_CREATE_2P blk_device_create_erase_partition.sh -d "sata" -p "2"
+
+SATA_XS_FUNC_FORMAT_2P_ALL_FS blk_device_readwrite_partitions.sh -d "sata" -p "2" -f
+
+SATA_XS_FUNC_MOUNT_2P_ALL_MODES blk_device_readwrite_partitions.sh -d "sata" -p "2" -f -m
+
+SATA_XS_FUNC_RW_EXT2_2P blk_device_readwrite_partitions.sh -d "sata" -p "2" -s "ext2" -w
+
+SATA_XS_FUNC_CREATE_3P blk_device_create_erase_partition.sh -d "sata" -p "3"
+
+SATA_XS_FUNC_FORMAT_3P_ALL_FS blk_device_readwrite_partitions.sh -d "sata" -p "3" -f
+
+SATA_XS_FUNC_MOUNT_3P_ALL_MODES blk_device_readwrite_partitions.sh -d "sata" -p "3" -f -m
+
+SATA_XS_FUNC_RW_EXT3_3P blk_device_readwrite_partitions.sh -d "sata" -p "3" -s "ext3" -w
+
+SATA_XS_FUNC_CREATE_4P blk_device_create_erase_partition.sh -d "sata" -p "4"
+
+SATA_XS_FUNC_FORMAT_4P_ALL_FS blk_device_readwrite_partitions.sh -d "sata" -p "4" -f
+
+SATA_XS_FUNC_MOUNT_4P_ALL_MODES blk_device_readwrite_partitions.sh -d "sata" -p "4" -f -m
+
+SATA_XS_FUNC_RW_EXT4_4P blk_device_readwrite_partitions.sh -d "sata" -p "4" -s "ext4" -w
+
+SATA_XS_FUNC_RW_VFAT_4P blk_device_readwrite_partitions.sh -d "sata" -p "4" -s "vfat" -w

@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_XS_FUNC_SR_2.0_FLASH_FREE_HOTPLUG",
+    "initial_platform": "",
+    "cmdline": "usb_suspend_resume_tests.sh -p 2.0 -t flash -s freeze -e hotplug",
+    "steps": [],
+    "flags": [],
+    "summary": "USB 2.0 flash storage with USB3.X port suspend to freeze/resume with hotplug",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_suspendresume_semi_auto_func_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Semi",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 2.0 flash storage device",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-11-01T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure 3.x flash/uas device is connected as case name. Hotplug automation need special HW.  Please make sure s/r to freeze is working."
+}

@@ -1,0 +1,6 @@
+# This file contains all the functional tests for LCK eMMC driver
+ddt_intel/emmc_ext2_func_tests
+ddt_intel/emmc_ext3_func_tests
+ddt_intel/emmc_ext4_func_tests
+ddt_intel/emmc_vfat_func_tests
+ddt_intel/emmc_iozone_func_tests

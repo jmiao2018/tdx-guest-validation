@@ -1,0 +1,25 @@
+# @name PCI_BAT_TESTS
+# @desc Check pci driver basic function and features
+# @requires pci
+# @utility_requires lspci
+# @setup_requires
+
+PCI_FUNC_PORT_KERNEL_DRIVER pci_verifyer.sh -k
+
+PCI_FUNC_ROOT_PORT_CLASS pci_verifyer.sh -c
+
+PCI_FUNC_LIST_MODULES_LOADED pci_verifyer.sh -m
+
+PCI_FUNC_NUMBER_OF_ROOT_PORTS pci_verifyer.sh -n
+
+PCI_FUNC_ROOT_PORT_VENDOR_ID pci_verifyer.sh -i
+
+PCI_FUNC_ENUMERATION_DEVICE pci_verifyer.sh -e
+
+PCI_XS_FUNC_GET_SPEED_WIDTH pci_basic_tests.sh -c 1
+
+PCI_XS_FUNC_VERIFY_DRV pci_basic_tests.sh -c 2
+
+PCI_XS_FUNC_VERIFY_DEV pci_basic_tests.sh -c 3
+
+PCI_XS_FUNC_VERIFY_CONFIG pci_basic_tests.sh -c 4

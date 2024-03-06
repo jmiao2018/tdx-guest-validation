@@ -1,0 +1,2 @@
+# This file contains all the functional tests for LCK Watchdog Timer driver
+ddt_intel/wdt_ioctl_func_tests

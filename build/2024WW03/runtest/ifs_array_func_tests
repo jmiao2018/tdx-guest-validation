@@ -1,0 +1,15 @@
+# @name IFS_ARRAY_FUNC_TESTS
+# @desc In Field Scan with array bist tests for EMR and later server
+# @requires ifs_array
+# @setup_requires
+
+IFS_S_ARRAY_LOAD_MODULE_TEST ifs_tests.sh -m 1 -p all -n load_ifs_array
+IFS_S_ARRAY_SCAN_ALL_CPU_TEST ifs_tests.sh -m 1 -p all -n ifs_array_scan
+IFS_S_ARRAY_SCAN_OFFLINE_SIBLING_CPU_TEST ifs_tests.sh -m 1 -p ran -n ifs_array_off_sib -t 10
+IFS_S_ARRAY_NEGATIVE_OFFLINE_SCAN_RANDOM_TEST ifs_tests.sh -m 1 -p ran -n ifs_array_offran -t 5
+IFS_S_ARRAY_CPU_RANDOM_FULL_LOAD_SCAN ifs_tests.sh -m 1 -p ran -n ifs_array_cpuran_fullload -t 10
+IFS_S_ARRAY_BIST_MSR_CHECK  ifs_tests.sh -m pass -p all -n msr_array
+IFS_S_ARRAY_AND_BATCH1_LEGACY_SCAN  ifs_tests.sh -m 1 -p ran -b 1 -n ifs_legacy_array -t 10
+IFS_S_ARRAY_SCAN_INTERRUPT_TEST  ifs_tests.sh -m 1 -p ran -n array_interrupt -t 10
+IFS_S_IFS1_CPU_SCAN_LOOP_TEST ifs_tests.sh -m 1 -p ran -b 1 -n ifs_loop -t 500
+IFS_S_IFS1_CPU_SCAN_AMX_LOOP_TEST ifs_tests.sh -a tmul -m 1 -p ran -b 1 -n ifs_app_loop -t 500

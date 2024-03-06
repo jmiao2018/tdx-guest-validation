@@ -1,0 +1,18 @@
+# @name Power Management pstate tests
+# @desc intel pstate Tests for Power Management driver.
+# @requires powermgr
+# @setup_requires
+# @package_requires msr-tools
+
+POWER_XS_FUNC_INTELPSTATE_SINGLE_CPUFREQ_POWERSAVE_TURBO powermgr_pstate_freq_tests.sh -t yes -m powersave -c one
+POWER_XS_FUNC_INTELPSTATE_MAX_CPUFREQ_POWERSAVE_TURBO powermgr_pstate_freq_tests.sh -t yes -m powersave -c all
+POWER_XS_FUNC_INTELPSTATE_SINGLE_CPUFREQ_PERF_TURBO powermgr_pstate_freq_tests.sh -t yes -m performance -c one
+POWER_XS_FUNC_INTELPSTATE_MAX_CPUFREQ_PERF_TURBO powermgr_pstate_freq_tests.sh -t yes -m performance -c all
+POWER_XS_FUNC_INTELPSTATE_MAX_PASSIVE_PERF_TURBO powermgr_pstate_freq_tests.sh -t yes -m passive_perf -c all
+POWER_XS_FUNC_INTELPSTATE_SINGLE_PASSIVE_PERF_TURBO powermgr_pstate_freq_tests.sh -t yes -m passive_perf -c one
+POWER_XS_FUNC_INTELPSTATE_MAX_PASSIVE_SCHED_TURBO powermgr_pstate_freq_tests.sh -t yes -m passive_sched -c all
+POWER_XS_FUNC_INTELPSTATE_SINGLE_PASSIVE_SCHED_TURBO powermgr_pstate_freq_tests.sh -t yes -m passive_sched -c one
+POWER_XS_FUNC_INTELPSTATE_SINGLE_CPUFREQ_POWERSAVE powermgr_pstate_freq_tests.sh -t no -m powersave -c one
+POWER_XS_FUNC_INTELPSTATE_MAX_CPUFREQ_POWERSAVE powermgr_pstate_freq_tests.sh -t no -m powersave -c all
+POWER_XS_FUNC_INTELPSTATE_SINGLE_CPUFREQ_PERF powermgr_pstate_freq_tests.sh -t no -m performance -c one
+POWER_XS_FUNC_INTELPSTATE_MAX_CPUFREQ_PERF powermgr_pstate_freq_tests.sh -t no -m performance -c all

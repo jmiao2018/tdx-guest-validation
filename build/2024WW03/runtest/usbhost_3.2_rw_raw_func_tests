@@ -1,0 +1,10 @@
+# @name USBHOST_3.2_RW_RAW_FUNC_TESTS
+# @desc usbhost read/write tests
+# @requires usbhost && usb3.2
+# @setup_requires
+
+# USBHOST READ & WRITE TESTS FOR USB 3.2
+USBHOST_XS_FUNC_RW_3.2_FLASH usb_read_write_tests.sh -b 1MB -c 100 -p 3.2 -t flash
+USBHOST_XS_FUNC_RW_3.2_UAS usb_read_write_tests.sh -b 1MB -c 100 -p 3.2 -t uas
+USBHOST_XS_FUNC_RW_3.2_FLASH_HUB usb_read_write_tests.sh -b 1MB -c 100 -p 3.2 -t flash -h 1
+USBHOST_XS_FUNC_RW_3.2_UAS_HUB usb_read_write_tests.sh -b 1MB -c 100 -p 3.2 -t uas -h 1

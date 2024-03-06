@@ -1,0 +1,16 @@
+# @name TPMI Uncore Frequency Scaling BAT TESTS
+# @desc Intel TPMI UFS Basic Acceptance Tests
+# @requires powermgr/ufs
+# @setup_requires
+
+#TPMI_UFS BAT Test
+UFS_XS_BAT_DRIVER_TPMI_LOAD_UNLOAD tpmi_ufs.sh -t load_unload_ufs_tpmi
+UFS_XS_BAT_DRIVER_UNBIND_BIND tpmi_ufs.sh -t check_ufs_unbind_bind
+UFS_XS_BAT_DEVICE_PER_PACKAGE tpmi_ufs.sh -t check_ufs_device
+UFS_XS_BAT_SYSFS_ATTRIBUTE_CHECK tpmi_ufs.sh -t check_ufs_sysfs_attr
+UFS_XS_BAT_SYSFS_INIT_MIN_MAX_UNCORE_FREQ tpmi_ufs.sh -t check_ufs_init_min_max_value
+UFS_S_BAT_UNCORE_FREQ_MIN_EQUALS_TO_MAX tpmi_ufs.sh -t check_ufs_min_equals_to_max
+UFS_S_BAT_UNCORE_FREQ_MAX_EQUALS_TO_MIN tpmi_ufs.sh -t check_ufs_max_equals_to_min
+UFS_S_BAT_UNCORE_FREQ_CURRENT_DYNAMIC tpmi_ufs.sh -t check_ufs_current_dynamic
+UFS_S_BAT_UNCORE_FREQ_PER_PKG_CHANGE tpmi_ufs.sh -t check_per_pkg_min_max_change
+UFS_S_BAT_UNCORE_FREQ_CURRENT_DYNAMIC_AFTER_S4 tpmi_ufs.sh -t check_ufs_current_dynamic_after_s4

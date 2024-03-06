@@ -1,0 +1,9 @@
+This is a guide to enable ALSA Test
+
+1. Make sure you have installed alsa-utils and libasound
+2. If you test on T100, please follow the guide on my google driver
+   to enable sound driver.
+Please visit: https://drive.google.com/open?id=0BzgnUtsQcwwFflc5MjQ3bXVkalozZmhpRmhrNllhV3BaNDZyQjl1MVFYZnBpd2FoOWwwVFE
+
+3. ${LTP-ROOT}/testcases/ddt_intel/script/alsa/fw contains the firmware you may need, if you are testing on T100.The
+   firmmware will be installed automatcially when you start alsa tests.

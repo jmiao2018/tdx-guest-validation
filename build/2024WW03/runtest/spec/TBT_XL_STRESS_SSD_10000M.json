@@ -1,0 +1,55 @@
+{
+    "name": "TBT_XL_STRESS_SSD_10000M",
+    "initial_platform": "",
+    "cmdline": "tbt_ssd_read_write.sh -b 1000MB -c 10 -p ssd -t 3",
+    "steps": [],
+    "flags": [],
+    "summary": "Connect tbt devices, detect SSD in tbt device already connected, transfer 10000M file in and out, and check the file should be the same after transfer in/out",
+    "status": "Closed",
+    "priority": "P4",
+    "scenario": "tbt_stress_tests",
+    "domain": "IO",
+    "feature": "Thunderbolt",
+    "owner": "xupengfe",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB4",
+            "values": [
+                "m"
+            ],
+            "description": "TBT3 and USB4 both used USB4 kconfig now"
+        },
+        {
+            "name": "CONFIG_USB4_NET",
+            "values": [
+                "m"
+            ],
+            "description": "For TBT thunderbolt net function enabling"
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "BIOS_wiki",
+            "path": "wiki_link",
+            "description": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [
+        {
+            "name": "Need plugged in devices",
+            "check": "Check is there tbt3 docker with USB2.0 USB3.0 insert plugged in",
+            "description": "For Thunderbolt tbt3 devices tests"
+        }
+    ],
+    "createDate": "2019-05-26T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

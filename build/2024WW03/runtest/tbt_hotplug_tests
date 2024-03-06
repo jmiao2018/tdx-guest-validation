@@ -1,0 +1,10 @@
+# @name TBT_HOTPLUG_TESTS
+# @desc Check thunderbolt device after plug out/in and still works well
+# @requires tbt
+# @setup_requires
+# @utility_requires boltctl
+
+TBT_XS_FUNC_COMMON_SSD_TRANS_POI tbt_func_test.sh -s po_transfer -p ssd -d device
+TBT_XS_FUNC_COMMON_USB2.0_TRANS_POI tbt_func_test.sh -s po_transfer -p 2.0 -d flash
+TBT_XS_FUNC_COMMON_USB3.0_TRANS_POI tbt_func_test.sh -s po_transfer -p 3.0 -d flash
+TBT_XS_FUNC_COMMON_HOTPLUG_CHECK tbt_func_test.sh -s poi -p 10

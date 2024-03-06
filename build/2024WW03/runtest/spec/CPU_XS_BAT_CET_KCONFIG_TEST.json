@@ -1,0 +1,50 @@
+{
+    "name": "CPU_XS_BAT_CET_KCONFIG_TEST",
+    "initial_platform": "",
+    "cmdline": "cpu_bat.sh -k \"CONFIG_X86_CET|CONFIG_X86_CET_USER|CONFIG_X86_SHADOW_STACK=y\"",
+    "steps": [],
+    "flags": [],
+    "summary": "Check kconfig CONFIG_X86_CET|CONFIG_X86_CET_USER set to y",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cpu_cet_bat_tests",
+    "domain": "Security",
+    "feature": "CET_USER",
+    "owner": "xupengfe",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_SHADOW_STACK_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For shadow stack enabling"
+        },
+        {
+            "name": "CONFIG_X86_BRANCH_TRACKING_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For IBT enabling"
+        },
+        {
+            "name": "CONFIG_X86_CET_USER",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CET_USER"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2018-06-27T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

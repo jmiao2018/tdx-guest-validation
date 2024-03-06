@@ -1,0 +1,36 @@
+# @name USBHOST_SUSPENDRESUME_SEMI_AUTO_FUNC_TESTS
+# @desc usbhost suspend to resume w/ hotplug tests
+# @requires usbhost && powermgr
+# @setup_requires
+
+# USBHOST SUSPEND RESUME TESTS W/ HOTPLUG FOR USB 3.1/3.0/2.0
+USBHOST_XS_FUNC_SR_2.0_FLASH_FREE_HOTPLUG usb_suspend_resume_tests.sh -p 2.0 -t flash -s freeze -e hotplug
+USBHOST_XS_FUNC_SR_2.0_FLASH_MEM_HOTPLUG usb_suspend_resume_tests.sh -p 2.0 -t flash -s mem -e hotplug
+USBHOST_XS_FUNC_SR_2.0_FLASH_DISK_HOTPLUG usb_suspend_resume_tests.sh -p 2.0 -t flash -s disk -e hotplug
+USBHOST_XS_FUNC_SR_3.0_FLASH_FREE_HOTPLUG usb_suspend_resume_tests.sh -p 3.0 -t flash -s freeze -e hotplug
+USBHOST_XS_FUNC_SR_3.0_FLASH_MEM_HOTPLUG usb_suspend_resume_tests.sh -p 3.0 -t flash -s mem -e hotplug
+USBHOST_XS_FUNC_SR_3.0_FLASH_DISK_HOTPLUG usb_suspend_resume_tests.sh -p 3.0 -t flash -s disk -e hotplug
+USBHOST_XS_FUNC_SR_3.0_UAS_FREE_HOTPLUG usb_suspend_resume_tests.sh -p 3.0 -t uas -s freeze -e hotplug
+USBHOST_XS_FUNC_SR_3.0_UAS_MEM_HOTPLUG usb_suspend_resume_tests.sh -p 3.0 -t uas -s mem -e hotplug
+USBHOST_XS_FUNC_SR_3.0_UAS_DISK_HOTPLUG usb_suspend_resume_tests.sh -p 3.0 -t uas -s disk -e hotplug
+USBHOST_XS_FUNC_SR_3.1_FLASH_FREE_HOTPLUG usb_suspend_resume_tests.sh -p 3.1 -t flash -s freeze -e hotplug
+USBHOST_XS_FUNC_SR_3.1_FLASH_MEM_HOTPLUG usb_suspend_resume_tests.sh -p 3.1 -t flash -s mem -e hotplug
+USBHOST_XS_FUNC_SR_3.1_FLASH_DISK_HOTPLUG usb_suspend_resume_tests.sh -p 3.1 -t flash -s disk -e hotplug
+USBHOST_XS_FUNC_SR_3.1_UAS_FREE_HOTPLUG usb_suspend_resume_tests.sh -p 3.1 -t uas -s freeze -e hotplug
+USBHOST_XS_FUNC_SR_3.1_UAS_MEM_HOTPLUG usb_suspend_resume_tests.sh -p 3.1 -t uas -s mem -e hotplug
+USBHOST_XS_FUNC_SR_3.1_UAS_DISK_HOTPLUG usb_suspend_resume_tests.sh -p 3.1 -t uas -s disk -e hotplug
+USBHOST_XS_FUNC_SR_2.0_FLASH_FREE_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 2.0 -t flash -s freeze -e hotplug -h 1
+USBHOST_XS_FUNC_SR_2.0_FLASH_MEM_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 2.0 -t flash -s mem -e hotplug -h 1
+USBHOST_XS_FUNC_SR_2.0_FLASH_DISK_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 2.0 -t flash -s disk -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.0_FLASH_FREE_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.0 -t flash -s freeze -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.0_FLASH_MEM_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.0 -t flash -s mem -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.0_FLASH_DISK_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.0 -t flash -s disk -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.0_UAS_FREE_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.0 -t uas -s freeze -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.0_UAS_MEM_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.0 -t uas -s mem -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.0_UAS_DISK_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.0 -t uas -s disk -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.1_FLASH_FREE_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.1 -t flash -s freeze -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.1_FLASH_MEM_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.1 -t flash -s mem -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.1_FLASH_DISK_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.1 -t flash -s disk -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.1_UAS_FREE_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.1 -t uas -s freeze -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.1_UAS_MEM_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.1 -t uas -s mem -e hotplug -h 1
+USBHOST_XS_FUNC_SR_3.1_UAS_DISK_HOTPLUG_HUB usb_suspend_resume_tests.sh -p 3.1 -t uas -s disk -e hotplug -h 1

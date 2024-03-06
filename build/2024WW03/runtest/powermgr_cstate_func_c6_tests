@@ -1,0 +1,11 @@
+# @name Power Management cstate tests
+# @desc intel cstate Tests for Power Management driver.
+# @requires powermgr/cc6
+# @setup_requires
+
+POWER_XS_FUNC_CPU_CORE_C6_RESIDENCY_ACPI_IDLE_RTM powermgr_cstate_tests.sh -c 7 -t 30
+POWER_XS_FUNC_CPU_CORE_C6_RESIDENCY_INTEL_IDLE_RTM powermgr_cstate_tests.sh -c 8 -t 30
+POWER_XS_FUNC_ALL_CPU_C6_RESIDENCY powermgr_cstate_tests.sh -c 10 -t 30
+POWER_XS_FUNC_RTM_PKG2_ENTRY powermgr_s0ix_tests.sh -c 16
+POWER_XS_FUNC_RTM_PKG6_ENTRY powermgr_s0ix_tests.sh -c 17
+POWER_XS_FUNC_RTM_PKG6_RESIDENCY powermgr_s0ix_tests.sh -c 18

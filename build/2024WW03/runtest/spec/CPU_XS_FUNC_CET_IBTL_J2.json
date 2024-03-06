@@ -1,0 +1,50 @@
+{
+    "name": "CPU_XS_FUNC_CET_IBTL_J2",
+    "initial_platform": "",
+    "cmdline": "cet_func.sh -t cet_legacy -n cet_ibt_legacy -p j2",
+    "steps": [],
+    "flags": [],
+    "summary": "Test IBT program J1 indirect jump w/o -fcf-protection=full, 'jmpq *%rsp;' , jump to stack top by rsp, should not trigger CP exception",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "cpu_cet_ibt_tests",
+    "domain": "Security",
+    "feature": "CET_USER",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_SHADOW_STACK_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For shadow stack enabling"
+        },
+        {
+            "name": "CONFIG_X86_BRANCH_TRACKING_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For IBT enabling"
+        },
+        {
+            "name": "CONFIG_X86_CET",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CET"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2018-07-16T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

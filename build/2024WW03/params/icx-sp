@@ -1,0 +1,3 @@
+# RAPL Support
+RAPL_GRAPHIC_SUPPORT="false"
+RAPL_DRAM_SUPPORT="false"

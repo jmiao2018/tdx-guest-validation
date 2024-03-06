@@ -1,0 +1,7 @@
+#This file contains all the tests for LCK NIC driver
+ddt_intel/eth_dualcard_perf_tests
+ddt_intel/eth_iperf_perf_tests
+ddt_intel/eth_multiprocessing_func_tests
+ddt_intel/eth_multiprocessing_stress_tests
+ddt_intel/eth_ping_func_tests
+ddt_intel/eth_ping_stress_tests

@@ -1,0 +1,8 @@
+# @name Power Management S0ix interactive tests
+# @desc S2idle path S0ix interactive test cases with peripheral devices connected
+# @requires powermgr
+# @setup_requires
+
+POWER_XS_FUNC_S2IDLE_S0IX_PMC_WITH_TBT_Device powermgr_s0ix_tests.sh -c 12
+POWER_XS_FUNC_S2IDLE_S0IX_PMC_WITH_ETH_CABLE powermgr_s0ix_tests.sh -c 12
+POWER_XS_FUNC_S2IDLE_S0IX_PMC_WITH_USB3_2_DEVICE powermgr_s0ix_tests.sh -c 12

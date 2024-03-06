@@ -1,0 +1,8 @@
+# @name ec_perf_tests
+# @desc ec_perf_tests perform performance tests for EC driver
+# @requires ec
+# @setup_requires
+
+# EC Performance Tests
+
+EC_XS_PERF_SUSPEND_RESUME_EVENT ec_suspend_resume_event.sh -s

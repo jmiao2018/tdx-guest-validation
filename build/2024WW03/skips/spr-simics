@@ -1,0 +1,33 @@
+# Add TCs to skip from execution on spr-simics platform
+# Following TCs are removed from Power On and Pre-Si
+# Skip note: not supported by SPR
+CPU_XS_BAT_RDT_MLC_CAT_L2_TEST
+# Skip note: client based TC, NA for server, dma driver validation covered by dsa test
+DMA_XS_FUNC_ACPI_ENUM
+DMA_XS_FUNC_DRV_CHECK
+# Skip note: client based TC, NA for server
+UART_XS_BAT_DRIVER_BIND_UNBIND_CHECK
+PCI_FUNC_NUMBER_OF_ROOT_PORTS
+PCI_FUNC_PORT_KERNEL_DRIVER
+PCI_FUNC_ROOT_PORT_CLASS
+PCI_FUNC_ROOT_PORT_VENDOR_ID
+LPC_FUNC_CHECK_PSMOUSE_DRIVER_SYSFS
+LPC_FUNC_CHECK_ATKBD_DRIVER_SYSFS
+ISH_XS_BAT_DMESG
+ISH_XS_BAT_LOAD_UNLOAD_DRIVER
+# Skip note: PT TCs skipped per domain owner's comments
+PT_XS_FUNC_CPL_USER
+PT_XS_FUNC_CPL_KERNEL
+PT_XS_FUNC_PID
+PT_XS_FUNC_FT_PACKGE_CPUS_EXCLUDE_NO
+PT_XS_FUNC_FT_PACKGE_CPUS_EXCLUDE_USER
+PT_XS_FUNC_FT_PACKGE_EXCLUDE_NO
+PT_XS_FUNC_FT_PACKGE_EXCLUDE_USER
+PT_XS_FUNC_PSB
+# Power related skip note:
+# removed due to 2 TCs are post-si tuning focus
+POWER_XS_FUNC_POWERCLAMP_CHECK_PERF_POWER_CONTROL
+POWER_XS_FUNC_POWERCLAMP_INCREMENTAL_IDLE_INJECT
+# Further power related TCs to be added for power on scope
+# TPM SHA1 not supported in server BIOS
+TPM_XS_FUNC_POLICY

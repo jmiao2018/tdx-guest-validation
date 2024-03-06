@@ -1,0 +1,5 @@
+#This file contains all the tests for LCK SD driver
+ddt_intel/sd_ext2_perf_tests
+ddt_intel/sd_ext3_perf_tests
+ddt_intel/sd_ext4_perf_tests
+ddt_intel/sd_vfat_perf_tests

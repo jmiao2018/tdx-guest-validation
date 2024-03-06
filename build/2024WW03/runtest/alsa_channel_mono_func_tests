@@ -1,0 +1,9 @@
+# @name Testing for channel configurations
+# @desc Do capture and loopback for different channels of audio
+# @requires alsa && hda
+ALSA_XS_FUNC_CAP_CH_MONO_D10 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -d 10 -c 1 -F ALSA_S_FUNC_CAP_CH_D10.snd'; do_cmd 'alsa_tests.sh -t playback -d 10 -c 1 -F ALSA_S_FUNC_CAP_CH_D10.snd'
+ALSA_S_FUNC_CAP_CH_MONO_D60 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -d 60 -c 1 -F ALSA_M_FUNC_CAP_CH_D60.snd'; do_cmd 'alsa_tests.sh -t playback -d 60 -c 1 -F ALSA_M_FUNC_CAP_CH_D60.snd'
+ALSA_S_FUNC_CAP_CH_MONO_D120 source 'common.sh' ; do_cmd 'alsa_tests.sh -t capture -d 120 -c 1 -F ALSA_L_FUNC_CAP_CH_D120.snd'; do_cmd 'alsa_tests.sh -t playback -d 120 -c 1 -F ALSA_L_FUNC_CAP_CH_D120.snd'
+ALSA_XS_FUNC_LPBK_CH_MONO_D10 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -c 1 -d 10'
+ALSA_S_FUNC_LPBK_CH_MONO_D60 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -c 1 -d 60'
+ALSA_S_FUNC_LPBK_CH_MONO_D120 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -c 1 -d 120'

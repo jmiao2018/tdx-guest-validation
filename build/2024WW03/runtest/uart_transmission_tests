@@ -1,0 +1,17 @@
+# @name UART_TRANSMISSION_TESTS
+# @desc uart data transmission tests
+# @requires uart
+# @setup_requires
+
+# bytesize: 8, no parity, stopbits: 1, no flow control
+UART_XS_FUNC_8BS_NOP_SB1_NOFC_TRANS_300 uart_transmit_tests.sh -b 300
+UART_XS_FUNC_8BS_NOP_SB1_NOFC_TRANS_600 uart_transmit_tests.sh -b 600
+UART_XS_FUNC_8BS_NOP_SB1_NOFC_TRANS_1200 uart_transmit_tests.sh -b 1200
+UART_XS_FUNC_8BS_NOP_SB1_NOFC_TRANS_2400 uart_transmit_tests.sh -b 2400
+UART_XS_FUNC_8BS_NOP_SB1_NOFC_TRANS_4800 uart_transmit_tests.sh -b 4800
+UART_XS_FUNC_8BS_NOP_SB1_NOFC_TRANS_9600 uart_transmit_tests.sh -b 9600
+UART_XS_FUNC_8BS_NOP_SB1_NOFC_TRANS_14400 uart_transmit_tests.sh -b 14400
+UART_XS_FUNC_8BS_NOP_SB1_NOFC_TRANS_19200 uart_transmit_tests.sh -b 19200
+UART_XS_FUNC_8BS_NOP_SB1_NOFC_TRANS_38400 uart_transmit_tests.sh -b 38400
+UART_XS_FUNC_8BS_NOP_SB1_NOFC_TRANS_57600 uart_transmit_tests.sh -b 57600
+UART_XS_FUNC_8BS_NOP_SB1_NOFC_TRANS_115200 uart_transmit_tests.sh -b 115200

@@ -1,0 +1,139 @@
+#!/bin/bash
+#
+#   Copyright (c) Intel, 2012
+#
+#   This library is free software; you can redistribute it and/or
+#   modify it under the terms of the GNU Lesser General Public
+#   License as published by the Free Software Foundation; either
+#   version 2.1 of the License, or (at your option) any later version.
+#   
+#   This library is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#   Lesser General Public License for more details.
+#   
+#   You should have received a copy of the GNU Lesser General Public
+#   License along with this library; if not, write to the Free Software
+#   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+#
+#
+# File:         test_runner.sh (lightweight version)
+#
+# Description:  Aims at running all auto-generated TGen's tests.
+#
+# Author(s):    Julian Dumez <julianx.dumez@intel.com>
+#
+# Date:         10/24/2012
+# Version:      v1.0
+#
+
+#=============================================================================#
+#		CONSTANTS															  #
+#=============================================================================#
+
+export ROOT_DIRECTORY="`pwd`"
+
+export PATH_EXECUTABLES="$ROOT_DIRECTORY/executables"
+export PATH_RESOURCES="$ROOT_DIRECTORY/resources"
+export PATH_OUT="$ROOT_DIRECTORY/out"
+
+export FILE_RESULT="$PATH_OUT/result.csv"
+export FILE_LOG="$PATH_OUT/runner.log"
+
+#=============================================================================#
+#		MAIN																  #
+#=============================================================================#
+
+function main()
+{
+	local directory
+	local subdirectory
+	local entry
+
+	# Create "out" directory if it doesn't exist
+	if [ ! -d "$PATH_OUT" ]
+	then
+		mkdir "$PATH_OUT"
+	fi
+
+	# Create result file a write .csv header into it if it doesn't exist
+	print_header
+
+	# Reset log file if it already exist
+	if [ -f "$FILE_LOG" ]
+	then
+		rm "$FILE_LOG"
+	fi
+
+	log "Hello World!"
+	log "Root directory: $ROOT_DIRECTORY"
+
+	# For each entry in root directory
+	for directory in `ls "$ROOT_DIRECTORY"`
+	do
+		# Check if it is a directory
+		if [ -d "${ROOT_DIRECTORY}/${directory}" ]
+		then
+			# Check if directory is a "type of test" directory (e.g. FUNCTIONAL_POSITIVE, STRESS, ...)
+			if [ "${ROOT_DIRECTORY}/${directory}" != "$PATH_RESOURCES" ] && 
+				[ "${ROOT_DIRECTORY}/${directory}" != "$PATH_EXECUTABLES" ] && 
+				[ "${ROOT_DIRECTORY}/${directory}" != "$PATH_OUT" ]
+			then
+				log "Entering $directory (`ls $directory`)"
+
+				# For each entry in the "type of test" directory
+				for subdirectory in `ls "${ROOT_DIRECTORY}/${directory}"`
+				do
+					# Check if it is a directory
+					if [ -d "${ROOT_DIRECTORY}/${directory}/${subdirectory}" ]
+					then
+						for entry in `ls "${ROOT_DIRECTORY}/${directory}/${subdirectory}"`
+						do
+							log "Executing ${entry}"
+
+							cd "${ROOT_DIRECTORY}/${directory}/${subdirectory}"
+							bash "${entry}"
+						done
+					fi
+				done
+			fi
+		fi
+	done
+
+	cd "$ROOT_DIRECTORY"
+
+	log "Goodbye World!"
+	clean_system
+}
+
+#=============================================================================#
+#		FUNCTIONS															  #
+#=============================================================================#
+
+function print_header()
+{
+	echo "\"Component\",\"Name\",\"Status\",\"Feature\",\"Description\",\"Comment\",\"Bug\",\"Measurement Name\",\"Value\",\"Unit\",\"Target\",\"Failure\"" > "$FILE_RESULT"
+}
+
+function clean_system()
+{
+    # Clear all constants
+    unset ROOT_DIRECTORY
+    unset PATH_EXECUTABLES
+    unset PATH_RESOURCES
+    unset PATH_OUT
+    unset FILE_RESULT
+    unset FILE_LOG
+    unset FILE_SETUP
+}
+
+function log()
+{
+	echo `date +"%F %T.%N"` "$1" | tee -a "$FILE_LOG"
+}
+
+#=============================================================================#
+#		ENTRY POINT															  #
+#=============================================================================#
+
+main "$@"

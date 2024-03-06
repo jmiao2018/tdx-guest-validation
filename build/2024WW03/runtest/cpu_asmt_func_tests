@@ -1,0 +1,12 @@
+# @name CPU_ASMT_FUNC_TESTS
+# @desc CPU ASMT function tests
+# @requires cpu/asmt
+# @setup_requires
+# @package_requires
+
+CPU_XS_FUNC_ASMT_ENABLED_ALL asmt_func.sh -c asmt -n 0
+CPU_XS_FUNC_ASMT_CPU_ONE asmt_func.sh -c asmt -n 1
+CPU_XS_FUNC_ASMT_SCHED_HT smt_smp_enabled.sh
+CPU_XS_FUNC_ASMT_SCHED_HACK hackbench 20 thread 1000
+CPU_XS_FUNC_ASMT_SCHED_PTH pth_str02 -n1000
+CPU_XS_FUNC_ASMT_SCHED_TIME time-schedule

@@ -1,0 +1,39 @@
+# @name CPU_CET_IBT_TESTS
+# @desc CPU CET ibt function tests
+# @requires cpu/cet
+# @setup_requires
+
+CPU_XS_FUNC_CET_IBT_ELF cet_func.sh -t elf_cet -n cet_ibt
+CPU_XS_FUNC_CET_IBT32_ELF cet_func.sh -t elf_cet -n cet_ibt_32
+CPU_XS_FUNC_CET_IBT_EBR64 cet_func.sh -t objdump -i endbr64 -n cet_ibt
+CPU_XS_FUNC_CET_IBT32_EBR32 cet_func.sh -t objdump -i endbr32 -n cet_ibt_32
+CPU_XS_FUNC_CET_IBT_G2 cet_func.sh -t test -n cet_ibt -p g2
+CPU_XS_FUNC_CET_IBT_G3 cet_func.sh -t test -n cet_ibt -p g3
+CPU_XS_FUNC_CET_IBT_J1 cet_func.sh -t test -n cet_ibt -p j1
+CPU_XS_FUNC_CET_IBT_J2 cet_func.sh -t test -n cet_ibt -p j2
+CPU_XS_FUNC_CET_IBT_JI1 cet_func.sh -t test -n cet_ibt -p ji1
+CPU_XS_FUNC_CET_IBTP_JN1 cet_func.sh -t cet_pass -n cet_ibt -p jn1
+CPU_XS_FUNC_CET_IBT_JR1 cet_func.sh -t test -n cet_ibt -p jr1
+CPU_XS_FUNC_CET_IBT_JER cet_func.sh -t test -n cet_ibt -p jer
+CPU_XS_FUNC_CET_IBT_JL cet_func.sh -t cet_pass -n cet_ibt -p jl
+CPU_XS_FUNC_CET_IBT_THREAD cet_thread i
+CPU_XS_FUNC_CET_IBTL_G1 cet_func.sh -t cet_legacy -n cet_ibt_legacy -p g1
+CPU_XS_FUNC_CET_IBTL_G2 cet_func.sh -t cet_legacy -n cet_ibt_legacy -p g2
+CPU_XS_FUNC_CET_IBTL_G3 cet_func.sh -t cet_legacy -n cet_ibt_legacy -p g3
+CPU_XS_FUNC_CET_IBTL_J1 cet_func.sh -t cet_legacy -n cet_ibt_legacy -p j1
+CPU_XS_FUNC_CET_IBTL_J2 cet_func.sh -t cet_legacy -n cet_ibt_legacy -p j2
+CPU_XS_FUNC_CET_IBTL_JI1 cet_func.sh -t cet_legacy -n cet_ibt_legacy -p ji1
+CPU_XS_FUNC_CET_IBTL_JN1 cet_func.sh -t cet_legacy -n cet_ibt_legacy -p jn1
+CPU_XS_FUNC_CET_IBTL_JR1 cet_func.sh -t cet_legacy -n cet_ibt_legacy -p jr1
+CPU_XS_FUNC_CET_IBTL_JER cet_func.sh -t cet_legacy -n cet_ibt_legacy -p jer
+CPU_XS_FUNC_CET_IBTL_JL cet_func.sh -t cet_legacy -n cet_ibt_legacy -p jl
+CPU_XS_FUNC_CET_IBTP32_G1 cet_func.sh -t test -n cet_ibt_32 -p g1
+CPU_XS_FUNC_CET_IBT32_G2 cet_func.sh -t ibt32 -n cet_ibt_32 -p g2
+CPU_XS_FUNC_CET_IBT32_G3 cet_func.sh -t ibt32 -n cet_ibt_32 -p g3
+CPU_XS_FUNC_CET_IBT32_J1 cet_func.sh -t ibt32 -n cet_ibt_32 -p j1
+CPU_XS_FUNC_CET_IBT32_J2 cet_func.sh -t ibt32 -n cet_ibt_32 -p j2
+CPU_XS_FUNC_CET_IBT32_JI1 cet_func.sh -t ibt32 -n cet_ibt_32 -p ji1
+CPU_XS_FUNC_CET_IBTP32_JN1 cet_func.sh -t cet_pass -n cet_ibt_32 -p jn1
+CPU_XS_FUNC_CET_IBT32_JR1 cet_func.sh -t ibt32 -n cet_ibt_32 -p jr1
+CPU_XS_FUNC_CET_IBT32_JER cet_func.sh -t ibt32 -n cet_ibt_32 -p jer
+CPU_XS_FUNC_CET_IBT32_JL cet_func.sh -t cet_pass -n cet_ibt_32 -p jl

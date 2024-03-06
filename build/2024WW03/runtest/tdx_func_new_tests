@@ -1,0 +1,24 @@
+# @name tdx_guest_func_tests
+# @desc Check tdx guest func status
+# @requires tdx
+# @setup_requires
+# @utility_requires sshpass
+
+TDX_XS_FUNC_GUEST_NET_SPEED_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 1 -d on -t tdx -f tdx -x TD_NET_SPEED -c "accept_memory=lazy" -p off
+TDX_XS_FUNC_GUEST_EBIZZY_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 16 -d on -t tdx -f tdx -x TD_MEM_EBIZZY_FUNC -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_1C_8G_1W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 8 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_1C_8G_1W -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_1C_8G_32W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 8 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_1C_8G_32W -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_1C_32G_1W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 32 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_1C_32G_1W -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_1C_32G_32W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 32 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_1C_32G_32W -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_1C_96G_1W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 96 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_1C_96G_1W -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_1C_96G_32W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 96 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_1C_96G_32W -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_32C_8G_32W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 32 -s 1 -m 8 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_32C_8G_32W -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_32C_8G_256W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 32 -s 1 -m 8 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_32C_8G_256W -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_32C_32G_32W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 32 -s 1 -m 32 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_32C_32G_32W -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_32C_32G_256W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 32 -s 1 -m 32 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_32C_32G_256W -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_32C_96G_32W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 32 -s 1 -m 96 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_32C_96G_32W -c "accept_memory=lazy" -p off
+TDX_M_FUNC_GUEST_MEM_ACPT_32C_96G_256W_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 32 -s 1 -m 96 -d on -t tdx -f tdx -x TD_MEM_ACPT_T_32C_96G_256W -c "accept_memory=lazy" -p off
+TDX_XS_FUNC_GUEST_MEM_ACPT_FUNC_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 16 -d on -t tdx -f tdx -x TD_MEM_ACPT_FUNC -c "accept_memory=lazy" -p off
+TDX_XS_FUNC_GUEST_MEM_ACPT_CAL_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 16 -d on -t tdx -f tdx -x TD_MEM_ACPT_CAL -c "accept_memory=lazy" -p off
+TDX_XS_FUNC_GUEST_MEM_ACPT_NEG_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 16 -d on -t tdx -f tdx -x TD_MEM_ACPT_NEG -c "accept_memory=eager" -p off
+TDX_XS_FUNC_GUEST_VE_HANDLER_HALT_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 1 -d on -t tdx -f tdx -x TD_VE_HALT -c "accept_memory=lazy" -p off

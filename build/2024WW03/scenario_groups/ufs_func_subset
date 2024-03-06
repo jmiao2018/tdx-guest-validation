@@ -1,0 +1,5 @@
+# This file contains all the functional tests for LCK ufs driver
+ddt_intel/ufs_ext2_func_tests
+ddt_intel/ufs_ext3_func_tests
+ddt_intel/ufs_ext4_func_tests
+ddt_intel/ufs_vfat_func_tests

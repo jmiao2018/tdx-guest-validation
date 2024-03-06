@@ -1,0 +1,43 @@
+{
+    "name": "USB4_XS_FUNC_RTD3_TEST",
+    "initial_platform": "",
+    "cmdline": "usb4_tests.sh -s usb4_rtd3",
+    "steps": [],
+    "flags": [],
+    "summary": "Check could access in RTD3 after USB4 device connected and idle more than 25s",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usb4_func_tests",
+    "domain": "IO",
+    "feature": "USB4",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB4",
+            "values": [
+                "m"
+            ],
+            "description": "For USB4 enabling"
+        },
+        {
+            "name": "CONFIG_USB4_NET",
+            "values": [
+                "m"
+            ],
+            "description": "For USB4 net  enabling"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-05-31T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

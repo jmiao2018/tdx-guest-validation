@@ -1,0 +1,11 @@
+# This file contains tbt tests not related with tbt mode for LCK thunderbolt
+# driver
+ddt_intel/tbt_bat_tests
+ddt_intel/tbt_func_tests
+ddt_intel/tbt_userspace_tests
+ddt_intel/tbt_hotplug_tests
+ddt_intel/tbt_rtd3_tests
+ddt_intel/tbt_suspend_resume_tests
+ddt_intel/tbt_preboot_tests
+ddt_intel/tbt_nvm_tests
+ddt_intel/tbt_vtd_tests

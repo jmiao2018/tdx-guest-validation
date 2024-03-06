@@ -1,0 +1,77 @@
+{
+    "name": "TH_XS_FUNC_CPU_HOST_MODE",
+    "initial_platform": "",
+    "cmdline": "intel_th_tests.sh -t host_mode",
+    "steps": [],
+    "flags": [],
+    "summary": "Check if in CPU  host mode, there is only gth, sth will be generated, and output ports devices will not show",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "th_host_mode_cpu_func_tests",
+    "domain": "CPU",
+    "feature": "Intel_TH",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_INTEL_TH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_ACPI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_GTH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_STH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_MSU",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_PTI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "CPU trace hub",
+            "path": "",
+            "description": "Set as CPU host mode as wiki: https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2020-05-11T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

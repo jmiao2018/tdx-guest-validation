@@ -1,0 +1,8 @@
+# @name IOMMU_FUNC_TESTS
+# @desc Check IOMMU FUNC tests
+# @requires iommu
+# @setup_requires
+
+IOMMU_XS_FUNC_BASIC_MMIO_SUPPORT iommu_tests.sh -s "mmio_support"
+IOMMU_XS_FUNC_BASIC_MMIO_CHECK iommu_tests.sh -s "basic_mmio"
+IOMMU_XS_FUNC_BASIC_MMIO_MAP_CHECK iommu_tests.sh -s "basic_mmio" -p "MAP"

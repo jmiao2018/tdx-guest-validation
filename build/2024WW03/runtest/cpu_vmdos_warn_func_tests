@@ -1,0 +1,9 @@
+# @name CPU_VMDOS_WARN_FUNC_TESTS
+# @desc CPU VMDOS function tests
+# @requires cpu/vmdos
+# @setup_requires
+
+CPU_XS_FUNC_VMDOS_CPUID_TEST    cpu_bat.sh -n vmdos -p "7 1 0 1 d 30"
+CPU_XS_FUNC_VMDOS_CPUINFO_TEST  cpu_bat.sh -n pks -f bus_lock_detect
+CPU_XS_FUNC_VMDOS_WARN_USER_TEST  sl_func.sh -t user -p "split_lock_detect=warn"
+CPU_XS_FUNC_VMDOS_WARN_ROOT_TEST  sl_func.sh -t root -p "split_lock_detect=warn"

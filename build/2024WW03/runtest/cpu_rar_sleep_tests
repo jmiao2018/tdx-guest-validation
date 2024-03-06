@@ -1,0 +1,8 @@
+# @name CPU_RAR_SLEEP_TESTS
+# @desc CPU RAR sleep workable tests
+# @requires cpu/rar
+# @setup_requires
+
+CPU_XS_FUNC_RAR_S2IDLE_TLB_FLUSH rar_func.sh -n tlb_flush -s "s2idle" -p "3 3 10"
+CPU_XS_FUNC_RAR_S3_TLB_FLUSH rar_func.sh -n tlb_flush -s "s3" -p "3 3 10"
+CPU_XS_FUNC_RAR_S4_TLB_FLUSH rar_func.sh -n tlb_flush -s "s4" -p "3 3 10"

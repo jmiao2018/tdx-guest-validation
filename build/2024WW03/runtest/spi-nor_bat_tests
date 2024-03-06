@@ -1,0 +1,14 @@
+# @name spi-nor_bat_tests
+# @desc spi-nor_bat_tests perform BAT tests for SPI-NOR driver
+# @requires spi
+# @setup_requires
+
+SPI-NOR_XS_BAT_DRV_CHECK driver_sysfs.sh -d "spi_nor" -p
+
+SPI-NOR_XS_BAT_DEV_CHECK driver_sysfs.sh -d "spi_nor" -s "h"
+
+SPI-NOR_XS_BAT_BIND_UNBIND_DRV bind_unbind_driver.sh "spi_nor"
+
+SPI-NOR_XS_BAT_DEV_ID_CHECK spi_dev_info_check.sh -d "spi_nor" -p
+
+SPI-NOR_XS_BAT_BIOS_DEV_CHECK spi_dev_info_check.sh -d "spi_nor" -m

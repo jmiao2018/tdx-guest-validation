@@ -1,0 +1,2 @@
+#no hwp msr reg on Braswell-M
+POWER_XS_FUNC_HWP_S3

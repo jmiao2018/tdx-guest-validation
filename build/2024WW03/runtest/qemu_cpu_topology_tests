@@ -1,0 +1,9 @@
+# @name DMR QEMU CPU Topology CPUID cases check 
+# @desc case to check CPU Topology CPUID in QEMU for DMR platform
+# @requires powermgr
+# @setup_requires
+
+QEMU_S_BAT_CHECK_DMR_ONE_SOCKET_CPUID powermgr_cpu_topology.sh -t verify_qemu_dmr_one_socket_cpuid
+QEMU_S_BAT_CHECK_DMR_TWO_SOCKETS_CPUID powermgr_cpu_topology.sh -t verify_qemu_dmr_two_sockets_cpuid
+QEMU_S_BAT_CHECK_DMR_CACHE_TOPO_CPUID powermgr_cpu_topology.sh -t verify_qemu_dmr_cache_topo_cpuid
+

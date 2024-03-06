@@ -1,0 +1,36 @@
+{
+    "name": "USB_XS_FUNC_CHK_XHCI_SYSFS",
+    "initial_platform": "",
+    "cmdline": "xhci_check.sh sysfs",
+    "steps": [],
+    "flags": [],
+    "summary": "USB xhci sysfs check",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usbhost_bat_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2017-12-17T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure a usb device is connected"
+}

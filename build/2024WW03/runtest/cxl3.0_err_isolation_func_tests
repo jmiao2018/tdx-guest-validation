@@ -1,0 +1,9 @@
+# @name CXL3.0_ERR_ISOLATION_FUNC_TESTS
+# @desc Check CXL3.0 error isolation feature functional test
+# @requires cxl3.0
+# @setup_requires
+
+CXL3_XS_FUNC_DPORT_ISOLATION_CHECK cxl_tests.sh -s cxl_mem_dport_isolation
+CXL3_XS_FUNC_DPORT_ENABLE_ISOLATION cxl_tests.sh -s cxl_mem_isolation
+CXL3_XS_FUNC_DPORT_ENABLE_INTERRUPT cxl_tests.sh -s cxl_mem_iso_interrupt
+CXL3_XS_FUNC_ERROR_ISOLATION_CAP cxl_tests.sh -s cxl_dmesg_check -p "cxl_core found timeout and isolation capability"

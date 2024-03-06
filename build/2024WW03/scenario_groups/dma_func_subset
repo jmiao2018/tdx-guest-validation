@@ -1,0 +1,2 @@
+# This file contains all the functional tests for LCK DMA driver
+ddt_intel/dma_func_tests

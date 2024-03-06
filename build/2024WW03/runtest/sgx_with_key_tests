@@ -1,0 +1,8 @@
+# @name SGX BAT TESTS
+# @desc SGX BAT TESTS perform basic acceptance tests for intel sgx driver
+# @requires security/sgx_with_key
+# @setup_requires
+
+
+SECURITY_XS_FUNC_SGX_WITH_KEY_INITCALL intel_sgx_tests.sh -c 0
+SECURITY_XS_FUNC_SGX_WITH_KEY_ENCLAVE_CREATE intel_sgx_tests.sh -c 2

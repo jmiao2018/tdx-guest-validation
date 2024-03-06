@@ -1,0 +1,36 @@
+{
+    "name": "5LP_XS_BAT_BASIC_TEST",
+    "initial_platform": "",
+    "cmdline": "5lp_test.sh -r BASIC_TEST",
+    "steps": [],
+    "flags": [],
+    "summary": "do basic 5-level-page memory test based on kernel tree tools/testing/selftests/vm/va_128TBswitch.c",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "5lp_bat_tests",
+    "domain": "Memory",
+    "feature": "5LP",
+    "owner": "hongyuni",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_5LEVEL",
+            "values": [
+                "Y"
+            ],
+            "description": "Enabling 5-level-paging"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2019-03-12T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

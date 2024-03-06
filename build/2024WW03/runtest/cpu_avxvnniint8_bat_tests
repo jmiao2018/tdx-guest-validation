@@ -1,0 +1,6 @@
+# @name CPU_AVXVNNIINT8_BAT_TESTS
+# @desc Check AVX_VNNI_INT8 cpuinfo and cpuid
+# @requires cpu/avx_vnni_int8
+# @setup_requires
+
+CPU_XS_BAT_AVX_VNNI_INT8_CPU_ID_TEST cpu_bat.sh -n avx_vnni_int8 -p "7 0 1 0 d 4"

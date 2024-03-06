@@ -1,0 +1,34 @@
+{
+    "name": "USB4_XS_FUNC_BOOT_WITH_GR_CHECK",
+    "initial_platform": "",
+    "cmdline": "usb4_tests.sh -s usb4_gr_boot",
+    "steps": [],
+    "flags": [],
+    "summary": "Check USB4 GR with USB3.0 should be recognized after boot and should not access in D3",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "usb4_boot_tests",
+    "domain": "IO",
+    "feature": "USB4",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "Need plugged in GR USB4 device with USB3.0 and then boot up",
+            "check": "Is there GR USB4 device with USB3.0 connected, and boot up",
+            "description": "For Thunderbolt usb4 boot up tests"
+        }
+    ],
+    "createDate": "2021-11-15T15:39:00.000-0800",
+    "link": "",
+    "tips": ""
+}

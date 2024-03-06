@@ -1,0 +1,7 @@
+# @name CPU_SERIALIZE_BAT_TESTS
+# @desc Check serialize cpuinfo and cpuid
+# @requires cpu/serialize
+# @setup_requires
+
+CPU_XS_BAT_SERIALIZE_CPU_INFO_TEST cpu_bat.sh -n serialize -f serialize
+CPU_XS_BAT_SERIALIZE_CPU_ID_TEST cpu_bat.sh -n serialize -p "7 0 0 0 d 14"

@@ -1,0 +1,2 @@
+# This file contains all the tests for LCK CPU RDT resctrl tests
+ddt_intel/cpu_rdt_resctrl_func_tests

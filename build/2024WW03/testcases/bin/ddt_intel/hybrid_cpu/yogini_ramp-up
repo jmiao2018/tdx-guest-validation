@@ -1,0 +1,49 @@
+#!/bin/bash
+
+echo "schedyogi 2020.12.13 - Len Brown <len.brown@intel.com>"
+
+NUMCPUS=`grep -c processor /proc/cpuinfo`
+HOSTNAME=`hostname`
+
+TMPFILE=/tmp/y.$$
+> $TMPFILE
+
+grep "model name" /proc/cpuinfo | head -1 | cut -b 14- >> $TMPFILE
+echo CPUs in each core: >> $TMPFILE
+cat /sys/devices/system/cpu/cpu*/topology/core_cpus_list | sort --unique >> $TMPFILE
+if [ -d /sys/devices/system/cpu/types ] ; then
+	echo CPUs of each type: >> $TMPFILE
+	pushd /sys/devices/system/cpu/types
+	grep . */cpulist >> $TMPFILE
+	popd
+fi
+echo >> $TMPFILE
+
+#######################
+TEST_NAME=ramp-up
+
+# single thread ramps from 1 - 100%
+
+THREADS=1
+START_RATE=1
+END_RATE=100
+OPTION_LIST="-w threads$THREADS,rate$START_RATE-$END_RATE"
+OUTFILE=yresult.$TEST_NAME-$HOSTNAME-`date +%Y%m%d_%H%M%S`.txt
+cp $TMPFILE $OUTFILE
+if [ -d /sys/kernel/debug/intel_hw_feedback ] ; then
+sudo cat /sys/kernel/debug/intel_hw_feedback/hw_state /sys/kernel/debug/intel_hw_feedback/capacities  >> $OUTFILE
+fi
+echo "sudo ./yogini $OPTION_LIST >> $OUTFILE"
+sudo ./yogini  $OPTION_LIST >> $OUTFILE
+if [ -d /sys/kernel/debug/intel_hw_feedback ] ; then
+sudo cat /sys/kernel/debug/intel_hw_feedback/hw_state /sys/kernel/debug/intel_hw_feedback/capacities  >> $OUTFILE
+fi
+
+# Note: rate percentages are of max theoretical frequency
+# utilization will be higher than requested rate because
+# utilization depends on current frequency
+
+#######################
+
+rm $TMPFILE
+echo Done

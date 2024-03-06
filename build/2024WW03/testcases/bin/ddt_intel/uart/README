@@ -1,0 +1,45 @@
+###########
+
+-----------For android-----------
+Change Log:
+zelindex.deng@intel.com  @ Jan 30th Created
+1. Add folder {$ltp-ddt}/testcases/ddt_intel/scripts/uart
+	Contain:lib-uart.sh: basic function for case-uart.sh
+			case-uart.sh: test cases for uart
+			Uart_fPos_drv_test.sh: main entry of uart test cases
+			uart_transfer_dut.sh: tansfer test script since some cmd can not be executed by "adb shell"
+			uart_lp_test_dut.sh: suspend/resume test script since some cmd can not be executed by "adb shell"
+			Makefile: for building
+			README: readme
+2. Edit ${ltp-ddt}/platforms/byt-cr-ecs byt-cr-ecs2_7b byt-cr-ecs2_8a byt-cr-anchor8
+    Add "uart" support for platform
+
+3. Edit ${ltp-ddt}/testcases/ddt_intel/scripts/lib/get_module_config_name.sh
+    Add "uart="8250 8250_dw 8250_pnp"" in order to support get_kmod_name function in lib-commond.sh
+
+4. Add scenario file ${ltp-ddt}/runtest/ddt_intel/uart-tests
+
+5. Edit scenario file $${ltp-ddt}/runtest/ddt_intel/android-driver-subset android-driver-subset-ecs2_7b android-driver-subset-ecs2_8b
+
+
+------------For upstream-------------
+UART Test
+--------
+Targeted HW platforms:
+ Broalwell-U
+ Baytrail-T
+
+Purpose:
+ Basic function tests like driver checking, device checking, baudrate setting .e.g
+
+Driver source:
+ ${Linux-kernel-tree}/drivers/tty/serial/8250/8250dw.c
+
+Required Linux kernel config options:
+ CONFIG_SERIAL_8250_DW
+
+/!\ Use "make menuconfig" command to update Linux kernel config file and enable some potentially dependent options /!\
+
+
+Hardware dependencies:
+ N/A

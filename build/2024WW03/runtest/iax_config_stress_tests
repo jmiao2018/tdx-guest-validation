@@ -1,0 +1,12 @@
+# @name IAX_CONFIG_STRESS_TESTS
+# @desc IAX config stress tests
+# @requires iax
+# @utility_requires
+
+IAX_M_STRESS_BIND_UNBIND_ACCFG_1000 dsa_config_test_runner.py -d iax test_stress_bind_unbind_accfg
+IAX_M_STRESS_BIND_UNBIND_SYSFS_1000 dsa_config_test_runner.py -d iax test_stress_bind_unbind_sysfs
+IAX_M_STRESS_FUZZING_ACCFG_1000 dsa_config_test_runner.py -d iax test_stress_fuzzing_accfg
+IAX_M_STRESS_FUZZING_NEG_ACCFG_1000 dsa_config_test_runner.py -d iax test_stress_fuzzing_negative_accfg
+IAX_M_STRESS_FUZZING_NEG_SYSFS_1000 dsa_config_test_runner.py -d iax test_stress_fuzzing_negative_sysfs
+IAX_M_STRESS_FUZZING_SYSFS_1000 dsa_config_test_runner.py -d iax test_stress_fuzzing_sysfs
+IAX_M_STRESS_LOAD_UNLOAD_1000 dsa_config_test_runner.py -d iax test_stress_load_unload

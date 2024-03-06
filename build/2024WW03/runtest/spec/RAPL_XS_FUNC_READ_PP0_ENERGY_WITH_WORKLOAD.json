@@ -1,0 +1,34 @@
+{
+    "name": "RAPL_XS_FUNC_READ_PP0_ENERGY_WITH_WORKLOAD",
+    "initial_platform": "",
+    "cmdline": "rapl_power_check.sh -p core",
+    "steps": [],
+    "flags": [],
+    "summary": "Check RAPL Package Core Energy Incresed with CPU workload using fspin tool",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "rapl_func_tests",
+    "domain": "Power",
+    "feature": "Intel_RAPL",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "fspin",
+            "check": "",
+            "description": "fspin need to run as the workload"
+        }
+    ],
+    "createDate": "2020-05-27T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

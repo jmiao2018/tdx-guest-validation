@@ -1,0 +1,47 @@
+{
+    "name": "USBHOST_XS_FUNC_SR_2.0_FLASH_DISK_MHUB",
+    "initial_platform": "",
+    "cmdline": "usb_suspend_resume_tests.sh -p 2.0 -t flash -s disk -h 2",
+    "steps": [],
+    "flags": [],
+    "summary": "USB 2.0 Flash with multi-hub suspend to disk",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_suspendresume_hubs_func_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 2.0 flash storage device",
+            "check": "",
+            "description": ""
+        },
+        {
+            "name": "USB 2.0 hub",
+            "check": "",
+            "description": "Need connect 5 hub between usb device and DUT"
+        }
+    ],
+    "createDate": "2017-11-25T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure 3.x flash/uas device is connected as case name. Hotplug automation need special HW. Please make sure s/r to mem is working."
+}

@@ -1,0 +1,34 @@
+{
+    "name": "EMMC_S_FUNC_IO_2TH_1G",
+    "initial_platform": "",
+    "cmdline": "blk_device_iozone_readwrite_test.sh -d \"emmc\" -s \"1g\" -r \"16k\" -i \"0\" -i \"1\" -i \"2\" -i \"8\" -t \"2\"",
+    "steps": [],
+    "flags": [],
+    "summary": "Write/Read data to eMMC with Iozone with 2 threads and record size of 1G",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "emmc_iozone_func_tests",
+    "domain": "IO",
+    "feature": "eMMC",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free EMMC partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-04-11T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

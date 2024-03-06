@@ -1,0 +1,10 @@
+# @name CPU_TMUL_STRESS_TESTS
+# @desc SPR AMX/TMUL related stress test
+# @requires cpu/tmul
+
+CPU_S_STRESS_TMUL_BF16_YIELD_TEST tmul -b 1 -t 10000 -c 10 -i 0
+CPU_S_STRESS_TMUL_SS_YIELD_TEST tmul -b 1 -t 10000 -c 10 -i 1
+CPU_S_STRESS_TMUL_SU_YIELD_TEST tmul -b 1 -t 10000 -c 10 -i 2
+CPU_S_STRESS_TMUL_US_YIELD_TEST tmul -b 1 -t 10000 -c 10 -i 3
+CPU_S_STRESS_TMUL_UU_YIELD_TEST tmul -b 1 -t 10000 -c 10 -i 4
+CPU_S_STRESS_TMUL_FP16_YIELD_TEST tmul -b 1 -t 10000 -c 10 -i 5

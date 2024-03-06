@@ -1,0 +1,8 @@
+# @name CPU_FSGSBASE_BAT_TESTS
+# @desc Check fsgsbase cpuinfo and cpuid
+# @requires cpu/fsgsbase
+# @setup_requires
+
+CPU_XS_BAT_FSGSBASE_CPU_INFO_TEST cpu_bat.sh -n fsgsbase -f fsgsbase
+CPU_XS_BAT_FSGSBASE_CPU_ID_TEST cpu_bat.sh -n fsgsbase -p "7 1 0 1 b 0"
+CPU_XS_FUNC_FSGSBASE_SUITE_TEST fsgsbase_func.sh

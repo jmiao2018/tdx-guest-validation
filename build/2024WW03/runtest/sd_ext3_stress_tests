@@ -1,0 +1,19 @@
+# @name SD-STRESS-TESTS
+# @desc SD-STRESS-TESTS perform all stress Test Cases for ext3
+# @requires sd && ext3
+# @setup_requires
+
+SD_M_STRESS_EXT3_DD_RW_100M blk_device_dd_readwrite_test.sh -f 'ext3' -b '10M' -c '10' -d 'sd' -l '100'
+
+SD_L_STRESS_EXT3_CP_100M blk_device_dd_readwrite_test.sh -f 'ext3' -b '10M' -c '10' -i 'cp' -d 'sd' -l '100'
+
+SD_M_STRESS_EXT3_WR_TARBALL blk_device_tarball_write_test.sh -f 'ext3' -d 'sd' -T 'gz' -s '100M' -l '100'
+
+SD_M_STRESS_EXT3_DD_RW_10G blk_device_dd_readwrite_test.sh -f 'ext3' -b '1M' -c '1024' -d 'sd' -l '10' -w
+
+SD_XL_STRESS_EXT3_DD_RW_50G blk_device_dd_readwrite_test.sh -f 'ext3' -b '1M' -c '1024' -d 'sd' -l '50' -w
+
+#Format and FS Check TC's on EXT3
+SD_M_STRESS_EXT3_MKFS_W_PART blk_device_erase_format_part.sh -d 'sd' -f 'ext3'
+
+SD_S_STRESS_EXT3_FSCK_W_PART blk_device_filesystem_check.sh -d 'sd' -f 'ext3'

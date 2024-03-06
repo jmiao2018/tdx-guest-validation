@@ -1,0 +1,61 @@
+# @name CPU_CET_SHSTK_TESTS
+# @desc CPU CET shadow stack function tests
+# @requires cpu/cet
+# @setup_requires
+
+CPU_XS_FUNC_CET_SHSTK_ELF cet_func.sh -t elf_cet -n shadow_test_fork
+CPU_XS_FUNC_CET_SHSTK32_ELF cet_func.sh -t elf_cet -n shadow_test_fork_32
+CPU_XS_FUNC_CET_SHSTK_EBR64 cet_func.sh -t objdump -i endbr64 -n shadow_test_fork
+CPU_XS_FUNC_CET_SHSTK32_EBR32 cet_func.sh -t objdump -i endbr32 -n shadow_test_fork_32
+CPU_XS_FUNC_CET_SHSTK_S1 cet_func.sh -t cet_pass -n shadow_test_fork -p s1
+CPU_XS_FUNC_CET_SHSTK_S2 cet_func.sh -t test -n shadow_test_fork -p s2
+CPU_XS_FUNC_CET_SHSTKP_S3 cet_func.sh -t cet_pass -n shadow_test_fork -p s3
+CPU_XS_FUNC_CET_SHSTK_SL1 cet_func.sh -t test -n shadow_test_fork -p sl1
+CPU_XS_FUNC_CET_SHSTK_SR cet_func.sh -t test -n shadow_test_fork -p sr
+CPU_XS_FUNC_CET_SHSTK_SN cet_func.sh -t test -n shadow_test_fork -p sn
+CPU_XS_FUNC_CET_SHSTK_BUF1 cet_func.sh -t test -n shadow_test_fork -p buf1
+CPU_XS_FUNC_CET_SHSTKP_BUF2 cet_func.sh -t cet_pass -n shadow_test_fork -p buf2
+CPU_XS_FUNC_CET_SHSTK_SNC cet_func.sh -t test -n shadow_test_fork -p snc
+CPU_XS_FUNC_CET_SHSTK_SC cet_func.sh -t test -n shadow_test_fork -p sc
+CPU_XS_FUNC_CET_SHSTK_SSP cet_func.sh -t cet_ssp -n shadow_test_fork -p ssp
+CPU_XS_FUNC_CET_SHSTK_STACKP cet_func.sh -t cet_pass -n shstk_process -p sp
+CPU_XS_FUNC_CET_SHSTK_STACKF cet_func.sh -t test -n shstk_process -p sf
+CPU_XS_FUNC_CET_SHSTK_THREAD cet_thread s
+CPU_XS_FUNC_CET_SHSTK_ALLOC  shstk_alloc
+CPU_XS_FUNC_CET_SHSTK_SIG_ACCESS_FUNC sig_stack a
+CPU_XS_FUNC_CET_SHSTK_SIG_SHSTK cet_func.sh -t test -n sig_stack -p s
+CPU_XS_FUNC_CET_SHSTK_HUGE_PAGE shstk_huge_page
+CPU_XS_FUNC_CET_SHSTKL_S1 cet_func.sh -t cet_legacy -n shadow_test_fork_legacy -p s1
+CPU_XS_FUNC_CET_SHSTKL_S2 cet_func.sh -t cet_legacy -n shadow_test_fork_legacy -p s2
+CPU_XS_FUNC_CET_SHSTKL_S3 cet_func.sh -t cet_legacy -n shadow_test_fork_legacy -p s3
+CPU_XS_FUNC_CET_SHSTKL_SL1 cet_func.sh -t cet_legacy -n shadow_test_fork_legacy -p sl1
+CPU_XS_FUNC_CET_SHSTKL_SR cet_func.sh -t cet_legacy -n shadow_test_fork_legacy -p sr
+CPU_XS_FUNC_CET_SHSTKL_SN cet_func.sh -t cet_legacy -n shadow_test_fork_legacy -p sn
+CPU_XS_FUNC_CET_SHSTKL_BUF1 cet_func.sh -t cet_legacy -n shadow_test_fork_legacy -p buf1
+CPU_XS_FUNC_CET_SHSTKL_BUF2 cet_func.sh -t cet_legacy -n shadow_test_fork_legacy -p buf2
+CPU_XS_FUNC_CET_SHSTKL_SNC cet_func.sh -t cet_legacy -n shadow_test_fork_legacy -p snc
+CPU_XS_FUNC_CET_SHSTKL_SC cet_func.sh -t cet_legacy -n shadow_test_fork_legacy -p sc
+CPU_XS_FUNC_CET_SHSTK32_S1 cet_func.sh -t cet_pass -n shadow_test_fork_32 -p s1
+CPU_XS_FUNC_CET_SHSTKP32_S3 cet_func.sh -t cet_pass -n shadow_test_fork_32 -p s3
+CPU_XS_FUNC_CET_SHSTKP32_BUF2 cet_func.sh -t cet_pass -n shadow_test_fork_32 -p buf2
+CPU_XS_FUNC_CET_SHSTK32_STACKP cet_func.sh -t cet_pass -n shstk_process_32 -p sp
+CPU_XS_FUNC_CET_SHSTKP_PTHREAD cet_func.sh -t cet_noseg -n tst-eintr1 -p null
+CPU_XS_FUNC_CET_SHSTKP_THP_SSP cet_func.sh -t cet_pass -n shstk_thp_ssp -p null
+CPU_XS_FUNC_CET_SHSTKP_PTHREAD_SHORT cet_func.sh -t cet_noseg -n tst-eintr1_short -p null
+CPU_XS_FUNC_CET_ALL_CPU_TESTS cet_func.sh -t cet_all_cpu -n quick_test -p null
+CPU_XS_FUNC_CET_SSP_CHANGE_TESTS cet_func.sh -t cet_seg -n ssp_change -p null
+CPU_XS_FUNC_CET_SHSTKP_CREATE_PID_1000000 cet_func.sh -t cet_noseg -n cet_pid_test -p "0 1000000"
+CPU_XS_FUNC_CET_CRIU_TEST_DATE cet_func.sh -t criu -n test_date.sh -p null
+CPU_XS_FUNC_CET_CRIU_SHSTK_DATE cet_func.sh -t criu -n show_date -p null
+CPU_XS_FUNC_CET_CRIU_LEGACY_DATE cet_func.sh -t criu -n show_date_legacy -p null
+CPU_XS_FUNC_CET_SHSTK_S2_ALL_CPU cet_func.sh -t all_cpu -n shadow_test_fork -p s2 -k "control protection"
+CPU_XS_FUNC_CET_SHSTK_WRSS_64 wrss_64
+CPU_XS_FUNC_CET_SHSTK_THREAD_TEST cet_func.sh -t test -n thread_shstk -p null
+CPU_XS_FUNC_CET_SHSTK_CHANGE_WRSS_VIOLATION test_shadow_stack
+CPU_XS_FUNC_CET_SHSTK_STATUS cet_func.sh -t shstk_status -n shstk_sleep -p shstk
+CPU_XS_FUNC_CET_SHSTK_LEGACY_STATUS cet_func.sh -t shstk_status -n shstk_sleep_legacy -p null
+CPU_XS_FUNC_CET_SHSTK_RDSSP_CHECK rdssp
+CPU_XS_FUNC_CET_SHSTK_UNLOCK_TEST cet_func.sh -t cet_pass -n shstk_unlock_test -p null
+CPU_XS_FUNC_CET_SHSTK_UNLOCK_WO_GLIBC_TEST cet_func.sh -t cet_pass -n shstk_unlock_test_default -p null
+CPU_XS_FUNC_CET_SHSTK_CP cet_func.sh -t test -n shstk_cp -p null
+CPU_XS_FUNC_CET_ALL_CPU_SHSTK_CP cet_func.sh -t all_cpu -n shstk_cp -p null -k "control protection"

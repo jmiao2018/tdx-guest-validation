@@ -1,0 +1,43 @@
+{
+    "name": "TELEMETRY_XS_FUNC_CRASHLOG_SYSFS_ENABLE",
+    "initial_platform": "",
+    "cmdline": "telemetry_tests.sh -t crashlog_sysfs",
+    "steps": [],
+    "flags": [],
+    "summary": "Check if crashlog system is generated",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "telemetry_crashlog_func_tests",
+    "domain": "CPU",
+    "feature": "TELEMETRY",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "MFD_INTEL_PMT",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "INTEL_PMT_CRASHLOG",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-03-18T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

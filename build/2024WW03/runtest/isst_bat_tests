@@ -1,0 +1,10 @@
+# @name ISST LEGACY DRIVER BAT TESTS
+# @desc Intel speed select technology legacy driver basic acceptance tests
+# @requires powermgr/isst
+# @utility_requires rdmsr wrmsr 
+# @setup_requires
+
+#ISST LEGACY DRIVER BAT Tests
+ISST_XS_BAT_IF_MMIO_DRIVER_LOAD_UNLOAD intel_sst.sh -t isst_if_mmio_load_unload
+ISST_XS_BAT_IF_MBOX_DRIVER_LOAD_UNLOAD intel_sst.sh -t isst_if_mbox_load_unload
+ISST_XS_BAT_LEAGCY_DRIVER_INTERFACE intel_sst.sh -t isst_legacy_driver_sysfs

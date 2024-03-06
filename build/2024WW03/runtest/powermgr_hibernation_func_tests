@@ -1,0 +1,28 @@
+# @name Power Management suspend tests
+# @desc Suspend Tests for Power Management driver on Broadwell-U x86_64 HW platform.
+# @requires powermgr
+# @setup_requires
+
+
+POWER_XS_FUNC_FREEZE_FREEZER powermgr_hibernation_tests.sh -s freeze -m freezer -d "$FREEZE_FREEZER_PATTERN"
+POWER_XS_FUNC_FREEZE_DEVICES powermgr_hibernation_tests.sh -s freeze -m devices -d "$FREEZE_FREEZER_PATTERN"
+POWER_XS_FUNC_FREEZE_PLATFORM powermgr_hibernation_tests.sh -s freeze -m platform -d "$FREEZE_FREEZER_PATTERN"
+POWER_XS_FUNC_FREEZE_NONE powermgr_hibernation_tests.sh -s freeze -m none -p "$FREEZE_NONE_PAUSE" -t "$FREEZE_NONE_TIME" -d "$FREEZE_NONE_PATTERN"
+
+POWER_XS_FUNC_S3_FREEZER powermgr_hibernation_tests.sh -s mem -m freezer -d "$MEM_FREEZER_PATTERN"
+POWER_XS_FUNC_S3_DEVICES powermgr_hibernation_tests.sh -s mem -m devices -d "$MEM_DEVICES_PATTERN"
+POWER_XS_FUNC_S3_PLATFORM powermgr_hibernation_tests.sh -s mem -m platform -d "$MEM_PLATFORM_PATTERN"
+POWER_XS_FUNC_S3_PROCESSORS powermgr_hibernation_tests.sh -s mem -m processors -d "$MEM_PROCESSORS_PATTERN"
+POWER_XS_FUNC_S3_CORE powermgr_hibernation_tests.sh -s mem -m core -d "$MEM_CORE_PATTERN"
+POWER_XS_FUNC_S3_NONE powermgr_hibernation_tests.sh -s mem -m none -p "$MEM_NONE_PAUSE" -t "$MEM_NONE_TIME" -d "$MEM_NONE_PATTERN"
+
+POWER_XS_FUNC_S4_FREEZER powermgr_hibernation_tests.sh -s disk -m freezer -d "$DISK_FREEZER_PATTERN"
+POWER_XS_FUNC_S4_DEVICES powermgr_hibernation_tests.sh -s disk -m devices -d "$DISK_DEVICES_PATTERN"
+POWER_XS_FUNC_S4_PLATFORM powermgr_hibernation_tests.sh -s disk -m platform -d "$DISK_PLATFORM_PATTERN"
+POWER_XS_FUNC_S4_PROCESSORS powermgr_hibernation_tests.sh -s disk -m processors -d "$DISK_PROCESSORS_PATTERN"
+POWER_XS_FUNC_S4_CORE powermgr_hibernation_tests.sh -s disk -m core -d "$DISK_CORE_PATTERN"
+POWER_XS_FUNC_S4_NONE powermgr_hibernation_tests.sh -s disk -m none -p "$DISK_NONE_PAUSE" -t "$DISK_NONE_TIME" -d "$DISK_NONE_PATTERN"
+POWER_XS_FUNC_S4_NONE_SERVER powermgr_hibernation_tests.sh -s disk -m none -p "$DISK_NONE_PAUSE" -t "$DISK_NONE_TIME_SERVER" -d "$DISK_NONE_PATTERN"
+
+POWER_XS_FUNC_TIMING_FREEZE powermgr_suspend_timing_tests.sh -s freeze
+POWER_XS_FUNC_TIMING_S3 powermgr_suspend_timing_tests.sh -s mem

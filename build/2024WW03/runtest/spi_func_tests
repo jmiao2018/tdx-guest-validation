@@ -1,0 +1,14 @@
+# @name spi_func_tests
+# @desc spi_func_tests perform FUNC tests for SPI driver
+# @requires spi
+# @setup_requires
+
+SPI_S_FUNC_SPEED_TEST run-spi-test.sh -d "/dev/spidev0.0" -r "a"
+
+SPI_S_FUNC_DATA_SIZE_TEST run-spi-test.sh -d "/dev/spidev0.0" -r "b"
+
+SPI_S_FUNC_MODE_TEST run-spi-test.sh -d "/dev/spidev0.0" -r "c"
+
+SPI_S_FUNC_WIDTH_TEST run-spi-test.sh -d "/dev/spidev0.0" -r "d"
+
+SPI_S_FUNC_SPIDEV_BUFSIZE_TEST run-spi-test.sh -d "/dev/spidev0.0" -r "e"

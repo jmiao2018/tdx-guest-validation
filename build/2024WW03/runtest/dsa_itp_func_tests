@@ -1,0 +1,9 @@
+# @name DSA_ACCFG_FUNC_TESTS
+# @desc DSA accel-config tool functional tests
+# @requires dsa2.0
+# @utility_requires
+
+DSA_XS_FUNC_ITP_SINGLE itp_test.sh -t single_user_window
+DSA_XS_FUNC_ITP_PASS_FILE itp_test.sh -t pass_owner_file
+DSA_XS_FUNC_ITP_MULTI_USER itp_test.sh -t multi_user_window
+DSA_XS_FUNC_ITP_PASS_MULTI_USER itp_test.sh -t pass_owner_multi_user

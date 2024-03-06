@@ -1,0 +1,21 @@
+# This file contains all the stress test scenarios for Linux Core Kernel Device Drivers
+ddt_intel/alsa_stress_tests
+ddt_intel/cpu_sl_stress_tests
+ddt_intel/ec_stress_tests
+ddt_intel/emmc_ext2_stress_tests
+ddt_intel/emmc_ext3_stress_tests
+ddt_intel/emmc_ext4_stress_tests
+ddt_intel/emmc_vfat_stress_tests
+ddt_intel/eth_multiprocessing_stress_tests
+ddt_intel/eth_ping_stress_tests
+ddt_intel/i2c_stress_tests
+ddt_intel/sd_ext2_stress_tests
+ddt_intel/sd_ext3_stress_tests
+ddt_intel/sd_ext4_stress_tests
+ddt_intel/sd_vfat_stress_tests
+ddt_intel/rtc_stress_tests
+ddt_intel/sata_ext2_stress_tests
+ddt_intel/sata_ext3_stress_tests
+ddt_intel/sata_ext4_stress_tests
+ddt_intel/sata_vfat_stress_tests
+ddt_intel/tbt_stress_tests

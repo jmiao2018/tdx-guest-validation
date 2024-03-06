@@ -1,0 +1,10 @@
+# @name TBT_STRESS_TESTS
+# @desc Check thunderbolt device plug out/in stress test and still works well
+# @requires tbt
+# @setup_requires
+
+TBT_XL_STRESS_COMMON_HOTPLUG tbt_func_test.sh -s poi -p 100
+TBT_XL_STRESS_SSD_10000M tbt_ssd_read_write.sh -b 1000MB -c 10 -p ssd -t 3
+TBT_XL_STRESS_USB2.0_3000M tbt_ssd_read_write.sh -b 1000MB -c 3 -p 2.0 -d flash -t 3
+TBT_XL_STRESS_USB3.0_6000M tbt_ssd_read_write.sh -b 1000MB -c 6 -p 3.0 -d flash -t 3
+TBT_XL_STRESS_SSD_3000M_100 tbt_ssd_read_write.sh -b 1000MB -c 3 -p ssd -t 100

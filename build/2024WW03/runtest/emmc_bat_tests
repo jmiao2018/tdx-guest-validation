@@ -1,0 +1,16 @@
+# @name EMMC_BAT_TESTS
+# @desc EMMC_BAT_TESTS contains BAT tests for emmc driver
+# @requires emmc
+# @setup_requires
+
+EMMC_XS_FUNC_DRV_CHECK blk_device_bat_test.sh -d "emmc" -c "1"
+
+EMMC_XS_FUNC_DEV_CHECK blk_device_bat_test.sh -d "emmc" -c "2"
+
+EMMC_XS_FUNC_GET_NAME blk_device_bat_test.sh -d "emmc" -c "3"
+
+EMMC_XS_FUNC_MOUNT_PART blk_device_bat_test.sh -d "emmc" -c "4"
+
+EMMC_XS_FUNC_BIND_UNBIND_DRV bind_unbind_driver.sh "sdhci"
+
+EMMC_XS_FUNC_NCQ_SPEC blk_native_command_queueing.sh -d "emmc"

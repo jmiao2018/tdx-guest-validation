@@ -1,0 +1,16 @@
+# @name CPU_KL_FUNC_TESTS
+# @desc verify key locker functions
+# @requires cpu/kl
+# @setup_requires
+# @package_requires msr-tools
+
+CPU_XS_FUNC_KL_IWKEY_CPU0_D_S  kl_func.sh -i 1
+CPU_XS_FUNC_KL_IWKEY_CPU1_D_S  kl_func.sh -i 2
+CPU_XS_FUNC_KL_IWKEY_CPU0_B_S  kl_func.sh -i 3
+CPU_XS_FUNC_KL_IWKEY_CPU0_R_S  kl_func.sh -i 4
+CPU_XS_FUNC_KL_IWKEY_CPU1_B_S  kl_func.sh -i 5
+CPU_XS_FUNC_KL_IWKEY_CPU1_R_S  kl_func.sh -i 6
+CPU_XS_FUNC_KL_IWKEY_CPU0_B_R  kl_func.sh -i 7
+CPU_XS_FUNC_KL_IWKEY_CPU1_B_R  kl_func.sh -i 8
+CPU_XS_FUNC_KL_IWKEY_CPU0_B_CPU1_R kl_func.sh -i 9
+CPU_XS_FUNC_KL_IWKEY_CPU1_B_CPU0_R kl_func.sh -i 10

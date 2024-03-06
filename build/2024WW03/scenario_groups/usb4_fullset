@@ -1,0 +1,4 @@
+# This file contains all the tests for LCK usb4
+ddt_intel/usb4_bat_tests
+ddt_intel/usb4_func_tests
+ddt_intel/usb4_nvm_tests

@@ -1,0 +1,5 @@
+#This file contains all the stress tests for LCK SD driver
+ddt_intel/sd_ext2_stress_tests
+ddt_intel/sd_ext3_stress_tests
+ddt_intel/sd_ext4_stress_tests
+ddt_intel/sd_vfat_stress_tests

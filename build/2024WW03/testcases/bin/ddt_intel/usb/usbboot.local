@@ -1,0 +1,24 @@
+#!/bin/bash -e
+#
+# usbboot.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.:
+
+run_dir="/run_dir"
+runtest_para="/runtest_para"
+
+cd $(cat "$run_dir" |tail -n1)
+para=$(cat "$runtest_para" |tail -n1)
+
+#./runtests.sh -p cfl-h-rvp -P cfl-h-rvp -f ddt_intel/usbhost_stress_bootup -c -o qqqqqq
+
+./runtests.sh $para
+
+exit 0

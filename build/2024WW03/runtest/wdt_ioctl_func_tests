@@ -1,0 +1,26 @@
+# @name WDT_IOCTL_FUNC_TESTS
+# @desc Watchdog Timer settimeout,gettimeout,keepalive and write ioctls tests
+# @requires watchdog
+
+WDT_XS_FUNC_SETTIMEOUT wdt_tests.sh -i "settimeout"
+
+WDT_XS_FUNC_GETTIMEOUT wdt_tests.sh -i "gettimeout"
+
+WDT_XS_FUNC_SETTIMEOUT_10SECS wdt_tests.sh -i "settimeout" -a "10"
+
+WDT_XS_FUNC_SETTIMEOUT_25SECS wdt_tests.sh -i "settimeout" -a "25"
+
+WDT_XS_FUNC_SETTIMEOUT_50SECS wdt_tests.sh -i "settimeout" -a "50"
+
+WDT_XS_FUNC_SETTIMEOUT_RNDM wdt_tests.sh -i "settimeout" -r
+
+WDT_XS_FUNC_WRITE wdt_tests.sh -i "write"
+
+WDT_XS_FUNC_KEEPALIVE wdt_tests.sh -i "keepalive"
+
+# TEMPORARILY DISABLED DUE TO IOCTLs DO NOT RETURN ANY VALUE NOR INFORMATION
+#WDT_XS_FUNC_GETSUPORT wdt_tests.sh -i "getsupport"
+
+#WDT_XS_FUNC_GETSTATUS wdt_tests.sh -i "getstatus"
+
+#WDT_XS_FUNC_GETBOOTSTATUS wdt_tests.sh -i "getbootstatus"

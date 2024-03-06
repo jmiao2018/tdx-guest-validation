@@ -1,0 +1,10 @@
+# @name SATA Write/Read Performance test with ext3
+# @desc format sata device first and then mount it and do read write perf test
+# @requires sata && ext3
+# @setup_requires
+
+SATA_S_PERF_EXT3_10M blk_device_filesystem_perf_test.sh -f "ext3" -s 100 -B "262144" -d "sata"
+
+SATA_M_PERF_EXT3_100M blk_device_filesystem_perf_test.sh -f "ext3" -s 100 -B "102400 262144 524288 1048576 5242880" -d "sata"
+
+SATA_L_PERF_EXT3_1G blk_device_filesystem_perf_test.sh -f "ext3" -s 1000 -B "102400 262144 524288 1048576 5242880" -d "sata"

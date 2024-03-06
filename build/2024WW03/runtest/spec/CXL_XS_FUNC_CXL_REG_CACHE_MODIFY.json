@@ -1,0 +1,36 @@
+{
+    "name": "CXL_XS_FUNC_CXL_REG_CACHE_MODIFY",
+    "initial_platform": "",
+    "cmdline": "pcie_check x 0x10 1 0",
+    "steps": [],
+    "flags": [],
+    "summary": "Check CXL PCIE 10 offset bytes bit0 should be 0 as default for cache modify",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cxl_func_tests",
+    "domain": "IO",
+    "feature": "CXL",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_PCI_CXL",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CXL"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2021-02-24T17:28:26.000-0800",
+    "link": "",
+    "tips": ""
+}

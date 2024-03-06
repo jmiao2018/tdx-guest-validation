@@ -1,0 +1,2 @@
+# This file contains all the functional tests for LCK UART driver
+ddt_intel/uart_bat_tests

@@ -1,0 +1,9 @@
+# @name PT_BAT_TESTS
+# @desc Basic Acceptance Tests for PT driver, to check the correctness of driver initialization.
+# @requires ipt
+# @setup_requires
+#
+PT_XS_FUNC_SYSFS ipt_sysfs_check.sh -t path
+PT_XS_FUNC_SYSFS_CAPS ipt_sysfs_check.sh -t caps
+PT_XS_FUNC_SYSFS_TIME ipt_sysfs_check.sh -t time
+PT_XS_FUNC_PTTT_CPUID perf_tests.sh -t pttt_cpuid

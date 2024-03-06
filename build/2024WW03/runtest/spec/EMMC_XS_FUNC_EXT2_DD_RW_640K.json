@@ -1,0 +1,34 @@
+{
+    "name": "EMMC_XS_FUNC_EXT2_DD_RW_640K",
+    "initial_platform": "",
+    "cmdline": "blk_device_dd_readwrite_test.sh -f 'ext2' -b '64K' -c '10' -d 'emmc'",
+    "steps": [],
+    "flags": [],
+    "summary": "Find, format in 'ext2' and mount device node. Write a file of 5M size",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "emmc_ext2_func_tests",
+    "domain": "IO",
+    "feature": "eMMC",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free EMMC partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-12-04T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

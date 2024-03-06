@@ -1,0 +1,2 @@
+# This file contains all the power management tests for LCK USB Type-C Host driver
+ddt_intel/usbhost_type-c_suspendresume_func_tests

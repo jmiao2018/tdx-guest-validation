@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_XS_FUNC_CAMERA",
+    "initial_platform": "",
+    "cmdline": "usb_peripheral_tests.sh -m camera",
+    "steps": [],
+    "flags": [],
+    "summary": "USB camera basic operation",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usbhost_peripheral_func_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB Camera",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-11-01T17:00:00.000-0700",
+    "link": "",
+    "tips": "Please make sure specific usb device is connected as case name. "
+}

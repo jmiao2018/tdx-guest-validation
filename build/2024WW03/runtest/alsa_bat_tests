@@ -1,0 +1,24 @@
+# @name ALSA_BAT_TESTS
+# @desc Doing ALSA BAT tests
+# @requires alsa
+
+ALSABAT_XS_BAT_GEN_CH_MONO alsabat_test.sh -c 1
+ALSABAT_XS_BAT_GEN_CH_DUAL alsabat_test.sh -c 2
+ALSABAT_XS_BAT_PLBK_SGL_LNE alsabat_test.sh -c 3
+ALSABAT_XS_BAT_CAP_SGL_LNE alsabat_test.sh -c 4
+ALSABAT_XS_BAT_PLBK_DECT_CH_MONO alsabat_test.sh -c 5
+ALSABAT_XS_BAT_PLBK_DECT_CH_DUAL alsabat_test.sh -c 6
+ALSABAT_XS_BAT_CAP_PLBK_CH_1 alsabat_test.sh -c 7
+ALSABAT_XS_BAT_CAP_PLBK_CH_2 alsabat_test.sh -c 8
+ALSABAT_XS_BAT_CAP_PLBK_SAMRT_44100 alsabat_test.sh -c 9
+ALSABAT_XS_BAT_CAP_PLBK_SAMRT_48000 alsabat_test.sh -c 10
+ALSABAT_XS_BAT_CAP_PLBK_DURA_SAMP alsabat_test.sh -c 11
+ALSABAT_XS_BAT_CAP_PLBK_DURA_SECD alsabat_test.sh -c 12
+ALSABAT_XS_BAT_CAP_PLBK_SMPFMT_U8 alsabat_test.sh -c 13
+ALSABAT_XS_BAT_CAP_PLBK_SMPFMT_S16_LE alsabat_test.sh -c 14
+ALSABAT_XS_BAT_CAP_PLBK_SMPFMT_S24_3LE alsabat_test.sh -c 15
+ALSABAT_XS_BAT_CAP_PLBK_SMPFMT_S32_LE alsabat_test.sh -c 16
+ALSABAT_XS_BAT_CAP_PLBK_SMPFMT_CD alsabat_test.sh -c 17
+ALSABAT_XS_BAT_CAP_PLBK_SMPFMT_DAT alsabat_test.sh -c 18
+ALSABAT_XS_BAT_CAP_PLBK_SGL_LNE alsabat_test.sh -c 19
+ALSABAT_XS_BAT_ANLY_LOCL_FLE alsabat_test.sh -c 20

@@ -1,0 +1,3 @@
+# Add TCs to skip from execution of CFL-H
+PT_XS_FUNC_PERF_PEBS
+PT_XS_FUNC_PERF_LBR

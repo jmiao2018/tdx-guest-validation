@@ -1,0 +1,42 @@
+{
+    "name": "USBTYPEC_XS_FUNC_RW_3.1_UAS",
+    "initial_platform": "",
+    "cmdline": "usb_read_write_tests.sh -b 1MB -c 100 -p 3.1 -t uas",
+    "steps": [],
+    "flags": [],
+    "summary": "USB 3.1 UAS on TYPEC port",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_type-c_rw_raw_func_tests",
+    "domain": "IO",
+    "feature": "USB_TYPEC",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 3.1 UAS device",
+            "check": "",
+            "description": "Need connect to typec port"
+        }
+    ],
+    "createDate": "2017-11-25T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure 2.0/3.x flash/uas device is connected to typec port as case name."
+}

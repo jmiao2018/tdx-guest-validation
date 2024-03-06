@@ -1,0 +1,36 @@
+{
+    "name": "USBHOST_XS_FUNC_3.2_ROOTHUB",
+    "initial_platform": "",
+    "cmdline": "xhci_check.sh 3.2",
+    "steps": [],
+    "flags": [],
+    "summary": "Check if xhci 3.2 roothub working",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usbhost_3.2_bat_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2018-01-29T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure 3.x flash/uas device is connected as case name."
+}

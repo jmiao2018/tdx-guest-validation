@@ -1,0 +1,32 @@
+{
+    "name": "POWER_XS_BAT_ACPI_CPPC_NOMINAL_PERF_COMPARE",
+    "initial_platform": "",
+    "cmdline": "powermgr_acpi_cppc.sh -t perf_compare",
+    "steps": [],
+    "flags": [],
+    "summary": "Check cpufeq acpi_cppc ecore.nominal_perf should not be equal to pcore.nominal_perf",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "powermgr_acpi_cppc_bat_tests",
+    "domain": "Power",
+    "feature": "Intel_Pstate",
+    "owner": "qwang59",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": true,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [
+        {
+            "Name": "cpuid"
+        }
+    ],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2021-10-25T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

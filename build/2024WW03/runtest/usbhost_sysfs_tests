@@ -1,0 +1,9 @@
+# @name USBHOST_SYSFS_TESTS
+# @desc check sysfs some apis.
+# @requires usbhost
+# @setup_requires
+#
+
+USBHOST_XS_FUNC_WAKEUP_ENABLE usb_sysfs_tests.sh -t wakeup_e
+USBHOST_XS_FUNC_WAKEUP_DISABLE usb_sysfs_tests.sh -t wakeup_d
+USBHOST_XS_FUNC_EP_POLL usb_sysfs_tests.sh -t ep

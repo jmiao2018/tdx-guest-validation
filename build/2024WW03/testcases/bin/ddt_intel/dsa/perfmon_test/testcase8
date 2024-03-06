@@ -1,0 +1,42 @@
+#!/bin/bash -Ex
+
+# multi-event on one device exceed event counter.
+#
+# assumes 8 counters, 9 events
+
+# Test event category 0x3 = 'Operations', all events
+#
+# event 0x1, DESC_NOOP
+# event 0x2, DESC_BATCH
+# event 0x4, DESC_DRAIN
+# event 0x8, MEM_MOVE
+# event 0x10, FILL
+# event 0x20, COMPARE_MEM
+# event 0x40, COMPARE_PAT
+# event 0x80, CREATE_DELTA
+# event 0x100, APPLY_DELTA
+#
+# Broken out by event
+#
+# Setup:
+#   assumes setup_dsa_dmatest_disabled has been run
+
+perf stat -o $1 -e dsa0/event=0x1,event_category=0x3/,dsa0/event=0x2,event_category=0x3/,dsa0/event=0x4,event_category=0x3/,dsa0/event=0x8,event_category=0x3/,dsa0/event=0x10,event_category=0x3/,dsa0/event=0x20,event_category=0x3/,dsa0/event=0x40,event_category=0x3/,dsa0/event=0x80,event_category=0x3/,dsa0/event=0x100,event_category=0x3/ dsa_test -w 1 -l 1024 -o0x3 -t200
+
+# Expected output (similar to):
+
+# Performance counter stats for 'system wide':
+
+# Performance counter stats for 'system wide':
+
+#                 2      dsa0/event=0x1,event_category=0x3/                                     (88.89%)
+#                 3      dsa0/event=0x2,event_category=0x3/                                     (88.89%)
+#                 3      dsa0/event=0x4,event_category=0x3/                                     (88.89%)
+#                 2      dsa0/event=0x8,event_category=0x3/                                     (88.89%)
+#                 3      dsa0/event=0x10,event_category=0x3/                                     (88.89%)
+#                 0      dsa0/event=0x20,event_category=0x3/                                     (88.89%)
+#                 0      dsa0/event=0x40,event_category=0x3/                                     (88.89%)
+#                 2      dsa0/event=0x80,event_category=0x3/                                     (88.89%)
+#                 3      dsa0/event=0x100,event_category=0x3/                                     (88.89%)
+
+#      34.227098301 seconds time elapsed

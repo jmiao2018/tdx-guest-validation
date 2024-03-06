@@ -1,0 +1,10 @@
+# @name IAX_KTEST_STRESS_TESTS
+# @desc IAX kernel level stress tests
+# @requires iax
+# @utility_requires
+
+IAX_M_STRESS_KTEST_64C_1T_10000 idxd_ktest.sh -d iax -c 64 -t 1 -i 10000
+IAX_M_STRESS_KTEST_8C_8T_10000 idxd_ktest.sh -d iax -c 8 -t 8 -i 10000
+IAX_M_STRESS_KTEST_1C_64T_10000 idxd_ktest.sh -d iax -c 1 -t 64 -i 10000
+IAX_M_STRESS_KTEST_32C_64T_10000 idxd_ktest.sh -d iax -c 32 -t 64 -i 10000
+IAX_M_STRESS_KTEST_64C_64T_10000 idxd_ktest.sh -d iax -c 64 -t 64 -i 10000

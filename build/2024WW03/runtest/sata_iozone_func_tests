@@ -1,0 +1,37 @@
+# @name SATA_IOZONE_FUNC_TESTS
+# @desc SATA read write test with Iozone tool whatever fs in card
+#   The device node is specified in get_blk_device_node.sh
+# @requires sata
+# @setup_requires
+
+SATA_XS_FUNC_IO_1TH_4K blk_device_iozone_readwrite_test.sh -d "sata" -r "4k"
+
+SATA_XS_FUNC_IO_1TH_512K blk_device_iozone_readwrite_test.sh -d "sata" -r "512k" -i "0" -i "1"
+
+SATA_XS_FUNC_IO_1TH_64M blk_device_iozone_readwrite_test.sh -d "sata" -s "64m" -r "16k" -i "0" -i "1" -i "2"
+
+SATA_S_FUNC_IO_1TH_1G blk_device_iozone_readwrite_test.sh -d "sata" -s "1g" -r "16k" -i "0" -i "1" -i "2" -i "8"
+
+SATA_XS_FUNC_IO_2TH_4K blk_device_iozone_readwrite_test.sh -d "sata" -r "4k" -t "2"
+
+SATA_XS_FUNC_IO_2TH_512K blk_device_iozone_readwrite_test.sh -d "sata" -r "512k" -i "0" -i "1" -t "2"
+
+SATA_XS_FUNC_IO_2TH_64M blk_device_iozone_readwrite_test.sh -d "sata" -s "64m" -r "16k" -i "0" -i "1" -i "2" -t "2"
+
+SATA_S_FUNC_IO_2TH_1G blk_device_iozone_readwrite_test.sh -d "sata" -s "1g" -r "16k" -i "0" -i "1" -i "2" -i "8" -t "2"
+
+SATA_XS_FUNC_IO_3TH_4K blk_device_iozone_readwrite_test.sh -d "sata" -r "4k" -t "3"
+
+SATA_XS_FUNC_IO_3TH_512K blk_device_iozone_readwrite_test.sh -d "sata" -r "512k" -i "0" -i "1" -t "3"
+
+SATA_XS_FUNC_IO_3TH_64M blk_device_iozone_readwrite_test.sh -d "sata" -s "64m" -r "16k" -i "0" -i "1" -i "2" -t "3"
+
+SATA_S_FUNC_IO_3TH_1G blk_device_iozone_readwrite_test.sh -d "sata" -s "1g" -r "16k" -i "0" -i "1" -i "2" -i "8" -t "3"
+
+SATA_XS_FUNC_IO_4TH_4K blk_device_iozone_readwrite_test.sh -d "sata" -r "4k" -t "4"
+
+SATA_XS_FUNC_IO_4TH_512K blk_device_iozone_readwrite_test.sh -d "sata" -r "512k" -i "0" -i "1" -t "4"
+
+SATA_XS_FUNC_IO_4TH_64M blk_device_iozone_readwrite_test.sh -d "sata" -s "64m" -r "16k" -i "0" -i "1" -i "2" -t "4"
+
+SATA_S_FUNC_IO_4TH_1G blk_device_iozone_readwrite_test.sh -d "sata" -s "1g" -r "16k" -i "0" -i "1" -i "2" -i "8" -t "4"

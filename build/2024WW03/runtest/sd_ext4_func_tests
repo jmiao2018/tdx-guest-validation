@@ -1,0 +1,22 @@
+# @name SD device w/r test with whatever fs in card
+# @desc SD read write test with whatever fs in card
+#   The device node is specified in get_blk_device_node.sh
+# @requires sd && ext4
+# @setup_requires
+
+SD_XS_FUNC_EXT4_DD_RW_1B blk_device_dd_readwrite_test.sh -f 'ext4' -b '1' -c '1' -d 'sd'
+SD_XS_FUNC_EXT4_DD_RW_512B blk_device_dd_readwrite_test.sh -f 'ext4' -b '512' -c '1' -d 'sd'
+SD_XS_FUNC_EXT4_DD_RW_64K blk_device_dd_readwrite_test.sh -f 'ext4' -b '64K' -c '1' -d 'sd'
+SD_XS_FUNC_EXT4_DD_RW_512K blk_device_dd_readwrite_test.sh -f 'ext4' -b '512K' -c '1' -d 'sd'
+SD_XS_FUNC_EXT4_DD_RW_640K blk_device_dd_readwrite_test.sh -f 'ext4' -b '64K' -c '10' -d 'sd'
+SD_XS_FUNC_EXT4_DD_RW_5M blk_device_dd_readwrite_test.sh -f 'ext4' -b '5M' -c '1' -d 'sd'
+SD_XS_FUNC_EXT4_DD_RW_10M blk_device_dd_readwrite_test.sh -f 'ext4' -b '1M' -c '10' -d 'sd'
+SD_S_FUNC_EXT4_SD2SD_CP_10M blk_device_dd_readwrite_test.sh -f 'ext4' -b '1M' -c '10' -i 'cp' -d 'sd'
+SD_S_FUNC_EXT4_DD_RW_50M blk_device_dd_readwrite_test.sh -f 'ext4' -b '5M' -c '10' -d 'sd'
+SD_S_FUNC_EXT4_DD_RW_100M blk_device_dd_readwrite_test.sh -f 'ext4' -b '10M' -c '10' -d 'sd'
+SD_M_FUNC_EXT4_DD_RW_1G blk_device_dd_readwrite_test.sh -f 'ext4' -b '10M' -c '100' -d 'sd'
+SD_XS_FUNC_EXT4_DD_FSYNC blk_device_dd_readwrite_test.sh -f 'ext4' -b '1M' -c '100' -d 'sd' -i fsync
+SD_XS_FUNC_EXT4_DD_FDATASYNC blk_device_dd_readwrite_test.sh -f 'ext4' -b '1M' -c '100' -d 'sd' -i fdatasync
+SD_XS_FUNC_EXT4_DD_DSYNC blk_device_dd_readwrite_test.sh -f 'ext4' -b '1M' -c '100' -d 'sd' -i dsync
+SD_XS_FUNC_EXT4_DD_SYNC blk_device_dd_readwrite_test.sh -f 'ext4' -b '1M' -c '100' -d 'sd' -i sync
+SD_XS_FUNC_EXT4_DD_NOCACHE blk_device_dd_readwrite_test.sh -f 'ext4' -b '1M' -c '100' -d 'sd' -i nocache

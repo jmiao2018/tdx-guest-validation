@@ -1,0 +1,34 @@
+{
+    "name": "SD_M_FUNC_IO_3TH_1G",
+    "initial_platform": "",
+    "cmdline": "blk_device_iozone_readwrite_test.sh -d \"sd\" -s \"1g\" -r \"16k\" -i \"0\" -i \"1\" -i \"2\" -i \"8\" -t \"3\"",
+    "steps": [],
+    "flags": [],
+    "summary": "Write/Read data to SD with Iozone with 3 threads with a record size of 1G",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "sd_iozone_func_tests",
+    "domain": "IO",
+    "feature": "SD",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free SD partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-04-11T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

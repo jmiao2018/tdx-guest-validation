@@ -1,0 +1,34 @@
+{
+    "name": "SATA_XS_FUNC_CREATE_2P",
+    "initial_platform": "",
+    "cmdline": "blk_device_create_erase_partition.sh -d \"sata\" -p \"2\"",
+    "steps": [],
+    "flags": [],
+    "summary": "Create 2 partitions in SATA block device",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "sata_partitions_func_tests",
+    "domain": "IO",
+    "feature": "SATA",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free sata disk partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-06-06T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

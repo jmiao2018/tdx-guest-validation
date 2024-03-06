@@ -1,0 +1,9 @@
+# @name CPU_CET_BAT_TESTS
+# @desc Check cet cpuinfo cpuid and kconfig
+# @requires cpu/cet_kernel
+# @setup_requires
+
+CPU_XS_BAT_CET_IBT_CPU_ID_TEST cpu_bat.sh -n cet -p "7 0 0 0 d 20"
+CPU_XS_BAT_CET_IBT_CPU_INFO_TEST cpu_bat.sh -n cet -f ibt
+CPU_XS_BAT_CET_KMOD_KCONFIG_IBT_TEST cpu_bat.sh -k "CONFIG_X86_KERNEL_IBT=y"
+CPU_XS_BAT_CET_KMOD_DMESG_IBT_TEST cpu_bat.sh -d "Indirect Branch Tracking enabled"

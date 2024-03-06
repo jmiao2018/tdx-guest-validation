@@ -1,0 +1,34 @@
+{
+    "name": "UFS_XS_FUNC_EXT3_DD_RW_64K",
+    "initial_platform": "",
+    "cmdline": "blk_device_dd_readwrite_test.sh -f 'ext3' -b '64K' -c '1' -d 'ufs'",
+    "steps": [],
+    "flags": [],
+    "summary": "Find, format in 'ext3' and mount device node. Write a file of 64K size",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "ufs_ext3_func_tests",
+    "domain": "IO",
+    "feature": "UFS",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free UFS partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-04-17T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

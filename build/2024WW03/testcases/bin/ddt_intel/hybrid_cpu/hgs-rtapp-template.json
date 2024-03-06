@@ -1,0 +1,20 @@
+{
+	"tasks": {
+		"rt-app-thr0": {
+			"instance" : $instance,
+			"priority": -19,
+			"loop" : -1,
+			"phases" : {
+				"p0" : {
+					"run" : $run_duration,
+					"sleep" : $sleep_duration
+				}
+			}
+		}
+	},
+	"global" : {
+		"duration" : $duration,
+		"calibration" : "CPU0",
+		"default_policy" : "SCHED_OTHER"
+	}
+}

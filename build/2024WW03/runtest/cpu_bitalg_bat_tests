@@ -1,0 +1,7 @@
+# @name CPU_BITALG_BAT_TESTS
+# @desc Check bitalg cpuinfo and cpuid
+# @requires cpu/bitalg
+# @setup_requires
+
+CPU_XS_BAT_BITALG_CPU_INFO_TEST cpu_bat.sh -n bitalg -f avx512_bitalg
+CPU_XS_BAT_BITALG_CPU_ID_TEST cpu_bat.sh -n bitalg -p "7 1 0 1 c 12"

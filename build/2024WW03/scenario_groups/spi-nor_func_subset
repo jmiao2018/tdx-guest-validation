@@ -1,0 +1,2 @@
+# This file contains all the Functional Tests for LCK INTEL SPI-NOR driver
+ddt_intel/spi-nor_func_tests

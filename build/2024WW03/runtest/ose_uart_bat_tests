@@ -1,0 +1,10 @@
+# @name ose_uart_bat_tests
+# @desc ose_uart_bat_tests perform BAT tests for UART driver
+# @requires ose_uart
+# @setup_requires
+
+OSE_UART_XS_BAT_DEV_ID_CHECK ose_uart_test.sh -t 1
+
+OSE_UART_XS_BAT_DEV_CHECK ose_uart_test.sh -t 2
+
+OSE_UART_XS_BAT_BIND_UNBIND_DRV bind_unbind_driver.sh "ose_uart"

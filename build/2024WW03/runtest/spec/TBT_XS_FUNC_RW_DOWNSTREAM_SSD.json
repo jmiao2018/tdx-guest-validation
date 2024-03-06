@@ -1,0 +1,34 @@
+{
+    "name": "TBT_XS_FUNC_RW_DOWNSTREAM_SSD",
+    "initial_platform": "",
+    "cmdline": "tbt_ssd_read_write.sh -b 1MB -c 100 -p ssd -m downstream -t 2",
+    "steps": [],
+    "flags": [],
+    "summary": "Connect with SSD by thunderbolt downstream port, check this SSD read write speed for 10M file successfully",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "tbt_func_tests",
+    "domain": "IO",
+    "feature": "Thunderbolt",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "Need plugged in TBT3 AR devices, and connected SSD under TBT3 device downstream port",
+            "check": "Check is there tbt3 docker and connected it's downstream port with SSD",
+            "description": "For Thunderbolt tbt3 devices downstream port tests"
+        }
+    ],
+    "createDate": "2022-01-12T17:05:52.000-0800",
+    "link": "",
+    "tips": ""
+}

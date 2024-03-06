@@ -1,0 +1,8 @@
+# @name TH_HOST_MODE_CPU_FUNC_TESTS
+# @desc TH_HOST_MODE_CPU_FUNC_TESTS perform basic functional tests for Intel TH driver
+# @requires intel_th
+# @setup_requires
+
+TH_XS_FUNC_CPU_HOST_MODE intel_th_tests.sh -t host_mode
+TH_XS_FUNC_CPU_HOST_MODULE intel_th_tests.sh -t host_module
+TH_XS_FUNC_CPU_TARGET_CHECK intel_th_tests.sh -t target_n

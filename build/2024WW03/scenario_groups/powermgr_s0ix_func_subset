@@ -1,0 +1,2 @@
+#This file contains all s0ix tests for LCK power management driver
+ddt_intel/powermgr_s0ix_func_tests

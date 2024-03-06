@@ -1,0 +1,7 @@
+# @name CPU_XSAVE_BAT_TESTS
+# @desc Check xsave cpuinfo
+# @requires cpu/xsave
+# @setup_requires
+
+CPU_XS_BAT_XSAVE_CPU_INFO_TEST cpu_bat.sh -n xsave -f xsave
+CPU_XS_BAT_XSAVE_CPUID_INS_TEST cpu_bat.sh -n xsave -p "1 0 0 0 c 26"

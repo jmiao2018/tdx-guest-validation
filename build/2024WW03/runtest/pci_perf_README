@@ -1,0 +1,24 @@
+How to use IPERF Tool
+
+To run PCI Performance with IPERF tool, this sholud be considered:
+
+-Make sure IPERF tool is installed:
+   iperf -v
+-If IPERF is not installed:
+   sudo apt install iperf
+
+Once IPERF tool is installed follow this steps:
+
+1.- Host Server with IPERF tool installed
+  1.1.- Initialize IPERF tool in the HOST Server
+        iperf -s
+2.- Client Server with IPERF tool installed
+  2.1.- Initialize IPERF tool in the Client Server
+        ( Test Cases will start automatically the client server by the
+        Test Scenario file )
+        iperf -c
+3.- Add the HOST IP on the parameter file params/DEFAULT
+    If the HOST IP is not set on this file Test will be BLOCKED
+4.- Run The Perfomance IPERF Test Cases
+
+LTP-DDT will provide PASS/FAIL results

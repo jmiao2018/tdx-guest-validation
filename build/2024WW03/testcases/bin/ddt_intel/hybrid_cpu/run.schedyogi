@@ -1,0 +1,45 @@
+#!/bin/bash
+
+#ALL_WORKLOADS="$ALL_WORKLOADS MEM"
+ALL_WORKLOADS="$ALL_WORKLOADS SSE"
+ALL_WORKLOADS="$ALL_WORKLOADS AVX"
+ALL_WORKLOADS="$ALL_WORKLOADS AVX2"
+#ALL_WORKLOADS="$ALL_WORKLOADS AVX512"
+#ALL_WORKLOADS="$ALL_WORKLOADS VNNI"
+#ALL_WORKLOADS="$ALL_WORKLOADS VNNI512"
+#ALL_WORKLOADS="$ALL_WORKLOADS RDTSC"
+ALL_WORKLOADS="$ALL_WORKLOADS PAUSE"
+#ALL_WORKLOADS="$ALL_WORKLOADS TPAUSE"
+
+source lib.yogini
+
+run_tests() {
+
+#	efficiency_vs_mhz_1_cpu
+#	efficiency_vs_mhz_4_cpu
+#	run_pyramid100 pyramid100 SSE
+
+#	energy_tests_at_epp 255
+#	energy_tests_at_epp 128
+#	energy_tests_at_epp 0
+
+#	flat_out_tests
+#
+#run_bow_tie bow-tie SSE
+
+	for WORKLOAD in $ALL_WORKLOADS ; do
+		standard_waveforms $WORKLOAD
+	done
+}
+
+# main
+
+initialize
+create_tmpfile
+probe_freq
+calibrate_cpus
+run_tests
+generate_summary
+remove_tmpfile
+tar_up_results
+

@@ -1,0 +1,20 @@
+#!/bin/bash -Ex
+
+# Maximum perf filter - test setting all filter value to maximum, i.e. 0xf/0xff
+#
+#   Current hw bug requires unused filters to be set to 0xff..
+#
+#   All filters set to defaults
+#
+# Setup:
+#   assumes setup_dsa_dmatest_disabled has been run
+
+perf stat -o $1 -e dsa0/filter_wq=0xffff,filter_tc=0xff,filter_pgsz=0xf,filter_sz=0xff,filter_eng=0xff,event=0x8,event_category=0x3/ dsa_test -w 1 -l 1024 -o0x3 -t200
+
+# Expected output (similar to):
+
+# Performance counter stats for 'system wide':
+
+#                19      dsa0/filter_wq=0xffff,filter_tc=0xff,filter_pgsz=0xf,filter_sz=0xff,filter_eng=0xff,event=0x8,event_category=0x3/
+
+#      15.528076500 seconds time elapsed

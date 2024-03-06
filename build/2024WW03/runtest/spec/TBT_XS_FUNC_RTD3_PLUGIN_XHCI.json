@@ -1,0 +1,55 @@
+{
+    "name": "TBT_XS_FUNC_RTD3_PLUGIN_XHCI",
+    "initial_platform": "",
+    "cmdline": "tbt_rtd3.sh -c 1 -s rtd3_xhci",
+    "steps": [],
+    "flags": [],
+    "summary": "Set all xhci and ahci in tbt pci bus power/control with auto.?? for example: 'echo auto > /sys/bus/pci/devices/0000:37:00.0/power/control', ?? all should return success. And after idle 8s, xhci should be in D3",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "tbt_rtd3_tests",
+    "domain": "IO",
+    "feature": "Thunderbolt",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB4",
+            "values": [
+                "m"
+            ],
+            "description": "TBT3 and USB4 both used USB4 kconfig now"
+        },
+        {
+            "name": "CONFIG_USB4_NET",
+            "values": [
+                "m"
+            ],
+            "description": "For TBT thunderbolt net function enabling"
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "BIOS_wiki",
+            "path": "wiki_link",
+            "description": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [
+        {
+            "name": "Need plugged in devices",
+            "check": "Check is there tbt3 docker with USB2.0 USB3.0 insert plugged in",
+            "description": "For Thunderbolt tbt3 devices tests"
+        }
+    ],
+    "createDate": "2018-05-16T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

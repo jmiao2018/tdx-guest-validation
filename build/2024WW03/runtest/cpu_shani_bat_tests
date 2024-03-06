@@ -1,0 +1,7 @@
+# @name CPU_SHANI_BAT_TESTS
+# @desc Check shani cpuinfo and cpuid
+# @requires cpu/shani
+# @setup_requires
+
+CPU_XS_BAT_SHANI_CPU_INFO_TEST cpu_bat.sh -n shani -f sha_ni
+CPU_XS_BAT_SHA_EXT_CPU_ID_TEST cpu_bat.sh -n sha -p "7 0 0 0 b 29"

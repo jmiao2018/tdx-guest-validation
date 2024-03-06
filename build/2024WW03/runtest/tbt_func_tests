@@ -1,0 +1,25 @@
+# @name TBT_SSD_RW_FUNC_TESTS
+# @desc Read write files on SSD connected by tbt, check speed and correction
+# @requires tbt
+# @setup_requires
+# @utility_requires boltctl
+
+TBT_XS_FUNC_TBT4_TOPO tbt_tools.sh -s tbt4_topo
+TBT_XS_FUNC_TBT_STUFF_VIEW tbt_tools.sh -s tbt_stuff
+TBT_XS_FUNC_RW_TBT_SSD_10M tbt_ssd_read_write.sh -b 1MB -c 10 -p ssd -t 10
+TBT_XS_FUNC_RW_TBT_SSD_100M tbt_ssd_read_write.sh -b 1MB -c 100 -p ssd -t 10
+TBT_XS_FUNC_RW_TBT_SSD_500M tbt_ssd_read_write.sh -b 10MB -c 50 -p ssd -t 5
+TBT_XS_FUNC_RW_TBT_SSD_1000M tbt_ssd_read_write.sh -b 10MB -c 100 -p ssd -t 5
+TBT_XS_FUNC_RW_TBT_NVME_10M tbt_ssd_read_write.sh -b 1MB -c 10 -p nvme -t 10
+TBT_XS_FUNC_RW_TBT_NVME_10G tbt_ssd_read_write.sh -b 10MB -c 1024 -p nvme -t 8
+TBT_XS_FUNC_RW_2.0_FLASH tbt_ssd_read_write.sh -b 1MB -c 100 -p 2.0 -d flash -t 2
+TBT_XS_FUNC_RW_3.0_FLASH tbt_ssd_read_write.sh -b 1MB -c 100 -p 3.0 -d flash -t 2
+TBT_XS_FUNC_SWAPOFF_S4_TEST tbt_func_test.sh -s suspend -t disk -p swapoff
+TBT_XS_FUNC_NVMEM_CHECK tbt_func_test.sh -s nvmem_check
+TBT_XS_FUNC_RW_DOWNSTREAM_SSD tbt_ssd_read_write.sh -b 1MB -c 100 -p ssd -m downstream -t 2
+TBT_XS_FUNC_MARGIN_SYSFS_CHECK tbt_func_test.sh -s mrg_sysfs
+TBT_XS_FUNC_MARGIN_RUN_TEST tbt_func_test.sh -s mrg_run
+TBT_XS_FUNC_MARGIN_RUN_TIME tbt_func_test.sh -s mrg_time
+TBT_XS_FUNC_MARGIN_RUN_RANDOM tbt_func_test.sh -s mrg_random
+TBT_XS_FUNC_PLUGOUT_CLD_CHECK tbt_func_test.sh -s plugout_cld
+TBT_XS_FUNC_PLUGIN_TBT3_CL0_CHECK tbt_func_test.sh -s plugin_cl0

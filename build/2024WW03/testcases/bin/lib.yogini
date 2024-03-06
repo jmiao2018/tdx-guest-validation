@@ -1,0 +1,382 @@
+#!/bin/bash
+
+initialize() {
+
+	VERSION=2021.03.23
+
+	NUMCPUS=`grep -c processor /proc/cpuinfo`
+	HOSTNAME=`hostname`
+
+	DATE=`date +%Y%m%d_%H%M%S`
+
+	OUTDIR=result.schedyogi-$VERSION.$HOSTNAME-$DATE
+	mkdir $OUTDIR
+
+	LOGFILE=$OUTDIR/logfile.txt
+
+	if [ -r /sys/devices/system/cpu/cpu0/cpufreq/energy_performance_preference ] ; then
+		ORIGINAL_EPP=`cat /sys/devices/system/cpu/cpu0/cpufreq/energy_performance_preference`
+	else
+		ORIGINAL_EPP=128
+	fi
+
+}
+
+create_tmpfile() {
+
+	TMPFILE=/tmp/schedyogi.$$-$DATE
+	> $TMPFILE
+
+	echo "schedyogi $VERSION - Len Brown <len.brown@intel.com>" >> $TMPFILE
+	uname -a >> $TMPFILE
+	cat /proc/cmdline >> $TMPFILE
+	if [ -f /proc/sys/kernel/sched_itmt_enabled ] ; then
+		grep . /proc/sys/kernel/sched_itmt_enabled >> $TMPFILE
+	else
+		echo NO /proc/sys/kernel/sched_itmt_enabled >> $TMPFILE
+	fi
+	grep "model name" /proc/cpuinfo | head -1 | cut -b 14- >> $TMPFILE
+	echo CPUs in each core: >> $TMPFILE
+	cat /sys/devices/system/cpu/cpu*/topology/core_cpus_list | sort -n --unique >> $TMPFILE
+	if [ -d /sys/devices/system/cpu/types ] ; then
+		echo CPUs of each type: >> $TMPFILE
+		pushd /sys/devices/system/cpu/types
+		grep . */cpulist >> $TMPFILE
+		popd
+	fi
+	grep . /sys/class/dmi/id/board_name /sys/class/dmi/id/bios* >> $TMPFILE
+	echo >> $TMPFILE
+}
+
+remove_tmpfile() {
+
+	rm $TMPFILE
+}
+
+set_epp_all() {
+
+	EPP_VALUE=$1
+
+	if ! which x86_energy_perf_policy > /dev/null ; then
+		sudo x86_energy_perf_policy --hwp-epp $EPP_VALUE
+	else
+		for CPU_DIR in /sys/devices/system/cpu/cpu*; do
+                        if [ ! -f $CPU_DIR/online ] ; then
+                                continue
+                        fi
+                        if [ `cat $CPU_DIR/online` -eq -0 ] ; then
+                                continue
+                        fi
+                        EPP_FILE=$CPU_DIR/cpufreq/energy_performance_preference
+			if [ -w $EPP_FILE ] ; then
+				echo $EPP_VALUE | sudo tee $EPP_FILE 2>&1 > /dev/null
+			fi
+                done
+	fi
+
+}
+
+restore_epp_all() {
+
+	set_epp_all $ORIGINAL_EPP
+}
+
+calibrate_cpus() {
+
+	CALIBRATE_LOG=$OUTDIR/calibrate.log-$DATE.txt
+	> $CALIBRATE_LOG
+	PRE_CALIBRATED="--calibrate "
+
+	echo -n "Calibrating... "
+	for WORK in $ALL_WORKLOADS ; do
+		echo -n "$WORK... "
+		sudo ./yogini --calibrate $WORK,0 >> $CALIBRATE_LOG
+
+		CALIBRATION=`grep "^$WORK	" $CALIBRATE_LOG | cut -f2`
+
+		if [ x"$CALIBRATION" != x ] ; then
+			PRE_CALIBRATED="$PRE_CALIBRATED,$WORK,$CALIBRATION"
+		fi
+	done
+	echo Done
+}
+probe_freq() {
+
+	if [ $NUMCPUS -eq 8 ] ; then
+		IS_HYBRID=0
+	else
+		IS_HYBRID=1
+	fi
+}
+
+
+run_yogini() {
+
+	NAME=$1
+	OPTIONS=$2
+	OUTFILE=$OUTDIR/$NAME-$DATE.txt
+
+	cp $TMPFILE $OUTFILE
+
+	if [ -d /sys/kernel/debug/intel_hw_feedback ] ; then
+		sudo cat /sys/kernel/debug/intel_hw_feedback/hw_state /sys/kernel/debug/intel_hw_feedback/capacities  >> $OUTFILE
+	fi
+
+	date >> $LOGFILE
+	echo "sudo ./yogini $OPTIONS" >> $LOGFILE
+	echo -n running "$NAME... "
+	sudo ./yogini $OPTIONS $PRE_CALIBRATED >> $OUTFILE
+
+	if [ -d /sys/kernel/debug/intel_hw_feedback ] ; then
+		sudo cat /sys/kernel/debug/intel_hw_feedback/hw_state /sys/kernel/debug/intel_hw_feedback/capacities  >> $OUTFILE
+	fi
+	echo Done
+}
+
+run_constant_rate_bind() {
+
+	TEST_NAME=$1-$2-$3
+	WORKER=$2
+	RATE=$3
+	BIND_CPU=$4
+
+	# single thread, constant rate
+
+	run_yogini $TEST_NAME "-w $WORKER,rate$RATE,bind-$BIND_CPU"
+}
+
+run_frequency_sweep() {
+
+	TEST_NAME=$1-$2-$3
+	WORKER=$2
+	RATE=$3
+	BIND_CPU1=$4
+	BIND_CPU2=$5
+	BIND_CPU3=$6
+	BIND_CPU4=$7
+
+	# assume cpu0 frequency range applies to all in this test
+	MIN_KHZ=`cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_min_freq`
+	MAX_KHZ=`cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq`
+
+	MIN_MHZ=$((MIN_KHZ/1000))
+	MAX_MHZ=$((MAX_KHZ/1000))
+
+	if [ $# -eq 4 ] ; then
+		run_yogini $TEST_NAME "-w $WORKER,rate$RATE,repeat1,bind-$BIND_CPU1,bind-mhz$MIN_MHZ-$MAX_MHZ"
+	elif [ $# -eq 7 ] ; then
+		run_yogini $TEST_NAME "-w $WORKER,rate$RATE,repeat1,bind-$BIND_CPU1,bind-mhz$MIN_MHZ-$MAX_MHZ  \
+			-w $WORKER,rate$RATE,repeat1,bind-$BIND_CPU2,bind-mhz$MIN_MHZ-$MAX_MHZ \
+			-w $WORKER,rate$RATE,repeat1,bind-$BIND_CPU3,bind-mhz$MIN_MHZ-$MAX_MHZ \
+			-w $WORKER,rate$RATE,repeat1,bind-$BIND_CPU4,bind-mhz$MIN_MHZ-$MAX_MHZ"
+	else
+		echo $# is unexpected numer of params  $0 $1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12
+	fi
+}
+run_ramp_down() {
+
+	TEST_NAME=$1-$2
+	WORKER=$2
+	# single thread starts on SLOWEST CPU and ramps from 115 - 0%
+
+	run_yogini $TEST_NAME "-w $WORKER,rate115-0,duty-cycle90,start-ATOM0"
+}
+
+run_ramp_up() {
+
+	TEST_NAME=$1-$2
+	WORKER=$2
+	# single thread starts on FASTEST CPU and ramps from 0 - 115%
+
+	run_yogini $TEST_NAME "-w $WORKER,rate0-115,duty-cycle90,start-CORE0"
+}
+
+run_ramp_up_bind() {
+
+	TEST_NAME=$1-$2
+	WORKER=$2
+	BIND_CPU=$3
+	# single thread starts on FASTEST CPU and ramps from 0 - 115%
+
+	run_yogini $TEST_NAME "-w $WORKER,rate0-115,duty-cycle90,bind-$BIND_CPU"
+}
+
+run_bow_tie() {
+
+	TEST_NAME=$1-$2
+	WORKER=$2
+	# first thread starts on ATOM0 and ramps from 115% - 0%
+	# 3,000 msec delay
+	# second thread starts on CORE0 and ramps from 0% - 115%
+
+	OPTION_LIST="-w $WORKER,rate0-115,start-msec3000,stop-msec13000,start-CORE0"
+	OPTION_LIST="-w $WORKER,rate115-0,start-msec0,stop-msec10000,start-ATOM0 $OPTION_LIST"
+
+	run_yogini $TEST_NAME "$OPTION_LIST"
+}
+
+run_pyramid100() {
+
+	TEST_NAME=$1-$2
+	WORKER=$2
+
+	# add NUMCPUS 100% constant-rate threads one by one until requesting theoretical max rate
+	# then remove them one by one
+	#
+	# add/remove is done by prescribing start/stop times, once per second
+	#
+	# demonstrates that max rate CPUs are used first
+	# demonstrates that threads migrate to max rate CPUs as it frees up
+
+	OPTION_LIST=
+
+	THREADS=$NUMCPUS
+	STEP_INTERVAL=1000
+	TOTAL_TEST_MS=$((STEP_INTERVAL * THREADS * 2))
+	THREAD_LIFETIME_MS=$((STEP_INTERVAL * THREADS))
+	#THREAD_LIFETIME_MS=$((TOTAL_TEST_MS / 2))
+	for ((INDEX=0; INDEX < THREADS; INDEX++)) ; do
+		START_MS=$((INDEX * STEP_INTERVAL))
+		END_MS=$((START_MS + THREAD_LIFETIME_MS))
+		OPTION="-w $WORKER,start-msec$START_MS,stop-msec$END_MS"
+		OPTION_LIST="$OPTION_LIST $OPTION"
+	done
+
+	run_yogini $TEST_NAME "$OPTION_LIST"
+}
+
+run_pyramid10() {
+
+	TEST_NAME=$1-$2
+	WORKER=$2
+
+	# add START_RATE constant-rate threads one by one until requesting theoretical max rate
+	# then remove them one by one
+	#
+	# add/remove is done by prescribing start/stop times, once per second
+	#
+	# demonstrates that max rate CPUs are used first
+	# demonstrates that threads migrate to max rate CPUs as it frees up
+
+	OPTION_LIST=
+
+	START_RATE=10
+	END_RATE=$START_RATE
+	# enough threads to fill all the CPUS at this rate
+	# n.b. / 4  was added to reduce test time
+	THREADS=$((NUMCPUS * 100 / START_RATE / 4))
+	STEP_INTERVAL=1000
+	TOTAL_TEST_MS=$((STEP_INTERVAL * THREADS * 2))
+	THREAD_LIFETIME_MS=$((STEP_INTERVAL * THREADS))
+	for ((INDEX=0; INDEX < THREADS; INDEX++)) ; do
+		START_MS=$((INDEX * STEP_INTERVAL))
+		END_MS=$((START_MS + THREAD_LIFETIME_MS))
+		OPTION="-w $WORKER,rate$START_RATE-$END_RATE,start-msec$START_MS,stop-msec$END_MS"
+		OPTION_LIST="$OPTION_LIST $OPTION"
+	done
+
+	run_yogini $TEST_NAME "$OPTION_LIST"
+}
+
+run_periodic() {
+
+	TEST_NAME=$1-$2
+	WORKER=$2
+
+	# single wakes at 60Hz and run MEM at 7% of capacity at high priority
+
+	START_RATE=5
+	END_RATE=5
+	WAKE_PERIOD=16.6666
+	OPTION_LIST="-w $WORKER,threads1,rate$START_RATE-$END_RATE,wake-msec$WAKE_PERIOD,priority-20"
+
+	run_yogini $TEST_NAME "$OPTION_LIST"
+}
+energy_tests_at_epp() {
+	EPP=$1
+
+	set_epp_all $EPP
+
+	for WORKLOAD in $ALL_WORKLOADS ; do
+		run_ramp_up_bind ramp-up-CORE-EPP$EPP $WORKLOAD CORE0
+		if [ $IS_HYBRID -eq 1 ] ; then
+			run_ramp_up_bind ramp-up-ATOM-EPP$EPP $WORKLOAD ATOM0
+		fi
+	done
+
+	restore_epp_all
+}
+
+flat_out_tests() {
+
+	EPP=0
+	set_epp_all $EPP
+
+	# run flat out, watch turbo degrade over time
+	for WORKLOAD in $ALL_WORKLOADS ; do
+		run_constant_rate_bind CORE-115-EPP$EPP $WORKLOAD 115 CORE0
+		if [ $IS_HYBRID -eq 1 ] ; then
+			run_constant_rate_bind CORE-115-EPP$EPP $WORKLOAD 115 ATOM0
+		fi
+	done
+
+	restore_epp_all
+}
+
+#
+
+efficiency_vs_mhz_1_cpu() {
+
+	EPP=0
+	set_epp_all $EPP
+
+	for WORKLOAD in $ALL_WORKLOADS ; do
+		run_frequency_sweep CORE-115-EPP$EPP $WORKLOAD 115 CORE0
+		if [ $IS_HYBRID -eq 1 ] ; then
+			run_frequency_sweep ATOM-115-EPP$EPP $WORKLOAD 115 ATOM0
+		fi
+	done
+
+	restore_epp_all
+}
+efficiency_vs_mhz_4_cpu() {
+
+	EPP=0
+	set_epp_all $EPP
+
+	for WORKLOAD in $ALL_WORKLOADS ; do
+		run_frequency_sweep CORE-115-EPP$EPP $WORKLOAD 115 CORE0 CORE1 CORE2 CORE3
+		if [ $IS_HYBRID -eq 1 ] ; then
+			run_frequency_sweep ATOM-115-EPP$EPP $WORKLOAD 115 ATOM0 ATOM1 ATOM2 ATOM3
+		fi
+	done
+
+	restore_epp_all
+}
+
+standard_waveforms () {
+	WORKER=$1
+
+	run_ramp_down ramp-down $WORKER
+	run_ramp_up ramp-up $WORKER
+	run_bow_tie bow-tie $WORKER
+	run_pyramid10 pyramid10 $WORKER
+	run_pyramid100 pyramid100 $WORKER
+	run_periodic periodic $WORKER
+}
+
+generate_summary () {
+
+	for RESULT_FILE in $OUTDIR/*-$DATE.txt ; do
+		FILE=`basename $OUTDIR/$RESULT_FILE .txt`
+		FILE=`basename $FILE -$DATE`
+		echo -n "$FILE	" >> $OUTDIR/summary.txt
+		tail -1 $RESULT_FILE >> $OUTDIR/summary.txt
+        done
+}
+
+tar_up_results() {
+	tar czf $OUTDIR.tar.gz $OUTDIR
+	echo schedyogi done: $PWD/$OUTDIR.tar.gz
+}
+

@@ -1,0 +1,34 @@
+{
+    "name": "EMMC_M_STRESS_EXT3_DD_RW_10G",
+    "initial_platform": "",
+    "cmdline": "blk_device_dd_readwrite_test.sh -f 'ext3' -b '1M' -c '1024' -d 'emmc' -l '10' -w",
+    "steps": [],
+    "flags": [],
+    "summary": "Find, format in 'ext3' and mount device node. Write a file of 10G size 10 times",
+    "status": "Closed",
+    "priority": "P4",
+    "scenario": "emmc_ext3_stress_tests",
+    "domain": "IO",
+    "feature": "eMMC",
+    "owner": "hongyuni",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free EMMC partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-12-04T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

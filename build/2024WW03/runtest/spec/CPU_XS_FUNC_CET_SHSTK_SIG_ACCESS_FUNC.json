@@ -1,0 +1,50 @@
+{
+    "name": "CPU_XS_FUNC_CET_SHSTK_SIG_ACCESS_FUNC",
+    "initial_platform": "",
+    "cmdline": "sig_stack a",
+    "steps": [],
+    "flags": [],
+    "summary": "Check signal triggered function still could be protected by shstk",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cpu_cet_shstk_tests",
+    "domain": "Security",
+    "feature": "CET_USER",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_SHADOW_STACK_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For shadow stack enabling"
+        },
+        {
+            "name": "CONFIG_X86_BRANCH_TRACKING_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For IBT enabling"
+        },
+        {
+            "name": "CONFIG_X86_CET",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CET"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2018-12-08T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

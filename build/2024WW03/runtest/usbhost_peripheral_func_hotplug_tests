@@ -1,0 +1,15 @@
+# @name USBHOST_PERIPHERAL_FUNC_TESTS
+# @desc usbhost different peripheral tests
+# @requires usbhost && powermgr
+# @setup_requires
+# @utility_requires avrdude
+
+# USBHOST DIFFERENT PERIPHERAL TEST
+USBHOST_XS_FUNC_PRINTER_HOTPLUG usb_peripheral_tests.sh -m printer -e hotplug -d 1 -p "03f0:df11" -n "DeskJet-1110-series"
+USBHOST_XS_FUNC_SCANNER_HOTPLUG usb_peripheral_tests.sh -m scanner -e hotplug -d 2 -p "04a9:190e" -n "Canon"
+USBHOST_XS_FUNC_HEADSET_HOTPLUG usb_peripheral_tests.sh -m headset -e hotplug -d 3 -p "046d:0a38" -n "Headset"
+USBHOST_XS_FUNC_LOW_KEYBOARD_HOTPLUG usb_peripheral_tests.sh -m lkeyboard -e hotplug -d 1
+USBHOST_XS_FUNC_HIGH_KEYBOARD_HOTPLUG usb_peripheral_tests.sh -m hkeyboard -e hotplug -d 2
+USBHOST_XS_FUNC_MOUSE_HOTPLUG usb_peripheral_tests.sh -m mouse -e hotplug -d 3
+USBHOST_XS_FUNC_CAMERA_HOTPLUG usb_peripheral_tests.sh -m camera -e hotplug -d 1
+USBHOST_XS_FUNC_ETHERNET_HOTPLUG usb_peripheral_tests.sh -m ethernet -e hotplug -d 2

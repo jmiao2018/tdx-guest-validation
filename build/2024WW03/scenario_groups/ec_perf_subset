@@ -1,0 +1,2 @@
+# This file contains all performance tests for EC driver
+ddt_intel/ec_perf_tests

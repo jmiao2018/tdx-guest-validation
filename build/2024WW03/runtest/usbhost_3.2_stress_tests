@@ -1,0 +1,12 @@
+# @name USBHOST 3.2 STRESS TESTS
+# @desc usbhost 3.2 stress tests
+# @requires usbhost && powermgr && usb3.2
+# @setup_requires
+
+# USBHOST STRESS TESTS FOR USB 3.2
+USBHOST_XS_STRESS_3.2_FLASH_MULTI_RW usb_multi_rw_tests.sh -p 3.2 -t flash -b '10M' -c '100'  -m 1000 -n 1000
+USBHOST_XS_STRESS_3.2_UAS_MULTI_RW usb_multi_rw_tests.sh -p 3.2 -t uas -b '10M' -c '100'  -m 1000 -n 1000
+USBHOST_XS_STRESS_3.2_FLASH_BIG_RW usb_read_write_tests.sh  -c 1 -p 3.2 -t flash -g bigdata -s 1000
+USBHOST_XS_STRESS_3.2_UAS_BIG_RW usb_read_write_tests.sh  -c 1 -p 3.2 -t uas -g bigdata -s 1000
+USBHOST_XS_STRESS_3.2_FLASH_S3_RW usb_suspend_resume_tests.sh -p 3.2 -t flash -s mem -m 1000
+USBHOST_XS_STRESS_3.2_UAS_S3_RW usb_suspend_resume_tests.sh -p 3.2 -t uas -s mem -m 1000

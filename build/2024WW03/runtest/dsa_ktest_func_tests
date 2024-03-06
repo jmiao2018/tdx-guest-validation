@@ -1,0 +1,9 @@
+# @name DSA_KTEST_FUNC_TESTS
+# @desc DSA kernel level functional tests
+# @requires dsa
+# @utility_requires
+
+DSA_XS_FUNC_KTEST_2C_4T_1000 idxd_ktest.sh -c 2 -t 4 -i 1000
+DSA_XS_FUNC_KTEST_4C_2T_1000 idxd_ktest.sh -c 4 -t 2 -i 1000
+DSA_XS_FUNC_KTEST_8C_1T_1000 idxd_ktest.sh -c 8 -t 1 -i 1000
+DSA_XS_FUNC_KTEST_32C_2T_1000 idxd_ktest.sh -c 32 -t 2 -i 1000

@@ -1,0 +1,15 @@
+# @name pci_func_tests
+# @desc Check pci driver basic function and feature
+# @requires pci
+# @utility_requires lspci
+# @setup_requires
+
+# Block 2 cases because it's not reasonable to handle all devices if no device connected
+#PCI_XS_FUNC_BIND_UNBIND pci_basic_tests.sh -c 5
+#PCI_XS_FUNC_REMOVE_RESCAN pci_basic_tests.sh -c 6
+
+PCIe_FUNC_ETH_PING_TG iface=`pci_eth_search_device.sh` || die "error getting pcie eth interface name";  pci_run_eth_test.sh -i "$iface" -o 1
+
+PCIe_FUNC_ETH_PING_TG_PKG_SIZE iface=`pci_eth_search_device.sh` || die "error getting pcie eth interface name";  pci_run_eth_test.sh -i "$iface" -o 2
+
+PCIe_FUNC_ETH_PING_TG_MLT_PKG_SIZE iface=`pci_eth_search_device.sh` || die "error getting pcie eth interface name";  pci_run_eth_test.sh -i "$iface" -o 3

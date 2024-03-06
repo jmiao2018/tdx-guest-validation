@@ -1,0 +1,15 @@
+# @name USBHOST_SUSPENDRESUME_HUBS_FUNC_TESTS
+# @desc usbhost suspend to resume tests
+# @requires usbhost && powermgr
+# @setup_requires
+
+# USBHOST SUSPEND RESUME TESTS FOR USB multihub
+USBHOST_XS_FUNC_SR_2.0_FLASH_FREE_MHUB usb_suspend_resume_tests.sh -p 2.0 -t flash -s freeze -h 2
+USBHOST_XS_FUNC_SR_2.0_FLASH_MEM_MHUB usb_suspend_resume_tests.sh -p 2.0 -t flash -s mem -h 2
+USBHOST_XS_FUNC_SR_2.0_FLASH_DISK_MHUB usb_suspend_resume_tests.sh -p 2.0 -t flash -s disk -h 2
+USBHOST_XS_FUNC_SR_3.0_FLASH_FREE_MHUB usb_suspend_resume_tests.sh -p 3.0 -t flash -s freeze -h 2
+USBHOST_XS_FUNC_SR_3.0_FLASH_MEM_MHUB usb_suspend_resume_tests.sh -p 3.0 -t flash -s mem -h 2
+USBHOST_XS_FUNC_SR_3.0_FLASH_DISK_MHUB usb_suspend_resume_tests.sh -p 3.0 -t flash -s disk -h 2
+USBHOST_XS_FUNC_SR_3.0_UAS_FREE_MHUB usb_suspend_resume_tests.sh -p 3.0 -t uas -s freeze -h 2
+USBHOST_XS_FUNC_SR_3.0_UAS_MEM_MHUB usb_suspend_resume_tests.sh -p 3.0 -t uas -s mem -h 2
+USBHOST_XS_FUNC_SR_3.0_UAS_DISK_MHUB usb_suspend_resume_tests.sh -p 3.0 -t uas -s disk -h 2

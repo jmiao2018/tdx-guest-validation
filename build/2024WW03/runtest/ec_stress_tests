@@ -1,0 +1,14 @@
+# @name ec_stress_tests
+# @desc ec_stress_tests perform stress tests for EC driver
+# @requires ec
+# @setup_requires
+
+# EC Stress Tests
+
+EC_S_STRESS_CAPS_LOCK_LED_50_TIMES ec_led_indicator.sh -i "input4" -c -l "50"
+
+EC_S_STRESS_NUMS_LOCK_LED_50_TIMES ec_led_indicator.sh -i "input4" -n -l "50"
+
+EC_S_STRESS_SCROLL_LOCK_LED_50_TIMES ec_led_indicator.sh -i "input4" -s -l "50"
+
+EC_M_STRESS_SUSPEND_RESUME_EVENT_50_TIMES ec_suspend_resume_event.sh -s -l "50"

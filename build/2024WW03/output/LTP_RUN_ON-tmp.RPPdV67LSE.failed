@@ -1,0 +1,7 @@
+TDX_XS_FUNC_GUEST_ATTEST_GET_TDREPORT_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 1 -d on -t tdx -f tdx -x TD_ATTEST_VERIFY_REPORT -c "accept_memory=lazy" -p off
+TDX_XS_FUNC_GUEST_ATTEST_VERIFY_TDREPORT_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 1 -d on -t tdx -f tdx -x TD_ATTEST_VERITY_REPORTMAC -c "accept_memory=lazy" -p off
+TDX_XS_FUNC_GUEST_ATTEST_GET_TDQUOTE_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 1 -d on -t tdx -f tdx -x TD_ATTEST_VERIFY_QUOTE -c "accept_memory=lazy" -p off
+TDX_XS_FUNC_GUEST_ATTEST_EXTEND_RTMR_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 1 -d on -t tdx -f tdx -x TD_ATTEST_VERIFY_RTMR_EXTEND -c "accept_memory=lazy" -p off
+TDX_XS_FUNC_GUEST_TSM_ATTEST_QUOTE_PRECHK_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 1 -d on -t tdx -f tdx -x TD_TSM_ATTEST_QUOTE_PRECHECK -c "accept_memory=lazy" -p off
+TDX_XS_FUNC_GUEST_TSM_ATTEST_QUOTE_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 1 -d on -t tdx -f tdx -x TD_TSM_ATTEST_QUOTE -c "accept_memory=lazy" -p off
+TDX_XS_FUNC_GUEST_TSM_ATTEST_QUOTE_NEG_NEW cd ddt_intel/lkvs/guest-test && ./guest.test_launcher.sh -v 1 -s 1 -m 1 -d on -t tdx -f tdx -x TD_TSM_ATTEST_QUOTE_NEG -c "accept_memory=lazy" -p off

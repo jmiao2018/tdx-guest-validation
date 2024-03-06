@@ -1,0 +1,9 @@
+# @name TBT_DUAL_CONTROLLER_TESTS
+# @desc Thunderbolt dual controller tests
+# @requires tbt
+# @setup_requires
+
+TBT_XS_FUNC_DUAL_DOMAIN tbt_verify_sysfs_mod.sh -t dual_domain
+TBT_XS_FUNC_DUAL_RP tbt_verify_sysfs_mod.sh -t dual_rp
+TBT_XS_FUNC_DUAL_PCI tbt_verify_sysfs_mod.sh -t dual_pci
+TBT_XS_FUNC_DUAL_SECURE tbt_verify_sysfs_mod.sh -t dual_secure

@@ -1,0 +1,25 @@
+usbboot Test Cases
+
+This file contains instructions how to set up the environment
+and how to run usbboot Test Cases.
+
+
+SET UP ENVIRONMENT
+========================================================================================================
+
+ 1. Independently on what platform will be used, it needs to have an usb3.1 interface.
+
+ 2. usbboot Test Cases execute test for usbboot, usb read/write. So need to get:
+     - Prepare a usb storage with latest Ubuntu & kernel to boot from.
+     - config BIOS setup to allow machine can enter the system in usb storage default.
+
+ 3. Insert the usb storage into usb3.1 interface before starting.
+
+RUN TESTCASES
+========================================================================================================
+
+ 1. Run "dmesg |grep -Ei 'fail|error'|wc -l > /dmesg_count"
+      * save the fail or error number in dmesg
+
+ 2. Run "./runtests.sh -p $platform -P $para_file -f ddt_intel/usbhost_stress_bootup -c -o $dir"
+      * test server will reboot many times (default 300 times)

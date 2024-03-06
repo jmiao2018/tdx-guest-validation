@@ -1,0 +1,100 @@
+{
+    "name": "TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC_IOMMU_OFF",
+    "initial_platform": "",
+    "cmdline": "intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -i disable",
+    "steps": [],
+    "flags": [],
+    "summary": "Check with PCH trace hub target mode, output as msc0, trace input as 0-sth with basic profile when iommu as off",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "th_target_mode_iommu_off_func_tests",
+    "domain": "CPU",
+    "feature": "Intel_TH",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [
+        "intel_iommu=off"
+    ],
+    "kconfigs": [
+        {
+            "name": "CONFIG_STM",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_STM_PROTO_BASIC",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_STM_DUMMY",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_STM_SOURCE_CONSOLE",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_PCI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_GTH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_STH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_MSU",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "PCH trace hub",
+            "path": "",
+            "description": "PCH trace hub as target mode: https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2019-04-27T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

@@ -1,0 +1,8 @@
+# @name CXL3.0_DCD_FUNC_TESTS
+# @desc Check CXL3.0 DCD(Dynamic Capacity Device) feature functional test
+# @requires cxl3.0
+# @setup_requires
+
+CXL3_XS_FUNC_DCD_DMESG_CHECK cxl_tests.sh -s dcd_dmesg
+CXL3_XS_FUNC_DCD_REGION_ALLOCATION cxl_tests.sh -s dcd_region
+CXL3_XS_FUNC_CREATE_DCD_REGION cxl_tests.sh -s create_dcd_region

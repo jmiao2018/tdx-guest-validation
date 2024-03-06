@@ -1,0 +1,8 @@
+# @name TPM_BAT_TESTS
+# @desc Check tpm basic kconfig
+# @requires tpm
+# @setup_requires
+
+TPM_XS_BAT_CONFIG_TCG_TPM tpm_bat.sh -k "CONFIG_TCG_TPM=y"
+TPM_XS_BAT_CONFIG_RANDOM_TPM tpm_bat.sh -k "CONFIG_HW_RANDOM_TPM=y"
+TPM_XS_BAT_CONFIG_TCG_CRB tpm_bat.sh -k "CONFIG_TCG_CRB=y"

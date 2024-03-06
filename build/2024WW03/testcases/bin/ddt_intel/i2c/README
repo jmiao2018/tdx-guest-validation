@@ -1,0 +1,35 @@
+I2C Test
+--------
+Targeted HW platforms:
+ Broalwell-U
+ Baytrail-T
+
+Purpose:
+ Basicly check I2C controller's driver and acpi enum. If there are I2C slave devices
+ tests will validate I2C transfer by reading/writing slave devices.
+
+Driver source:
+ ${Linux-kernel-tree}/drivers/i2c/busses/i2c-designware-platdrv.c (acpi enumeration)
+
+Required Linux kernel config options:
+ CONFIG_I2C_DESIGNWARE_PLATFORM (ACPI enumeration)
+ CONFIG_I2C_CHARDEV (i2c-dev test driver)
+
+/!\ Use "make menuconfig" command to update Linux kernel config file and enable some potentially dependent options /!\
+
+NOTE:
+ We use i2ctools to test i2c. Please make sure CONFIG_I2C_CHARDEV has been enabled.
+ Before you launch the tests, please make sure i2c-dev module has been loaded. This
+ module will create /sys/class/i2c-dev sysfs which is used for i2ctools.
+
+Hardware dependencies:
+ N/A
+
+--------Please attention---------
+We have no i2c slave devices connected to I2C controller. However, i915 driver has
+used i2c algorithm driver to manager Display Monitor Connectors. We can test i2c
+transfer function by reading/writing Display Monitor Connectors.
+
+-If you want to test this, a Display Monitor have to be connected to you device
+-If not, a BLOCK will be returned, and it is expected because I2C device has not
+been registered if a Display Monitor has not been detected.

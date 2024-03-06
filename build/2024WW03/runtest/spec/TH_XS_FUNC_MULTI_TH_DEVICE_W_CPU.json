@@ -1,0 +1,98 @@
+{
+    "name": "TH_XS_FUNC_MULTI_TH_DEVICE_W_CPU",
+    "initial_platform": "",
+    "cmdline": "intel_th_tests.sh -t mth_cpu",
+    "steps": [],
+    "flags": [],
+    "summary": "Check if enable CPU trace, it will generat more =, such as 1-gth?",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "th_target_mode_w_cpu_func_tests",
+    "domain": "CPU",
+    "feature": "Intel_TH",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_STM",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_STM_PROTO_BASIC",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_STM_DUMMY",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_STM_SOURCE_CONSOLE",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_PCI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_GTH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_STH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_MSU",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "CPU/PCH trace hub",
+            "path": "",
+            "description": "Both CPU and PCH trace hub as target mode:https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2018-11-12T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .sidebar {
+            height: 100%;
+            width: 30vw;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: small;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            background-color: lightblue;
+            overflow-y: auto;
+        }
+
+        .content {
+            height: 100%;
+            width: 70vw;
+            position: absolute;
+            margin-left: 30vw;
+            padding: 10px 10px 10px 10px;
+            font-size: 15px;
+            overflow-y: auto;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Executions</title>
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar"></div>
+    <div id="content" class="content"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        fetchExecutions = () => {
+            let sb = document.getElementById("sidebar");
+            sb.innerHTML = "";
+
+            let ul = document.createElement("UL");
+            sb.appendChild(ul);
+
+            const url = encodeURI(`${document.URL}executions`);
+
+            fetch(url).then(response => {
+                if (response.status !== 200) {
+                    response.text().then(err => console.log(err));
+                    return;
+                }
+
+                response.json().then(data => {
+                    Object.keys(data).forEach(domainName => {
+                        let features = data[domainName];
+
+                        Object.keys(features).forEach(featureName => {
+                            let executions = features[featureName];
+
+                            Object.keys(executions).forEach((name, index) => {
+                                let li = document.createElement("li");
+                                li.key = name;
+                                li.value = index;
+                                li.innerHTML = name;
+
+                                if (executions[name].Code === 0) {
+                                    li.style.color = "#75B000";
+                                } else if (executions[name].Code === 2) {
+                                    li.style.color = "#6693B0";
+                                } else {
+                                    li.style.color = "#CC3300";
+                                }
+
+                                li.addEventListener("mouseenter", evt => {
+                                    evt.target.style.cursor = "pointer";
+                                    evt.target.style.textDecoration = "underline";
+                                });
+
+                                li.addEventListener("mouseleave", evt => {
+                                    evt.target.style.textDecoration = "";
+
+                                    if (executions[name].Code === 0) {
+                                        evt.target.style.color = "#75B000";
+                                    } else if (executions[name].Code === 2) {
+                                        evt.target.style.color = "#6693B0";
+                                    } else {
+                                        evt.target.style.color = "#CC3300";
+                                    }
+                                });
+
+                                li.addEventListener("click", evt => fetchExecution(evt.target.key));
+                                ul.appendChild(li);
+                            })
+                        });
+
+                    });
+                })
+            });
+        };
+
+        fetchExecution = (name) => {
+            const url = encodeURI(`${document.URL}execution/${name}`);
+            const content = document.getElementById("content");
+
+            // clear the content
+            content.innerHTML = "";
+
+            fetch(url).then(response => {
+                if (response.status !== 200) {
+                    response.text().then(err => console.error(err));
+                    return;
+                }
+
+                response.json().then(data => {
+                    const logBanner = document.createElement("H2");
+                    const dmesgBanner = document.createElement("H2");
+
+                    logBanner.innerText = "Logs";
+                    dmesgBanner.innerText = "Dmesg";
+
+                    content.appendChild(logBanner);
+
+                    data.Logs.forEach(line => {
+                        content.appendChild(document.createTextNode(line));
+                        content.appendChild(document.createElement("br"));
+                    });
+
+                    content.appendChild(dmesgBanner);
+
+                    data.Dmesg.forEach(line => {
+                        content.appendChild(document.createTextNode(line));
+                        content.appendChild(document.createElement("br"));
+                    });
+
+                })
+            })
+        }
+
+        fetchExecutions();
+    </script>
+</body>
+
+</html>

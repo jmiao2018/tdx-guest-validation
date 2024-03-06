@@ -1,0 +1,38 @@
+#!/bin/bash -Ex
+
+# Event group
+
+# perf stat -e {dsa0/event0/,dsa0/event1}
+
+# The expectation is no crashes / warnings in the kernel and that
+# group works well. For a group, the group member must be from the
+# same PMU for the current perf. The number of member events must be
+# less than the number of available counters.  Otherwise, perf tool
+# should print warning or print <not counted> or <not supported>.
+ 
+# For perf stat -e {dsa0/event0/,dsa2/event1} which members are from
+# different PMU, you should expect the warning/<not counted> message
+# from perf tool.
+
+# note group event has to be on same PMU/device
+#
+# Setup:
+#   assumes setup_dsa_dmatest_disabled has been run
+
+perf stat -o $1 -e "{dsa0/event=0x8,event_category=0x3/,dsa0/event=0x10,event_category=0x0/}" dsa_test -w 1 -l 1024 -o0x3 -t200
+
+# Expected output (similar to):
+
+# sys_perf_event_open: pid -1  cpu 0  group_fd 3  flags 0 = 4
+# dsa0/event=0x8,event_category=0x3/: 0: 19 14991072012 14991072012
+# dsa0/event=0x10,event_category=0x0/: 0: 19 14991072012 14991072012
+# dsa0/event=0x8,event_category=0x3/: 19 14991072012 14991072012
+# dsa0/event=0x10,event_category=0x0/: 19 14991072012 14991072012
+
+# Performance counter stats for 'system wide':
+
+#                19      dsa0/event=0x8,event_category=0x3/                      
+#                19      dsa0/event=0x10,event_category=0x0/                     
+
+#      14.991202382 seconds time elapsed
+

@@ -1,0 +1,11 @@
+# @name TPMI PEM BAT TESTS
+# @desc Intel TPMI PEM Basic Acceptance Tests
+# @requires powermgr/pem
+# @setup_requires
+
+#TPMI_PEM BAT Tests
+PEM_XS_BAT_DRIVER_LOAD_UNLOAD tpmi_pem.sh -t load_unload_pem
+PEM_XS_BAT_DRIVER_UNBIND_BIND tpmi_pem.sh -t check_pem_unbind_bind
+PEM_XS_BAT_DEVICE_INSTANCE_CHECK tpmi_pem.sh -t pem_instance_check
+PEM_XS_BAT_SYSFS_ATTIBUTE_CHECK tpmi_pem.sh -t pem_sysfs_attr
+PEM_XS_BAT_SYSFS_CPUMASK_CHECK tpmi_pem.sh -t pem_cpumask_check

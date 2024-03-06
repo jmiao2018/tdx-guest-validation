@@ -1,0 +1,30 @@
+{
+    "name": "DSA_XS_FUNC_USER_CFLUSH_1D2G2Q",
+    "initial_platform": "Granite Rapids",
+    "cmdline": "dsa_user_test.sh -c 1d2g2q_user -o 0x20",
+    "steps": [],
+    "flags": [],
+    "summary": "Dsa cflush test with dsa0",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "dsa_user_func_tests",
+    "domain": "CPU",
+    "feature": "DSA",
+    "owner": "xinzhanz",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [
+        "intel_iommu=on,sm_on"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2022-12-06T10:24:34.000-0800",
+    "link": "",
+    "tips": ""
+}

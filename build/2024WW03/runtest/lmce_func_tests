@@ -1,0 +1,25 @@
+# @name LMCE_TEST
+# @desc LMCE_TEST do local MCE test
+# @requires ras
+# @setup_requires
+
+LMCE_S_FUNC_SADDR_SCORE_II ras_test.sh -t 31 -m 1
+LMCE_S_FUNC_SADDR_SSOCK_II ras_test.sh -t 31 -m 2
+LMCE_S_FUNC_SADDR_DSOCK_II ras_test.sh -t 31 -m 3
+LMCE_S_FUNC_DADDR_SCORE_II ras_test.sh -t 31 -m 4
+LMCE_S_FUNC_DADDR_SSOCK_II ras_test.sh -t 31 -m 5
+LMCE_S_FUNC_DADDR_DSOCK_II ras_test.sh -t 31 -m 6
+LMCE_S_FUNC_SADDR_SCORE_ID ras_test.sh -t 31 -m 7
+LMCE_S_FUNC_SADDR_SSOCK_ID ras_test.sh -t 31 -m 8
+LMCE_S_FUNC_SADDR_DSOCK_ID ras_test.sh -t 31 -m 9
+LMCE_S_FUNC_DADDR_SCORE_ID ras_test.sh -t 31 -m 10
+LMCE_S_FUNC_DADDR_SSOCK_ID ras_test.sh -t 31 -m 11
+LMCE_S_FUNC_DADDR_DSOCK_ID ras_test.sh -t 31 -m 12
+LMCE_S_FUNC_SADDR_SCORE_DD ras_test.sh -t 31 -m 13
+LMCE_S_FUNC_SADDR_SSOCK_DD ras_test.sh -t 31 -m 14
+LMCE_S_FUNC_SADDR_DSOCK_DD ras_test.sh -t 31 -m 15
+LMCE_S_FUNC_DADDR_SCORE_DD ras_test.sh -t 31 -m 16
+LMCE_S_FUNC_DADDR_SSOCK_DD ras_test.sh -t 31 -m 17
+LMCE_S_FUNC_DADDR_DSOCK_DD ras_test.sh -t 31 -m 18
+
+

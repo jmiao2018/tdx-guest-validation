@@ -1,0 +1,2 @@
+# This file contains all functional tests for EC driver
+ddt_intel/ec_func_tests

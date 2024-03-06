@@ -1,0 +1,16 @@
+xhci.*USB Transaction Error
+xhci.*No Slots Available Error
+xhci.*Split Transaction Error
+xhci.*Isoch Buffer Overrun
+xhci.*Babble Detected
+xhci.*Stall Error
+xhci.*Bandwidth Error
+xhci.*Ring Underrun
+xhci.*Ring Overrun
+xhci.*Bandwidth Overrun Error
+xhci.*Context State Error
+xhci.*No Ping Response Error
+xhci.*Missed Service Error
+xhci.*Secondary Bandwidth Error
+xhci.*Command Ring Stopped
+xhci.*Command Aborted

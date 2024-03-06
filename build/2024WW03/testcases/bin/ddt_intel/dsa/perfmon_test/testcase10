@@ -1,0 +1,27 @@
+#!/bin/bash -Ex
+
+# unload and load the DSA driver, and check if the DSA perf driver
+# still works.
+
+# set up and run this testcase once, then unload and load idxd driver:
+#
+# rmmod idxd; modprobe idxd
+#
+# then set up and run this testcase again, should get same results
+#
+# Setup:
+#   assumes setup_dsa_dmatest_disabled has been run
+
+perf stat -o $1 -e dsa0/event=0x8,event_category=0x3/ dsa_test -w 1 -l 1024 -o0x3 -t200
+
+# Expected output (similar to):
+
+# Performance counter stats for 'system wide':
+
+#                19      dsa0/event=0x8,event_category=0x3/                      
+
+#      19.172321001 seconds time elapsed
+
+
+
+

@@ -1,0 +1,19 @@
+# @name IFS_LEGACY_FUNC_TESTS
+# @desc In Field Scan with legacy tests for SPR
+# @requires ifs
+# @setup_requires
+
+IFS_S_LEGACY_LOAD_MODULE_TEST ifs_tests.sh -m 0 -p all -n load_ifs
+IFS_S_LEGACY_LOAD_BATCH_TEST ifs_tests.sh -m 0 -p all -b 1 -n ifs_batch
+IFS_S_LEGACY_TWICE_QUICK_TEST       ifs_tests.sh -m 0 -p all -b 1 -n legacy_twice_run
+IFS_S_LEGACY_BATCH2_TWICE_SCAN_TEST ifs_tests.sh -m 0 -p all -b 2 -n legacy_twice_run
+IFS_S_LEGACY_BATCH3_TWICE_SCAN_TEST ifs_tests.sh -m 0 -p all -b 3 -n legacy_twice_run
+IFS_S_LEGACY_IMG_VERSION_CHECK ifs_tests.sh -m 0 -p all -b 1 -n img_version
+IFS_S_LEGACY_BATCH1_CPU_OFFLINE  ifs_tests.sh -m 0 -p all -b 1 -n ifs_offline
+IFS_S_LEGACY_BATCH2_CPU_OFFLINE  ifs_tests.sh -m 0 -p all -b 2 -n ifs_offline
+IFS_S_LEGACY_BATCH3_CPU_OFFLINE  ifs_tests.sh -m 0 -p all -b 3 -n ifs_offline
+IFS_S_LEGACY_RELOAD_MODULE  ifs_tests.sh -m 0 -p all -b 1 -n reload_ifs
+IFS_S_LEGACY_LOAD_ERR_ZERO_BATCH  ifs_tests.sh -m 0 -p all -b 1 -n load_err_zero_batch
+IFS_S_LEGACY_LOAD_ERR_RANDOM_BATCH  ifs_tests.sh -m 0 -p all -b 1 -n load_err_random_batch
+IFS_S_IFS0_CPU_SCAN_LOOP_TEST ifs_tests.sh -m 0 -p ran -b 1 -n ifs_loop -t 500
+IFS_S_IFS0_CPU_SCAN_AMX_LOOP_TEST ifs_tests.sh -a tmul -m 0 -p ran -b 1 -n ifs_app_loop -t 500

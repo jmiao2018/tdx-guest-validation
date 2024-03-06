@@ -1,0 +1,9 @@
+# @name RDT_RESCTRL_TESTS
+# @desc RDT_RESCTRL_TESTS perform RESCTRL TCs for RDT driver
+# @requires cpu/rdt_resctrl
+# @setup_requires
+
+RDT_XS_FUNC_RESCTRL_MBM cpu_rdt_resctrl_tests.sh -t mbm
+RDT_XS_FUNC_RESCTRL_MBA cpu_rdt_resctrl_tests.sh -t mba
+RDT_XS_FUNC_RESCTRL_CAT cpu_rdt_resctrl_tests.sh -t cat
+RDT_XS_FUNC_RESCTRL_CMT cpu_rdt_resctrl_tests.sh -t cmt

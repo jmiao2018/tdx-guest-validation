@@ -1,0 +1,18 @@
+# @name CPU_TMUL_BAT_TESTS
+# @desc Check SPR TMUL related feature kernel test
+# @requires cpu/tmul
+
+CPU_XS_BAT_TMUL_TILE_CPU_ID_TEST cpu_bat.sh -n tmul -p "7 0 0 0 d 24"
+CPU_XS_BAT_TMUL_INT8_CPU_ID_TEST cpu_bat.sh -n tmul -p "7 0 0 0 d 25"
+CPU_XS_BAT_TMUL_BF16_CPU_ID_TEST cpu_bat.sh -n tmul -p "7 0 0 0 d 22"
+CPU_XS_BAT_TMUL_XFD_CPU_ID_TEST cpu_bat.sh -n tmul -p "d 0 1 0 a 4"
+CPU_XS_BAT_TMUL_FP16_CPU_ID_TEST cpu_bat.sh -n tmul -p "7 0 1 0 a 21"
+CPU_XS_BAT_TMUL_TILE_CPU_INFO_TEST cpu_bat.sh -n tmul -f amx_tile
+CPU_XS_BAT_TMUL_INT8_CPU_INFO_TEST cpu_bat.sh -n tmul -f amx_int8
+CPU_XS_BAT_TMUL_BF16_CPU_INFO_TEST cpu_bat.sh -n tmul -f amx_bf16
+CPU_XS_BAT_TMUL_FP16_CPU_INFO_TEST cpu_bat.sh -n tmul -f amx_fp16
+CPU_XS_BAT_TMUL_CPUID_1D_0 tmul_cpuid.sh -t 1D_0
+CPU_XS_BAT_TMUL_CPUID_1D_1 tmul_cpuid.sh -t 1D_1
+CPU_XS_BAT_TMUL_CPUID_1E_0 tmul_cpuid.sh -t 1E_0
+CPU_XS_BAT_TMUL_CPUID_D_17 tmul_cpuid.sh -t D_17
+CPU_XS_BAT_TMUL_CPUID_D_18 tmul_cpuid.sh -t D_18

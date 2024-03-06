@@ -1,0 +1,4 @@
+#This file contains all the tests for LCK RTC driver
+ddt_intel/rtc_bat_tests
+ddt_intel/rtc_func_tests
+ddt_intel/rtc_stress_tests

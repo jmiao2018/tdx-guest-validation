@@ -1,0 +1,36 @@
+{
+    "name": "CPU_XS_FUNC_UMIP_OPNDS_64_STR",
+    "initial_platform": "",
+    "cmdline": "umip_func.sh -n umip_test_opnds_64 -p t",
+    "steps": [],
+    "flags": [],
+    "summary": "64bit STR operand test, INIT_SS INIT_VAL(13131313), reg mem check? rax - r15",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cpu_umip_func_tests",
+    "domain": "Security",
+    "feature": "UMIP",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_UMIP",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for UMIP"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2017-10-28T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

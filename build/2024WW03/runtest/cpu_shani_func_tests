@@ -1,0 +1,8 @@
+# @name CPU_SHANI_FUNC_TESTS
+# @desc check SHANI FUNC tests
+# @requires cpu/shani
+# @setup_requires
+
+SHA_XS_FUNC_SHA1_NI_TEST sha_ni_test.sh -t sha_ni -n sha1 -a test
+
+SHA_XS_FUNC_SHA256_NI_TEST sha_ni_test.sh -t sha_ni -n sha256 -a test

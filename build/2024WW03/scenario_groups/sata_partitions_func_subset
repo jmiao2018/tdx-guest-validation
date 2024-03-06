@@ -1,0 +1,2 @@
+# This file contains functional Tests to create/delete partitions.
+ddt_intel/sata_partitions_func_tests

@@ -1,0 +1,10 @@
+# @name UTIMER_BAT_TESTS
+# @desc user timer BAT test cases for related cpuflag and cpuid check
+# @requires utimer
+
+UTIMER_XS_BAT_UINTR_CPUINFO cpu_bat.sh -n utimer -f uintr
+UTIMER_XS_BAT_UTIMER_CPUINFO cpu_bat.sh -n utimer -f utimer
+UTIMER_XS_BAT_UINTR_CPUID  cpu_bat.sh -n utimer -p "7 0 0 0 d 5"
+UTIMER_XS_BAT_UTIMER_CPUID cpu_bat.sh -n utimer -p "7 0 1 0 d 13"
+ 
+

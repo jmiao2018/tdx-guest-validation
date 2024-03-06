@@ -1,0 +1,7 @@
+# @name HYBRID_CPU_IDLE_INJECTION_FUNC_TESTS
+# @desc HYBRID_CPU_IDLE_INJECTION_FUNC_TESTS perform founctional tests for idle injection
+# @requires idle_injection
+# @setup_requires
+
+HYBRID_CPU_XS_FUNC_IDLE_INJECTION_W_HFI_IDLE idle_injection_tests.sh -t hfi_idle -d 30
+HYBRID_CPU_XS_FUNC_IDLE_INJECTION_W_CUR_STATE idle_injection_tests.sh -t hfi_idle -d 30

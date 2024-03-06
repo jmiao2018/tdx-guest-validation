@@ -1,0 +1,11 @@
+# @name CPU_SL_ON_FUNC_TESTS
+# @desc CPU SL function tests
+# @requires cpu/sl
+# @setup_requires
+# @package_requires msr-tools
+
+CPU_XS_FUNC_SL_CPUID_TEST    cpu_bat.sh -n sl -p "7 1 0 1 d 30"
+CPU_XS_FUNC_SL_ON_DEFAULT    cpu_bat.sh -n sl -f split_lock_detect
+CPU_XS_FUNC_SL_TESTCTL_WRITABLE sl_func.sh -t split_lock_ctrl -p "split_lock_detect=on"
+CPU_XS_FUNC_SL_ON_USER_MODE  sl_func.sh -t user -p "split_lock_detect=on"
+CPU_XS_FUNC_SL_ON_ROOT_MODE  sl_func.sh -t root -p "split_lock_detect=on"

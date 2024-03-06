@@ -1,0 +1,4 @@
+ddt_intel/pt_bat_tests
+ddt_intel/pt_func_tests
+ddt_intel/pt_func_perf_unit_tests
+ddt_intel/pt_func_perf_tests

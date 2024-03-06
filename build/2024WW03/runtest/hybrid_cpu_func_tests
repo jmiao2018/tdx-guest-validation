@@ -1,0 +1,23 @@
+# @name HYBRID_CPU_FUNC_TESTS
+# @desc HYBRID_CPU_FUNC_TESTS perform founctional tests for Hybrid CPU
+# @requires hybrid_cpu
+# @setup_requires
+
+HYBRID_CPU_XS_FUNC_SYSTEM_HEAVY_WORKLOAD_CORE hybrid_cpu_tests.sh -t workload_h_core
+HYBRID_CPU_XS_FUNC_SYSTEM_HEAVY_WORKLOAD_ATOM hybrid_cpu_tests.sh -t workload_h_atom
+HYBRID_CPU_XS_FUNC_SYSTEM_HEAVY_WORKLOAD_RT_APP hybrid_cpu_tests.sh -t workload_h_rt_app
+HYBRID_CPU_XS_FUNC_SYSTEM_LIGHT_WORKLOAD_ATOM hybrid_cpu_tests.sh -t workload_l_atom
+HYBRID_CPU_XS_FUNC_CPU_HOTPLUG_CORE hybrid_cpu_tests.sh -t hotplug_core
+HYBRID_CPU_XS_FUNC_CPU_HOTPLUG_ATOM hybrid_cpu_tests.sh -t hotplug_atom
+HYBRID_CPU_XS_FUNC_SYSTEM_WORKLOAD_SWITCH hybrid_cpu_tests.sh -t workload_switch
+HYBRID_CPU_XS_FUNC_SYSTEM_WORKLOAD_RAMPUP hybrid_cpu_tests.sh -t workload_rampup
+HYBRID_CPU_XS_FUNC_SYSTEM_WORKLOAD_DECREASE hybrid_cpu_tests.sh -t workload_decrease
+HYBRID_CPU_XS_FUNC_SYSTEM_WORKLOAD_FB hybrid_cpu_tests.sh -t workload_fb
+HYBRID_CPU_XS_FUNC_SYSTEM_THREADS_BLOCK hybrid_cpu_tests.sh -t threads_block
+HYBRID_CPU_XS_FUNC_SYSTEM_DISK_IO hybrid_cpu_tests.sh -t disk_io
+HYBRID_CPU_XS_FUNC_AVX2_WORKLAOD hybrid_cpu_tests.sh -t workload_avx2
+HYBRID_CPU_XS_FUNC_VNNI_WORKLAOD hybrid_cpu_tests.sh -t workload_vnni
+HYBRID_CPU_XS_FUNC_VNNI_AVX2_WORKLAOD hybrid_cpu_tests.sh -t workload_vnni_avx2
+HYBRID_CPU_XS_FUNC_VNNI_AVX2_FSPIN hybrid_cpu_tests.sh -t workload_avx2_fspin
+HYBRID_CPU_XS_FUNC_PLUS_CLASSID hybrid_cpu_tests.sh -t classid
+HYBRID_CPU_XS_FUNC_YOGINI hybrid_cpu_tests.sh -t yogini

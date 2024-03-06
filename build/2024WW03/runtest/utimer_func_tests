@@ -1,0 +1,16 @@
+# @name UTIMER_FUNC_TESTS
+# @desc user timer function test cases 
+# @requires utimer
+
+UINTR_XS_FUNC_UTIMER_TEST utimer_test.sh 0
+UINTR_XS_FUNC_SELF_IPI_TEST utimer_test.sh 1
+UINTR_XS_FUNC_SHARE_IPI_FD_TEST utimer_test.sh 2
+UINTR_XS_FUNC_SENDUIPI_TEST utimer_test.sh 3
+UINTR_XS_FUNC_REGISTER_RECEIVER_TEST utimer_test.sh 4
+UINTR_XS_FUNC_REGISTER_SENDER_TEST utimer_test.sh 5
+UINTR_XS_FUNC_IPC_BASE_TEST utimer_test.sh 6
+UINTR_XS_FUNC_BLOCKING_TEST utimer_test.sh 7
+UINTR_XS_FUNC_ALT_STACK_TEST utimer_test.sh 8
+UINTR_XS_FUNC_SYSCALL_INVALID_FLAG_TEST utimer_test.sh 9
+UINTR_XS_FUNC_INVALID_VECTOR_TEST utimer_test.sh 10
+UINTR_XS_STRESS_CONTEXT_SWITCH_TEST utimer_test.sh 11

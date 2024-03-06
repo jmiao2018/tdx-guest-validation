@@ -1,0 +1,21 @@
+# @name CPU_DLSM_FUNC_TESTS
+# @desc Check dlsm(Dynamic Lock Step Mode) functions
+# @requires cpu/dlsm
+# @setup_requires
+
+CPU_XS_FUNC_DLSM_CAP_MSR dlsm_func.sh -s dlsm_msr_cap -p "0x2b3"
+CPU_XS_FUNC_DLSM_SYSFS_LOCKSTEP dlsm_func.sh -s dlsm_sysfs
+CPU_XS_FUNC_DLSM_SYNC_CPU dlsm_func.sh -s dlsm_sync -p 0
+CPU_XS_FUNC_DLSM_MSR_CPU_ROLE dlsm_func.sh -s dlsm_msr_cpu_role -p "0x2b0"
+CPU_XS_FUNC_DLSM_MSR_BREAK_STATUS dlsm_func.sh -s dlsm_msr_break_status -p "0x2b1"
+CPU_XS_FUNC_DLSM_MSR_LOCKSTEP_STATE dlsm_func.sh -s dlsm_msr_lockstep_state -p "0x2b2"
+CPU_XS_FUNC_DLSM_CHECK_SHADOW_LOCKSTEP dlsm_func.sh -s check_shadow_lockstep
+CPU_XS_FUNC_DLSM_ENABLE_ACTIVE_LOCKSTEP dlsm_func.sh -s enable_active_lockstep
+CPU_XS_FUNC_DLSM_OFFLINE_SHADOW_LOCKSTEP dlsm_func.sh -s offline_shadow_lockstep
+CPU_XS_FUNC_DLSM_DISABLE_ACTIVE_LOCKSTEP dlsm_func.sh -s disable_active_lockstep
+CPU_XS_FUNC_DLSM_ONLINE_SHADOW_LOCKSTEP dlsm_func.sh -s online_shadow_lockstep
+CPU_XS_FUNC_DLSM_OFFLINE_ACTIVE_LOCKSTEP dlsm_func.sh -s offline_active_lockstep
+CPU_XS_FUNC_DLSM_ONLINE_ACTIVE_LOCKSTEP dlsm_func.sh -s online_acitve_lockstep
+CPU_XS_FUNC_DLSM_DISABLE_ACTIVE_LOCKSTEP_AGAIN dlsm_func.sh -s disable_active_lockstep_again
+CPU_XS_FUNC_DLSM_OFFLINE_ACTIVE_LOCKSTEP_DISABLED dlsm_func.sh -s offline_active_lockstep_disabled
+CPU_XS_FUNC_DLSM_OFFLINE_SHADOW_LOCKSTEP_DISABLED dlsm_func.sh -s offline_shadow_lockstep_disabled

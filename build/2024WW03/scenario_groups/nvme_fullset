@@ -1,0 +1,16 @@
+#This file contains all the tests for LCK NVME driver
+ddt_intel/nvme_bat_tests
+ddt_intel/nvme_ext2_func_tests
+ddt_intel/nvme_ext2_perf_tests
+ddt_intel/nvme_ext2_stress_tests
+ddt_intel/nvme_ext3_func_tests
+ddt_intel/nvme_ext3_perf_tests
+ddt_intel/nvme_ext3_stress_tests
+ddt_intel/nvme_ext4_func_tests
+ddt_intel/nvme_ext4_perf_tests
+ddt_intel/nvme_ext4_stress_tests
+ddt_intel/nvme_iozone_func_tests
+ddt_intel/nvme_partitions_func_tests
+ddt_intel/nvme_vfat_func_tests
+ddt_intel/nvme_vfat_perf_tests
+ddt_intel/nvme_vfat_stress_tests

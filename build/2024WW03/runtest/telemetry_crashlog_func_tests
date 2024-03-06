@@ -1,0 +1,16 @@
+# @name TELEMETRY_CRASHLOG_FUNC_TESTS
+# @desc telemetry crashlog function tests
+# @requires telemetry_crashlog
+# @setup_requires
+
+# telemetry crashlog test
+TELEMETRY_XS_FUNC_CRASHLOG_DRIVER telemetry_tests.sh -t crashlog_driver
+TELEMETRY_XS_FUNC_CRASHLOG_SYSFS_ENABLE telemetry_tests.sh -t crashlog_sysfs
+TELEMETRY_XS_FUNC_CRASHLOG_SYSFS_TRIGGER_0 telemetry_tests.sh -t crashlog_sysfs_tri_0
+TELEMETRY_XS_FUNC_CRASHLOG_SYSFS_TRIGGER_1 telemetry_tests.sh -t crashlog_sysfs_tri_1
+TELEMETRY_XS_FUNC_CRASHLOG_SYSFS_TRIGGER_WRITE_0 telemetry_tests.sh -t crashlog_sysfs_tri_W_0
+TELEMETRY_XS_FUNC_CRASHLOG_DATA telemetry_tests.sh -t crashlog_data
+TELEMETRY_XS_FUNC_CRASHLOG_DATA_32 telemetry_tests.sh -t crashlog_data_32
+TELEMETRY_XS_FUNC_CRASHLOG_DATA_DISABLE telemetry_tests.sh -t crashlog_data_disable
+TELEMETRY_XS_FUNC_CRASHLOG_DATA_VERIFY telemetry_tests.sh -t crashlog_data_verify
+TELEMETRY_XS_FUNC_CRASHLOG_DATA_CLEAR telemetry_tests.sh -t crashlog_data_clear

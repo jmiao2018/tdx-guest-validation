@@ -1,0 +1,55 @@
+{
+    "name": "TBT_XS_FUNC_DUAL_RP",
+    "initial_platform": "",
+    "cmdline": "tbt_verify_sysfs_mod.sh -t dual_rp",
+    "steps": [],
+    "flags": [],
+    "summary": "Check dual controller root port 0-0 and 1-0 folder exist",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "tbt_dual_controller_tests",
+    "domain": "IO",
+    "feature": "Thunderbolt",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB4",
+            "values": [
+                "m"
+            ],
+            "description": "TBT3 and USB4 both used USB4 kconfig now"
+        },
+        {
+            "name": "CONFIG_USB4_NET",
+            "values": [
+                "m"
+            ],
+            "description": "For TBT thunderbolt net function enabling"
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "BIOS_wiki",
+            "path": "wiki_link",
+            "description": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [
+        {
+            "name": "Need plugged in devices",
+            "check": "Check is there tbt3 docker with USB2.0 USB3.0 insert plugged in",
+            "description": "For Thunderbolt tbt3 devices tests"
+        }
+    ],
+    "createDate": "2019-07-01T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

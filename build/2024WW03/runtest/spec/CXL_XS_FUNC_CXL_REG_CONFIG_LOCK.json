@@ -1,0 +1,36 @@
+{
+    "name": "CXL_XS_FUNC_CXL_REG_CONFIG_LOCK",
+    "initial_platform": "",
+    "cmdline": "pcie_check x 0x14 1 1",
+    "steps": [],
+    "flags": [],
+    "summary": "Check CXL device DVSEC offset 0x14 bit0 CONFIG_LOCK should be 1",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cxl_func_tests",
+    "domain": "IO",
+    "feature": "CXL",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_PCI_CXL",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CXL"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2021-01-13T16:05:15.000-0800",
+    "link": "",
+    "tips": ""
+}

@@ -1,0 +1,18 @@
+# @name TELEMETRY_FUNC_TESTS
+# @desc telemetry function tests
+# @requires telemetry
+# @utility_requires stress-ng
+# @setup_requires
+
+# telemetry test
+TELEMETRY_XS_FUNC_PCI telemetry_tests.sh -t pci
+TELEMETRY_XS_FUNC_PCI_DRIVER telemetry_tests.sh -t pci_driver
+TELEMETRY_XS_FUNC_TELEM_DRIVER telemetry_tests.sh -t telem_driver
+TELEMETRY_XS_FUNC_TELEM_SYSFS telemetry_tests.sh -t telem_sysfs
+TELEMETRY_XS_FUNC_TELEM_DEV telemetry_tests.sh -t telem_dev
+TELEMETRY_XS_FUNC_TELEM_SYSFS_COMMON telemetry_tests.sh -t telem_sysfs_common
+TELEMETRY_XS_FUNC_TELEM_DATA telemetry_tests.sh -t telem_data
+TELEMETRY_XS_FUNC_TELEM_DATA_C2_RESIDENCY telemetry_tests.sh -t telem_data_c2_residency
+TELEMETRY_XS_FUNC_TELEM_DATA_PACKAGE_CSTATE_COUNTS_C2 telemetry_tests.sh -t telem_data_c2_counts
+TELEMETRY_XS_FUNC_TELEM_DATA_32 telemetry_tests.sh -t telem_data_32
+TELEMETRY_XS_FUNC_TELEM_DATA_C1C0_RESIDENCY telemetry_tests.sh -t telem_data_c1c0_residency

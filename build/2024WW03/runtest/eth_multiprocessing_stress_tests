@@ -1,0 +1,7 @@
+# @name ETH Parallel Processing
+# @desc Check that multiple parallel processes using ethernet interface can be started
+# @requires eth
+# @setup_requires
+# @utility_requires ethtool udhcpc iperf
+
+ETH_M_STRESS_MULTI_PROCESSING eth_multiprocessing_tests.sh -c stress

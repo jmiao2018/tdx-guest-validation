@@ -1,0 +1,30 @@
+{
+    "name": "DSA_XS_FUNC_USER_MEMFILL_4D4G4Q",
+    "initial_platform": "",
+    "cmdline": "dsa_user_test.sh -c 4d4g4q_user -o 0x04",
+    "steps": [],
+    "flags": [],
+    "summary": "Dsa memory fill test with dsa0 and all wqs",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "dsa_user_func_tests",
+    "domain": "CPU",
+    "feature": "DSA",
+    "owner": "xinzhanz",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [
+        "intel_iommu=on,sm_on"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2021-08-05T15:00:44.000-0800",
+    "link": "",
+    "tips": ""
+}

@@ -1,0 +1,6 @@
+#This file contains all the tests for cet tests
+ddt_intel/cpu_cet_bat_tests
+ddt_intel/cpu_cet_ibt_tests
+ddt_intel/cpu_cet_kmod_tests
+ddt_intel/cpu_cet_shstk_tests
+ddt_intel/cpu_cet_stress_tests

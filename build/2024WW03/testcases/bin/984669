@@ -1,0 +1,2 @@
+#85424,984669,/home/jmiao/2024WW03/bin/ltp-pan -e -S -a 984669 -n 984669 -p -f 
+#85431,TDX_XS_FUNC_GUEST_TSM_ATTEST_QUOTE_NEG_NEW,cd ddt_intel/lkvs/guest-test 

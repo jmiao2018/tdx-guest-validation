@@ -1,0 +1,21 @@
+# @name ec_func_tests
+# @desc ec_func_tests perform functional tests for EC driver
+# @requires ec
+# @setup_requires
+# @utility_requires iasl
+
+# EC Funtional Tests
+
+EC_XS_FUNC_ENUMERATION_DEVICE ec_enumeration_device.sh
+
+EC_XS_FUNC_BIND_UNBIND_DRIVER bind_unbind_driver.sh "ec"
+
+EC_XS_FUNC_DSDT_ACPI_TABLES ec_dsdt.sh
+
+EC_XS_FUNC_READ_STATUS_LID_BUTTON ec_button.sh
+
+EC_XS_FUNC_CAPS_LOCK_LED ec_led_indicator.sh -i "input4" -c
+
+EC_XS_FUNC_NUM_LOCK_LED ec_led_indicator.sh -i "input4" -n
+
+EC_XS_FUNC_SCROLL_LOCK_LED ec_led_indicator.sh -i "input4" -s

@@ -1,0 +1,6 @@
+# @name CPU_AVXIFMA_BAT_TESTS
+# @desc Check AVX_IFMA cpuinfo and cpuid
+# @requires cpu/avx_ifma
+# @setup_requires
+
+CPU_XS_BAT_AVX_IFMA_CPU_ID_TEST cpu_bat.sh -n avx_ifma -p "7 0 1 0 a 23"

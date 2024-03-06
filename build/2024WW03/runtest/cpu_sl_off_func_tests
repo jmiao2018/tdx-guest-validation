@@ -1,0 +1,7 @@
+# @name CPU_SL_OFF_FUNC_TESTS
+# @desc CPU SL function tests
+# @requires cpu/sl
+# @setup_requires
+
+CPU_XS_FUNC_SL_OFF_USER_MODE  sl_func.sh -t user -p "split_lock_detect=off"
+CPU_XS_FUNC_SL_OFF_ROOT_MODE  sl_func.sh -t root -p "split_lock_detect=off"

@@ -1,0 +1,17 @@
+#this artical describes how to prepare for eth tests
+
+1. Request
+	a. iperf must be installed
+	b. udhchc must be installed
+	c. make sure your DUT has connected to local area network
+	d. Router which your DUT connects to must enable DHCP function
+	e. Please make sure your DUT's IP is distributed dynamically
+	f. A server which has to connect to the same lan is needed
+
+2. Prepare
+	a. Start NFS server on your server
+	b. Start iperf server on your server
+	c. Configure the access configuration of your server in order to your DUT
+	is accessable.
+	d. Please modify the variables in this file:./eth_common.sh according your
+	server's IP

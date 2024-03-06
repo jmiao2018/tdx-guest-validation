@@ -1,0 +1,21 @@
+# This file contains all func tests for cpu features
+ddt_intel/cpu_asmt_func_tests
+ddt_intel/cpu_cet_ibt_tests
+ddt_intel/cpu_cet_kmod_tests
+ddt_intel/cpu_cet_shstk_tests
+ddt_intel/cpu_kl_func_tests
+ddt_intel/cpu_kl_suspend_resume_tests
+ddt_intel/cpu_kl_iwkey_func_tests
+ddt_intel/cpu_mfc_func_tests
+ddt_intel/cpu_rar_func_tests
+ddt_intel/cpu_rar_sleep_tests
+ddt_intel/cpu_rdpid_func_tests
+ddt_intel/cpu_serialize_func_tests
+ddt_intel/cpu_shani_func_tests
+ddt_intel/cpu_sl_on_func_tests
+ddt_intel/cpu_sl_off_func_tests
+ddt_intel/cpu_sl_suspend_resume_tests
+ddt_intel/cpu_umip_func_tests
+ddt_intel/cpu_vbmi_func_tests
+ddt_intel/cpu_xsave_func_tests
+ddt_intel/raid_func_tests

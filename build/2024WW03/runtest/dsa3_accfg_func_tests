@@ -1,0 +1,7 @@
+# @name DSA_ACCFG_FUNC_TESTS
+# @desc DSA accel-config tool functional tests
+# @requires dsa3_accfg
+# @utility_requires
+
+IDXD_ACCFG_XS_FUNC_CFG_GROUP_RBL accel_test.sh -t config-group_read_bandwith_limit
+IDXD_ACCFG_XS_FUNC_CFG_GROUP_WBL accel_test.sh -t config-group_write_bandwith_limit

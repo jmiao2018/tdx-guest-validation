@@ -1,0 +1,11 @@
+# @name CAN_BAT_TESTS
+# @desc can basic tests
+# @requires ose_can
+# @setup_requires
+
+# CAN BAT test
+CAN_XS_FUNC_DEVICES_ENUM can_tests.sh -t dev_enum
+CAN_XS_FUNC_DRIVER can_tests.sh -t driver
+CAN_XS_FUNC_DEVICES can_tests.sh -t dev
+
+

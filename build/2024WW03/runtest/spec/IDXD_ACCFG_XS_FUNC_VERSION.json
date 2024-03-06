@@ -1,0 +1,30 @@
+{
+    "name": "IDXD_ACCFG_XS_FUNC_VERSION",
+    "initial_platform": "Granite Rapids",
+    "cmdline": "accel_test.sh -t version",
+    "steps": [],
+    "flags": [],
+    "summary": "accel-config version command test",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "dsa_accfg_func_tests",
+    "domain": "CPU",
+    "feature": "IDXD_ACCFG",
+    "owner": "xinzhanz",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [
+        "intel_iommu=on,sm_on"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2022-05-24T20:16:39.000-0800",
+    "link": "",
+    "tips": ""
+}

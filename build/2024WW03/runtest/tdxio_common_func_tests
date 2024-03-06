@@ -1,0 +1,36 @@
+# @name tdxio_guest_func_tests
+# @desc Check tdx-io guest func status
+# @requires tdx-io
+# @setup_requires
+# @utility_requires
+
+# TDX-IO early init
+TDXIO_M_FUNC_EAELY_INIT_BIOSTDXDISABLE tdxio_guest_func.sh -t BOOTUP
+TDXIO_M_FUNC_EAELY_INIT_CPUNOTALLONLINE tdxio_guest_func.sh -t BOOTUP
+
+# Common FUNC testcases
+TDXIO_XS_FUNC_SPDM_SESSION_ESTABLISHMENT tdxio_guest_func.sh -t SPDM
+TDXIO_XS_FUNC_SPDM_HEARTBEAT tdxio_guest_func.sh -t SPDM
+TDXIO_XS_FUNC_SPDM_KEY_UPDATE tdxio_guest_func.sh -t SPDM
+TDXIO_XS_FUNC_SPDM_KEY_REFRESH tdxio_guest_func.sh -t SPDM
+TDXIO_XS_FUNC_DEVICE_ATTESTATION tdxio_guest_func.sh -t ATTEST
+TDXIO_XS_FUNC_DEVICE_ATTESTATION_DISABLE tdxio_guest_func.sh -t ATTEST
+TDXIO_XS_FUNC_DEVICE_ATTESTATION_NEGATIVE tdxio_guest_func.sh -t ATTEST
+
+#SR-IOV
+TDXIO_XS_FUNC_64VF_CREATION tdxio_guest_func.sh -t DMATEST
+TDXIO_XS_FUNC_64VF_DMA tdxio_guest_func.sh -t DMATEST
+
+# Common TD abnormal negative testcases
+TDXIO_XS_FUNC_KILL_IDE tdxio_guest_func.sh -t SHUTDOWN_NEG
+TDXIO_XS_FUNC_KILL_SPDM tdxio_guest_func.sh -t SHUTDOWN_NEG
+TDXIO_XS_FUNC_KILL_TDISP tdxio_guest_func.sh -t SHUTDOWN_NEG
+TDXIO_XS_FUNC_HOST_MODIFY_DEVMMIO tdxio_guest_func.sh -t MMIO_PROTECTION
+TDXIO_XS_FUNC_DEV_ERROR_INJECTION tdxio_guest_func.sh -t ERROR_INJ
+
+TDXCON_XS_FUNC_TSM_CAP tdxio_guest_func.sh -t TSM_CAP
+#TDISP DEVIF report check
+TDXCON_XS_FUNC_TDISP_INTERFACE_INFO tdxio_guest_func.sh -t TDISP_REPORT
+TDXCON_XS_FUNC_TDISP_MSI_X_MESSAGE_CONTROL tdxio_guest_func.sh -t TDISP_REPORT
+TDXCON_XS_FUNC_TDISP_LNR_CONTROL tdxio_guest_func.sh -t TDISP_REPORT
+TDXCON_XS_FUNC_TDISP_TPH_CONTROL tdxio_guest_func.sh -t TDISP_REPORT

@@ -1,0 +1,23 @@
+# @name Intel CPU Topology cases check
+# @desc case to check CPU Topology
+# @requires powermgr
+# @setup_requires
+
+POWER_XS_BAT_NUMA_NODES_COMPARE_PKG_CPU_LIST powermgr_cpu_topology.sh -t numa_nodes_compare
+POWER_XS_BAT_CHECK_THREAD_PER_CORE powermgr_cpu_topology.sh -t verify_thread_per_core
+POWER_XS_BAT_CHECK_CORES_PER_SOCKET powermgr_cpu_topology.sh -t verify_cores_per_socket
+POWER_XS_BAT_CHECK_SOCKET_NUM powermgr_cpu_topology.sh -t verify_socket_num
+POWER_XS_BAT_CHECK_LEVEL_TYPE_CPUID powermgr_cpu_topology.sh -t verify_level_type
+# CBB means core building block, supported on DMR, NVL etc
+POWER_XS_BAT_CHECK_CBB_TOPO_DUAL_CORE_MODULE powermgr_cpu_topology.sh -t verify_cbb_dual_core_module
+POWER_XS_BAT_CHECK_CBB_TOPO_LEVEL_TYPE powermgr_cpu_topology.sh -t verify_cbb_topo_level_type
+POWER_XS_BAT_CHECK_CBB_TOPO_SCHED_DOMAIN powermgr_cpu_topology.sh -t verify_cbb_topo_sched_domain
+# sched_domain cases for different platforms
+# SRF, CWF
+POWER_XS_BAT_CHECK_ECORE_ONLY_SCHED_DOMAIN_SERVER powermgr_cpu_topology.sh -t verify_server_ecore_only_sched_domain
+# SPR, GNR
+POWER_XS_BAT_CHECK_PCORE_SCHED_DOMAIN_SERVER powermgr_cpu_topology.sh -t verify_server_pcore_server_sched_domain
+# Arrow lake-S
+POWER_XS_BAT_CHECK_HYBRID_NO_LP_SCHED_DOMAIN_CLIENT powermgr_cpu_topology.sh -t verify_client_hybrid_no_lp_sched_domain
+# Lunar lake-M
+POWER_XS_BAT_CHECK_ECORE_NO_LLC_SCHED_DOMAIN_CLIENT powermgr_cpu_topology.sh -t verify_client_ecore_no_llc_sched_domain

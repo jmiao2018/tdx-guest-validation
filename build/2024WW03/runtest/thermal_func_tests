@@ -1,0 +1,51 @@
+# @name THERMAL_FUNC_TESTS
+# @desc THERMAL_FUNC_TESTS  perform functional tests for thermal driver
+# @requires thermal
+# @setup_requires
+# @koption_requires CONFIG_INTEL_RAPL=ym
+
+# THERMAL driver
+#thermal sanity checks: thermal_01.sh
+THERMAL_XS_FUNC_SANITY thermal_01.sh
+
+#thermal test on cooling actions: thermal_02.sh
+THERMAL_XS_FUNC_COOLING thermal_02.sh
+
+#thermal test on sensor changes: thermal_03.sh
+THERMAL_XS_FUNC_SENSING thermal_03.sh
+
+#thermal zone sysfs: thermal_07.sh
+THERMAL_XS_FUNC_TZONE_SYSFS thermal_07.sh
+
+#Power Clamp didnt found registered: thermal_09.sh
+THERMAL_XS_FUNC_PCLAMP_REG thermal_09.sh
+
+#thermal test on check coretemp entries: thermal_10
+THERMAL_XS_FUNC_CORETEMP_ENTRY thermal_10.sh
+
+#thermal test on read per core temp:thermal_11.sh
+THERMAL_XS_FUNC_PER_CORE_TEMP thermal_11.sh -c -t 300
+
+#thermal test on RAPL DOMAIN SYSFS: thermal_12.sh
+THERMAL_XS_FUNC_RAPL_SYSFS thermal_12.sh
+
+#thermal cooling device max state: thermal_13.sh
+THERMAL_XS_FUNC_NEG_CDEV_MSTATE thermal_13.sh
+
+#thermal throttling test
+THERMAL_XS_FUNC_THROTTLING thermal_throttling.sh
+
+#thermal test on check the coretemp label list under hardware monitor sysfs: thermal_14.sh
+THERMAL_XS_FUNC_HWMON_TEMP_LABEL thermal_14.sh
+
+#thermal test on check coretemp name: thermal_15.sh
+THERMAL_XS_FUNC_HWMON_CORETEMP thermal_15.sh
+
+#thermal test on check interrupt events: thermal_interrupts.sh
+THERMAL_XS_FUNC_INTERRUPT_EVENTS thermal_interrupt.sh
+
+#Themal CPU package temp status via MSR
+THERMAL_XS_FUNC_PKG_TEMP_MSR thermal_pkg_temp_msr.sh
+
+#Thermal TCC Offset test
+THERMAL_S_FUNC_TCC_OFFSET thermal_tcc_offset.sh

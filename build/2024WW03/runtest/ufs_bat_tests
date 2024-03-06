@@ -1,0 +1,12 @@
+# @name UFS_BAT_TESTS
+# @desc UFS_BAT_TESTS contains BAT tests for ufs driver
+# @requires ufs
+# @setup_requires
+
+UFS_XS_FUNC_DRV_CHECK blk_device_bat_test.sh -d "ufs" -c "1"
+
+UFS_XS_FUNC_DEV_CHECK blk_device_bat_test.sh -d "ufs" -c "2"
+
+UFS_XS_FUNC_GET_NAME blk_device_bat_test.sh -d "ufs" -c "3"
+
+UFS_XS_FUNC_MOUNT_PART blk_device_bat_test.sh -d "ufs" -c "4"

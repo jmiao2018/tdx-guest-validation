@@ -1,0 +1,7 @@
+# @name Power Management S0ix tests
+# @desc intel S0ix Tests for Power Management driver.
+# @requires powermgr
+# @setup_requires
+
+POWER_XS_FUNC_RTM_PC10_ENTRY_EXIT_VIA_TURBOSTAT_SCREEN_OFF powermgr_s0ix_tests.sh -c 1
+POWER_XS_FUNC_RTM_PC10_RESIDENCY_VIA_TURBOSTAT_SCREEN_OFF powermgr_s0ix_tests.sh -c 2

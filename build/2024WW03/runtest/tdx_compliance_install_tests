@@ -1,0 +1,7 @@
+# @name tdx_compliance_install_tests
+# @desc Verify tdx guest virt value
+# @requires tdx
+# @setup_requires
+# @utility_requires
+
+TDX_M_COMP_INSTALL tdx_compliance_install.sh

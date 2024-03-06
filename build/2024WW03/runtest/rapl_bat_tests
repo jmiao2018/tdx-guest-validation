@@ -1,0 +1,22 @@
+# @name RAPL tests
+# @desc Basic Acceptance Tests for RAPL driver on CNL x86_64 HW platform and beyond
+# @requires powermgr/rapl
+# @utility_requires rdmsr wrmsr perl bc
+
+#check kernel configuration
+RAPL_XS_FUNC_CHK_KCFG_POWERCAP source "common.sh"; test_kconfigs "y" "CONFIG_POWERCAP"
+RAPL_XS_FUNC_CHK_KCFG_RAPL source "common.sh"; test_kconfigs "y" "CONFIG_INTEL_RAPL" || test_kconfigs "m" "CONFIG_INTEL_RAPL"
+
+#load and unload powerclamp modules
+RAPL_XS_FUNC_LOAD_UNLOAD_MODULE rapl_bat_tests.sh -l 10
+
+#check MSR and SYSFS
+RAPL_XS_FUNC_CHK_INTERFACE rapl_bat_tests.sh -i
+RAPL_XS_FUNC_CHK_PKG_DOMAIN rapl_bat_tests.sh -p
+RAPL_XS_FUNC_CHK_PP0_DOMAIN rapl_bat_tests.sh -c
+RAPL_XS_FUNC_CHK_PP1_DOMAIN rapl_bat_tests.sh -g
+RAPL_XS_FUNC_CHK_DRAM_DOMAIN rapl_bat_tests.sh -d
+RAPL_XS_FUNC_CHK_PSYS_DOMAIN rapl_bat_tests.sh -s
+RAPL_XS_FUNC_CHK_PKG_ENERGY_STATUS_MSR rapl_bat_tests.sh -x
+RAPL_XS_FUNC_CHK_PSYS_DOMAIN_MSR rapl_bat_tests.sh -y
+RAPL_XS_FUNC_CHK_PKG_POWER_LIMIT_MSR rapl_bat_tests.sh -o

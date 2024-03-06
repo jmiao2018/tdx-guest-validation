@@ -1,0 +1,3 @@
+ddt_intel/wdt_bat_tests
+ddt_intel/wdt_ioctl_func_tests
+ddt_intel/wdt_ioctl_stress_tests

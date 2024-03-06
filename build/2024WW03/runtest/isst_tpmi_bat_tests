@@ -1,0 +1,9 @@
+# @name ISST TPMI DRIVER BAT TESTS
+# @desc Intel speed select technology isst tpmi driver basic acceptance tests
+# @requires powermgr/isst
+# @utility_requires rdmsr wrmsr 
+# @setup_requires
+
+#ISST TPMI DRIVER BAT Tests
+ISST_XS_BAT_TPMI_DRIVER_LOAD_UNLOAD intel_sst.sh -t isst_tpmi_load_unload
+ISST_XS_BAT_TPMI_DRIVER_INTERFACE intel_sst.sh -t isst_tpmi_driver_sysfs

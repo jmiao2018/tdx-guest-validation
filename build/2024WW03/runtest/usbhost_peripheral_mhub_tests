@@ -1,0 +1,13 @@
+# @name USBHOST_PERIPHERAL_MHUB_TESTS
+# @desc usbhost different peripheral tests with multiple hubs
+# @requires usbhost
+# @setup_requires
+
+# USBHOST DIFFERENT PERIPHERAL MHUB TEST
+USBHOST_XS_FUNC_CAMERA_MHUB usb_peripheral_tests.sh -m camera -t 5
+USBHOST_XS_FUNC_ETHERNET_MHUB usb_peripheral_tests.sh -m ethernet -t 5
+USBHOST_XS_FUNC_HEADSET_MHUB usb_peripheral_tests.sh -m headset -p "046d:0a58" -n "Headset" -t 5
+USBHOST_XS_FUNC_HIGH_KEYBOARD_MHUB usb_peripheral_tests.sh -m hkeyboard -t 5
+USBHOST_XS_FUNC_LOW_KEYBOARD_MHUB usb_peripheral_tests.sh -m lkeyboard -t 5
+USBHOST_XS_FUNC_MOUSE_MHUB usb_peripheral_tests.sh -m mouse -t 5
+USBHOST_XS_FUNC_PRINTER_MHUB usb_peripheral_tests.sh -m printer -p "05f0:df11" -n "DeskJet-1110-series" -t 5

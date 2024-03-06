@@ -1,0 +1,7 @@
+# @name CPU_MFC_BAT_TESTS
+# @desc CPU most favored core bat tests
+# @requires cpu/mfc
+# @setup_requires
+# @package_requires
+
+CPU_XS_BAT_MFC_KCONFIG cpu_bat.sh -k "CONFIG_INTEL_TURBO_MAX_3=y"

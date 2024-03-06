@@ -1,0 +1,7 @@
+# @name CPU_SMEP_BAT_TESTS
+# @desc Check smep cpuinfo and cpuid
+# @requires cpu/smep
+# @setup_requires
+
+CPU_XS_BAT_SMEP_CPU_INFO_TEST cpu_bat.sh -n smep -f smep
+CPU_XS_BAT_SMEP_CPU_ID_TEST cpu_bat.sh -n smep -p "7 0 0 0 b 7"

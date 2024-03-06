@@ -1,0 +1,2 @@
+# Add TCs to skip from execution of kbl-s-rvp
+EC_XS_FUNC_READ_STATUS_LID_BUTTON

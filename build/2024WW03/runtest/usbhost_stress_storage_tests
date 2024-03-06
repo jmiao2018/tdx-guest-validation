@@ -1,0 +1,7 @@
+# @name USBHOST_STRESS_STORAGE_TESTS
+# @desc usbhost switch stress with read/write
+# @requires usbhost
+# @setup_requires
+
+# USBHOST SWITCH FUNC TEST
+USBHOST_XS_STRESS_SWITCH_USB_STORAGE usb_switch_tests.sh -p 2.0-flash -q 3.0-flash -r 3.0-uas -s 3.1-uas -t 100

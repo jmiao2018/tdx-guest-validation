@@ -1,0 +1,8 @@
+# @name 2LMPM_BAT_TESTS
+# @desc perform BAT tests for 2LM and PM
+# @requires 2lmpm
+# @setup_requires
+
+2LMPM_XS_BAT_FMSS_CPUID cpu_bat.sh -n 2lmpm -p "7 0 0 0 0 0"
+
+2LMPM_XS_FUNC_TME_CPUID cpu_bat.sh -n 2lmpm -p "7 1 0 0 0 7"

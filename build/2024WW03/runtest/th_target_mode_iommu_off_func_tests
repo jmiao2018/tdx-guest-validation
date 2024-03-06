@@ -1,0 +1,7 @@
+# @name TH_TARGET_MODE_FUNC_TESTS
+# @desc TH_TARGET_MODE_FUNC_TESTS perform basic functional tests for Intel TH driver
+# @requires intel_th
+# @setup_requires
+
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC_IOMMU_OFF intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -i disable
+TH_XS_FUNC_PCH_MSC0_CONSOLE_TRACE_BASIC_IOMMU_OFF intel_th_tests.sh -t msu_trace -s console -d 0-msc0 -p basic -i disable

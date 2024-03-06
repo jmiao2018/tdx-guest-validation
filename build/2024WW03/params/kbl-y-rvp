@@ -1,0 +1,12 @@
+# NFS server address and export path, needed by ETH_S_FUNC_MULTI_PROCESSING,ETH_M_STRESS_MULTI_PROCESSING
+# These should be changed when deploying tests into a different test farm.
+# Once defined here in the param file, the values would overwrite the default ones
+# defined in the test case.
+#NFS_SERVER=
+#NFS_ROOT_PATH=
+
+# Block device nodes specified for MMC/EMMC/USB/SATA tests
+#SD_DEV_NODE=
+#EMMC_DEV_NODE=
+#USB_DEV_NODE=
+#SATA_DEV_NODE=

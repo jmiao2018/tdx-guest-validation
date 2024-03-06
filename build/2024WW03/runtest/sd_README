@@ -1,0 +1,57 @@
+                      SECURE DIGITAL (SD) TEST SUITE
+================================================================================
+
+1) TEST CASES OVERVIEW:
+================================================================================
+
+TEST SCENARIO               AUTO    MANUAL
+-------------              ------   ------
+'sd_bat_tests'            :  8 TC     --
+'sd_partitions_func_tests':  4 TC     --
+'sd_ext2_func_tests'      : 11 TC     --
+'sd_ext3_func_tests'      : 11 TC     --
+'sd_ext4_func_tests'      : 11 TC     --
+'sd_vfat_func_tests'      : 11 TC     --
+'sd_ext2_perf_tests'      : 10 TC     --
+'sd_ext3_perf_tests'      : 10 TC     --
+'sd_ext4_perf_tests'      : 10 TC     --
+'sd_vfat_perf_tests'      : 10 TC     --
+'sd_ext2_stress_tests'    :  7 TC     --
+'sd_ext3_stress_tests'    :  7 TC     --
+'sd_ext4_stress_tests'    :  7 TC     --
+'sd_vfat_stress_tests'    :  7 TC     --
+------------------------------------------
+Total                     :124 TC     --
+------------------------------------------
+
+2) PRECONDITIONS:
+================================================================================
+
+- Before run 'sd_partitions_func_tests' test scenario please be sure that
+  SD device DOES NOT contain a OS like Ubuntu.
+  These test cases delete/create partitions, mount/umount partitions
+  and format partitions.
+  These test cases need a free device to run smoothly, otherwise they will fail.
+
+3) HOW TO RUN SD TEST CASES:
+================================================================================
+
+- To run all BAT test cases:
+  ./runtests.sh -p $PLATFORM -P $PLATFORM -g sd_bat_subset -o ./results
+
+- To run all partition test cases:
+  ./runtests.sh -p $PLATFORM -P $PLATFORM -g sd_partitions_func_subset -o ./results
+
+- To run all functional test cases:
+  ./runtests.sh -p $PLATFORM -P $PLATFORM -g sd_func_subset -o ./results
+
+- To run all performance test cases:
+  ./runtests.sh -p $PLATFORM -P $PLATFORM -g sd_perf_subset -o ./results
+
+- To run all stress test cases:
+  ./runtests.sh -p $PLATFORM -P $PLATFORM -g sd_stress_subset -o ./results
+
+4) CONTACT:
+================================================================================
+
+Juan Carlos Alonso <juan.carlos.alonso@intel.com>

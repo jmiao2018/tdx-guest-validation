@@ -1,0 +1,31 @@
+{
+    "name": "DSA_XS_FUNC_USER_WBL_SET_VALUE_3",
+    "cmdline": "dsa_func_test.sh -t write_bandwith_limit_set_value_3 -d 0 -g 2",
+    "initial_platform": "Diamond Rapids",
+    "summary": "Test write_bandwith_limit could be configured or written with value 3",
+    "status": "Closed",
+    "steps": [],
+    "flags": [],
+    "priority": "P2",
+    "scenario": "dsa3_user_func_tests",
+    "domain": "CPU",
+    "feature": "DSA3",
+    "owner": "xinzhanz",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [
+        "intel_iommu=on",
+        "sm_on"
+    ],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2023-07-11T18:37:27.000-0800",
+    "link": "",
+    "tips": ""
+}

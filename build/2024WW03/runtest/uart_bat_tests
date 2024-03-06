@@ -1,0 +1,10 @@
+# @name UART_BAT_TESTS
+# @desc basic acceptance tests of uart
+# @requires uart
+# @setup_requires
+
+UART_XS_BAT_8250_INITCALL_CHECK uart_bat_tests.sh -c 0
+UART_XS_BAT_SERIAL_PCI_INITCALL_CHECK uart_bat_tests.sh -c 1
+UART_XS_BAT_SYSFS_NODE_CHECK uart_bat_tests.sh -c 2
+UART_XS_BAT_8250_DW_MODULE_CHECK uart_bat_tests.sh -c 3
+UART_XS_BAT_DRIVER_BIND_UNBIND_CHECK uart_bat_tests.sh -c 4

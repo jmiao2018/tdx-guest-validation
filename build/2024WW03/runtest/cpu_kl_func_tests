@@ -1,0 +1,26 @@
+# @name CPU_KL_FUNC_TESTS
+# @desc verify key locker functions
+# @requires cpu/kl
+# @setup_requires
+
+CPU_XS_FUNC_KL_CPU_AESKL_INFO kl_func.sh -f "driver       : aes-aeskl"
+CPU_XS_FUNC_KL_CPU_CBCKL_INFO kl_func.sh -f "driver       : cbc-aes-aeskl"
+CPU_XS_FUNC_KL_CPU_CTRKL_INFO kl_func.sh -f "driver       : ctr-aes-aeskl"
+CPU_XS_FUNC_KL_CPU_ECBKL_INFO kl_func.sh -f "driver       : ecb-aes-aeskl"
+CPU_XS_FUNC_KL_CPU_XTSKL_INFO kl_func.sh -f "driver       : xts-aes-aeskl"
+CPU_XS_FUNC_KL_CPU_CBCKL1_INFO kl_func.sh -f "driver       : __cbc-aes-aeskl"
+CPU_XS_FUNC_KL_CPU_CTRKL1_INFO kl_func.sh -f "driver       : __ctr-aes-aeskl"
+CPU_XS_FUNC_KL_CPU_ECBKL1_INFO kl_func.sh -f "driver       : __ecb-aes-aeskl"
+CPU_XS_FUNC_KL_CPU_XTSKL1_INFO kl_func.sh -f "driver       : __xts-aes-aeskl"
+CPU_XS_FUNC_KL_CPU_BASE_NI_TEST kl_func.sh -p "cbc_ni ecb_ni"
+CPU_XS_FUNC_KL_CPU_BASE_KL_TEST kl_func.sh -p "base_kl"
+CPU_XS_FUNC_KL_CPU_CBC_NI_TEST kl_func.sh -p "cbc_ni"
+CPU_XS_FUNC_KL_CPU_CBC_KL_TEST kl_func.sh -p "cbc_kl"
+CPU_XS_FUNC_KL_CPU_CTR_NI_TEST kl_func.sh -p "ctr_ni"
+CPU_XS_FUNC_KL_CPU_CTR_KL_TEST kl_func.sh -p "ctr_kl"
+CPU_XS_FUNC_KL_CPU_ECB_NI_TEST kl_func.sh -p "ecb_ni"
+CPU_XS_FUNC_KL_CPU_ECB_KL_TEST kl_func.sh -p "ecb_kl"
+CPU_XS_FUNC_KL_CPU_XTS_NI_TEST kl_func.sh -p "xts_ni"
+CPU_XS_FUNC_KL_CPU_XTS_KL_TEST kl_func.sh -p "xts_kl"
+CPU_XS_FUNC_KL_384H_128K_NO_RESTRICTION kl_func.sh -p "base_kl cbc_ni cbc_kl ctr_ni ctr_kl"
+CPU_XS_FUNC_KL_512H_256K_NO_RESTRICTION kl_func.sh -p "ecb_ni ecb_kl xts_ni xts_kl"

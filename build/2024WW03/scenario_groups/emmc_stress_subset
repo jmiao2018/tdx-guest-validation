@@ -1,0 +1,5 @@
+#This file contains all the stress tests for LCK eMMC driver
+ddt_intel/emmc_ext2_stress_tests
+ddt_intel/emmc_ext3_stress_tests
+ddt_intel/emmc_ext4_stress_tests
+ddt_intel/emmc_vfat_stress_tests

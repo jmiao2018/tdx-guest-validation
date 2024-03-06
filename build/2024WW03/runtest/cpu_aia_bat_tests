@@ -1,0 +1,11 @@
+# @name CPU_AIA_BAT_TESTS
+# @desc Accelerator Interfacing Arch bat test cases
+# @requires cpu/aia
+# @setup_requires
+
+CPU_XS_BAT_AIA_CPUID_UMONITOR_UMWAIT cpu_bat.sh -n aia -p "7 1 0 1 c 5"
+CPU_XS_BAT_AIA_CPUID_MOVDIRI cpu_bat.sh -n aia -p "7 1 0 1 c 27"
+CPU_XS_BAT_AIA_CPUID_MOVDIR64B cpu_bat.sh -n aia -p "7 1 0 1 c 28"
+CPU_XS_BAT_AIA_MOVDIRI_CPUINFO cpu_bat.sh -n aia -f movdiri
+CPU_XS_BAT_AIA_MOVDIR64B_CPUINFO cpu_bat.sh -n aia -f movdir64b
+CPU_XS_BAT_AIA_UMONITOR_CPUINFO cpu_bat.sh -n aia -f waitpkg

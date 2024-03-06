@@ -1,0 +1,70 @@
+{
+    "name": "USBTYPEC_XS_FUNC_STORAGE_SYSFS_CHECK",
+    "initial_platform": "",
+    "cmdline": "usb_typec_tests.sh -t storage",
+    "steps": [],
+    "flags": [],
+    "summary": "USBTYPEC_XS_FUNC_STORAGE_SYSFS_CHECK",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "usbtypec_storage_func_tests",
+    "domain": "IO",
+    "feature": "USB_TYPEC",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_TYPEC",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_TYPEC_UCSI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_UCSI_ACPI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_TYPEC_TPS6598X",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_USB_DWC3",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "USB DWC3",
+            "path": "",
+            "description": "Enable USB DWC3 as https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2018-02-22T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure TCSS related FW is flashed successfully and USB gadget is working and connect 2 typec port together on HW."
+}

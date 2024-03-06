@@ -1,0 +1,63 @@
+{
+    "name": "TH_XS_FUNC_IOCTL_GET_ID",
+    "initial_platform": "",
+    "cmdline": "intel_th_tests.sh -t ioctl_get",
+    "steps": [],
+    "flags": [],
+    "summary": "Check if get policy correctly with ioctl",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "th_bat_tests",
+    "domain": "CPU",
+    "feature": "Intel_TH",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_INTEL_TH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_PCI",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_STH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        },
+        {
+            "name": "CONFIG_INTEL_TH_GTH",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [
+        {
+            "name": "PCH Trace Hub",
+            "path": "",
+            "description": "Set as PCH target mode in bios as: https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2018-12-26T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

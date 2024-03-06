@@ -1,0 +1,41 @@
+# @name PMU_FUNC_TESTS
+# @desc PMU  tests
+# @requires pmu
+# @setup_requires
+
+# PMU tests
+PMU_XS_FUNC_BASIC_CHECK pmu_tests.sh -t basic
+PMU_XS_FUNC_FIX_COUNTER_W_0 pmu_tests.sh -t fix_counter -w 0
+PMU_XS_FUNC_FIX_COUNTER_W_1 pmu_tests.sh -t fix_counter -w 1
+PMU_XS_FUNC_CET_64 apebs_tests.sh -t cet -b tchain_edit_zero_cet_64
+#PMU_XS_FUNC_CET_32 apebs_tests.sh -t cet -b tchain_edit_zero_cet_32
+PMU_XS_FUNC_EVENTS pmu_tests.sh -t events
+PMU_XS_FUNC_EVENTS_METRICS pmu_tests.sh -t metrics
+PMU_XS_FUNC_UNCORE_BASIC pmu_tests.sh -t uncore
+PMU_XS_FUNC_MSRLIST_CPUID pmu_tests.sh -t mrslist_cpuid
+PMU_XS_FUNC_LBR_EVENTS_CPUID pmu_tests.sh -t lbr_events_cpuid
+#PMU_XS_FUNC_LBR_EVENTS pmu_tests.sh -t lbr_events
+#PMU_XS_FUNC_LBR_EVENTS_INSTRUCTIONS pmu_tests.sh -t lbr_events_instructions
+#PMU_XS_FUNC_LBR_EVENTS_INSTRUCTIONS_P pmu_tests.sh -t lbr_events_instructions_p
+PMU_XS_FUNC_TIMED_PEBS_MSR pmu_tests.sh -t timed_pebs_msr
+PMU_XS_FUNC_UNCORE_DID0 pmu_tests.sh -t Uncore_DID0
+PMU_XS_FUNC_UNCORE_DMESG pmu_tests.sh pmu_tests.sh -t uncore_dmesg
+PMU_XS_FUNC_ARCH_PEBS_CPUID pmu_tests.sh -t arch_pebs_cpuid
+PMU_XS_FUNC_ARCH_PEBS_GP_REG_GROUP pmu_tests.sh -t arch_pebs_gp_reg_group
+PMU_XS_FUNC_ARCH_PEBS_XER_GROUP pmu_tests.sh -t arch_pebs_xer_group
+PMU_XS_FUNC_ARCH_PEBS_COUNTER_GROUP pmu_tests.sh -t arch_pebs_counter_group
+PMU_XS_FUNC_ARCH_PEBS_COUNTER_GROUP_STRESS pmu_tests.sh -t arch_pebs_counter_group_stress
+PMU_XS_FUNC_ARCH_PEBS_GP_COUNTER pmu_tests.sh -t arch_pebs_gp_counter
+PMU_XS_FUNC_ARCH_PEBS_BASIC_GROUP pmu_tests.sh -t arch_pebs_basic_group
+PMU_XS_FUNC_ARCH_PEBS_STRESS pmu_tests.sh -t arch_pebs_stress -l 10
+PMU_XS_FUNC_VERSION_CHECK pmu_tests.sh -t version
+PMU_XS_FUNC_BITMAP_6_CHECK pmu_tests.sh -t bitmap_6
+PMU_XS_FUNC_UMASK2_CPUID pmu_tests.sh -t umask2_cpuid
+PMU_XS_FUNC_ZBIT_CPUID pmu_tests.sh -t zbit_cpuid
+PMU_XS_FUNC_UMASK2 pmu_tests.sh -t umask2
+PMU_XS_FUNC_ZBIT pmu_tests.sh -t zbit
+PMU_XS_FUNC_3_FIXCOUNTER_COUNTING pmu_tests.sh -t counting
+PMU_XS_FUNC_3_FIXCOUNTER_SAMPLING pmu_tests.sh -t sampling
+PMU_XS_FUNC_3_FIXCOUNTER_COUNTING_MULTI pmu_tests.sh -t counting_multi
+PMU_XS_FUNC_LBR_EVENTS_S pmu_tests.sh -t lbr_events_s
+PMU_XS_FUNC_LBR_EVENTS_ALL pmu_tests.sh -t lbr_events_all

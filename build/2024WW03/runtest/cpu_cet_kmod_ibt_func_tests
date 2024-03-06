@@ -1,0 +1,9 @@
+# @name CPU_CET_KMOD_TESTS
+# @desc CPU CET kernel mode ring 0 function tests
+# @requires cpu/cet_kernel
+# @setup_requires
+
+CPU_XS_FUNC_CET_KMOD_B1 cet_func.sh -t kmod_ibt -n cet_app -p b1
+CPU_XS_FUNC_CET_KMOD_B2_LEGACY cet_func.sh -t kmodn_ibt -n cet_app -p b2
+CPU_XS_FUNC_CET_KMOD_ALL_CPU_B1 cet_func.sh -t all_cpu_kmod -n cet_app -p b1 -k "Missing ENDBR"
+CPU_XS_FUNC_CET_KMOD_IBT_MSR cet_func.sh -t kmod_ibt_msr

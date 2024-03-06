@@ -1,0 +1,22 @@
+# @name smbus_func_tests
+# @desc smbus_func_tests perform FUNC tests for SMBus driver
+# @requires smbus
+# @utility_requires i2cdetect i2cdump i2cget i2cset
+
+SMBUS_XS_FUNC_GET_FUNCTIONALITY smbus_function_test.sh -r "GET_FUNCTIONALITY"
+
+SMBUS_XS_FUNC_SLAVE_ADDR_DETECT smbus_function_test.sh -r "SMBUS_ADDR_DETECT"
+
+SMBUS_XS_FUNC_POS_VALID_ADDR_REG_RD smbus_function_test.sh -r "VALID_ADDR_REG_RD"
+
+SMBUS_XS_FUNC_NEG_INVALID_ADDR_REG_RD smbus_function_test.sh -r "INVALID_ADDR_REG_RD"
+
+SMBUS_XS_FUNC_VALID_ADDR_DUMP smbus_function_test.sh -r "VALID_ADDR_DUMP"
+
+SMBUS_XS_FUNC_POS_VALID_ADDR_REG_WR smbus_function_test.sh -r "VALID_ADDR_REG_WR"
+
+SMBUS_XS_FUNC_NEG_INVALID_ADDR_REG_WR smbus_function_test.sh -r "INVALID_ADDR_REG_WR"
+
+SMBUS_XS_FUNC_RUNTIME_PM_SUPPORT_CHECK smbus_function_test.sh -r "RT_PM_CHECK"
+
+SMBUS_XS_FUNC_RUNTIME_PM_AUTO_SUSPENDED smbus_function_test.sh -r "RT_PM_AUTO_SUSPENDED"

@@ -1,0 +1,20 @@
+# @name GPIO_BAT_TESTS
+# @desc GPIO_BAT_TESTS perform BAT TCs for GPIO driver
+# @requires gpio
+# @setup_requires
+
+GPIO_XS_FUNC_DRV_CHECK driver_sysfs.sh -d "gpio" -p
+
+GPIO_XS_FUNC_DEV_CHECK driver_sysfs.sh -d "gpio" -s "h"
+
+GPIO_XS_FUNC_BIND_UNBIND_DRV bind_unbind_driver.sh "gpio"
+
+GPIO_XS_FUNC_GET_CHIPS gpio_chips.sh -g "chips"
+
+GPIO_XS_FUNC_GET_GPIOS gpio_chips.sh -g "gpios"
+
+GPIO_XS_FUNC_CTRL_INTERFACES gpio_chips.sh -f
+
+GPIO_XS_FUNC_GPIODETECT gpio_libtool.sh -c gpiodetect
+
+GPIO_XS_FUNC_GPIOINFO gpio_libtool.sh -c gpioinfo

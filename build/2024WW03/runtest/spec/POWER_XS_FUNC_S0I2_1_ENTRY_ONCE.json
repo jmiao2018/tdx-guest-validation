@@ -1,0 +1,34 @@
+{
+    "name": "POWER_XS_FUNC_S0I2_1_ENTRY_ONCE",
+    "initial_platform": "",
+    "cmdline": "powermgr_s0ix_substate_tests.sh -c 1",
+    "steps": [],
+    "flags": [],
+    "summary": "Check S0ix substate S0i2.1 via S2idle path",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "powermgr_s0ix_substate_func_tests",
+    "domain": "Power",
+    "feature": "S0IX",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": true,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "intel_pmc_core driver",
+            "check": "",
+            "description": "intel_pmc_core driver need to enable test platform"
+        }
+    ],
+    "createDate": "2020-06-04T17:00:00.000-0700",
+    "link": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA",
+    "tips": ""
+}

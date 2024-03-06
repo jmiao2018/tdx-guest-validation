@@ -1,0 +1,34 @@
+{
+    "name": "RAPL_XS_FUNC_READ_PKG_ENERGY_WITH_WORKLOAD",
+    "initial_platform": "",
+    "cmdline": "rapl_power_check.sh -p pkg",
+    "steps": [],
+    "flags": [],
+    "summary": "Check if RAPL package enery increase with CPU workload using fspin tool",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "rapl_func_tests",
+    "domain": "Power",
+    "feature": "Intel_RAPL",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "fspin",
+            "check": "",
+            "description": "fspin need to run as the workload"
+        }
+    ],
+    "createDate": "2017-09-18T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

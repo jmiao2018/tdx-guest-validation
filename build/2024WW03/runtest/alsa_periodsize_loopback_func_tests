@@ -1,0 +1,20 @@
+# @name Testing for various period sizes
+# @desc Do loopback for various period sizes
+# @requires alsa && hda
+ALSA_S_FUNC_LPBK_PRDSZ_1 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 1 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_2 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 2 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_4 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 4'
+ALSA_S_FUNC_LPBK_PRDSZ_8 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 8 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_16 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 16 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_32 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 32 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_64 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 64 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_128 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 128 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_256 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 256 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_512 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 512 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_1024 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 1024 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_2046 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 2046 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_4096 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 4096 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_8192 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 8192 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_16384 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 16384 -d 20'
+ALSA_S_FUNC_LPBK_PRDSZ_32768 source 'common.sh' ; do_cmd 'alsa_tests.sh -t loopback -p 32768 -d 20'
+

@@ -1,0 +1,19 @@
+# @name usbhost_bat_tests
+# @desc Basic Acceptance Tests for USB xHCI driver, to check the correctness of driver initialization.
+# @requires usbhost
+# @setup_requires
+#
+
+USB_XS_FUNC_SYSFS_NEW_ID add_rm_device_id.sh -t add_id
+USB_XS_FUNC_SYSFS_RM_ID add_rm_device_id.sh -t remove_id
+USB_XS_FUNC_SYSFS_CTRL verify_sysfs_xhci_controllers.sh
+USB_XS_FUNC_LIST_USB_DEV listing_usb_devices.sh
+USB_XS_FUNC_D3HOT_ENABLE check_suspend_mode_set.sh
+USB_XS_FUNC_CHK_XHCI_DMESG xhci_check.sh dmesg
+USB_XS_FUNC_CHK_XHCI_SYSFS xhci_check.sh sysfs
+USBHOST_XS_FUNC_DRV_CHECK blk_device_bat_test.sh -d "usb" -c "1"
+USBHOST_XS_FUNC_DEV_CHECK blk_device_bat_test.sh -d "usb" -c "2"
+USBHOST_XS_FUNC_GET_NAME blk_device_bat_test.sh -d "usb" -c "3"
+USBHOST_XS_FUNC_MOUNT_PART blk_device_bat_test.sh -d "usb" -c "4"
+USBHOST_XS_FUNC_TRACE usb_trace_tests.sh -t host
+USBHOST_XS_FUNC_ROOTHUB_HOTPLUG usb_sysfs_tests.sh -t hotplug

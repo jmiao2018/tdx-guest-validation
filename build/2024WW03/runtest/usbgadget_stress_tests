@@ -1,0 +1,7 @@
+# @name UABGADGET_STRESS_TESTS
+# @desc usb gadget stress tests
+# @requires usbgadget
+# @setup_requires
+
+# USBGADGET STRESS test
+USBGADGET_XS_STRESS_TEST_TOOL usb_gadget_stress.sh -t 1000

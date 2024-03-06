@@ -1,0 +1,42 @@
+{
+    "name": "USBHOST_XS_FUNC_SR_3.2_FLASH_MEM",
+    "initial_platform": "",
+    "cmdline": "usb_suspend_resume_tests.sh -p 3.2 -t flash -s mem",
+    "steps": [],
+    "flags": [],
+    "summary": "3.2 flash mem",
+    "status": "Closed",
+    "priority": "P5",
+    "scenario": "usbhost_3.2_suspendresume_func_tests",
+    "domain": "IO",
+    "feature": "USB_HOST",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_USB_XHCI_PCI",
+            "values": [
+                "y"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "USB 3.2 flash storage device",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-01-13T16:00:00.000-0800",
+    "link": "",
+    "tips": "Please make sure 3.x flash/uas device is connected as case name. Please make sure s/r to mem is working."
+}

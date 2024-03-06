@@ -1,0 +1,7 @@
+# @name IAX_KTEST_BAT_TESTS
+# @desc IAX kernel level basic accpetance tests
+# @requires iax
+# @utility_requires
+
+IAX_XS_BAT_KTEST_1C_1T_SHARED_100 idxd_ktest.sh -d iax -c 1 -t 1 -i 100 -m shared
+IAX_XS_BAT_KTEST_1C_1T_DEDICATED_100 idxd_ktest.sh -d iax -c 1 -t 1 -i 100 -m dedicated

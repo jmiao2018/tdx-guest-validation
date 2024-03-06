@@ -1,0 +1,7 @@
+# @name Power Management suspend tests
+# @desc RUNTIME Tests for Power Management driver on x86_64 HW platform.
+# @requires powermgr
+# @setup_requires
+
+
+POWER_XS_FUNC_RUNTIME_PM_D3 powermgr_runtime_tests.sh

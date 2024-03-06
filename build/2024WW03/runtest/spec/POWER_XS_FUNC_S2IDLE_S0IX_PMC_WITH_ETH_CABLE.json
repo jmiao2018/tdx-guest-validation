@@ -1,0 +1,34 @@
+{
+    "name": "POWER_XS_FUNC_S2IDLE_S0IX_PMC_WITH_ETH_CABLE",
+    "initial_platform": "",
+    "cmdline": "powermgr_s0ix_tests.sh -c 12",
+    "steps": [],
+    "flags": [],
+    "summary": "Connect ethernet cable on the RVP board RJ45 port, check S2idle Path the deepest S0ix Substate entry and exit for the pmc supported platform",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "powermgr_s0ix_peripheral_func_tests",
+    "domain": "Power",
+    "feature": "S0IX",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Semi",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": true,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "Ethernet cable is connected",
+            "check": "",
+            "description": "Make sure ethernet cable is connected on the RVP board RJ45 port"
+        }
+    ],
+    "createDate": "2017-11-02T17:00:00.000-0700",
+    "link": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA",
+    "tips": ""
+}

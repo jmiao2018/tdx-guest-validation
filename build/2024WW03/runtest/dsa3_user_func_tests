@@ -1,0 +1,18 @@
+# @name DSA_USER_FUNC_TESTS
+# @desc DSA user functional tests
+# @requires dsa3
+# @utility_requires
+
+DSA_XS_FUNC_USER_DSA3_VERSION_CHECK dsa_func_test.sh -t dsa3_version_check -d 0
+DSA_XS_FUNC_USER_PASID_ENABLED_CHECK dsa_func_test.sh -t pasid_enabled_check -d 0
+DSA_XS_FUNC_USER_RBL_ENABLED_CHECK dsa_func_test.sh -t read_bandwith_limit_enabled_check -d 0 -g 0
+DSA_XS_FUNC_USER_WBL_ENABLED_CHECK dsa_func_test.sh -t write_bandwith_limit_enabled_check -d 0 -g 0
+DSA_XS_FUNC_USER_RBL_DEFAULT_VALUE dsa_func_test.sh -t read_bandwith_limit_default_value -d 0 -g 0
+DSA_XS_FUNC_USER_WBL_DEFAULT_VALUE dsa_func_test.sh -t write_bandwith_limit_default_value -d 0 -g 0
+DSA_XS_FUNC_USER_RBL_SET_VALUE_1 dsa_func_test.sh -t read_bandwith_limit_set_value_1 -d 0 -g 0
+DSA_XS_FUNC_USER_RBL_SET_VALUE_2 dsa_func_test.sh -t read_bandwith_limit_set_value_2 -d 0 -g 2
+DSA_XS_FUNC_USER_RBL_SET_VALUE_3 dsa_func_test.sh -t read_bandwith_limit_set_value_3 -d 0 -g 1
+DSA_XS_FUNC_USER_WBL_SET_VALUE_1 dsa_func_test.sh -t write_bandwith_limit_set_value_1 -d 0 -g 1
+DSA_XS_FUNC_USER_WBL_SET_VALUE_2 dsa_func_test.sh -t write_bandwith_limit_set_value_2 -d 0 -g 3
+DSA_XS_FUNC_USER_WBL_SET_VALUE_3 dsa_func_test.sh -t write_bandwith_limit_set_value_3 -d 0 -g 2
+DSA_XS_FUNC_USER_RBL1_WBL2_ENGINE0 dsa_func_test.sh -t rbl_1_wbl_2_engine0_dsa_test -d 0 -g 0

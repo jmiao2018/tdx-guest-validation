@@ -1,0 +1,92 @@
+# @name TH_TARGET_MODE_FUNC_TESTS
+# @desc TH_TARGET_MODE_FUNC_TESTS perform basic functional tests for Intel TH driver
+# @requires intel_th
+# @setup_requires
+
+TH_XS_FUNC_DUMMY_STM intel_th_tests.sh -t dummy_stm
+TH_XS_FUNC_STH_DEV intel_th_tests.sh -t sth_dev
+TH_XS_FUNC_STM_SOURCE_CONSOLE intel_th_tests.sh -t stm_source_console
+TH_XS_FUNC_STM_SOURCE_FTRACE intel_th_tests.sh -t stm_source_ftrace
+TH_XS_FUNC_STM_SOURCE_HEARTBEAT intel_th_tests.sh -t stm_source_heartbeat
+TH_XS_FUNC_STM_SOURCE_CONSOLE_WITH_DUMMY intel_th_tests.sh -t stm_source_console_dummy
+TH_XS_FUNC_STM_SOURCE_FTRACE_WITH_DUMMY intel_th_tests.sh -t stm_source_ftrace_dummy
+TH_XS_FUNC_STM_SOURCE_HEARTBEAT_WITH_DUMMY intel_th_tests.sh -t stm_source_heartbeat_dummy
+TH_XS_FUNC_STM_SOURCE_ALL_WITH_DUMMY intel_th_tests.sh -t stm_source_all_dummy
+TH_XS_FUNC_STM_POLICY_DUMMY intel_th_tests.sh -t stm_policy_dummy
+TH_XS_FUNC_STM_POLICY_STH intel_th_tests.sh -t stm_policy_sth
+TH_XS_FUNC_STM_POLICY_MASTER_CHANNEL_SET intel_th_tests.sh -t stm_policy_set
+TH_XS_FUNC_MULTI_TH_DEVICE intel_th_tests.sh -t mth
+TH_XS_FUNC_STM_PROTOCOL_BASIC intel_th_tests.sh -t protocol_basic
+TH_XS_FUNC_STM_PROTOCOL_NAGATIVE_CHECK intel_th_tests.sh -t protocol_n
+TH_XS_FUNC_STM_PROTOCOL_MIPI intel_th_tests.sh -t protocol_mipi
+TH_XS_FUNC_STM_PROTOCOL_BASIC_WITH_POLICY intel_th_tests.sh -t protocol_basic_w_policy
+TH_XS_FUNC_STM_PROTOCOL_MIPI_WITH_POLICY intel_th_tests.sh -t protocol_mipi_w_policy
+TH_XS_FUNC_STM_PROTOCOL_BASIC_MIPI intel_th_tests.sh -t protocol_basic_mipi
+TH_XS_FUNC_MSU_BASIC intel_th_tests.sh -t msu
+TH_XS_FUNC_MSU_SYSFS intel_th_tests.sh -t msu_sysfs
+TH_XS_FUNC_STM_PROTOCOL_BASIC_WITH_DEFAULT intel_th_tests.sh -t protocol_basic_w_default
+TH_XS_FUNC_STM_PROTOCOL_MIPI_WITH_DEFAULT intel_th_tests.sh -t protocol_mipi_w_default
+TH_XS_FUNC_MSU_ENABLE_DISABLE intel_th_tests.sh -t msu_enable_disable
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic
+TH_XS_FUNC_PCH_MSC0_CONSOLE_TRACE_BASIC intel_th_tests.sh -t msu_trace -s console -d 0-msc0 -p basic
+TH_XS_FUNC_PCH_MSC1_DEFAULT_TRACE_BASIC intel_th_tests.sh -t msu_trace -s default -d 0-msc1 -p basic
+TH_XS_FUNC_PCH_MSC1_CONSOLE_TRACE_BASIC intel_th_tests.sh -t msu_trace -s console -d 0-msc1 -p basic
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC_SINGLE_NOWRAP intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -c 1
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC_SINGLE_WRAP intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -c 2
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC_MULTI_NOWARP intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -c 3
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC_MULTI_WRAP intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -c 4
+TH_XS_FUNC_PCH_MSC0_CONSOLE_TRACE_BASIC_SINGLE_NOWRAP intel_th_tests.sh -t msu_trace -s console -d 0-msc0 -p basic -c 1
+TH_XS_FUNC_PCH_MSC0_CONSOLE_TRACE_BASIC_SINGLE_WRAP intel_th_tests.sh -t msu_trace -s console -d 0-msc0 -p basic -c 2
+TH_XS_FUNC_PCH_MSC0_CONSOLE_TRACE_BASIC_MULTI_NOWARP intel_th_tests.sh -t msu_trace -s console -d 0-msc0 -p basic -c 3
+TH_XS_FUNC_PCH_MSC0_CONSOLE_TRACE_BASIC_MULTI_WRAP intel_th_tests.sh -t msu_trace -s console -d 0-msc0 -p basic -c 4
+TH_XS_FUNC_PCH_MSC1_DEFAULT_TRACE_BASIC_SINGLE_NOWRAP intel_th_tests.sh -t msu_trace -s default -d 0-msc1 -p basic -c 1
+TH_XS_FUNC_PCH_MSC1_DEFAULT_TRACE_BASIC_SINGLE_WRAP intel_th_tests.sh -t msu_trace -s default -d 0-msc1 -p basic -c 2
+TH_XS_FUNC_PCH_MSC1_DEFAULT_TRACE_BASIC_MULTI_NOWARP intel_th_tests.sh -t msu_trace -s default -d 0-msc1 -p basic -c 3
+TH_XS_FUNC_PCH_MSC1_DEFAULT_TRACE_BASIC_MULTI_WRAP intel_th_tests.sh -t msu_trace -s default -d 0-msc1 -p basic -c 4
+TH_XS_FUNC_PCH_MSC1_CONSOLE_TRACE_BASIC_SINGLE_NOWRAP intel_th_tests.sh -t msu_trace -s console -d 0-msc1 -p basic -c 1
+TH_XS_FUNC_PCH_MSC1_CONSOLE_TRACE_BASIC_SINGLE_WRAP intel_th_tests.sh -t msu_trace -s console -d 0-msc1 -p basic -c 2
+TH_XS_FUNC_PCH_MSC1_CONSOLE_TRACE_BASIC_MULTI_NOWARP intel_th_tests.sh -t msu_trace -s console -d 0-msc1 -p basic -c 3
+TH_XS_FUNC_PCH_MSC1_CONSOLE_TRACE_BASIC_MULTI_WRAP intel_th_tests.sh -t msu_trace -s console -d 0-msc1 -p basic -c 4
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_MIPI intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p mipi
+TH_XS_FUNC_PCH_MSC0_CONSOLE_TRACE_MIPI intel_th_tests.sh -t msu_trace -s console -d 0-msc0 -p mipi
+TH_XS_FUNC_PCH_MSC1_DEFAULT_TRACE_MIPI intel_th_tests.sh -t msu_trace -s default -d 0-msc1 -p mipi
+TH_XS_FUNC_PCH_MSC1_CONSOLE_TRACE_MIPI intel_th_tests.sh -t msu_trace -s console -d 0-msc1 -p mipi
+TH_XS_FUNC_PCH_MSC0_FTRACE_TRACE_BASIC intel_th_tests.sh -t msu_trace -s ftrace -d 0-msc0 -p basic
+TH_XS_FUNC_PCH_MSC0_FTRACE_TRACE_MIPI intel_th_tests.sh -t msu_trace -s ftrace -d 0-msc0 -p mipi
+TH_XS_FUNC_PCH_MSC1_FTRACE_TRACE_BASIC intel_th_tests.sh -t msu_trace -s ftrace -d 0-msc1 -p basic
+TH_XS_FUNC_PCH_MSC1_FTRACE_TRACE_MIPI intel_th_tests.sh -t msu_trace -s ftrace -d 0-msc1 -p mipi
+TH_XS_FUNC_PCH_MSC0_HEARTBEAT_TRACE_BASIC intel_th_tests.sh -t msu_trace -s heartbeat.0 -d 0-msc0 -p basic
+TH_XS_FUNC_PCH_MSC0_HEARTBEAT_TRACE_MIPI intel_th_tests.sh -t msu_trace -s heartbeat.0 -d 0-msc0 -p mipi
+TH_XS_FUNC_PCH_MSC1_HEARTBEAT_TRACE_BASIC intel_th_tests.sh -t msu_trace -s heartbeat.0 -d 0-msc1 -p basic
+TH_XS_FUNC_PCH_MSC1_HEARTBEAT_TRACE_MIPI intel_th_tests.sh -t msu_trace -s heartbeat.0 -d 0-msc1 -p mipi
+TH_XS_FUNC_PTI_BASIC intel_th_tests.sh -t output_basic -o pti
+TH_XS_FUNC_LPP_BASIC intel_th_tests.sh -t output_basic -o lpp
+TH_XS_FUNC_DCIH_BASIC intel_th_tests.sh -t output_basic -o dcih
+TH_XS_FUNC_PTI_WITH_MSC intel_th_tests.sh -t output_msc -o pti -s default -d 0-msc0 -p basic
+TH_XS_FUNC_LPP_WITH_MSC intel_th_tests.sh -t output_msc -o lpp -s default -d 0-msc0 -p basic
+TH_XS_FUNC_DCIH_WITH_MSC intel_th_tests.sh -t output_msc -o dcih -s default -d 0-msc0 -p basic
+TH_XS_FUNC_GTH_PORT_INFO intel_th_tests.sh -t port_sys
+TH_XS_FUNC_GTH_SWITCH intel_th_tests.sh -t gth_switch
+TH_XS_FUNC_PCH_MSC_WRAP intel_th_tests.sh -t wrap -d 0-msc0
+TH_XS_FUNC_PCH_MSC_UNWRAP intel_th_tests.sh -t unwrap -d 0-msc0
+TH_XS_FUNC_MMAP_TRACE intel_th_tests.sh -t mmap -d 0-msc0
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC_SINK_NOWARP intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -c 5
+TH_XS_FUNC_PCH_MSC0_DEFAULT_TRACE_BASIC_SINK_WRAP intel_th_tests.sh -t msu_trace -s default -d 0-msc0 -p basic -c 6
+TH_XS_FUNC_PCH_MSC0_CONSOLE_TRACE_BASIC_SINK_NOWARP intel_th_tests.sh -t msu_trace -s console -d 0-msc0 -p basic -c 5
+TH_XS_FUNC_PCH_MSC0_CONSOLE_TRACE_BASIC_SINK_WRAP intel_th_tests.sh -t msu_trace -s console -d 0-msc0 -p basic -c 6
+TH_XS_FUNC_PCH_MSC1_DEFAULT_TRACE_BASIC_SINK_NOWARP intel_th_tests.sh -t msu_trace -s default -d 0-msc1 -p basic -c 5
+TH_XS_FUNC_PCH_MSC1_DEFAULT_TRACE_BASIC_SINK_WRAP intel_th_tests.sh -t msu_trace -s default -d 0-msc1 -p basic -c 6
+TH_XS_FUNC_PCH_MSC1_CONSOLE_TRACE_BASIC_SINK_NOWARP intel_th_tests.sh -t msu_trace -s console -d 0-msc1 -p basic -c 5
+TH_XS_FUNC_PCH_MSC1_CONSOLE_TRACE_BASIC_SINK_WRAP intel_th_tests.sh -t msu_trace -s console -d 0-msc1 -p basic -c 6
+TH_XS_FUNC_PCH_TRACE_SINK_NEGATIVE intel_th_tests.sh -t sink_negtive -s default -d 0-msc0 -p basic
+TH_XS_FUNC_PCH_TRACE_SINK_WITH_OTHERS intel_th_tests.sh -t sink_w_others -s default -d 0-msc0 -p basic
+TH_XS_FUNC_PCH_TRACE_SINK_MULTI intel_th_tests.sh -t sink_multi -s console -d 0-msc0 -p basic
+TH_XS_FUNC_PCH_TRACE_SINK_FULL intel_th_tests.sh -t sink_full -s default -d 0-msc0 -p basic
+TH_XS_FUNC_PCH_TRACE_NPKTOOL_ONE intel_th_tests.sh -t npktool_one -s default -d 0-msc0 -p basic
+TH_XS_FUNC_PCH_TRACE_NPKTOOL_TWO intel_th_tests.sh -t npktool_two -s default -d 0-msc0 -p basic
+TH_XS_FUNC_32_BIN intel_th_tests.sh -t 32_bin
+TH_XS_FUNC_POLICY_REMOVE intel_th_tests.sh -t policy_remove -s default -d 0-msc0 -p basic
+TH_XS_FUNC_FTRACE_WRITE intel_th_tests.sh -t ftrace_write -s ftrace -d 0-msc0 -p basic
+TH_XS_FUNC_POLICY_MIPI_CLOCKSYNC intel_th_tests.sh -t protocol_mipi_clocksync
+TH_XS_FUNC_CHECK_HOST intel_th_tests.sh -t host_n
+TH_XS_FUNC_IOCTL_NEGTIVE intel_th_tests.sh -t ioctl_n

@@ -1,0 +1,12 @@
+# @name QEP_FUNC_TESTS
+# @desc QEP tests
+# @requires ose_qep
+# @setup_requires
+
+# QEP test
+QEP_XS_FUNC_DEVICES qep_tests.sh -t dev
+QEP_XS_FUNC_CAPTURE_DATA qep_tests.sh -t capture_data
+QEP_XS_FUNC_COUNT qep_tests.sh -t count
+QEP_XS_FUNC_DIRECTION qep_tests.sh -t direction
+QEP_XS_FUNC_CAPTURE_MODE qep_tests.sh -t capture_mode
+QEP_XS_FUNC_DRIVER qep_tests.sh -t driver

@@ -1,0 +1,16 @@
+# @name USBHOST device w/r test with whatever fs in card
+# @desc USBHOST read write test with whatever fs in card
+#   The device node is specified in get_blk_device_node.sh
+# @requires usbhost && ext2
+# @setup_requires
+USBHOST_XS_FUNC_EXT2_DD_RW_1B blk_device_dd_readwrite_test.sh -f 'ext2' -b '1' -c '1' -d 'usb'
+USBHOST_XS_FUNC_EXT2_DD_RW_512B blk_device_dd_readwrite_test.sh -f 'ext2' -b '512' -c '1' -d 'usb'
+USBHOST_XS_FUNC_EXT2_DD_RW_64K blk_device_dd_readwrite_test.sh -f 'ext2' -b '64K' -c '1' -d 'usb'
+USBHOST_XS_FUNC_EXT2_DD_RW_512K blk_device_dd_readwrite_test.sh -f 'ext2' -b '512K' -c '1' -d 'usb'
+USBHOST_XS_FUNC_EXT2_DD_RW_640K blk_device_dd_readwrite_test.sh -f 'ext2' -b '64K' -c '10' -d 'usb'
+USBHOST_XS_FUNC_EXT2_DD_RW_5M blk_device_dd_readwrite_test.sh -f 'ext2' -b '5M' -c '1' -d 'usb'
+USBHOST_XS_FUNC_EXT2_DD_RW_10M blk_device_dd_readwrite_test.sh -f 'ext2' -b '1M' -c '10' -d 'usb'
+USBHOST_S_FUNC_EXT2_U2U_CP_10M blk_device_dd_readwrite_test.sh -f 'ext2' -b '1M' -c '10' -i 'cp' -d 'usb'
+USBHOST_S_FUNC_EXT2_DD_RW_50M blk_device_dd_readwrite_test.sh -f 'ext2' -b '5M' -c '10' -d 'usb'
+USBHOST_S_FUNC_EXT2_DD_RW_100M blk_device_dd_readwrite_test.sh -f 'ext2' -b '10M' -c '10' -d 'usb'
+USBHOST_M_FUNC_EXT2_DD_RW_1G blk_device_dd_readwrite_test.sh -f 'ext2' -b '10M' -c '100' -d 'usb'

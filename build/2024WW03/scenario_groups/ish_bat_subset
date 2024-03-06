@@ -1,0 +1,2 @@
+# This file contains all the Basic Acceptance Tests for ish component
+ddt_intel/ish_bat_tests

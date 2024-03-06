@@ -1,0 +1,11 @@
+# @name USI_STYLUS_FUNC_TESTS
+# @desc test usi stylus
+# @requires usi
+# @setup_requires
+
+USI_XS_FUNC_RUN_SERVER usi_run_server.sh "0"
+USI_XS_FUNC_RUN_DEBUG_SERVER usi_run_server.sh "--debug 0"
+USI_XS_FUNC_NEG_RUN_SERVER run_test.sh run_test "server" "foo" 1
+USI_XS_FUNC_SERVER_HELP run_test.sh run_test "server" "--help" 1
+USI_XS_FUNC_CLIENT_HELP run_test.sh run_test "client" "--help" 1
+

@@ -1,0 +1,8 @@
+# @name USB4_BAT_TESTS
+# @desc Check USB4 sysfs files
+# @requires usb4
+# @setup_requires
+
+USB4_XS_BAT_SYSFS_GENERATION_TEST usb4_tests.sh -s generation
+USB4_XS_BAT_TYPE_CHECK usb4_tests.sh -s usb4_type
+USB4_XS_BAT_V2_TYPE_CHECK usb4_tests.sh -s usb4v2_type

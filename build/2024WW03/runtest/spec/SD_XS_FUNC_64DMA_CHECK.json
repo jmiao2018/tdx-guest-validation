@@ -1,0 +1,34 @@
+{
+    "name": "SD_XS_FUNC_64DMA_CHECK",
+    "initial_platform": "",
+    "cmdline": "sd_64.sh",
+    "steps": [],
+    "flags": [],
+    "summary": "verify if sdcard support 64-bit DMA capability",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "sd_bat_tests",
+    "domain": "IO",
+    "feature": "SD",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free SD partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-06-04T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

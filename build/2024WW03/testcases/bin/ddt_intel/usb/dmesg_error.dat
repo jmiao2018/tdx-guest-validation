@@ -1,0 +1,53 @@
+nvalid device address
+can't SetAddress
+Set SEL should be 6 bytes
+invalid test
+unexpected direction for Data Phase
+failed to allocate trb pool for
+can't queue to disabled endpoint
+request %pK was not queued to
+is of Isochronous type
+failed to set STALL on
+failed to clear STALL on
+failed to put link in Recovery
+failed to send remote wakeup
+timed out waiting for SETUP phase
+failed to enable
+failed to request irq
+%s is already bound to,
+invalid speed;
+incomplete IN transfer
+XferComplete for Isochronous endpoint
+Stream event for non-Bulk
+UNKNOWN IRQ type
+missing peripheral IRQ
+failed to allocate ep0 trb
+failed to register udc
+failed to initialize host
+failed to initialize peripheral
+can't allocate event buffer
+failed to map scratch buffer;
+this is not a DesignWare USB3 DRD Core
+failed to setup event buffers
+no usb2 phy configured
+no usb3 phy configured
+failed to initialize gadget
+failed to initialize dual-role
+Unsupported mode of operation
+invalid maximum_speed parameter
+missing memory resource
+failed to allocate event buffers
+failed to initialize core
+Can't create debugfs root
+PPM NOT RESPONDING!
+ucsi_run_command: sync failed
+reading error failed!
+Dead battery condition!
+ucsi_run_command: possible UCSI driver bug  error
+ucsi_run_command: error without status
+failed to register partner
+ucsi_connector_change: GET_CONNECTOR_STATUS failed
+Failed to reset PPM! Trying again..
+conX: failed to read status
+Failed to reset PPM!
+PPM Init failed

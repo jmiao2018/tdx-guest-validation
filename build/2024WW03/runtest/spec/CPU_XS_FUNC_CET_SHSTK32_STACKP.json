@@ -1,0 +1,50 @@
+{
+    "name": "CPU_XS_FUNC_CET_SHSTK32_STACKP",
+    "initial_platform": "",
+    "cmdline": "cet_func.sh -t cet_pass -n shstk_process_32 -p sp",
+    "steps": [],
+    "flags": [],
+    "summary": "32bit program, use indirect jump to other function, then stack changed, make shstk still could work.",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cpu_cet_shstk_tests",
+    "domain": "Security",
+    "feature": "CET_USER",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_SHADOW_STACK_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For shadow stack enabling"
+        },
+        {
+            "name": "CONFIG_X86_BRANCH_TRACKING_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For IBT enabling"
+        },
+        {
+            "name": "CONFIG_X86_CET",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CET"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2018-10-16T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

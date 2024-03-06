@@ -1,0 +1,2 @@
+# This file contains all the functional tests for LCK SMBus driver
+ddt_intel/smbus_func_tests

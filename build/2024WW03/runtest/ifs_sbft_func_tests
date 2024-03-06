@@ -1,0 +1,10 @@
+# @name IFS_SBFT_FUNC_TESTS
+# @desc In Field Scan with SBFT(Structural Based Fault Test) for GNR and so on
+# @requires ifs_sbft
+# @setup_requires
+
+IFS_S_SBFT_LOAD_MODULE_TEST ifs_tests.sh -m 2 -p all -b 1 -n load_ifs_sbft
+IFS_S_SBFT_SCAN_ALL_CPU_TEST ifs_tests.sh -m 2 -p all -b 1 -n ifs_sbft_scan
+IFS_S_SBFT_NEGATIVE_OFFLINE_SCAN_RANDOM_TEST ifs_tests.sh -m 2 -p ran -b 1 -n ifs_sbft_offran -t 5
+IFS_S_SBFT_CPU_RANDOM_FULL_LOAD_SCAN ifs_tests.sh -m 2 -p ran -b 1 -n ifs_sbft_cpuran_fullload -t 2
+IFS_S_SBFT_SCAN_INTERRUPT_TEST ifs_tests.sh -m 2 -p ran -b 1 -n sbft_interrupt -t 5

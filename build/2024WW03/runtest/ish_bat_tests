@@ -1,0 +1,7 @@
+# @name ISH_BAT_TESTS
+# @desc ISH_BAT_TESTS perform BAT tests for INTEL_ISH_IPC driver
+# @requires ish
+# @utility_requires
+
+ISH_XS_BAT_DMESG ish_tests.sh dmesg_check
+ISH_XS_BAT_LOAD_UNLOAD_DRIVER ish_tests.sh load_unload_driver

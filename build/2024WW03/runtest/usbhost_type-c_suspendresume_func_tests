@@ -1,0 +1,18 @@
+# @name usbhost basic func tests
+# @desc usbhost suspend to resume tests
+# @requires usbhost && powermgr && usbtypec
+# @setup_requires
+
+# USBTYPEC SUSPEND RESUME TESTS FOR USB Type-C
+USBTYPEC_XS_FUNC_SR_3.1_UAS_FREE usb_suspend_resume_tests.sh -p 3.1 -t uas -s freeze
+USBTYPEC_XS_FUNC_SR_3.1_UAS_MEM usb_suspend_resume_tests.sh -p 3.1 -t uas -s mem
+USBTYPEC_XS_FUNC_SR_3.1_UAS_DISK usb_suspend_resume_tests.sh -p 3.1 -t uas -s disk
+USBTYPEC_XS_FUNC_SR_3.0_FLASH_FREE usb_suspend_resume_tests.sh -p 3.0 -t flash -s freeze
+USBTYPEC_XS_FUNC_SR_3.0_FLASH_MEM usb_suspend_resume_tests.sh -p 3.0 -t flash -s mem
+USBTYPEC_XS_FUNC_SR_3.0_FLASH_DISK usb_suspend_resume_tests.sh -p 3.0 -t flash -s disk
+USBTYPEC_XS_FUNC_SR_3.0_UAS_FREE usb_suspend_resume_tests.sh -p 3.0 -t uas -s freeze
+USBTYPEC_XS_FUNC_SR_3.0_UAS_MEM usb_suspend_resume_tests.sh -p 3.0 -t uas -s mem
+USBTYPEC_XS_FUNC_SR_3.0_UAS_DISK usb_suspend_resume_tests.sh -p 3.0 -t uas -s disk
+USBTYPEC_XS_FUNC_SR_2.0_FLASH_FREE usb_suspend_resume_tests.sh -p 2.0 -t flash -s freeze
+USBTYPEC_XS_FUNC_SR_2.0_FLASH_MEM usb_suspend_resume_tests.sh -p 2.0 -t flash -s mem
+USBTYPEC_XS_FUNC_SR_2.0_FLASH_DISK usb_suspend_resume_tests.sh -p 2.0 -t flash -s disk

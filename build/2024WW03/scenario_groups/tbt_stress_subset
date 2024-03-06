@@ -1,0 +1,3 @@
+#This file contains all the tests for LCK thunderbolt stress cases
+ddt_intel/tbt_perf_tests
+ddt_intel/tbt_stress_tests

@@ -1,0 +1,35 @@
+powermgr s0ix func
+---------------
+
+
+Targeted HW platform:
+ Kabylake-u
+ Kabylake-y
+ Apollo lake
+
+
+Required Linux kernel config options:
+ CONFIG_X86_MSR=y or m
+ CONFIG_INTEL_PMC_CORE=y
+ CONFIG_INTEL_TELEMETRY=y
+ CONFIG_INTEL_PM_DEBUG=y
+
+/!\ Use "make menuconfig" command to update Linux kernel config file and enable some potentially dependent options /!\
+
+
+Environment:
+ When it comes to "runtime", need to plug out usb peripherals, and run the case in local t-box, remote test like using ssh
+ will cause unexpected results.
+ Required packages: powertop
+
+
+Notes:
+ - cases related to telemetry can only run on Apollolake platform, need BIOS version to be 150.40 or newer, in which IPC1 will
+   be enable by default.
+ - cases related to pmc can only run on Kabylake platform
+ - cases related to pmc on Kabylake platform need do following workaround in testing code:
+        # ignore CSMe during S0ix
+        echo 6 > /sys/kernel/debug/pmc_core/ltr_ignore
+        iotools mmio_write32 0xfe00031c 0xabc09003
+        iotools mmio_write32 0xfe00034c 0xc02c0000
+ - for pc10 related cases, need to provide PC10_REG_ADDR in param file for different platform.

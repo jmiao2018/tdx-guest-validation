@@ -1,0 +1,6 @@
+# @name ALSA amixer tests.
+# @desc Loopback the audio in the backgroung and tests the amixer settings.
+#	amixer cset name is passed as an argument to the alsa_amixer.sh.
+# @requires alsa && hda
+ALSA_M_FUNC_AMIXER_VOLSET source "common.sh"; do_cmd 'alsa_amixer_volumesetting.sh'
+ALSA_S_FUNC_AMIXER_SWTOGGLE source "common.sh"; do_cmd 'alsa_amixer_switchtoggle.sh'

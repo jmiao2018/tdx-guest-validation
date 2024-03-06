@@ -1,0 +1,34 @@
+{
+    "name": "TBT_XS_FUNC_BIOS_CONNECT_TBT_PCI",
+    "initial_platform": "",
+    "cmdline": "",
+    "steps": [],
+    "flags": [],
+    "summary": "Access BIOS and then connect TBT device, should no issue in tbt pci",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "tbt_func_tests",
+    "domain": "IO",
+    "feature": "Thunderbolt",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Semi",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "Need plugged in devices",
+            "check": "Check is there tbt3 docker with USB2.0 USB3.0 insert plugged in",
+            "description": "For Thunderbolt tbt3 devices tests"
+        }
+    ],
+    "createDate": "2022-09-29T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

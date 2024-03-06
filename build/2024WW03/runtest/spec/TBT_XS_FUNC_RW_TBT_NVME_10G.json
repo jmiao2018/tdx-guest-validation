@@ -1,0 +1,40 @@
+{
+    "name": "TBT_XS_FUNC_RW_TBT_NVME_10G",
+    "initial_platform": "",
+    "cmdline": "tbt_ssd_read_write.sh -b 10MB -c 1024 -p nvme -t 8",
+    "steps": [],
+    "flags": [],
+    "summary": "Add tbt nvme 10G big fie transfer tests, which should no exception like call trace in dmesg",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "tbt_func_tests",
+    "domain": "IO",
+    "feature": "Thunderbolt",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [
+        {
+            "name": "BIOS_wiki",
+            "path": "wiki_link",
+            "description": "https://wiki.ith.intel.com/display/CLKIR/Intel+Reference+Platforms+BIOS+and+Kconfig+options+to+run+LTP-DDT+for+IA"
+        }
+    ],
+    "peripherals": [
+        {
+            "name": "Need plugged in TBT docker with nvme devices like sabrent docker",
+            "check": "Check is there tbt3 docker with USB2.0 USB3.0 insert plugged in",
+            "description": "For Thunderbolt tbt3 devices tests"
+        }
+    ],
+    "createDate": "2021-07-21T15:26:37.000-0800",
+    "link": "",
+    "tips": ""
+}

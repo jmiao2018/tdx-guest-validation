@@ -1,0 +1,12 @@
+# @name CXL_BAT_TESTS
+# @desc Check CXL bat cases files
+# @requires cxl
+# @setup_requires
+
+CXL_XS_BAT_KCONFIG_CHECK_TEST cxl_tests.sh -s kconfig -p "CONFIG_CXL_BUS=m"
+CXL_XS_BAT_KCONFIG_CXL_ACPI cxl_tests.sh -s kconfig -p "CONFIG_CXL_ACPI=m"
+CXL_XS_BAT_DMESG_CHECK_TEST cxl_tests.sh -s cxl_dmesg
+CXL_XS_BAT_LSPCI_CHECK_TEST cxl_tests.sh -s cxl_lspci
+CXL_XS_BAT_CXL_PCI_CHECK_TEST cxl_tests.sh -s cxl_pci_dmesg
+CXL_XS_BAT_CXL_OSC_CHECK_TEST cxl_tests.sh -s cxl_osc_dmesg
+CXL_XS_BAT_LSPCI_RCEC_TEST cxl_tests.sh -s cxl_lspci_rcec

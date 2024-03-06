@@ -1,0 +1,36 @@
+{
+    "name": "SEAMLESS_M_FUNC_FIRMWARE_UPDATE_NEG",
+    "initial_platform": "",
+    "cmdline": "",
+    "steps": [],
+    "flags": [],
+    "summary": "do seamless firmware update using valid BIOS and invalid capsule file through seamless driver pfr_update, using tools/power/acpi/pfrut tool",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "",
+    "domain": "Power",
+    "feature": "SEAMLESS",
+    "owner": "qwang59",
+    "testType": "FUNC",
+    "execType": "Manual",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": true,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_ACPI_PFRU",
+            "values": [
+                "m"
+            ],
+            "description": ""
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2021-12-23T15:30:56.000-0800",
+    "link": "",
+    "tips": ""
+}

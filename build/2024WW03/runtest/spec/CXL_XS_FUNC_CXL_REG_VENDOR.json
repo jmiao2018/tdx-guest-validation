@@ -1,0 +1,36 @@
+{
+    "name": "CXL_XS_FUNC_CXL_REG_VENDOR",
+    "initial_platform": "",
+    "cmdline": "pcie_check x 0x4 16 0x1e98",
+    "steps": [],
+    "flags": [],
+    "summary": "Check CXL PCIE 4bytes 16bit size should be 0x1e98",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cxl_func_tests",
+    "domain": "IO",
+    "feature": "CXL",
+    "owner": "xupengfe",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_PCI_CXL",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CXL"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-08-17T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

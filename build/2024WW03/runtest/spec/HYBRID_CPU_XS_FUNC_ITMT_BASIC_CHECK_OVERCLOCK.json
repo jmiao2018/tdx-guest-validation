@@ -1,0 +1,34 @@
+{
+    "name": "HYBRID_CPU_XS_FUNC_ITMT_BASIC_CHECK_OVERCLOCK",
+    "initial_platform": "",
+    "cmdline": "hybrid_cpu_tests.sh -t itmt_basic",
+    "steps": [],
+    "flags": [],
+    "summary": "ITMT basic check with overclocking enabled in BIOS",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "hybrid_cpu_overclock_bat_tests",
+    "domain": "CPU",
+    "feature": "HYBRID_CPU",
+    "owner": "feiyi",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": true,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [
+        {
+            "name": "Core Max OC Ratio changed to [ 85 ]",
+            "path": "Intel Advanced Menu -> OverClocking Performance Menu -> Processor",
+            "description": "Set this value as maximum value 85"
+        }
+    ],
+    "peripherals": [],
+    "createDate": "2021-12-16T10:03:25.000-0800",
+    "link": "",
+    "tips": ""
+}

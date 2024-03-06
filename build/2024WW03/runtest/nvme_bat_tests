@@ -1,0 +1,13 @@
+# @name NVME_BAT_TESTS
+# @desc NVME_BAT_TESTS contains BAT tests for nvme diver
+# @requires nvme
+# @setup_requires
+# @utility_requires pvdisplay
+
+NVME_XS_FUNC_DRV_CHECK blk_device_bat_test.sh -d "nvme" -c "1"
+
+NVME_XS_FUNC_DEV_CHECK blk_device_bat_test.sh -d "nvme" -c "2"
+
+NVME_XS_FUNC_GET_NAME blk_device_bat_test.sh -d "nvme" -c "3"
+
+NVME_XS_FUNC_MOUNT_PART blk_device_bat_test.sh -d "nvme" -c "4"

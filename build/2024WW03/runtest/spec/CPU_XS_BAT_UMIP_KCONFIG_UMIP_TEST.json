@@ -1,0 +1,36 @@
+{
+    "name": "CPU_XS_BAT_UMIP_KCONFIG_UMIP_TEST",
+    "initial_platform": "",
+    "cmdline": "cpu_bat.sh -k \"CONFIG_X86_INTEL_UMIP|CONFIG_X86_UMIP=y\"",
+    "steps": [],
+    "flags": [],
+    "summary": "Check umip kconfig, CONFIG_X86_INTEL_UMIP=y",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "cpu_umip_bat_tests",
+    "domain": "Security",
+    "feature": "UMIP",
+    "owner": "xupengfe",
+    "testType": "BAT",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_UMIP",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for UMIP"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2018-01-07T16:00:00.000-0800",
+    "link": "",
+    "tips": ""
+}

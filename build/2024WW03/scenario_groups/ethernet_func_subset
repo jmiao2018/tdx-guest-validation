@@ -1,0 +1,3 @@
+# This file contains all the functional tests for LCK Ethernet driver
+ddt_intel/eth_ping_func_tests
+ddt_intel/eth_multiprocessing_func_tests

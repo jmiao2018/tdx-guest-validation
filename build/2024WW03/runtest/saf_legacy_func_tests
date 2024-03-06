@@ -1,0 +1,19 @@
+# @name SAF_LEGACY_FUNC_TESTS
+# @desc normal SCAN AND FIELD with legacy tests for SPR
+# @requires saf
+# @setup_requires
+
+IFS_SCAN_S_FUNC_BASIC_ALL_DEFAULT saf_normal.sh -m 0
+IFS_SCAN_S_FUNC_BASIC_CPUS_DEFAULT saf_normal.sh -m 1 -p -1
+IFS_SCAN_S_FUNC_INTERRUPT_ALL_DEFAULT saf_interrupt.sh -m 0
+IFS_SCAN_S_FUNC_INTERRUPT_CPUS_SPEC saf_interrupt.sh -m 1 -p 1,3,4
+IFS_SCAN_S_FUNC_INTERRUPT_CPUS_RANDOM saf_interrupt.sh -m 1 -p -1
+IFS_SCAN_S_FUNC_OFFLINE_ALL_DEFAULT saf_normal.sh -m 1 -o -1
+IFS_SCAN_S_FUNC_OFFLINE_SOME_DEFAULT saf_normal.sh -m 1 -p 1,2,3,4,5,12,113 -o 1,2,3,113
+IFS_SCAN_S_FUNC_OFFLINE_RANDOM_DEFAULT saf_normal.sh -m 1 -p -1 -o -1
+IFS_SCAN_S_FUNC_RELOAD_NORMAL saf_reload.sh -m 0
+IFS_SCAN_S_FUNC_RELOAD_RNDM  saf_reload.sh -m 3 -e 1
+IFS_SCAN_S_FUNC_RELOAD_ERROR saf_reload.sh -m 2 -e 1
+IFS_SCAN_S_FUNC_RELOAD_CRC_ERR saf_reload.sh -m 1 -e 1
+IFS_SCAN_S_FUNC_STRESS_ALL_DEFAULT saf_stress.sh -m 0
+IFS_SCAN_S_FUNC_STRESS_ALL_RANDOM saf_stress.sh -m 1 -p -1

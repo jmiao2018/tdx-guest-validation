@@ -1,0 +1,4 @@
+# This file contains all the tests for LCK thunderbolt mini(tbt 1/2) tests
+ddt_intel/tbt_mini_bat_tests
+ddt_intel/tbt_mini_func_tests
+ddt_intel/tbt_mini_suspend_resume_tests

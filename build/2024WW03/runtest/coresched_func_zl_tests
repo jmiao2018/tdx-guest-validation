@@ -1,0 +1,6 @@
+# @name coresched_zl_test
+# @desc coresched_zl_test perform core scheduler function zl test
+# @requires coresched
+# @setup_requires perf
+
+CORESCHED_M_FUNC_ZL_USERSPACE_TEST zombieload_test.sh

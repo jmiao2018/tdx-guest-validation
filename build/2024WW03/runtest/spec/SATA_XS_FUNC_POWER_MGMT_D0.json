@@ -1,0 +1,34 @@
+{
+    "name": "SATA_XS_FUNC_POWER_MGMT_D0",
+    "initial_platform": "",
+    "cmdline": "blk_power_management.sh",
+    "steps": [],
+    "flags": [],
+    "summary": "Read 'run_active_time' counter, wait 10 seconds, read again",
+    "status": "Closed",
+    "priority": "P1",
+    "scenario": "sata_bat_tests",
+    "domain": "IO",
+    "feature": "SATA",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": true,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free sata disk partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2017-10-15T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

@@ -1,0 +1,17 @@
+# @name TBT_RTD3_TESTS
+# @desc Check thunderbolt host and device should support rtd3
+# @requires tbt
+# @setup_requires
+
+TBT_XS_FUNC_RTD3_INIT tbt_rtd3.sh -c 0 -s rtd3_init
+TBT_XS_FUNC_RTD3_HOST_D3 tbt_rtd3.sh -c 0 -s rtd3_host_d3
+TBT_XS_FUNC_RTD3_HOST_BUSY tbt_rtd3.sh -c 0 -s rtd3_host_busy
+TBT_XS_FUNC_RTD3_HOST_ON_CHECK tbt_rtd3.sh -c 0 -s rtd3_host_on
+TBT_XS_FUNC_RTD3_HOST_XHCI_CHECK tbt_rtd3.sh -c 0 -s rtd3_xhci
+TBT_XS_FUNC_RTD3_HOST_UNLOAD_DRIVER tbt_rtd3.sh -c 0 -s rtd3_host_unload_driver
+TBT_XS_FUNC_RTD3_HOST_LOAD_DRIVER tbt_rtd3.sh -c 0 -s rtd3_host_load_driver
+TBT_XS_FUNC_RTD3_freeze_test tbt_rtd3.sh -c 0 -s rtd3_host_freeze
+TBT_XS_FUNC_RTD3_S3_test tbt_rtd3.sh -c 0 -s rtd3_host_s3
+TBT_XS_FUNC_RTD3_S4_test tbt_rtd3.sh -c 0 -s rtd3_host_s4
+TBT_XS_FUNC_RTD3_PLUGIN_HOST_CHECK tbt_rtd3.sh -c 1 -s rtd3_plugin_host
+TBT_XS_FUNC_RTD3_PLUGIN_XHCI tbt_rtd3.sh -c 1 -s rtd3_xhci

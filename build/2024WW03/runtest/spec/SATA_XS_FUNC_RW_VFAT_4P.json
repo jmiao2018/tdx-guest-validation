@@ -1,0 +1,34 @@
+{
+    "name": "SATA_XS_FUNC_RW_VFAT_4P",
+    "initial_platform": "",
+    "cmdline": "blk_device_readwrite_partitions.sh -d \"sata\" -p \"4\" -s \"vfat\" -w",
+    "steps": [],
+    "flags": [],
+    "summary": "Find and format SATA 4 partitions in fs type vfat and write file of 100M between any 2 of 4 partitions",
+    "status": "Closed",
+    "priority": "P2",
+    "scenario": "sata_partitions_func_tests",
+    "domain": "IO",
+    "feature": "SATA",
+    "owner": "hongyuni",
+    "testType": "FUNC",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": true,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [],
+    "packages": [],
+    "bios": [],
+    "peripherals": [
+        {
+            "name": "free sata disk partition",
+            "check": "",
+            "description": ""
+        }
+    ],
+    "createDate": "2018-06-06T17:00:00.000-0700",
+    "link": "",
+    "tips": ""
+}

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spec Editor</title>
+  </head>
+
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      margin-top: 2vh;
+    }
+
+    .control-div {
+      width: 35vw;
+      height: 90vh;
+      margin-top: 2vh;
+    }
+
+    .edit-div {
+      width: 60vw;
+      height: 90vh;
+      margin-left: 2vw;
+      margin-top: 2vh;
+      margin-right: 2vw;
+      overflow-y: auto;
+    }
+
+    .regexp-input {
+      width: 90%;
+    }
+
+    .test-cases {
+      height: 90vh;
+      overflow-y: auto;
+    }
+
+    .test-case-item {
+      cursor: pointer;
+    }
+
+    .fix-label {
+      display: inline-block;
+      width: 6vw;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .fix-value {
+      display: inline-block;
+      width: 50vw;
+    }
+
+    .fix-height {
+      margin-bottom: 1vh;
+    }
+  </style>
+
+  <body>
+    <div class="grid-container">
+      <div class="control-div">
+        <input
+          id="regexp"
+          name="regexp"
+          placeholder="Test Case Regular Expression"
+          class="regexp-input"
+        /><br />
+
+        <div class="test-cases">
+          <ul id="test-cases"></ul>
+        </div>
+      </div>
+
+      <div id="editor" class="edit-div">
+        <label for="summary" class="fix-label">Summary</label>
+        <input
+          type="text"
+          id="summary"
+          name="summary"
+          class="fix-value fix-height"
+        /><br />
+
+        <label for="owner" class="fix-label">Owner</label>
+        <input type="text" id="owner" name="owner" class="fix-height" /><br />
+
+        <label for="domain" class="fix-label">Domain</label>
+        <input type="text" id="domain" name="domain" class="fix-height" /><br />
+
+        <label for="feature" class="fix-label">Feature</label>
+        <input
+          type="text"
+          id="feature"
+          name="feature"
+          class="fix-height"
+        /><br />
+
+        <label for="powerOn" class="fix-label">PowerOn</label>
+        <input
+          type="checkbox"
+          id="powerOn"
+          name="powerOn"
+          class="fix-height"
+        /><br />
+
+        <label for="preSilicon" class="fix-label">PreSilicon</label>
+        <input
+          type="checkbox"
+          id="preSilicon"
+          name="preSilicon"
+          class="fix-height"
+        /><br />
+
+        <label for="clientOnly" class="fix-label">ClientOnly</label>
+        <input
+          type="checkbox"
+          id="clientOnly"
+          name="clientOnly"
+          class="fix-height"
+        /><br />
+
+        <label for="serverOnly" class="fix-label">ServerOnly</label>
+        <input
+          type="checkbox"
+          id="serverOnly"
+          name="serverOnly"
+          class="fix-height"
+        /><br />
+
+        <label for="priority" class="fix-label">Priority</label>
+        <select id="priority" name="priority" class="fix-height">
+          <option value="P1">P1</option>
+          <option value="P2">P2</option>
+          <option value="P3">P3</option>
+          <option value="P4">P4</option>
+          <option value="P5">P5</option></select
+        ><br />
+
+        <label for="testType" class="fix-label">Test Type</label>
+        <select id="testType" name="testType" class="fix-height">
+          <option value="BAT">BAT</option>
+          <option value="FUNC">FUNC</option>
+          <option value="PERF">PERF</option>
+          <option value="STRESS">STRESS</option></select
+        ><br />
+
+        <label for="kparams" class="fix-label">Kparams</label>
+        <input
+          type="text"
+          id="kparams"
+          name="kparams"
+          placeholder="sep: ,"
+          class="fix-value fix-height"
+        /><br />
+
+        <label for="link" class="fix-label">Link</label>
+        <input
+          type="text"
+          id="link"
+          name="link"
+          class="fix-value fix-height"
+        /><br />
+
+        <label for="tips" class="fix-label">Tips</label>
+        <input
+          type="text"
+          id="tips"
+          name="tips"
+          class="fix-value fix-height"
+        /><br />
+      </div>
+    </div>
+
+    <script>
+      class Spec {
+        constructor() {
+          this.summary = null;
+          this.owner = null;
+          this.domain = null;
+          this.feature = null;
+          this.powerOn = false;
+          this.preSilicon = false;
+          this.clientOnly = false;
+          this.serverOnly = false;
+          this.priority = null;
+          this.testType = null;
+          this.kparams = null;
+          this.link = null;
+          this.tips = null;
+          this.kconfigs = null;
+          this.bios = null;
+          this.packages = null;
+          this.peripherals = null;
+        }
+      }
+
+      var testCases = [];
+      var selectedTestCases = [];
+      var spec = new Spec();
+      var simpleEditUrl = document.URL + "edit_simple";
+
+      function setPoweron(checked) {
+        document.getElementById("powerOn").checked = checked;
+        spec.powerOn = {
+          value: checked,
+          update: false,
+        };
+      }
+
+      function setPreSilicon(checked) {
+        document.getElementById("preSilicon").checked = checked;
+        spec.preSilicon = {
+          value: checked,
+          update: false,
+        };
+      }
+
+      function setClientOnly(checked) {
+        document.getElementById("clientOnly").checked = checked;
+        spec.clientOnly = {
+          value: checked,
+          update: false,
+        };
+      }
+
+      function setServerOnly(checked) {
+        document.getElementById("serverOnly").checked = checked;
+        spec.serverOnly = {
+          value: checked,
+          update: false,
+        };
+      }
+
+      function setPriority(priority) {
+        let prioritySel = document.getElementById("priority");
+
+        for (let i = 0; i < prioritySel.options.length; i++) {
+          if (prioritySel.options[i].value === priority) {
+            prioritySel.selectedIndex = i;
+            spec.priority = {
+              value: priority,
+              update: false,
+            };
+          }
+        }
+      }
+
+      function setTestType(testType) {
+        let testTypeSel = document.getElementById("testType");
+
+        for (let i = 0; i < testTypeSel.options.length; i++) {
+          if (testTypeSel.options[i].value === testType) {
+            testTypeSel.selectedIndex = i;
+            spec.testType = {
+              value: testType,
+              update: false,
+            };
+          }
+        }
+      }
+
+      function setOwner(owner) {
+        document.getElementById("owner").value = owner;
+        spec.owner = {
+          value: owner,
+          update: false,
+        };
+      }
+
+      function setDomain(domain) {
+        document.getElementById("domain").value = domain;
+        spec.domain = {
+          value: domain,
+          update: false,
+        };
+      }
+
+      function setFeature(feature) {
+        document.getElementById("feature").value = feature;
+        spec.feature = {
+          value: feature,
+          update: false,
+        };
+      }
+
+      function setSummary(summary) {
+        document.getElementById("summary").value = summary;
+        spec.summary = {
+          value: summary,
+          update: false,
+        };
+      }
+
+      function setKparams(kparams) {
+        document.getElementById("kparams").value = kparams;
+        spec.kparams = {
+          value: kparams,
+          update: false,
+        };
+      }
+
+      function setLink(link) {
+        document.getElementById("link").value = link;
+        spec.link = {
+          value: link,
+          update: false,
+        };
+      }
+
+      function setTips(tips) {
+        document.getElementById("tips").value = tips;
+        spec.tips = {
+          value: tips,
+          update: false,
+        };
+      }
+
+      function selectTestCase(name) {
+        let specUrl = document.URL + `spec/${name}`;
+
+        fetch(specUrl).then(function (response) {
+          if (response.status !== 200) {
+            return;
+          }
+
+          response.json().then(function (data) {
+            setPoweron(data.poweron);
+            setPreSilicon(data.presilicon);
+            setClientOnly(data.clientOnly);
+            setServerOnly(data.serverOnly);
+            setPriority(data.priority);
+            setTestType(data.testType);
+            setOwner(data.owner);
+            setDomain(data.domain);
+            setFeature(data.feature);
+            setSummary(data.summary);
+            setLink(data.link);
+            setTips(data.tips);
+            setKparams(data.kparams.join(" "));
+          });
+        });
+      }
+
+      function listRender(tcs) {
+        const ul = document.getElementById("test-cases");
+        ul.innerHTML = "";
+
+        tcs
+          .sort(function (a, b) {
+            return a.localeCompare(b);
+          })
+          .forEach(function (testCase, index) {
+            if (index === 0) {
+              selectTestCase(testCase);
+            }
+
+            const li = document.createElement("LI");
+            li.appendChild(document.createTextNode(testCase));
+            li.addEventListener("click", function (evt) {
+              selectTestCase(testCase);
+            });
+            li.style.cursor = "pointer";
+            ul.appendChild(li);
+          });
+      }
+
+      function loadTestCases() {
+        let url = document.URL + "specs";
+
+        fetch(url).then(function (response) {
+          if (response.status !== 200) {
+            return;
+          }
+
+          response.json().then(function (data) {
+            testCases = data;
+            selectedTestCases = data;
+            listRender(data);
+          });
+        });
+      }
+
+      function syncField(key, value) {
+        let request = new XMLHttpRequest();
+        let f = new FormData();
+
+        request.open("PUT", simpleEditUrl);
+
+        f.append("testCases", selectedTestCases.join(","));
+        f.append("key", key);
+        f.append("value", value !== null ? value : "");
+
+        request.send(f);
+      }
+
+      function syncAll() {
+        if (spec.summary != null && spec.summary.update) {
+          syncField("Summary", spec.summary.value);
+          spec.summary.update = false;
+        }
+        if (spec.owner !== null && spec.owner.update) {
+          syncField("Owner", spec.owner.value);
+          spec.owner.update = false;
+        }
+        if (spec.domain != null && spec.domain.update) {
+          syncField("Domain", spec.domain.value);
+          spec.domain.update = false;
+        }
+        if (spec.feature !== null && spec.feature.update) {
+          syncField("Feature", spec.feature.value);
+          spec.feature.update = false;
+        }
+        if (spec.powerOn !== null && spec.powerOn.update) {
+          syncField("PowerOn", spec.powerOn.value.toString());
+          spec.powerOn.update = false;
+        }
+        if (spec.preSilicon !== null && spec.preSilicon.update) {
+          syncField("PreSi", spec.preSilicon.value.toString());
+          spec.preSilicon.update = false;
+        }
+        if (spec.clientOnly !== null && spec.clientOnly.update) {
+          syncField("ClientOnly", spec.clientOnly.value.toString());
+          spec.clientOnly.update = false;
+        }
+        if (spec.serverOnly !== null && spec.serverOnly.update) {
+          syncField("ServerOnly", spec.serverOnly.value.toString());
+          spec.serverOnly.update = false;
+        }
+        if (spec.priority !== null && spec.priority.update) {
+          syncField("Priority", spec.priority.value);
+          spec.priority.update = false;
+        }
+        if (spec.kparams !== null && spec.kparams.update) {
+          syncField("KParams", spec.kparams.value);
+          spec.kparams.update = false;
+        }
+        if (spec.testType !== null && spec.testType.update) {
+          syncField("TestType", spec.testType.value);
+          spec.testType.update = false;
+        }
+        if (spec.link !== null && spec.link.update) {
+          syncField("InfoLink", spec.link.value);
+          spec.link.update = false;
+        }
+        if (spec.tips !== null && spec.tips.update) {
+          syncField("Tips", spec.tips.value);
+          spec.tips.update = false;
+        }
+      }
+
+      var timer = setInterval(syncAll, 500);
+
+      // Add event listeners for simple structured fields
+      const textFields = [
+        "summary",
+        "owner",
+        "domain",
+        "feature",
+        "kparams",
+        "link",
+        "tips",
+      ];
+      const checkFields = ["powerOn", "preSilicon", "clientOnly", "serverOnly"];
+      const selectFields = ["priority", "testType"];
+      for (let i = 0; i < textFields.length; i++) {
+        let fieldId = textFields[i];
+        document
+          .getElementById(fieldId)
+          .addEventListener("change", function (evt) {
+            spec[fieldId] = {
+              value: evt.target.value,
+              update: true,
+            };
+          });
+      }
+      for (let i = 0; i < checkFields.length; i++) {
+        let fieldId = checkFields[i];
+        document
+          .getElementById(fieldId)
+          .addEventListener("change", function (evt) {
+            spec[fieldId] = {
+              value: evt.target.checked,
+              update: true,
+            };
+          });
+      }
+      for (let i = 0; i < selectFields.length; i++) {
+        let fieldId = selectFields[i];
+        document
+          .getElementById(fieldId)
+          .addEventListener("change", function (evt) {
+            spec[fieldId] = {
+              value: evt.target.options[evt.target.selectedIndex].value,
+              update: true,
+            };
+          });
+      }
+
+      document
+        .getElementById("regexp")
+        .addEventListener("keydown", function (evt) {
+          if (evt.key === "Enter") {
+            let regexp = evt.target.value;
+            let filterdTestCases = [];
+
+            testCases.forEach(function (el, index) {
+              let reg = new RegExp(regexp);
+              let m = el.match(reg);
+              if (m !== null) {
+                filterdTestCases.push(el);
+              }
+            });
+
+            selectedTestCases = filterdTestCases;
+            listRender(filterdTestCases);
+          }
+        });
+
+      loadTestCases();
+    </script>
+  </body>
+</html>

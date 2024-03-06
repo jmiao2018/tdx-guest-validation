@@ -1,0 +1,6 @@
+# @name CPU_CET_KMOD_TESTS
+# @desc CPU CET kernel mode ring 0 function tests
+# @requires cpu/cet_kernel
+# @setup_requires
+
+CPU_XS_FUNC_CET_KMOD_S1 cet_func.sh -t kmod_shstk -n cet_app -p s1

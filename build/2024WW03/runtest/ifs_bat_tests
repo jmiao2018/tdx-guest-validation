@@ -1,0 +1,6 @@
+# @name IFS_BAT_TESTS
+# @desc Check ifs kconfig
+# @requires ifs
+# @setup_requires
+
+IFS_XS_BAT_KCONFIG_TEST cpu_bat.sh -k "CONFIG_INTEL_IFS=m"

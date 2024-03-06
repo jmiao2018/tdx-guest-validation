@@ -1,0 +1,10 @@
+# @name UFS3.1_FUNC_TESTS
+# @desc UFS3.1_FUNC_TESTS contains UFS3.1 functional tests
+# @requires ufs3.1
+# @setup_requires
+# @utility_requires fio
+
+UFS3.1_XS_FUNC_DEVICE_NODE ufs_tests.sh -s ufs_node
+UFS3.1_XS_FUNC_TRANSFER_FILE ufs_tests.sh -s ufs_transfer_file
+UFS3.1_XS_FUNC_INLINE_ENCRYPTION ufs_tests.sh -s inline_encrypt
+UFS3.1_XS_FUNC_UFSPCI_LOAD_UNLOAD ufs_tests.sh -s ufs_mod

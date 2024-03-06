@@ -1,0 +1,7 @@
+# @name CPU_FP16_BAT_TESTS
+# @desc Check fp16 cpuinfo and cpuid
+# @requires cpu/fp16
+# @setup_requires
+
+CPU_XS_BAT_FP16_CPU_INFO_TEST cpu_bat.sh -n fp16 -f avx512_fp16
+CPU_XS_BAT_FP16_CPU_ID_TEST cpu_bat.sh -n fp16 -p "7 0 0 0 d 23"

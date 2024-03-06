@@ -1,0 +1,2 @@
+# This file contains all the functional tests for LCK Thermal driver
+ddt_intel/thermal_func_tests

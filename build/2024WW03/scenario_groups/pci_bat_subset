@@ -1,0 +1,3 @@
+# This file contains all the Basic Acceptance Tests for LCK PCI driver
+ddt_intel/pci_bat_tests
+ddt_intel/pci_4.0_bat_tests

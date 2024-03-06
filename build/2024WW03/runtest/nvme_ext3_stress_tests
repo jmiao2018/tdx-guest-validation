@@ -1,0 +1,9 @@
+# @name NVME device w/r stress test with fs:ext3 and size:10M (bs=10M;count=1)
+# @desc Perform mkfs first, then do read write
+#	The device node is specified in get_blk_device_node.sh
+# @requires nvme && ext3
+# @setup_requires nvme
+
+NVME_L_STRESS_EXT3_DD_RW_100M blk_device_dd_readwrite_test.sh -f "ext3" -b "10M" -c "10" -d "nvme" -l "300"
+
+NVME_XL_STRESS_EXT3_DD_RW_1G blk_device_dd_readwrite_test.sh -f "ext3" -b "10M" -c "100" -d "nvme" -l "100"

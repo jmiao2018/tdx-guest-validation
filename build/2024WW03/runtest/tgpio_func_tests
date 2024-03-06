@@ -1,0 +1,17 @@
+# @name TGPIO_FUNC_TESTS
+# @desc TGPIO  tests
+# @requires tgpio
+# @setup_requires
+
+# TGPIO test
+TGPIO_PMC_XS_FUNC_PINS_COUNT  tgpio_tests.sh -t pins_count -m pmc
+TGPIO_PMC_XS_FUNC_DEVICES_CHECK  tgpio_tests.sh -t dev_check -m pmc
+TGPIO_PMC_XS_FUNC_DRIVER tgpio_tests.sh -t driver -m pmc
+TGPIO_PMC_XS_FUNC_DEVICES tgpio_tests.sh -t dev -m pmc
+TGPIO_PMC_XS_FUNC_CAP tgpio_tests.sh -t cap -m pmc
+TGPIO_PMC_XS_FUNC_GETTIME tgpio_tests.sh -t gtime -m pmc
+TGPIO_PMC_XS_FUNC_SETTIME tgpio_tests.sh -t stime -m pmc
+TGPIO_PMC_XS_FUNC_ADJF tgpio_tests.sh -t agjf -m pmc
+TGPIO_PMC_XS_FUNC_ADJT tgpio_tests.sh -t agjt -m pmc
+TGPIO_PMC_XS_FUNC_INPUT tgpio_tests.sh -t input -m pmc
+TGPIO_PMC_XS_FUNC_OUTPUT tgpio_tests.sh -t output -m pmc

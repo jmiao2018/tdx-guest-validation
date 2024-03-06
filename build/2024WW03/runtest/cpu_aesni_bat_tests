@@ -1,0 +1,7 @@
+# @name CPU_AESNI_BAT_TESTS
+# @desc Check aesni cpuinfo and cpuid
+# @requires cpu/aesni
+# @setup_requires
+
+CPU_XS_BAT_AESNI_CPU_INFO_TEST cpu_bat.sh -n aesni -f aes
+CPU_XS_BAT_AESNI_CPU_ID_TEST cpu_bat.sh -n aesni -p "1 0 0 0 c 25"

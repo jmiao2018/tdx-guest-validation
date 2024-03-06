@@ -1,0 +1,3 @@
+#This file contains all the tests for shani tests
+ddt_intel/cpu_shani_bat_tests
+ddt_intel/cpu_shani_func_tests

@@ -1,0 +1,31 @@
+#!/bin/bash -Ex
+
+# test 2 simultaneous same events
+#
+# Filters:
+#
+#   According to spec, only ENG filters apply to these events, but if
+#   other filters e.g. wq set incorrectly, they will filter events
+#   out.
+#
+#   Also, current hw bug requires unused filters to be set to 0xff..
+#
+#   All filters set to defaults
+#
+# Setup:
+#   assumes setup_dsa_dmatest_disabled has been run
+
+perf stat -o $1 -d -e dsa0/event=0x8,event_category=0x3/,dsa0/event=0x8,event_category=0x3/ dsa_test -w 1 -l 1024 -o0x3 -t200
+
+# Expected output (similar to):
+
+# Performance counter stats for 'system wide':
+
+#                19      dsa0/event=0x8,event_category=0x3/                      
+#                19      dsa0/event=0x8,event_category=0x3/                      
+#        61,419,293      L1-dcache-loads                                         
+#         5,562,697      L1-dcache-load-misses     #    9.06% of all L1-dcache accesses
+#         4,722,847      LLC-loads                                               
+#           199,231      LLC-load-misses           #    4.22% of all LL-cache accesses
+
+#      13.460654412 seconds time elapsed

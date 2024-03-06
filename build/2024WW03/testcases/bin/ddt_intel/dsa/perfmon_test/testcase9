@@ -1,0 +1,20 @@
+#!/bin/bash -Ex
+
+# With -a and without -a option
+
+# with "-a"
+#
+# Setup:
+#   assumes setup_dsa_dmatest_disabled has been run
+
+perf stat -o $1 -e dsa0/event=0x8,event_category=0x3/ -a dsa_test -w 1 -l 1024 -o0x3 -t200
+
+# Expected output (similar to):
+
+# Performance counter stats for 'system wide':
+
+#                19      dsa0/event=0x8,event_category=0x3/                      
+
+#      14.256300418 seconds time elapsed
+
+

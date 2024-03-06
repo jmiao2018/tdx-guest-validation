@@ -1,0 +1,21 @@
+# @name CPU_CET_STRESS_TESTS
+# @desc CPU CET stress tests
+# @requires cpu/cet
+# @setup_requires
+
+CPU_XS_STRESS_CET_SHSTK cet_func.sh -t cet_stress -n shstk_stress -p 1000000
+CPU_XS_STRESS_CET_SHSTK_LEGACY cet_func.sh -t legacy_stress -n shstk_stress_legacy -p 1000000
+CPU_XS_STRESS_CET_SHSTK32 cet_func.sh -t cet_stress -n shstk_stress_32 -p 1000000
+CPU_XS_STRESS_CET_SHSTK32_LEGACY cet_func.sh -t legacy_stress -n shstk_stress_32_legacy -p 1000000
+CPU_XS_STRESS_CET_IBT cet_func.sh -t cet_stress -n ibt_stress -p 1000000
+CPU_XS_STRESS_CET_IBT_LEGACY cet_func.sh -t legacy_stress -n ibt_stress_legacy -p 1000000
+CPU_XS_STRESS_CET_IBT32 cet_func.sh -t cet_stress -n ibt_stress_32 -p 1000000
+CPU_XS_STRESS_CET_IBT32_LEGACY cet_func.sh -t legacy_stress -n ibt_stress_32_legacy -p 1000000
+CPU_XS_STRESS_CET_PERF_LOSS cet_func.sh -t cet_compare
+CPU_XS_STRESS_CET_PERF_SHSTK_LOSS cet_func.sh -t cet_perf_compare -p shstk_stress
+CPU_XS_STRESS_CET_PERF_IBT_LOSS cet_func.sh -t cet_perf_compare -p ibt_stress
+CPU_XS_STRESS_CET_PERF_SHSTK_32_LOSS cet_func.sh -t cet_perf_compare -p shstk_stress_32
+CPU_XS_STRESS_CET_PERF_IBT_32_LOSS cet_func.sh -t cet_perf_compare -p ibt_stress_32
+CPU_XS_STRESS_CET_CPU_SHSTK_PERF cet_func.sh -t all_cpu_perf -p shstk_cpu
+CPU_XS_STRESS_CET_CPU_SHSTK_32_PERF cet_func.sh -t all_cpu_perf -p shstk_cpu_32
+CPU_XS_STRESS_CET_CPU_IBT_PERF cet_func.sh -t all_cpu_perf -p ibt_cpu

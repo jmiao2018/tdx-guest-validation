@@ -1,0 +1,9 @@
+# @name Power Management Controller BAT Tests
+# @desc Intel pmc core debug driver readiness test
+# @requires powermgr
+# @setup_requires
+
+POWER_XS_BAT_DRIVER_PMC_CORE_LOAD_UNLOAD powermgr_pmc_core.sh -t load_unload_pmc_core
+POWER_XS_BAT_DRIVER_PMC_PCI_DEVICE_CHECK powermgr_pmc_core.sh -t check_pmc_device
+POWER_XS_BAT_DRIVER_PMC_CORE_ATTRIBUTES powermgr_pmc_core.sh -t check_pmc_core_attr
+

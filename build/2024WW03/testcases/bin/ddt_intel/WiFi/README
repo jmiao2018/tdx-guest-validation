@@ -1,0 +1,140 @@
+WiFi Driver Test
+
+Usage:
+-c <testcase ID> - Testcase ID
+ 1	Test kernel module load/unload
+ 2	Test SDIO driver bind/unbind
+ 3	Test WiFi device is enumerated and MAC address is valid
+ 4	Test WiFi siwthing on
+ 5	Test WiFi siwthing off
+ 6	Test WiFi scanning
+ 7	Test WiFi connecting to a non-encrypted AP
+ 8	Test WiFi connecting to a WEP(128bit)-encrypted AP
+ 9	Test WiFi connecting to a WPA-PSK encrypted AP
+ 10	Test WiFi connecting to a WPA2-PSK encrypted AP
+ 11	Test WiFi connecting to a WPA/WPA2-mixed encrypted AP
+ 12 Test WiFi connecting to a WPA/WPA2-EAP TTLS encrypted AP
+ 13 Test WiFi connecting to a WPA/WPA2-EAP PEAP encrypted AP
+
+-p <PLATFORM> - Platform file to identify HW/SW features for DUT
+				The specified file should be found in platforms/ dir
+	PLATFORM list:
+	byt-cr-ecs
+	byt-cr-anchor8
+	byt-cr-mrd7
+	byt-cr-t10
+-d <ADB S/N> - ADB serial number (optional)
+-l - List all available test cases
+-o  - Output directory for storing test log files
+-O  - Output directory for storing test report files for TRC
+-r  Report file(csv format) is generated for TRC
+-i  Information used for generating TRC report
+-f  Force to create a new Test Report file for TRC
+-a  All tests are to be run in sequence
+
+Example:
+* Run test case 2 for testing SDIO driver bind/unbind
+	./WiFi_fPos_drv_test.sh -p byt-cr-anchor8 -d 013FB182 -c 2
+* List all available WiFi driver test cases
+	./WiFi_fPos_drv_test.sh -p byt-cr-anchor8 -l
+
+---
+Host Environment Preparation
+I. For testing case 7 to 13
+
+For testing case 7 to 13, a dedicated wireless AP is required and must be
+configured as following:
+
+Test Case ID    AP's SSID				AP's encryption method		Password		RADIUS Server	Secret
+7               SHZ1-3F-OTC-TEST        none                        N/A             N/A             N/A
+8               SHZ1-3F-OTC-TEST        WEP 128bit                  otcqatest1234   N/A             N/A
+9               SHZ1-3F-OTC-TEST        WPA/PSK                     otcqatest1234   N/A             N/A
+10              SHZ1-3F-OTC-TEST        WPA2/PSK                    otcqatest1234   N/A             N/A
+11              SHZ1-3F-OTC-TEST        WPA/WPA2/PSK                otcqatest1234   N/A             N/A
+12              SHZ1-3F-OTC-TEST        WPA2/EAP/TTLS               otcqatest1234   192.168.1.x     testing123
+13              SHZ1-3F-OTC-TEST        WPA2/EAP/PEAP               otcqatest1234   192.168.1.x     testing123
+
+Annotation: for RADIUS server's IP, the 'x' value may be different as the IP
+address is assigned by DHCP. Thus, it should be identified manually.
+
+II. For testing case 12 and 13
+
+Step I - Setup FreeRADIUS on Ubuntu
+* Install
+	sudo apt-get install freeradius freeradius-common freeradius-utils \
+	mysql-server libmysqlclientdev
+
+* Configure FreeRADIUS
+1.	sudo vim /etc/freeradius/radiusd.conf
+
+	1.1 uncomment for following lines
+		$INCLUDE eap.conf
+		$INCLUDE sql.conf
+
+2.	sudo vim /etc/freeradius/users
+	Place following text at the top of the file
+
+	otcqa   Cleartext-Password := "otcqatest1234"
+
+3.	sudo vim /etc/freeradius/clients.conf
+	Place following text at the top of the file
+
+# NETGEAR AP Client
+client 192.168.1.0/24 {
+        secret          = testing123
+        shortname       = netgear
+        nastype         = other
+}
+
+4. Configure mysql
+
+	4.1 - Create radius database
+
+	mysqladmin -u root -p create radius
+	mysql -u root -p <password> radius < /etc/freeradius/sql/mysql/schema.sql
+	mysql -u root -p
+	mysql> grant all on radius.* to radius@localhost identified by 'radius';
+	mysql> exit;
+
+	4.2 - Insert data to radcheck table
+
+	mysql -u radius -pradius
+	mysql> use radius;
+	mysql> insert into radcheck(username, attribute, value, op)            \
+                  values('otcqa', 'Cleartext-Password', 'otcqatest1234', ':=');
+	mysql> select * from radcheck;
+	mysql> exit;
+
+5.	sudo vim /etc/freeradius/sql.conf
+
+		Modify the 'login' and 'password' items:
+
+		login = "radius"
+		password = "radius"
+
+6.  sudo vim /etc/freeradius/sites-available/default
+
+	uncomment for all 'sql' lines.
+
+* Test RADIUS server
+
+	sudo freeradius -X
+	sudo radtest otcqa otcqatest1234 localhost 0 testing123
+
+	Successful Output should be like:
+
+Sending Access-Request of id 128 to 127.0.0.1 port 1812
+	User-Name = "otcqa"
+	User-Password = "otcqatest1234"
+	NAS-IP-Address = 127.0.1.1
+	NAS-Port = 0
+	Message-Authenticator = 0x00000000000000000000000000000000
+rad_recv: Access-Accept packet from host 127.0.0.1 port 1812, id=128, length=20
+
+* Start RADIUS server before test
+
+	sudo freeradius -X
+
+* Reference
+1. RFC2865 - http://freeradius.org/rfc/rfc2865.html
+

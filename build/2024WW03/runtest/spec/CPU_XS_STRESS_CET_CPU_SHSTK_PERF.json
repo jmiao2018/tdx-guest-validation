@@ -1,0 +1,50 @@
+{
+    "name": "CPU_XS_STRESS_CET_CPU_SHSTK_PERF",
+    "initial_platform": "",
+    "cmdline": "cet_func.sh -t all_cpu_perf -p shstk_cpu",
+    "steps": [],
+    "flags": [],
+    "summary": "Check all CPU cores shstk perf loss is as expected range -50%-20%",
+    "status": "Closed",
+    "priority": "P3",
+    "scenario": "cpu_cet_stress_tests",
+    "domain": "Security",
+    "feature": "CET_USER",
+    "owner": "xupengfe",
+    "testType": "STRESS",
+    "execType": "Auto",
+    "poweron": false,
+    "presilicon": false,
+    "clientOnly": false,
+    "serverOnly": false,
+    "kparams": [],
+    "kconfigs": [
+        {
+            "name": "CONFIG_X86_SHADOW_STACK_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For shadow stack enabling"
+        },
+        {
+            "name": "CONFIG_X86_BRANCH_TRACKING_USER",
+            "values": [
+                "y"
+            ],
+            "description": "For IBT enabling"
+        },
+        {
+            "name": "CONFIG_X86_CET",
+            "values": [
+                "y"
+            ],
+            "description": "Kconfig for CET"
+        }
+    ],
+    "packages": [],
+    "bios": [],
+    "peripherals": [],
+    "createDate": "2020-12-04T16:12:31.000-0800",
+    "link": "",
+    "tips": ""
+}

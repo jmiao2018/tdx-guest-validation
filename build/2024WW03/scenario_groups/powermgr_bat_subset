@@ -1,0 +1,4 @@
+# This file contains all the Basic Acceptance Tests for LCK Power driver
+ddt_intel/powerclamp_bat_tests
+ddt_intel/powermgr_bat_tests
+ddt_intel/rapl_bat_tests

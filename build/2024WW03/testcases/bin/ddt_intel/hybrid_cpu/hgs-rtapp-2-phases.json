@@ -1,0 +1,27 @@
+{
+	"tasks" : {
+		"rt-app-thr0" : {
+			"instance" : 1,
+			"loop" : -1,
+			"priority": -19,
+			"phases" : {
+				"p0" : {
+					"loop" : 10000,
+					"run" :   800,
+					"sleep" : 200
+				},
+				"p1" : {
+					"loop" : 10000,
+					"run" :   50,
+					"sleep" : 950
+				}
+			}
+		}
+	},
+	"global" : {
+		"duration" : 20,
+		"calibration" : "CPU0",
+		"default_policy" : "SCHED_OTHER",
+		"log_size" : "Disable"
+	}
+}

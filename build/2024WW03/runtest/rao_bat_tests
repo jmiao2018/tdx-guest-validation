@@ -1,0 +1,9 @@
+# @name RAO_BAT_TESTS
+# @desc Basic Acceptance Tests for rao.
+# @requires rao
+# @setup_requires
+#
+RAO_XS_FUNC_CPUID rao_tests.sh -t cpuid
+RAO_XS_FUNC_CPUINFO rao_tests.sh -t cpuinfo
+RAO_XS_FUNC_KCONFIG rao_tests.sh -t kconfig
+
